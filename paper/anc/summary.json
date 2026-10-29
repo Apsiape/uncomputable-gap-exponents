@@ -1,0 +1,16 @@
+{
+  "python": "3.13.12",
+  "status": "PASS",
+  "counter_cases": 12,
+  "largest_counter_dimension": 262144,
+  "classical_sizes": [
+    2,
+    3,
+    4
+  ],
+  "random_penalty_instances": 2000,
+  "exhaustive_penalty_instances": 22398,
+  "independent_counter_cases": 46,
+  "four_flag_assignments": 69632,
+  "numerical_caveat": "Floating-point diagonalization is evidence, not an interval proof."
+}

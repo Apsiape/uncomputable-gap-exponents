@@ -1,0 +1,33 @@
+{
+  "title": "Uncomputable finite-size gap exponents",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "version": "1.0.0",
+  "creators": [
+    {
+      "name": "Douglas, Seth"
+    },
+    {
+      "name": "Mghirbi, Nidhal"
+    }
+  ],
+  "description": "<p>We classify the nonnegative finite-size spectral-gap exponents of translation-invariant nearest-neighbour Hamiltonians on the square lattice, with finite local dimension, integer interaction matrices and open boundaries. The gap is measured above the entire ground space on an $L\\times L$ box. The existing exponents in $\\Delta(L)=L^{-z+o(1)}$ are exactly the nonnegative limit-computable ($\\Delta^0_2$) reals. The finite nonnegative lower/upper exponent pairs are exactly the ordered pairs consisting of a left-$\\Sigma^0_2$ real and a left-$\\Pi^0_2$ real. In particular, one fixed integer-valued model has exponent equal to the halting probability of any chosen prefix-universal machine. A classical boundary preference fixes a size counter and a computation tableau; a reversible mixed-radix counter supplies the small gap. We bound every sector of the full Hilbert space. The closing modes live on a boundary segment of length $O(\\log L)$, and the local dimension may depend on the prescribed pair. These are finite-box exponents, with no assertion about bulk dispersion or stability of thermodynamic critical exponents.</p>",
+  "keywords": [
+    "spectral gap",
+    "translation-invariant Hamiltonians",
+    "uncomputability",
+    "arithmetical hierarchy",
+    "finite-size exponents"
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "notes": "Preprint. It has not been peer reviewed. Text and documentation: CC BY 4.0. Scripts: MIT or Apache 2.0.",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23753741",
+      "scheme": "doi",
+      "relation": "references"
+    }
+  ]
+}

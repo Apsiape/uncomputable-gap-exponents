@@ -1,0 +1,79 @@
+\begin{thebibliography}{10}
+
+\bibitem{sizeDriven}
+Johannes Bausch, Toby~S. Cubitt, Angelo Lucia, David P{\'e}rez-Garc{\'i}a, and
+  Michael~M. Wolf.
+\newblock Size-driven quantum phase transitions.
+\newblock {\em Proceedings of the National Academy of Sciences}, 115(1):19--23,
+  2018.
+\newblock \url{https://doi.org/10.1073/pnas.1705042114}.
+
+\bibitem{phaseDiagrams}
+Johannes Bausch, Toby~S. Cubitt, and James~D. Watson.
+\newblock Uncomputability of phase diagrams.
+\newblock {\em Nature Communications}, 12:452, 2021.
+\newblock \url{https://doi.org/10.1038/s41467-020-20504-6}.
+
+\bibitem{spectralShort}
+Toby~S. Cubitt, David P{\'e}rez-Garc{\'i}a, and Michael~M. Wolf.
+\newblock Undecidability of the spectral gap.
+\newblock {\em Nature}, 528:207--211, 2015.
+\newblock \url{https://doi.org/10.1038/nature16059}.
+
+\bibitem{spectralFull}
+Toby~S. Cubitt, David P{\'e}rez-Garc{\'i}a, and Michael~M. Wolf.
+\newblock Undecidability of the spectral gap.
+\newblock {\em Forum of Mathematics, Pi}, 10:e14, 2022.
+\newblock \url{https://doi.org/10.1017/fmp.2021.15}.
+
+\bibitem{pricePrecision}
+Seth Douglas and Nidhal Mghirbi.
+\newblock The uncomputable price of precision, 2026.
+\newblock Zenodo. \url{https://doi.org/10.5281/zenodo.23736188}.
+
+\bibitem{density}
+Rodney~G. Downey, Carl~G. {Jockusch, Jr.}, and Paul~E. Schupp.
+\newblock Asymptotic density and computably enumerable sets, 2013.
+\newblock \url{https://arxiv.org/abs/1307.0040}.
+
+\bibitem{gossetMozgunov}
+David Gosset and Evgeny Mozgunov.
+\newblock Local gap threshold for frustration-free spin systems, 2016.
+\newblock \url{https://doi.org/10.1063/1.4962337}.
+
+\bibitem{lemmMozgunov}
+Marius Lemm and Evgeny Mozgunov.
+\newblock Spectral gaps of frustration-free spin systems with boundary, 2019.
+\newblock \url{https://doi.org/10.1063/1.5089773}.
+
+\bibitem{masaokaSoejimaWatanabe}
+Rintaro Masaoka, Tomohiro Soejima, and Haruki Watanabe.
+\newblock Rigorous lower bound on dynamical exponents in gapless
+  frustration-free systems.
+\newblock {\em Physical Review X}, 15:041050, 2025.
+\newblock \url{https://doi.org/10.1103/d4c4-5p2r}.
+
+\bibitem{chaitinTransition}
+James Purcell, Zhi Li, and Toby Cubitt.
+\newblock Chaitin phase transition, 2024.
+\newblock \url{https://arxiv.org/abs/2410.02600}.
+
+\bibitem{energyDensity}
+James~D. Watson and Toby~S. Cubitt.
+\newblock Computational complexity of the ground state energy density problem,
+  2021.
+\newblock \url{https://arxiv.org/abs/2107.05060}.
+
+\bibitem{bulkGap}
+Xiangling Xu, Matthias Sch{\"o}tz, Jie Wang, Victor Magron, Igor Klep, Omar
+  Fawzi, and Marc-Olivier Renou.
+\newblock The bulk spectral gap is certifiable from above but uncomputable from
+  below, 2026.
+\newblock Version 4, 15 October 2026. \url{https://arxiv.org/abs/2606.03836v4}.
+
+\bibitem{zhengWeihrauch}
+Xizhong Zheng and Klaus Weihrauch.
+\newblock The arithmetical hierarchy of real numbers.
+\newblock {\em Mathematical Logic Quarterly}, 47(1):51--65, 2001.
+
+\end{thebibliography}
