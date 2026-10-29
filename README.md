@@ -2,7 +2,7 @@
 
 Seth Douglas and Nidhal Mghirbi.
 
-Version 2.0.0, October 2026. A preprint; it has not been peer reviewed.
+Version 2.0.0, October 2026. DOI: [10.5281/zenodo.23757361](https://doi.org/10.5281/zenodo.23757361). Concept DOI (all versions): [10.5281/zenodo.23753839](https://doi.org/10.5281/zenodo.23753839). A preprint; it has not been peer reviewed.
 
 This is version 2.0.0 of "Uncomputable finite-size gap exponents" (version 1.0.0: [10.5281/zenodo.23753840](https://doi.org/10.5281/zenodo.23753840)). It keeps the finite-size classification and adds the critical exponents, the bulk third-level theorem and the hierarchy.
 
