@@ -1,0 +1,939 @@
+{
+  "density_all_prefix_bound": {
+    "pass": true,
+    "runs": [
+      {
+        "beta": "0",
+        "tail": [
+          {
+            "s": 32,
+            "N": 295232799039604140847618609643520000000,
+            "endpoint_error": 0.027757284534531492,
+            "largest_probe_error": 0.027757284534531492
+          },
+          {
+            "s": 33,
+            "N": 10333147966386144929666651337523200000000,
+            "endpoint_error": 0.0007930652724151855,
+            "largest_probe_error": 0.027757284534531492
+          },
+          {
+            "s": 34,
+            "N": 371993326789901217467999448150835200000000,
+            "endpoint_error": 0.0262983058671767,
+            "largest_probe_error": 0.0262983058671767
+          }
+        ]
+      },
+      {
+        "beta": "3/10",
+        "tail": [
+          {
+            "s": 32,
+            "N": 295232799039604140847618609643520000000,
+            "endpoint_error": 0.026917603060426325,
+            "largest_probe_error": 0.027658638802647795
+          },
+          {
+            "s": 33,
+            "N": 10333147966386144929666651337523200000000,
+            "endpoint_error": 0.026215052610971946,
+            "largest_probe_error": 0.026917603060426325
+          },
+          {
+            "s": 34,
+            "N": 371993326789901217467999448150835200000000,
+            "endpoint_error": 0.025548080370415945,
+            "largest_probe_error": 0.026215052610971946
+          }
+        ]
+      },
+      {
+        "beta": "997/1000",
+        "tail": [
+          {
+            "s": 32,
+            "N": 295232799039604140847618609643520000000,
+            "endpoint_error": 0.0020746760809246564,
+            "largest_probe_error": 0.028461013248561682
+          },
+          {
+            "s": 33,
+            "N": 10333147966386144929666651337523200000000,
+            "endpoint_error": 0.026924850524671994,
+            "largest_probe_error": 0.026924850524671994
+          },
+          {
+            "s": 34,
+            "N": 371993326789901217467999448150835200000000,
+            "endpoint_error": 0.0021687541520924447,
+            "largest_probe_error": 0.026924850524671994
+          }
+        ]
+      },
+      {
+        "beta": "1",
+        "tail": [
+          {
+            "s": 32,
+            "N": 295232799039604140847618609643520000000,
+            "endpoint_error": 0.0008396814741051683,
+            "largest_probe_error": 0.028549170119575723
+          },
+          {
+            "s": 33,
+            "N": 10333147966386144929666651337523200000000,
+            "endpoint_error": 0.027008117883387132,
+            "largest_probe_error": 0.027008117883387132
+          },
+          {
+            "s": 34,
+            "N": 371993326789901217467999448150835200000000,
+            "endpoint_error": 0.0007502254967607537,
+            "largest_probe_error": 0.027008117883387132
+          }
+        ]
+      }
+    ]
+  },
+  "exponent_exact_floor": {
+    "pass": true,
+    "runs": [
+      {
+        "gamma": "0",
+        "tail": [
+          {
+            "k": 160,
+            "N": 1461501637330902918203684832716283019655932542976,
+            "exponent": 0.045762050593046014
+          },
+          {
+            "k": 160,
+            "N": 1461501637330902918203684832716283019655932542976,
+            "exponent": 0.045762050593046014
+          },
+          {
+            "k": 160,
+            "N": 2923003274661805836407369665432566039311865085951,
+            "exponent": 0.04553364520568085
+          }
+        ]
+      },
+      {
+        "gamma": "3/5",
+        "tail": [
+          {
+            "k": 160,
+            "N": 1461501637330902918203684832716283019655932542976,
+            "exponent": 0.6067469902830152
+          },
+          {
+            "k": 160,
+            "N": 1461501637330902918281908676816598611727049052224,
+            "exponent": 0.6102035792174555
+          },
+          {
+            "k": 160,
+            "N": 2923003274661805836407369665432566039311865085951,
+            "exponent": 0.6088906051633135
+          }
+        ]
+      },
+      {
+        "gamma": "1",
+        "tail": [
+          {
+            "k": 160,
+            "N": 1461501637330902918203684832716283019655932542976,
+            "exponent": 0.9964022852252903
+          },
+          {
+            "k": 160,
+            "N": 2192252455996354377305527249074424529483898814464,
+            "exponent": 0.9977754309811993
+          },
+          {
+            "k": 160,
+            "N": 2923003274661805836407369665432566039311865085951,
+            "exponent": 0.9983894663951197
+          }
+        ]
+      }
+    ]
+  },
+  "blocked_frame_drift": {
+    "pass": true,
+    "runs": [
+      {
+        "r": 1,
+        "block_size": 2,
+        "steps": 12
+      },
+      {
+        "r": 2,
+        "block_size": 4,
+        "steps": 12
+      },
+      {
+        "r": 3,
+        "block_size": 6,
+        "steps": 12
+      }
+    ]
+  },
+  "protected_register_track": {
+    "pass": true,
+    "head_steps": 510,
+    "changes": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        0,
+        3,
+        0
+      ],
+      [
+        2,
+        3,
+        1
+      ],
+      [
+        1,
+        4,
+        0
+      ],
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        2,
+        5,
+        0
+      ],
+      [
+        4,
+        5,
+        1
+      ],
+      [
+        1,
+        6,
+        1
+      ],
+      [
+        3,
+        6,
+        0
+      ],
+      [
+        5,
+        6,
+        1
+      ],
+      [
+        4,
+        7,
+        0
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        3,
+        8,
+        1
+      ],
+      [
+        5,
+        8,
+        0
+      ],
+      [
+        7,
+        8,
+        1
+      ],
+      [
+        6,
+        9,
+        0
+      ],
+      [
+        8,
+        9,
+        1
+      ],
+      [
+        5,
+        10,
+        1
+      ],
+      [
+        7,
+        10,
+        0
+      ],
+      [
+        9,
+        10,
+        1
+      ],
+      [
+        8,
+        11,
+        0
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        7,
+        12,
+        1
+      ],
+      [
+        9,
+        12,
+        0
+      ],
+      [
+        11,
+        12,
+        1
+      ],
+      [
+        10,
+        13,
+        0
+      ],
+      [
+        12,
+        13,
+        1
+      ],
+      [
+        9,
+        14,
+        1
+      ],
+      [
+        11,
+        14,
+        0
+      ],
+      [
+        13,
+        14,
+        1
+      ]
+    ],
+    "note": "finite interpreter sanity check; the universal rule is specified in the proof of Theorem 20.9, not certified by this check"
+  },
+  "forgetting_fast_majority_counterexample": [
+    {
+      "t": 1,
+      "m": 17,
+      "p_t": 0.75,
+      "P_majority_1_exact": 0.9876152205979452,
+      "P_majority_1_lower_bound": 0.8805670317332803
+    },
+    {
+      "t": 2,
+      "m": 257,
+      "p_t": 0.625,
+      "P_majority_1_exact": 0.9999771529841501,
+      "P_majority_1_lower_bound": 0.9996748584721121
+    },
+    {
+      "t": 3,
+      "m": 4097,
+      "p_t": 0.5625,
+      "P_majority_1_exact": null,
+      "P_majority_1_lower_bound": 0.9999999999999875
+    },
+    {
+      "t": 4,
+      "m": 65537,
+      "p_t": 0.53125,
+      "P_majority_1_exact": null,
+      "P_majority_1_lower_bound": 1.0
+    },
+    {
+      "t": 5,
+      "m": 1048577,
+      "p_t": 0.515625,
+      "P_majority_1_exact": null,
+      "P_majority_1_lower_bound": 1.0
+    }
+  ],
+  "forgetting_critical_majority_counterexample": {
+    "limiting_value": 0.8413447460685428,
+    "formula": "lambda=1/2, p_t=(1+2^-t)/2, m_t=4^t+1; limit=normal_CDF(1)",
+    "finite_rows": [
+      {
+        "t": 1,
+        "m": 5,
+        "majority_probability": 0.896484375
+      },
+      {
+        "t": 2,
+        "m": 17,
+        "majority_probability": 0.8561184660499377
+      },
+      {
+        "t": 3,
+        "m": 65,
+        "majority_probability": 0.8451034628401047
+      },
+      {
+        "t": 4,
+        "m": 257,
+        "majority_probability": 0.8422885608469617
+      }
+    ]
+  },
+  "dyadic_prefix_obstruction": {
+    "p": "1/2",
+    "intervals": [
+      "[1/2-2^-n,1/2+2^-n]"
+    ],
+    "common_binary_prefix_length": 0,
+    "repair": "encode in an irrational entry, as the proof of Theorem 20.12 stipulates"
+  },
+  "independent_disjoint_cone_monte_carlo": {
+    "alphabet": 40,
+    "seed": 2910202602,
+    "trials_per_kernel_time": 4096,
+    "construction": "exact finite backward squares; independent copies have independent noise; no periodic boundary",
+    "certification_limit": "chosen p values are not certified to belong to imported U; observed inequalities are finite checks only",
+    "runs": [
+      {
+        "fault_probability": 0.02,
+        "T": 1,
+        "canonical_m": 3,
+        "trials": 4096,
+        "program0_logical_bit": 1,
+        "program1_logical_bit": 0,
+        "single_symbol_error": 0.02001953125,
+        "single_bit_error": 0.010904947916666666,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 1,
+            "observed_error": 0.000244140625,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.02,
+        "T": 2,
+        "canonical_m": 3,
+        "trials": 4096,
+        "program0_logical_bit": 1,
+        "program1_logical_bit": 1,
+        "single_symbol_error": 0.021565755208333332,
+        "single_bit_error": 0.011637369791666666,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.02,
+        "T": 4,
+        "canonical_m": 9,
+        "trials": 4096,
+        "program0_logical_bit": 0,
+        "program1_logical_bit": 1,
+        "single_symbol_error": 0.021131727430555556,
+        "single_bit_error": 0.011203342013888888,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          },
+          {
+            "m": 7,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.4168620196785084,
+            "binomial_tail_at_one_quarter": 0.070556640625
+          },
+          {
+            "m": 9,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.32465246735834974,
+            "binomial_tail_at_one_quarter": 0.04892730712890625
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.02,
+        "T": 6,
+        "canonical_m": 19,
+        "trials": 4096,
+        "program0_logical_bit": 0,
+        "program1_logical_bit": 0,
+        "single_symbol_error": 0.02129163240131579,
+        "single_bit_error": 0.010819284539473685,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 4,
+            "observed_error": 0.0009765625,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          },
+          {
+            "m": 7,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.4168620196785084,
+            "binomial_tail_at_one_quarter": 0.070556640625
+          },
+          {
+            "m": 19,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.09301448921066349,
+            "binomial_tail_at_one_quarter": 0.008903279303922318
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.02,
+        "T": 8,
+        "canonical_m": 19,
+        "trials": 4096,
+        "program0_logical_bit": 1,
+        "program1_logical_bit": 1,
+        "single_symbol_error": 0.020533511513157895,
+        "single_bit_error": 0.010510896381578948,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 2,
+            "observed_error": 0.00048828125,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          },
+          {
+            "m": 7,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.4168620196785084,
+            "binomial_tail_at_one_quarter": 0.070556640625
+          },
+          {
+            "m": 19,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.09301448921066349,
+            "binomial_tail_at_one_quarter": 0.008903279303922318
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.02,
+        "T": 12,
+        "canonical_m": 33,
+        "trials": 4096,
+        "program0_logical_bit": 1,
+        "program1_logical_bit": 1,
+        "single_symbol_error": 0.020751953125,
+        "single_bit_error": 0.010764382102272728,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          },
+          {
+            "m": 7,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.4168620196785084,
+            "binomial_tail_at_one_quarter": 0.070556640625
+          },
+          {
+            "m": 33,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.016163494588165874,
+            "binomial_tail_at_one_quarter": 0.0009509599956171568
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.06,
+        "T": 1,
+        "canonical_m": 3,
+        "trials": 4096,
+        "program0_logical_bit": 1,
+        "program1_logical_bit": 0,
+        "single_symbol_error": 0.059326171875,
+        "single_bit_error": 0.032145182291666664,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 8,
+            "observed_error": 0.001953125,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.06,
+        "T": 2,
+        "canonical_m": 3,
+        "trials": 4096,
+        "program0_logical_bit": 1,
+        "program1_logical_bit": 1,
+        "single_symbol_error": 0.06656901041666667,
+        "single_bit_error": 0.035237630208333336,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 13,
+            "observed_error": 0.003173828125,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.06,
+        "T": 4,
+        "canonical_m": 9,
+        "trials": 4096,
+        "program0_logical_bit": 0,
+        "program1_logical_bit": 1,
+        "single_symbol_error": 0.07066514756944445,
+        "single_bit_error": 0.03602430555555555,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 14,
+            "observed_error": 0.00341796875,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          },
+          {
+            "m": 7,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.4168620196785084,
+            "binomial_tail_at_one_quarter": 0.070556640625
+          },
+          {
+            "m": 9,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.32465246735834974,
+            "binomial_tail_at_one_quarter": 0.04892730712890625
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.06,
+        "T": 6,
+        "canonical_m": 19,
+        "trials": 4096,
+        "program0_logical_bit": 0,
+        "program1_logical_bit": 0,
+        "single_symbol_error": 0.06992701480263158,
+        "single_bit_error": 0.03578587582236842,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 13,
+            "observed_error": 0.003173828125,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          },
+          {
+            "m": 7,
+            "errors": 1,
+            "observed_error": 0.000244140625,
+            "claimed_exp_minus_m_over_8": 0.4168620196785084,
+            "binomial_tail_at_one_quarter": 0.070556640625
+          },
+          {
+            "m": 19,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.09301448921066349,
+            "binomial_tail_at_one_quarter": 0.008903279303922318
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.06,
+        "T": 8,
+        "canonical_m": 19,
+        "trials": 4096,
+        "program0_logical_bit": 1,
+        "program1_logical_bit": 1,
+        "single_symbol_error": 0.07081363075657894,
+        "single_bit_error": 0.036543996710526314,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 12,
+            "observed_error": 0.0029296875,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          },
+          {
+            "m": 7,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.4168620196785084,
+            "binomial_tail_at_one_quarter": 0.070556640625
+          },
+          {
+            "m": 19,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.09301448921066349,
+            "binomial_tail_at_one_quarter": 0.008903279303922318
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.06,
+        "T": 12,
+        "canonical_m": 33,
+        "trials": 4096,
+        "program0_logical_bit": 1,
+        "program1_logical_bit": 1,
+        "single_symbol_error": 0.07077858664772728,
+        "single_bit_error": 0.03630297111742424,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 17,
+            "observed_error": 0.004150390625,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          },
+          {
+            "m": 7,
+            "errors": 1,
+            "observed_error": 0.000244140625,
+            "claimed_exp_minus_m_over_8": 0.4168620196785084,
+            "binomial_tail_at_one_quarter": 0.070556640625
+          },
+          {
+            "m": 33,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.016163494588165874,
+            "binomial_tail_at_one_quarter": 0.0009509599956171568
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.12,
+        "T": 1,
+        "canonical_m": 3,
+        "trials": 4096,
+        "program0_logical_bit": 1,
+        "program1_logical_bit": 0,
+        "single_symbol_error": 0.12483723958333333,
+        "single_bit_error": 0.062744140625,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 48,
+            "observed_error": 0.01171875,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.12,
+        "T": 2,
+        "canonical_m": 3,
+        "trials": 4096,
+        "program0_logical_bit": 1,
+        "program1_logical_bit": 1,
+        "single_symbol_error": 0.14599609375,
+        "single_bit_error": 0.07609049479166667,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 63,
+            "observed_error": 0.015380859375,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.12,
+        "T": 4,
+        "canonical_m": 9,
+        "trials": 4096,
+        "program0_logical_bit": 0,
+        "program1_logical_bit": 1,
+        "single_symbol_error": 0.16357421875,
+        "single_bit_error": 0.08360460069444445,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 94,
+            "observed_error": 0.02294921875,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          },
+          {
+            "m": 7,
+            "errors": 6,
+            "observed_error": 0.00146484375,
+            "claimed_exp_minus_m_over_8": 0.4168620196785084,
+            "binomial_tail_at_one_quarter": 0.070556640625
+          },
+          {
+            "m": 9,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.32465246735834974,
+            "binomial_tail_at_one_quarter": 0.04892730712890625
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.12,
+        "T": 6,
+        "canonical_m": 19,
+        "trials": 4096,
+        "program0_logical_bit": 0,
+        "program1_logical_bit": 0,
+        "single_symbol_error": 0.17860814144736842,
+        "single_bit_error": 0.09247789884868421,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 93,
+            "observed_error": 0.022705078125,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          },
+          {
+            "m": 7,
+            "errors": 8,
+            "observed_error": 0.001953125,
+            "claimed_exp_minus_m_over_8": 0.4168620196785084,
+            "binomial_tail_at_one_quarter": 0.070556640625
+          },
+          {
+            "m": 19,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.09301448921066349,
+            "binomial_tail_at_one_quarter": 0.008903279303922318
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.12,
+        "T": 8,
+        "canonical_m": 19,
+        "trials": 4096,
+        "program0_logical_bit": 1,
+        "program1_logical_bit": 1,
+        "single_symbol_error": 0.18484015213815788,
+        "single_bit_error": 0.09560032894736842,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 113,
+            "observed_error": 0.027587890625,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          },
+          {
+            "m": 7,
+            "errors": 8,
+            "observed_error": 0.001953125,
+            "claimed_exp_minus_m_over_8": 0.4168620196785084,
+            "binomial_tail_at_one_quarter": 0.070556640625
+          },
+          {
+            "m": 19,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.09301448921066349,
+            "binomial_tail_at_one_quarter": 0.008903279303922318
+          }
+        ]
+      },
+      {
+        "fault_probability": 0.12,
+        "T": 12,
+        "canonical_m": 33,
+        "trials": 4096,
+        "program0_logical_bit": 1,
+        "program1_logical_bit": 1,
+        "single_symbol_error": 0.18922378077651514,
+        "single_bit_error": 0.0993948271780303,
+        "majorities": [
+          {
+            "m": 3,
+            "errors": 94,
+            "observed_error": 0.02294921875,
+            "claimed_exp_minus_m_over_8": 0.6872892787909722,
+            "binomial_tail_at_one_quarter": 0.15625
+          },
+          {
+            "m": 7,
+            "errors": 8,
+            "observed_error": 0.001953125,
+            "claimed_exp_minus_m_over_8": 0.4168620196785084,
+            "binomial_tail_at_one_quarter": 0.070556640625
+          },
+          {
+            "m": 33,
+            "errors": 0,
+            "observed_error": 0.0,
+            "claimed_exp_minus_m_over_8": 0.016163494588165874,
+            "binomial_tail_at_one_quarter": 0.0009509599956171568
+          }
+        ]
+      }
+    ]
+  },
+  "runtime_seconds": 6.052718000020832,
+  "peak_working_set_bytes": 45457408,
+  "all_assertions_pass": true
+}

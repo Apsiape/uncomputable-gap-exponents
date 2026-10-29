@@ -1,8 +1,8 @@
-"""Third-engine check of the reversible mixed-radix counter (counter construction Lemma DC) and of the
-instability theorem instability: adding eps * (one-site digit-flip Laplacian among legal digits) sends the
+"""Third-engine check of the reversible mixed-radix counter (Lemma 6.1) and of the
+instability result (Theorem 17.1): adding eps * (one-site digit-flip Laplacian among legal digits) sends the
 cell gap from ~4^-k to >= (2/5) eps 2^-beta / l^2 (polylogarithmic in the cell size).
 
-Written from the rule list T1-T5 in counter construction 3.2; imports none of the input scripts.
+Written from the local moves in Section 6; imports none of the other checkers.
 Region-only engine (no exterior sites); weights accumulate, so the l=1, r=1 double edge is kept.
 """
 import itertools, json, sys, time, math
@@ -103,6 +103,7 @@ def main():
             out.append(rec)
             print(f"{str(rad):14s} eps={eps:<5} k={rec['k']:2d} gap={rec['gap']:.3e} cycle={rec['main_cycle']:.3e} "
                   f"instability_bound={rec['lower_instability']:.2e} pure={rec['pure']} pass={rec['pass']} ({time.time()-t0:.0f}s)", flush=True)
+    assert ok, "Finite check condition failed"
     print("PASS" if ok else "FAIL", flush=True)
     json.dump(dict(records=out, passed=ok), open(sys.argv[0].replace('.py', '.json'), 'w'), indent=1)
 

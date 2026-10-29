@@ -1,9 +1,9 @@
-"""Exhaustive floating-point check of the wall-layer selection/charging lemma (Theorem 1, Lemma CS).
+"""Exhaustive floating-point check of the wall-layer selection/charging lemma (Lemma 2.2).
 
 Symbols: 0=W (horizontal wall), 1=V (vertical wall), 2=A (above signal), 3=S (signal),
 4=D (below signal), 5=O (vacuum).
 Energy E = -g #W + r #(V above W) + #(violated bonds).
-Lemma CS claims, on every L1 x L2 torus (L1 columns, L2 rows):
+The charging estimate states, on every L1 x L2 torus (L1 columns, L2 rows):
     E(sigma) - (1 - 6r) V(sigma) >= L1 L2 f*,  f* = min(0, min_{p>=1} f(p)),  f(p) = -g/p + r/p^2,
 i.e. with violation weight w = 6r the minimum is still >= L1 L2 f*.
 Exhaustive floating-point min-plus transfer matrices over rows (width L1) and over columns (height L2).
@@ -120,6 +120,7 @@ def main():
     print("min slack (w=6r) =", min(sl), flush=True)
     eq = sum(1 for x in records if x['weight'] == 'w=6r' and abs(x['min'] - x['vf_pred']) < 1e-9)
     print("w=6r minimum equals violation-free prediction in", eq, "of", len(sl), "cases", flush=True)
+    assert ok, "Finite check condition failed"
     print("PASS" if ok else "FAIL", flush=True)
     json.dump(dict(r=r, records=records, passed=ok), open(sys.argv[0].replace('.py', '.json'), 'w'), indent=1)
 

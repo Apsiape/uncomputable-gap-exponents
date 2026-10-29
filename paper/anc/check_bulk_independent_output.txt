@@ -25,8 +25,8 @@ PASS independent full counter sectors; main-cycle equality refuted again
     "exact": true
   },
   "resources": {
-    "elapsed_seconds": 1.372707900009118,
-    "peak_working_set_bytes": 19922944,
+    "elapsed_seconds": 1.3971156999468803,
+    "peak_working_set_bytes": 19972096,
     "standard_library_only": true,
     "processes": 1,
     "numerical_threads_requested": 1

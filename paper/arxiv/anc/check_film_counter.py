@@ -1,4 +1,4 @@
-"""Second engine for the reversible mixed-radix counter (counter construction Lemma DC), written independently.
+"""Second engine for the reversible mixed-radix counter (Lemma 6.1), written independently.
 
 The counter region is a line of l sites. Local state per site: digit d in {0..D-1} and a symbol in
 {NL, NR, INC, RET}. The Hamiltonian is built LITERALLY from local terms on the full product space
@@ -175,6 +175,7 @@ if __name__ == '__main__':
         allok &= ok
         print(json.dumps(res), flush=True)
         out.append(res)
+    assert allok, "Finite check condition failed"
     print('ALL PASS' if allok else 'SOME FAIL', flush=True)
     with open(sys.argv[1] if len(sys.argv) > 1 else 'check_film_counter.json', 'w') as fh:
         json.dump(dict(cases=out, all_pass=allok), fh, indent=1)

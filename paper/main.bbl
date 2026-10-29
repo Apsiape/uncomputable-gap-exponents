@@ -26,6 +26,28 @@ Johannes Bausch, Toby~S. Cubitt, and James~D. Watson.
 \newblock {\em Nature Communications}, 12:452, 2021.
 \newblock \url{https://doi.org/10.1038/s41467-020-20504-6}.
 
+\bibitem{baxterMagnetization}
+Rodney~J. Baxter.
+\newblock Onsager and {Kaufman}'s calculation of the spontaneous magnetization
+  of the {Ising} model, 2011.
+\newblock Version 2. \url{https://arxiv.org/abs/1103.3347v2}.
+
+\bibitem{probabilisticChoice}
+Vasco Brattka, Guido Gherardi, and Rupert H{\"o}lzl.
+\newblock Probabilistic computability and choice, 2013.
+\newblock \url{https://arxiv.org/abs/1312.7305}.
+
+\bibitem{effectivePuiseux}
+Manfred Buchacher.
+\newblock The {Newton--Puiseux} algorithm and effective algebraic series, 2025.
+\newblock Version 5. \url{https://arxiv.org/abs/2209.00875v5}.
+
+\bibitem{isingChains}
+M.~Bundaru, N.~Angelescu, and G.~Nenciu.
+\newblock On the ground state of {Ising} chains with finite range interactions.
+\newblock {\em Physics Letters A}, 43:5--6, 1973.
+\newblock \url{https://doi.org/10.1016/0375-9601(73)90518-5}.
+
 \bibitem{gapInstability}
 Laura Castilla-Castellano and Angelo Lucia.
 \newblock Instability of the undecidable behavior of the spectral gap in {1D},
@@ -44,15 +66,49 @@ Toby~S. Cubitt, David P{\'e}rez-Garc{\'i}a, and Michael~M. Wolf.
 \newblock {\em Forum of Mathematics, Pi}, 10:e14, 2022.
 \newblock \url{https://doi.org/10.1017/fmp.2021.15}.
 
+\bibitem{pressureConvexity}
+R.~L. Dobrushin and B.~S. Nakhapetian.
+\newblock Strong convexity of the pressure for lattice systems of classical
+  statistical physics.
+\newblock {\em Teoreticheskaya i Matematicheskaya Fizika}, 20(2):223--234,
+  1974.
+\newblock \url{https://geodesic.mathdoc.fr/item/TMF_1974_20_2_a8/}.
+
+\bibitem{domanyKinzel}
+Eytan Domany and Wolfgang Kinzel.
+\newblock Equivalence of cellular automata to {Ising} models and directed
+  percolation.
+\newblock {\em Physical Review Letters}, 53:311--314, 1984.
+\newblock \url{https://doi.org/10.1103/PhysRevLett.53.311}.
+
 \bibitem{pricePrecision}
 Seth Douglas and Nidhal Mghirbi.
 \newblock The uncomputable price of precision, 2026.
 \newblock Zenodo. \url{https://doi.org/10.5281/zenodo.23736188}.
 
+\bibitem{ershovDensity}
+Rodney~G. Downey, Carl~G. {Jockusch, Jr.}, Timothy~H. McNicholl, and Paul~E.
+  Schupp.
+\newblock Asymptotic density and the {Ershov} hierarchy, 2014.
+\newblock Version 2. \url{https://arxiv.org/abs/1309.0137v2}.
+
 \bibitem{density}
 Rodney~G. Downey, Carl~G. {Jockusch, Jr.}, and Paul~E. Schupp.
 \newblock Asymptotic density and computably enumerable sets, 2013.
 \newblock \url{https://arxiv.org/abs/1307.0040}.
+
+\bibitem{certifiedStates}
+Hamza Fawzi, Omar Fawzi, and Samuel~O. Scalet.
+\newblock Certified algorithms for equilibrium states of local quantum
+  hamiltonians, 2025.
+\newblock Version 3. \url{https://arxiv.org/abs/2311.18706v3}.
+
+\bibitem{contourTheory}
+Roberto Fern{\'a}ndez.
+\newblock Contour ensembles and the description of {Gibbsian} probability
+  distributions at low temperature, 1998.
+\newblock Corrected lecture notes.
+  \url{https://webspace.science.uu.nl/~ferna107/papers/cont.pdf}.
 
 \bibitem{fisherBarber}
 Michael~E. Fisher and Michael~N. Barber.
@@ -66,6 +122,38 @@ Michael~E. Fisher and Walter Selke.
 \newblock {\em Physical Review Letters}, 44:1502--1505, 1980.
 \newblock \url{https://doi.org/10.1103/PhysRevLett.44.1502}.
 
+\bibitem{gacsReif}
+P{\'e}ter G{\'a}cs and John Reif.
+\newblock A simple three-dimensional real-time reliable cellular array.
+\newblock {\em Journal of Computer and System Sciences}, 36(2):125--147, 1988.
+\newblock \url{https://doi.org/10.1016/0022-0000(88)90024-4}.
+
+\bibitem{invariantComputability}
+Stefano Galatolo, Mathieu Hoyrup, and Crist{\'o}bal Rojas.
+\newblock Dynamics and abstract computability: Computing invariant measures,
+  2011.
+\newblock Author manuscript.
+  \url{https://members.loria.fr/MHoyrup/computinvmeas.pdf}.
+
+\bibitem{effectiveStateSets}
+L{\'e}o Gayral, Mathieu Sablik, and Siamak Taati.
+\newblock Characterisation of the set of ground states of uniformly chaotic
+  finite-range lattice models.
+\newblock {\em Nonlinearity}, 38:075011, 2025.
+\newblock \url{https://doi.org/10.1088/1361-6544/addbb8}.
+
+\bibitem{goldLimit}
+E.~Mark Gold.
+\newblock Limiting recursion.
+\newblock {\em The Journal of Symbolic Logic}, 30(1):28--48, 1965.
+\newblock \url{https://doi.org/10.2307/2270580}.
+
+\bibitem{pcaEquilibrium}
+Sheldon Goldstein, R.~Kuik, Joel~L. Lebowitz, and Christian Maes.
+\newblock From {PCA}'s to equilibrium systems and back.
+\newblock {\em Communications in Mathematical Physics}, 125:71--79, 1989.
+\newblock \url{https://doi.org/10.1007/BF01217769}.
+
 \bibitem{gossetMozgunov}
 David Gosset and Evgeny Mozgunov.
 \newblock Local gap threshold for frustration-free spin systems, 2016.
@@ -78,10 +166,30 @@ Tosio Kato.
 \newblock Reprint of the second edition.
   \url{https://doi.org/10.1007/978-3-642-66282-9}.
 
+\bibitem{kellyLearning}
+Kevin~T. Kelly.
+\newblock Learning theory and descriptive set theory.
+\newblock {\em Journal of Logic and Computation}, 3(1):27--45, 1993.
+\newblock \url{https://doi.org/10.1093/logcom/3.1.27}.
+
+\bibitem{lemmLucia}
+Marius Lemm and Angelo Lucia.
+\newblock On the critical finite-size gap scaling for frustration-free
+  {Hamiltonians}.
+\newblock {\em Reviews in Mathematical Physics}, 37(7):2550015, 2025.
+\newblock \url{https://doi.org/10.1142/S0129055X25500151}. Version 2:
+  \url{https://arxiv.org/abs/2409.09685v2}.
+
 \bibitem{lemmMozgunov}
 Marius Lemm and Evgeny Mozgunov.
 \newblock Spectral gaps of frustration-free spin systems with boundary, 2019.
 \newblock \url{https://doi.org/10.1063/1.5089773}.
+
+\bibitem{noisyErgodicity}
+Ir{\`e}ne Marcovici, Mathieu Sablik, and Siamak Taati.
+\newblock Ergodicity of some classes of cellular automata subject to noise.
+\newblock {\em Electronic Journal of Probability}, 24(41):1--44, 2019.
+\newblock \url{https://doi.org/10.1214/19-EJP297}.
 
 \bibitem{masaokaSoejimaWatanabe}
 Rintaro Masaoka, Tomohiro Soejima, and Haruki Watanabe.
@@ -97,21 +205,66 @@ Tom Meyerovitch.
 \newblock {\em Inventiones Mathematicae}, 184:567--589, 2011.
 \newblock \url{https://doi.org/10.1007/s00222-010-0296-1}.
 
+\bibitem{stableQuasicrystals}
+Jacek Mi\k{e}kisz.
+\newblock Stable quasicrystalline ground states, 1998.
+\newblock Version 2. \url{https://arxiv.org/abs/cond-mat/9301017v2}.
+
+\bibitem{moritaChains}
+T.~Morita.
+\newblock Orderings of one-dimensional {Ising} systems with an arbitrary
+  interaction of finite range.
+\newblock {\em Journal of Physics A: Mathematical, Nuclear and General},
+  7:289--300, 1974.
+\newblock \url{https://doi.org/10.1088/0305-4470/7/2/014}.
+
 \bibitem{liebRobinson}
 Bruno Nachtergaele and Robert Sims.
 \newblock {Lieb--Robinson} bounds and the exponential clustering theorem.
 \newblock {\em Communications in Mathematical Physics}, 265:119--130, 2006.
 \newblock \url{https://doi.org/10.1007/s00220-006-1556-1}.
 
+\bibitem{randomDegrees}
+Andr{\'e} Nies, Frank Stephan, and Sebastiaan~A. Terwijn.
+\newblock Randomness, relativization and {Turing} degrees.
+\newblock {\em The Journal of Symbolic Logic}, 70(2):515--535, 2005.
+\newblock \url{https://www.math.ru.nl/~terwijn/publications/jslrevision.pdf}.
+
+\bibitem{matrixProductStates}
+David P{\'e}rez-Garc{\'i}a, Frank Verstraete, Michael~M. Wolf, and J.~Ignacio
+  Cirac.
+\newblock Matrix product state representations.
+\newblock {\em Quantum Information and Computation}, 7:401--430, 2007.
+\newblock \url{https://arxiv.org/abs/quant-ph/0608197v2}.
+
 \bibitem{chaitinTransition}
 James Purcell, Zhi Li, and Toby Cubitt.
 \newblock Chaitin phase transition, 2024.
 \newblock \url{https://arxiv.org/abs/2410.02600}.
 
+\bibitem{putnamTrial}
+Hilary Putnam.
+\newblock Trial and error predicates and the solution to a problem of
+  {Mostowski}.
+\newblock {\em The Journal of Symbolic Logic}, 30(1):49--57, 1965.
+\newblock \url{https://doi.org/10.2307/2270581}.
+
 \bibitem{algorithmicTransition}
 Christof Schmidhuber.
 \newblock {Chaitin}'s {Omega} and an algorithmic phase transition, 2021.
 \newblock Version 3. \url{https://arxiv.org/abs/1909.09231v3}.
+
+\bibitem{thermalTrajectories}
+Siamak Taati and Jacek Mi\k{e}kisz.
+\newblock Quasicrystalline {Gibbs} states in 4-dimensional lattice-gas models
+  with finite-range interactions, 2025.
+\newblock Version 1. \url{https://arxiv.org/abs/2512.24436v1}.
+
+\bibitem{toom}
+Andrei~L. Toom.
+\newblock Stable and attractive trajectories in multicomponent systems.
+\newblock In R.~L. Dobrushin and Ya.~G. Sinai, editors, {\em Multicomponent
+  Random Systems}, pages 549--575. Marcel Dekker, 1980.
 
 \bibitem{criticalBoundary}
 James~D. Watson and Johannes Bausch.
@@ -137,6 +290,12 @@ Xiangling Xu, Matthias Sch{\"o}tz, Jie Wang, Victor Magron, Igor Klep, Omar
 \newblock The bulk spectral gap is certifiable from above but uncomputable from
   below, 2026.
 \newblock Version 4, 15 October 2026. \url{https://arxiv.org/abs/2606.03836v4}.
+
+\bibitem{yangMagnetization}
+Chen~Ning Yang.
+\newblock The spontaneous magnetization of a two-dimensional {Ising} model.
+\newblock {\em Physical Review}, 85:808--816, 1952.
+\newblock \url{https://doi.org/10.1103/PhysRev.85.808}.
 
 \bibitem{zhengWeihrauch}
 Xizhong Zheng and Klaus Weihrauch.

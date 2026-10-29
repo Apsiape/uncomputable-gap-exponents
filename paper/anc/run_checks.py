@@ -9,13 +9,13 @@ import psutil
 HERE=Path(__file__).resolve().parent
 scripts=sys.argv[1:] or ['finite_size_runner.py','check_wall_layer.py','check_wall_layer_noO.py',
          'check_counter_perturbation.py','check_film_counter.py',
-         'check_film_classical_layer.py','check_nested_limits.py','check_critical_ruler.py','check_bulk_broadcast.py','check_bulk_independent.py']
+         'check_film_classical_layer.py','check_nested_limits.py','check_critical_ruler.py','check_bulk_broadcast.py','check_bulk_independent.py','registers/check_registers.py','registers/check_registers_independent.py','states/check_states.py','states/check_states_independent.py','restricted/check_restricted.py','ruler/check_ruler_stability.py','restricted/check_restricted_independent.py','inquiry/check_inquiry.py','inquiry/check_inquiry_independent.py','robust/check_robust_laws.py','robust/check_robust_laws_independent.py']
 previous=HERE/'all_checks_summary.json'
 records=json.loads(previous.read_text())['checks'] if sys.argv[1:] and previous.exists() else []
 for name in scripts:
     print('Running '+name,flush=True)
     start=time.monotonic(); peak=0
-    output=HERE/(Path(name).stem+'_output.txt')
+    output=HERE/Path(name).parent/(Path(name).stem+'_output.txt')
     with output.open('w',encoding='utf-8') as out:
         proc=subprocess.Popen([sys.executable,'-u',name],cwd=HERE,stdout=out,stderr=subprocess.STDOUT)
         monitor=psutil.Process(proc.pid)
@@ -35,9 +35,9 @@ for name in scripts:
     text=output.read_text(encoding='utf-8')
     if proc.returncode or 'FAIL' in text or 'Traceback' in text:
         raise RuntimeError(name+' failed; inspect recorded output')
-    records.append(dict(script=name,status='PASS',seconds=round(time.monotonic()-start,3),peak_bytes=peak))
+    records.append(dict(script=name,status='PASS',seconds=round(time.monotonic()-start,3),sampled_peak_rss_bytes=peak))
     print(name+' PASS',flush=True)
-summary=dict(status='PASS',single_threaded=True,memory_limit_bytes=1000000000,checks=records,
+summary=dict(status='PASS',single_threaded=True,memory_limit_bytes=1000000000,memory_method="sampled process-tree RSS; not an OS historical peak",checks=records,
              numerical_caveat='Floating-point eigenvalues are consistency checks, not interval proofs.')
 (HERE/'all_checks_summary.json').write_text(json.dumps(summary,indent=2)+'\n',encoding='utf-8')
 print('ALL FINITE CHECKS PASS',flush=True)

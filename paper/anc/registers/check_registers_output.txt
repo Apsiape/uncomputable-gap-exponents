@@ -1,0 +1,65 @@
+{
+  "shared_coordinate": {
+    "geometries": 190,
+    "source_row_overlaps": 114,
+    "broadcast_free_components": 570,
+    "recurrence_cells": 30856,
+    "unique_source_filling": true,
+    "disjoint_reader_supports": true
+  },
+  "all_short_source_words": 24,
+  "noncommensurate_attack": [
+    {
+      "L": 13,
+      "p": 6,
+      "word_bits": 1
+    },
+    {
+      "L": 14,
+      "p": 6,
+      "word_bits": 2
+    },
+    {
+      "L": 17,
+      "p": 7,
+      "word_bits": 1
+    },
+    {
+      "L": 20,
+      "p": 8,
+      "word_bits": 4
+    }
+  ],
+  "exact_ruler_midpoints_and_ties": 251,
+  "ruler_deficit": [
+    {
+      "width": 2,
+      "height": 2,
+      "configurations": 625,
+      "explicit_cases": 4
+    },
+    {
+      "width": 2,
+      "height": 3,
+      "configurations": 15625,
+      "explicit_cases": 0
+    },
+    {
+      "width": 3,
+      "height": 2,
+      "configurations": 15625,
+      "explicit_cases": 0
+    },
+    {
+      "width": 3,
+      "height": 3,
+      "configurations": 1953125,
+      "explicit_cases": 9
+    }
+  ],
+  "retained_old_guess_attack": "retained 1/8 differs from final 1/2",
+  "integer_classical_chain": "integer spacing lower bound; analytic proof in the manuscript",
+  "peak_working_set_bytes": 18665472,
+  "elapsed_seconds": 8.69309349998366,
+  "status": "PASS"
+}

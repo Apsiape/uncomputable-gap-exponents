@@ -1,0 +1,104 @@
+{
+  "all_clean_ruler_tori": [
+    {
+      "width": 2,
+      "height": 2,
+      "horizontal_rows": 5,
+      "clean_tori": 6,
+      "aligned_striped": 4,
+      "mixed_pitch_excluded": 0,
+      "pitches": {
+        "2": 4
+      }
+    },
+    {
+      "width": 3,
+      "height": 3,
+      "horizontal_rows": 9,
+      "clean_tori": 11,
+      "aligned_striped": 9,
+      "mixed_pitch_excluded": 0,
+      "pitches": {
+        "3": 9
+      }
+    },
+    {
+      "width": 4,
+      "height": 4,
+      "horizontal_rows": 17,
+      "clean_tori": 26,
+      "aligned_striped": 20,
+      "mixed_pitch_excluded": 0,
+      "pitches": {
+        "2": 4,
+        "4": 16
+      }
+    },
+    {
+      "width": 5,
+      "height": 5,
+      "horizontal_rows": 33,
+      "clean_tori": 27,
+      "aligned_striped": 25,
+      "mixed_pitch_excluded": 0,
+      "pitches": {
+        "5": 25
+      }
+    },
+    {
+      "width": 6,
+      "height": 6,
+      "horizontal_rows": 65,
+      "clean_tori": 81,
+      "aligned_striped": 49,
+      "mixed_pitch_excluded": 0,
+      "pitches": {
+        "2": 4,
+        "3": 9,
+        "6": 36
+      }
+    },
+    {
+      "width": 7,
+      "height": 7,
+      "horizontal_rows": 129,
+      "clean_tori": 51,
+      "aligned_striped": 49,
+      "mixed_pitch_excluded": 0,
+      "pitches": {
+        "7": 49
+      }
+    },
+    {
+      "width": 8,
+      "height": 8,
+      "horizontal_rows": 257,
+      "clean_tori": 290,
+      "aligned_striped": 84,
+      "mixed_pitch_excluded": 128,
+      "pitches": {
+        "2": 4,
+        "4": 16,
+        "8": 64
+      }
+    }
+  ],
+  "literal_broadcast_transfer": {
+    "candidate_B_C_pairs": 30288,
+    "source_geometries_and_words": 170,
+    "rejected_masked_wrong_words": 854,
+    "old_floor_gate_missing_source_cases": 24
+  },
+  "all_thickness_initial_seeds": 1222728,
+  "shared_geometry_literal_bonds": {
+    "fillings": 840,
+    "source_on_W": 120,
+    "source_on_F": 120,
+    "source_on_T": 120
+  },
+  "tensor_and_classical_sector_checks": 81,
+  "full_chain_subset_spectra": 11,
+  "peak_working_set_bytes": 18083840,
+  "elapsed_seconds": 0.7790391000453383,
+  "status": "PASS"
+}

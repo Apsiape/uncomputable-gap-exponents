@@ -1,0 +1,342 @@
+{
+  "status": "PASS",
+  "seconds": 6.876196800032631,
+  "peak_traced_python_bytes": 35113,
+  "resource_note": "sequential standard-library Python; no worker processes or numerical libraries",
+  "checks": {
+    "clone_identity": {
+      "cases": 16384,
+      "status": "PASS",
+      "rules": 16,
+      "scope": "all binary two-input rules and all width-3 length-3 histories"
+    },
+    "toom_slab": {
+      "status": "PASS",
+      "cases": 20,
+      "rows": [
+        {
+          "width": 1,
+          "steps": 1,
+          "errors": 1,
+          "avoided_marks": 1,
+          "ratio": "1"
+        },
+        {
+          "width": 1,
+          "steps": 2,
+          "errors": 1,
+          "avoided_marks": 2,
+          "ratio": "1/2"
+        },
+        {
+          "width": 1,
+          "steps": 4,
+          "errors": 1,
+          "avoided_marks": 4,
+          "ratio": "1/4"
+        },
+        {
+          "width": 1,
+          "steps": 8,
+          "errors": 1,
+          "avoided_marks": 8,
+          "ratio": "1/8"
+        },
+        {
+          "width": 1,
+          "steps": 32,
+          "errors": 1,
+          "avoided_marks": 32,
+          "ratio": "1/32"
+        },
+        {
+          "width": 2,
+          "steps": 1,
+          "errors": 4,
+          "avoided_marks": 4,
+          "ratio": "1"
+        },
+        {
+          "width": 2,
+          "steps": 2,
+          "errors": 4,
+          "avoided_marks": 8,
+          "ratio": "1/2"
+        },
+        {
+          "width": 2,
+          "steps": 4,
+          "errors": 4,
+          "avoided_marks": 16,
+          "ratio": "1/4"
+        },
+        {
+          "width": 2,
+          "steps": 8,
+          "errors": 4,
+          "avoided_marks": 32,
+          "ratio": "1/8"
+        },
+        {
+          "width": 2,
+          "steps": 32,
+          "errors": 4,
+          "avoided_marks": 128,
+          "ratio": "1/32"
+        },
+        {
+          "width": 3,
+          "steps": 1,
+          "errors": 9,
+          "avoided_marks": 9,
+          "ratio": "1"
+        },
+        {
+          "width": 3,
+          "steps": 2,
+          "errors": 9,
+          "avoided_marks": 18,
+          "ratio": "1/2"
+        },
+        {
+          "width": 3,
+          "steps": 4,
+          "errors": 9,
+          "avoided_marks": 36,
+          "ratio": "1/4"
+        },
+        {
+          "width": 3,
+          "steps": 8,
+          "errors": 9,
+          "avoided_marks": 72,
+          "ratio": "1/8"
+        },
+        {
+          "width": 3,
+          "steps": 32,
+          "errors": 9,
+          "avoided_marks": 288,
+          "ratio": "1/32"
+        },
+        {
+          "width": 5,
+          "steps": 1,
+          "errors": 25,
+          "avoided_marks": 25,
+          "ratio": "1"
+        },
+        {
+          "width": 5,
+          "steps": 2,
+          "errors": 25,
+          "avoided_marks": 50,
+          "ratio": "1/2"
+        },
+        {
+          "width": 5,
+          "steps": 4,
+          "errors": 25,
+          "avoided_marks": 100,
+          "ratio": "1/4"
+        },
+        {
+          "width": 5,
+          "steps": 8,
+          "errors": 25,
+          "avoided_marks": 200,
+          "ratio": "1/8"
+        },
+        {
+          "width": 5,
+          "steps": 32,
+          "errors": 25,
+          "avoided_marks": 800,
+          "ratio": "1/32"
+        }
+      ],
+      "scope": "fixed initial plane; not a claimed enclosed ruler-cell compiler"
+    },
+    "residual_preemption": {
+      "status": "PASS",
+      "cases": 5,
+      "rows": [
+        {
+          "epsilon": "1/4",
+          "minimizing_n": 6,
+          "critical_coupling": "-1/432",
+          "pitch": 1296,
+          "density_jump": "1/1296",
+          "tested_t": "17/83875"
+        },
+        {
+          "epsilon": "1/8",
+          "minimizing_n": 12,
+          "critical_coupling": "-1/3456",
+          "pitch": 20736,
+          "density_jump": "1/20736",
+          "tested_t": "14/1622489"
+        },
+        {
+          "epsilon": "1/16",
+          "minimizing_n": 24,
+          "critical_coupling": "-1/27648",
+          "pitch": 331776,
+          "density_jump": "1/331776",
+          "tested_t": "284/631893145"
+        },
+        {
+          "epsilon": "1/40",
+          "minimizing_n": 60,
+          "critical_coupling": "-1/432000",
+          "pitch": 12960000,
+          "density_jump": "1/12960000",
+          "tested_t": "1790/173060355181"
+        },
+        {
+          "epsilon": "1/80",
+          "minimizing_n": 120,
+          "critical_coupling": "-1/3456000",
+          "pitch": 207360000,
+          "density_jump": "1/207360000",
+          "tested_t": "7180/11503028461561"
+        }
+      ],
+      "scope": "exact rational algebra; analytic monotonicity proves the infinite tail"
+    },
+    "residual_directions": {
+      "status": "PASS",
+      "cases": 500,
+      "scope": "rotating signed-coordinate example; finiteness argument is analytic"
+    },
+    "branching_schedule": {
+      "status": "PASS",
+      "cases": 300000,
+      "rows": [
+        {
+          "test_limit": "1/7",
+          "samples": [
+            {
+              "k": 100,
+              "selected": 21,
+              "logarithmic_count_exponent": 0.21
+            },
+            {
+              "k": 1000,
+              "selected": 104,
+              "logarithmic_count_exponent": 0.104
+            },
+            {
+              "k": 10000,
+              "selected": 1561,
+              "logarithmic_count_exponent": 0.1561
+            },
+            {
+              "k": 100000,
+              "selected": 18286,
+              "logarithmic_count_exponent": 0.18286
+            }
+          ]
+        },
+        {
+          "test_limit": "3/7",
+          "samples": [
+            {
+              "k": 100,
+              "selected": 50,
+              "logarithmic_count_exponent": 0.5
+            },
+            {
+              "k": 1000,
+              "selected": 374,
+              "logarithmic_count_exponent": 0.374
+            },
+            {
+              "k": 10000,
+              "selected": 3901,
+              "logarithmic_count_exponent": 0.3901
+            },
+            {
+              "k": 100000,
+              "selected": 46858,
+              "logarithmic_count_exponent": 0.46858
+            }
+          ]
+        },
+        {
+          "test_limit": "6/7",
+          "samples": [
+            {
+              "k": 100,
+              "selected": 87,
+              "logarithmic_count_exponent": 0.87
+            },
+            {
+              "k": 1000,
+              "selected": 802,
+              "logarithmic_count_exponent": 0.802
+            },
+            {
+              "k": 10000,
+              "selected": 8117,
+              "logarithmic_count_exponent": 0.8117
+            },
+            {
+              "k": 100000,
+              "selected": 87908,
+              "logarithmic_count_exponent": 0.87908
+            }
+          ]
+        }
+      ],
+      "scope": "computable test limits only; no finite check proves noncomputability"
+    },
+    "scale_mesh": {
+      "status": "PASS",
+      "ordered_crossings": 78,
+      "selection_cases": 77,
+      "endpoint_samples": [
+        {
+          "k": 3,
+          "upper_endpoint_sample": 3.89277078908135,
+          "lower_endpoint_sample": 2.057724048499797
+        },
+        {
+          "k": 4,
+          "upper_endpoint_sample": 3.947258081574826,
+          "lower_endpoint_sample": 2.025203044711987
+        },
+        {
+          "k": 5,
+          "upper_endpoint_sample": 3.975269926975443,
+          "lower_endpoint_sample": 2.011706801422907
+        },
+        {
+          "k": 6,
+          "upper_endpoint_sample": 3.9883950908940298,
+          "lower_endpoint_sample": 2.005481409442017
+        },
+        {
+          "k": 7,
+          "upper_endpoint_sample": 3.9945410326842246,
+          "lower_endpoint_sample": 2.0025802671059902
+        },
+        {
+          "k": 8,
+          "upper_endpoint_sample": 3.9974247165833265,
+          "lower_endpoint_sample": 2.0012195324265254
+        },
+        {
+          "k": 9,
+          "upper_endpoint_sample": 3.9987815819986703,
+          "lower_endpoint_sample": 2.0005782967077352
+        }
+      ]
+    },
+    "blank_field": {
+      "status": "PASS",
+      "cases": 3276,
+      "scope": "universal density bound; endpoint configurations imported from primary paper"
+    }
+  }
+}

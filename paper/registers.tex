@@ -1,0 +1,313 @@
+\section{The third level in two dimensions by separate registers}
+\label{sec:registers}
+Spatial coordinates need not be reserved for different logical tasks.
+The construction here places the frame, ruler, computation, masks and
+broadcast on separate finite registers at the same sites of
+$(\Z/L\Z)^2$. Throughout this section $L=n!$, volume precedes coupling,
+and the gap is the next distinct energy above the entire ground space.
+The finite alphabet depends on the prescribed program and a fixed integer
+$\beta$, never on $L$ or $g$.
+
+\subsection{A shared geometry with ordinary nearest-neighbour rules}
+Use the frame of Section~\ref{sec:bulk-three}, now in one $xy$ plane.
+Its minimum is four; every other configuration costs at least five.
+This is precisely the periodic-to-open frame of
+\cite[Section~6.3, equation~(133), Lemma~55]{spectralFull}.
+Its complement is an open $(L-1)$-square. The four adjacent-interior
+flags are $X_0,X_1,Y_0,Y_1$. Put the unchanged five-symbol ruler of
+Section~\ref{sec:ruler} on an independent register, with its horizontal
+rules along $x$ and vertical rules along $y$. Write
+\[
+ f_g(p)=-g/p+r/p^2,\quad r=1/16,\quad
+ f_* =\min(0,\min_{q\geq1}f_g(q)),\quad
+ \mathcal P(g)=\{p\geq2:f_g(p)=f_*\}.
+\]
+For $0<g<11/480$, the minimizing pitches are at least six.
+There is one minimizing pitch except at
+$g_p=r(2p+1)/(p(p+1))$, where $p,p+1$ tie, and
+$p=2r/g+O(1)$. The planar estimate
+\eqref{eq:bulk-defect-bound} applies without summing over a third axis:
+\begin{equation}\label{eq:register-defect}
+ E_{\rm wall}-L^2f_*\geq
+ \sum_s p_s(f_g(p_s)-f_*)+\tfrac58 V_{\rm err}.
+\end{equation}
+The nonnegative contribution of $W$-free columns is retained in the
+underlying identity \eqref{eq:bulk-defect-identity}.
+In particular a defective ruler cannot gain an extensive negative
+energy by evading clean-stripe costs.
+
+A bit $v$, constant on $y$ bonds and equal to $[\text{ruler}=V]$
+off $W$, aligns the divider columns in every stripe. Require $v=1$
+on $W$ sites in the frame column. Thus a zero-penalty striped ruler
+has a common pitch, and the frame column is one divider column.
+Every uniform pitch dividing $L$ has such a filling. At a tie,
+mixed pitches fail alignment. A phase bit $I$ has unit equality
+penalties on both axes. The inert phase $I=0$ restricts the ruler
+to $A,D$ and fixes the auxiliary classical fields to dummy values;
+it does not remove any bare ruler energy. The active phase $I=1$
+enables the following rules. Frame and ruler fields remain independent.
+
+Let $F_y,T_y$ mark respectively the first and last non-$W$ rows in
+a stripe. Define the cell-first flag by the actual bond after a $V$
+column. All these flags have two-site defining truth tables.
+Use two independent copies of the thickness counter
+\eqref{eq:bulk-thickness}. In its own horizontal interval each has
+Boolean fields $b,c,f$, initialized by $b=f=0$ at $F_y$ and $c_0=1$
+at the interval's first column, with internal recurrences
+\[
+ c_{j+1}=b_jc_j,\qquad b'_j=b_j\mathbin{\mathrm{XOR}}c_j,
+ \qquad f'_j=f_j\mathbin{\mathrm{OR}}b_j.
+\]
+The local copy restarts after every $V$ and is dummy on $V,W$.
+The global copy restarts only at $X_0$, ignores interior dividers,
+and is dummy on $W$ and the frame column. Increment is checked only
+between non-$W$ rows, and carry only inside its specified interval.
+The frame row does not interrupt either counter.
+At stripe time $t$, $b_j$ is the $j$th binary bit of $t$ and
+$b_j\lor f_j=[2^j\leq t]$. At $T_y$ this selects
+\[
+ \ell(p)=\bitlength(p-2).
+\]
+Copy the top indicators into $P_{\rm cell},P_{\rm global}$ on
+\emph{every} $y$ bond, including $W$ and the frame row. Set the local
+mask to zero on $V$ and the global mask to zero on the frame column.
+The masks mark, respectively, the first $\ell$ sites after each
+divider and the first $\ell$ sites of the whole framed tape.
+Common pitch makes all stripe-top demands agree. Since
+$\ell(p)<p-1$ for $p\geq6$, every reader has an adjacent nonreader.
+
+Fix $A\leq_T0'$ containing $0,1,2$ and a total computable
+approximation $a(j,s)\to A(j)$. Run one initialized functional
+tableau, as in Section~\ref{sec:classical}, throughout the whole frame
+interior, using $x$ for tape and $y$ for time. Its work and persistent
+output tracks are separate; both edge-arrival fields are blank,
+and inactive fields are dummy. The machine fairly finishes stages
+$a(0,s),\ldots,a(s,s)$. Its output $o_t(j)$ settles after a finite
+time $t_j$. The ruler's $W$ rows and $V$ columns do not cut this
+tableau. The head moves at most one site per step, so the included
+times $0,\ldots,L-2$ fit in width $L-1$.
+
+Broadcast bits $B,C,D$ live on every site, including all frame and
+$W$ sites. Their ordinary bond and onsite predicates are
+\begin{align*}
+ B(x,y+1)&=B(x,y),&D(x,y)&=C(x-1,y),\\
+ C(x,y+1)&=D(x,y),&C(x,y)&=B(x,y)\quad\text{on }W.
+\end{align*}
+Starting at a wall row $y_0$, these imply
+$B(x,y)=b(x)$ and $C(x,y_0+t)=b(x-t)$. The next wall imposes
+$b(x-p)=b(x)$. Conversely every $p$-periodic word uniquely fills
+$C,D$ when $p\mid L$. This is the planar version of
+Lemma~\ref{lem:bulk-broadcast}; the apparent diagonal shift is two
+ordinary bonds.
+Impose the sole output source at $Y_1\wedge P_{\rm global}$:
+\begin{equation}\label{eq:register-source}
+ B=o_{L-2}(j),\qquad j<\ell(p),
+\end{equation}
+and impose $B=0$ wherever $P_{\rm cell}=0$.
+There is no $F_y$ condition on \eqref{eq:register-source}.
+The source may lie on a wall, stripe floor, stripe top or intervening
+row; the registers it tests are still present there.
+
+\begin{lemma}[Simultaneous planar completion]\label{lem:register-completion}
+For each minimum frame and aligned minimizing pitch dividing $L$,
+all active auxiliary penalties can vanish. Every such filling has
+the same repeated reader word $[o_{L-2}(j):j<\ell(p)]$.
+\end{lemma}
+\begin{proof}
+Fill the functional counters, copy their top masks through all rows,
+and fill the initialized tableau. Repeat its final prefix followed
+by zeros with period $p$, and use the preceding formulas for $C,D$.
+Every constraint vanishes. Conversely, counters and masks fix the
+source positions, the functional tableau fixes their values,
+periodicity copies them to every cell, and the zero mask fixes all
+remaining residues. The Robinson labels enter none of these tests.
+Every predicate reads one site or a single bond, with finite stored
+flags checked on their defining bonds. Thus this is a fixed finite
+onsite/nearest-neighbour rational interaction.
+\end{proof}
+
+The source condition is essential. For example, at $L=12,p=6$ with
+walls $y=0,6$, stripe floors are $1,7$. A final source row $y=11$
+would disappear if it also required $F_y$. An erroneous all-zero
+broadcast would then escape comparison with a nonzero final prefix.
+Condition~\eqref{eq:register-source} tests that prefix at its actual
+final row. Earlier machine guesses are not retained as extra readers.
+
+\subsection{The full spectrum, exponent and critical point}
+On each stripe top activate the guarded full counter of
+Lemma~\ref{lem:counter} on the $\ell(p)$ local-mask sites, with
+radix $2^{\beta B}$. Its first guard uses the cell-first flag; its
+last guard uses the actual bond to the next nonreader. Freeze all
+exterior dynamic fields at unit cost. Every controlled edge
+Laplacian remains nonnegative even in inconsistent classical blocks.
+Add a qubit at each site, penalized by $|1\rangle\langle1|$ when
+active. On inert $y$ bonds use
+$(|01\rangle-|10\rangle)(\langle01|-\langle10|)$.
+This completes rational affine coefficient matrices.
+
+\begin{lemma}[Planar full-gap identity]\label{lem:register-gap}
+For each fixed $0<g<11/480$, eventually along $L=n!$,
+\begin{equation}\label{eq:register-gap}
+ \Delta(L,g)=\min_{p\in\mathcal P(g)}d_p,\quad
+ d_p=\Delta^+K[2^{\beta A(j)}:j<\ell(p)].
+\end{equation}
+For $g\leq0$ the inner gap limit is zero.
+\end{lemma}
+\begin{proof}
+The direct-sum decomposition by classical labels is
+$H=\bigoplus_\sigma(E_{\rm cl}(\sigma)\ind+K_\sigma)$ with
+$K_\sigma\geq0$. Completion attains the common lower bound
+$E_*=4+L^2f_*$. A nonminimum frame costs at least one. A ruler
+violation costs at least $5/8$ by \eqref{eq:register-defect}.
+A clean wrong pitch costs at least $L\delta(g)$, with the same
+positive $\delta(g)$ as in Section~\ref{sec:bulk-three}; a $W$-free
+or wholly inert ruler costs $L^2|f_*|$. These exceed $5/8$ eventually.
+Every wrong auxiliary predicate or nonconstant phase contributes an
+additional integer penalty. Independent bare-layer lower bounds
+prevent trading these costs against a lower ruler or frame energy.
+
+In a minimizing active block there are $(L/p)^2$ identical disjoint
+counters and unit-gap exterior factors. Tensor sums with nonempty
+kernels have first positive gap equal to the least factor gap,
+regardless of zero-mode multiplicities. For
+$L-2\geq\max_{j<\ell(p)}t_j$ the reader word is settled. Put
+$k_p=\beta|A\cap[0,\ell(p))|$. The full-sector bounds are
+\begin{equation}\label{eq:register-bracket}
+ \frac{4^{-k_p}}{64\ell(p)^2}\leq d_p
+ \leq4\pi^2 4^{-k_p}\leq\frac{\pi^2}{16}<\frac58,
+ \qquad d_p\leq\frac{\pi^2}{\ell(p)^2}.
+\end{equation}
+Here $k_p\geq3$. All other classical blocks start above this gap.
+At a tie, both pitches eventually divide $n!$; alignment leaves
+their two uniform blocks and their least positive gap is the minimum
+in \eqref{eq:register-gap}. We use the full counter bound, including
+free paths and all head sectors, without equating it to a main orbit.
+
+For $g\leq0$ an inert all-$A$ or all-$D$ ruler with dummy auxiliaries
+and a minimum frame attains energy four. Its qubit rings have a
+positive single-excitation eigenvalue
+$2-2\cos(2\pi/L)$, which bounds the full gap from above and tends
+to zero. This suffices without an exact formula for the ring's gap.
+\end{proof}
+
+Taking logarithms of \eqref{eq:register-bracket} gives
+\begin{equation}\label{eq:register-density}
+ \frac{\log(1/\Delta_\infty(g))}{\log(1/g)}
+ =2\beta\rho_{\ell(p)}(A)
+   +O\!\left(\frac{\log\ell(p)}{\ell(p)}\right).
+\end{equation}
+At a tie take the larger inverse logarithm; neighboring bitlengths
+differ by at most one, so an existing density gives the same limit.
+The explicit relativized mechanical-word construction in
+Section~\ref{sec:bulk-three} supplies a $0'$-computable set of any
+prescribed $0''$-computable density $\rho\in[0,1]$.
+For completeness, use $0'$-computable rationals $u_s\to\rho$,
+$N_0=1$, $N_{s+1}=(s+2)N_s$, and mechanical bits of slope $u_s$
+on $[N_s,N_{s+1})$. Endpoint densities differ from $u_s$ by at most
+$1/(s+2)+1/N_{s+1}$. Intermediate densities are, up to $1/n$,
+convex combinations of the previous endpoint density and $u_s$.
+Hence all densities converge. Set the first three bits to one and
+apply the ordinary limit lemma to obtain the finite ordinary program.
+For a finite $\alpha\geq0$ in $\mathsf D_3$, choose
+$\beta\geq\max(1,\alpha/2)$ and $\rho=\alpha/(2\beta)$.
+Equation~\eqref{eq:register-density} gives exponent $\alpha$.
+The nested-thirds diagonal in Corollary~\ref{cor:bulk-beyond-sides}
+also supplies planar exponents outside
+$\mathsf S_2\cup\mathsf P_2$.
+
+Even when $\alpha=0$, the last bound in
+\eqref{eq:register-bracket} closes the right gap. The energy density
+is zero on the left and $f_*=-g^2/(4r)+O(g^4)$ on the right, since
+the frame density $4/L^2$ vanishes. Thus zero is a nonanalytic
+critical point. The volume limit is eventually exact at fixed $g$;
+no effective bound on the finite prefix settling time is assumed.
+Each reader excitation can be placed independently at any of the
+$(L/p)^2$ cells. The product-ground-vector argument of
+\eqref{eq:bulk-local-weight} gives local spectral weight per area
+at least $1/p^2$ at fixed $g$. Receding the frame seams and taking a
+local subsequential limit gives the selected product representation
+with gap $d_p$, by the same local spectral-measure argument in
+Section~\ref{sec:bulk-three}. This does not classify all ground states
+or establish local nondegeneracy. These observations prove
+Theorem~\ref{thm:register-headline}.
+
+\subsection{Limit depth, finite data and restricted dimension bounds}
+\begin{proposition}[Finite-data and dependent-limit ceilings]
+\label{prop:register-ceilings}
+Algebraic local entries give uniformly computable next-distinct
+finite-volume gaps. A fixed finite tuple of computable local entries
+also gives computable gaps, nonuniformly in that tuple. An existing
+one-size exponent therefore lies in $\mathsf D_2$.
+With $k$ dependent existing limits of uniformly computable data,
+and existence of every required intermediate limit, the resulting
+real lies in $\mathsf D_{k+1}$.
+\end{proposition}
+\begin{proof}
+In the algebraic case root isolation decides multiplicities and
+selects the first two distinct roots. For a fixed computable real
+tuple $c=(c_1,\ldots,c_m)$, let
+$I_c=\{P\in\Q[X_1,\ldots,X_m]:P(c)=0\}$.
+This ideal has a finite rational Gr\"obner basis. Hard-code it as
+finite advice. It decides which polynomial expressions vanish;
+for a nonzero expression approximation eventually decides its sign.
+Real-closed-field root and multiplicity algorithms relative to this
+ordered coefficient field compute each finite spectrum. Complex
+entries are replaced by their real and imaginary parts. The advice
+need not be recoverable from programs for arbitrary coefficient names.
+This is a pointwise assertion, not a uniform degeneracy-decider.
+Each existing limit of a computable rational array has a Cauchy name
+in $0'$ by tail-Cauchy search. Relativize this step successively.
+Positivity allows the logarithms used here. Effective moduli can
+remove jumps; independent parallel limits do not add their depths.
+\end{proof}
+
+In particular, Proposition~\ref{prop:critical-ceiling} is sharp
+already in two dimensions for the present volume-then-coupling
+convention. Spatial dimension alone does not count these dependent
+limits. It still constrains an explicitly narrower architecture.
+Consider classical-forced designs whose nested boxes grow along
+pairwise disjoint axis blocks, whose innermost computation is
+deterministic on a finite transverse strip, and whose final quantum
+reader has a fixed finite state space independent of that strip's
+length. In this class attaining a proper $\mathsf D_{k+1}$ value
+with $k$ nested box-size limits requires $d\geq k+1$.
+Indeed, if the innermost block used only one axis, its finite
+computable strip-state transition would eventually cycle. An existing
+finite-reader limit must have a constant value on that cycle and is
+computable by evaluating any cycle state; no real-equality decision
+is needed. This removes one jump. To avoid that collapse the first
+block needs two axes, and each other disjoint block needs one.
+Growing readers, quantum strips and nondeterministic tableaux are
+outside this statement. The planar construction above shares axes
+and uses a coupling limit, so is outside that architecture.
+
+\begin{proposition}[Elementary one-dimensional benchmarks]
+For rational classical finite-range open chains, every existing
+size-gap exponent is zero. Rational quantum nearest-neighbour open
+chains realize size-gap exponents zero, one and two.
+\end{proposition}
+\begin{proof}
+For the classical chain choose a common denominator $D$ of the local
+energies. Distinct total energies differ by at least $1/D$. From a
+ground product configuration, follow single-site changes to an
+excited configuration. The first exit from the ground set changes
+only boundedly many bounded local terms, so the gap is at most a
+constant independent of length. Onsite projectors attain zero.
+For spin-$1/2$ chains put $n=|1\rangle\langle1|$ and
+$t=|01\rangle\langle10|+|10\rangle\langle01|$.
+The families $\sum_jn_j$, $\sum_jt_{j,j+1}$, and
+$2\sum_jn_j-\sum_jt_{j,j+1}$ have the stated exponents.
+The Jordan--Wigner transform gives one-particle levels respectively
+$1$, $2\cos(k\pi/(L+1))$, and
+$2-2\cos(k\pi/(L+1))$. The full fermionic spectrum consists of
+subset sums. For hopping alone fill all negative levels; each
+excitation costs a sum of absolute nonzero levels. Its gap is
+$2\sin(\pi/(2(L+1)))$ for even $L$ and
+$2\sin(\pi/(L+1))$ for odd $L\geq3$. Zero modes enlarge the
+kernel. The third family has positive levels and vacuum ground
+state, with gap $2-2\cos(\pi/(L+1))$. These are full spectra,
+without an imposed particle-number sector.
+\end{proof}
+These benchmarks do not determine the full quantum-chain attainment
+class. General one-limit ceilings and this restricted strip argument
+must not be interpreted as an unrestricted spatial lower bound.

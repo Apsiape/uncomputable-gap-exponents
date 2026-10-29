@@ -1474,7 +1474,7 @@
     "second_response_counterexample": true,
     "all_pass": true
   },
-  "seconds": 1.3806123733520508,
-  "peak_working_set_bytes": 52350976,
+  "seconds": 1.351654052734375,
+  "peak_working_set_bytes": 52670464,
   "all_pass": true
 }

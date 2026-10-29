@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "adaptive_ternary_histories": 729,
+  "random_prefix_fixed_target_bounds": 60,
+  "factor_two_log_checks": 1000,
+  "factorial_rounding_checks": 5000,
+  "exact_pitch_ties": 120,
+  "negative_controls_rejected": 3,
+  "peak_working_set_bytes": null,
+  "seconds": 0.4216311000054702,
+  "scope": "Finite consistency and rejection tests; no test proves the reach theorem or a noncomputable settling bound."
+}

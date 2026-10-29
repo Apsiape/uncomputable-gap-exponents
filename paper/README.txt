@@ -1,14 +1,20 @@
 Uncomputable critical exponents
 Seth Douglas and Nidhal Mghirbi
-Version 2.0.0, October 2026. A preprint; it has not been peer reviewed.
+Version 2.1.0, October 2026. A preprint; it has not been peer reviewed.
+The PDF, abstract/metadata and arXiv package correspond to the same source
+snapshot. The ancillary sources in paper/anc and paper/arxiv/anc are identical.
+The inquiry checks exercise adaptive outcome coupling, logarithmic bounds,
+permitted-size rounding and ruler identities. Platform-specific memory probes
+are optional; the sequential runner samples process-tree RSS. None of these
+finite checks establishes an uncomputable limit.
 
-main.pdf is the manuscript. main.tex inputs the named section files.
-references.bib and main.bbl provide the bibliography.
-Build in an external directory: python build.py --output-dir BUILD_DIRECTORY
-The builder runs pdflatex, BibTeX and two further pdflatex passes, then rejects
+We construct translation-invariant nearest-neighbour quantum Hamiltonian families with rational affine coefficient matrices whose existing finite nonnegative critical gap exponents at coupling zero are exactly the nonnegative Delta^0_3 reals, already in two dimensions. Volume limits along factorial tori precede coupling, and gaps are above the entire ground space. Separate finite registers share an energetic ruler, a framed computation and a final-time broadcast to positive-density quantum readers. The inner gap is eventually exact at fixed positive coupling without a general computable settling bound. Three-dimensional broadcast and wetting films give independent routes; tamed rulers and nested limits retain their classifications. A fixed universal noisy rule, with a computable bottom boundary, program origin and infinite cloning, has exactly Delta^0_3 density and counting laws in [0,1] under prescribed time-then-window limits, robust on an open positive-rate kernel region. At computable kernels no effective inquiry converges with positive probability to a fixed such law outside Delta^0_2; the exceptional learnable kernels are null, meager but dense for external finite-cylinder inquiry. Unique classical states of computable specifications have computable local numbers, while growing readouts and state selection permit noncomputable asymptotic content. Restricted response certificates and an exact calibrated-ruler criterion delimit robustness claims. A computable randomized adaptive inquiry reaches a fixed real with positive probability only at Delta^0_2. The beyond-Delta^0_2 gap exponents have no computably bounded relative gap-settling scale, excluding a specified uniform scaling tail. All-size convergence, unique ground states, locally nondegenerate gap identification and robust intrinsic equilibrium exponents remain unestablished.
+
+main.pdf is the manuscript; main.tex inputs the named section files.
+references.bib, references-additions.bib and main.bbl give the bibliography.
+Build outside the release tree: python build.py --output-dir BUILD_DIRECTORY
+The builder runs pdflatex and BibTeX, settles cross-references, and rejects
 warnings, undefined references and overfull or underfull boxes.
-arxiv/ is a self-contained source package. anc/ contains all finite checks.
-The thermodynamic gap conventions are specified in the manuscript: factorial
-tori for both bulk rulers and factorial open cubes for the wetting ruler.
-The bulk broadcast theorem uses the gap above the entire ground space;
-it does not identify a locally nondegenerate or KMS-extremized gap.
+arxiv/ builds alone; anc/ contains sequential finite checks and their outputs.
+Factorial tori and the full-ground-space distinct-level gap are essential.
+The history/readout robustness claims have their explicitly restricted scope.

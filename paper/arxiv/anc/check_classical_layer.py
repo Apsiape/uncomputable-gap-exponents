@@ -26,11 +26,11 @@ def unpack(s):
 
 
 U = [unpack(s) for s in range(NS)]
-onsite = np.zeros(NS)
+onsite = np.zeros(NS, dtype=np.int16)
 for s, u in enumerate(U):
     onsite[s] = -u['T'] - u['F'] - u['B'] + (1 if u['T'] and (u['b'] or u['f']) else 0) + (1 if u['F'] and not u['c'] else 0)
-vert = np.zeros((NS, NS))   # vert[x_above, y_below]
-horiz = np.zeros((NS, NS))  # horiz[x_left, y_right]
+vert = np.zeros((NS, NS), dtype=np.int16)   # vert[x_above, y_below]
+horiz = np.zeros((NS, NS), dtype=np.int16)  # horiz[x_left, y_right]
 for x, ux in enumerate(U):
     for y, uy in enumerate(U):
         v = 2 * uy['T'] + 2 * ux['B']
@@ -46,9 +46,9 @@ for x, ux in enumerate(U):
 
 def solve(L):
     """Profile DP over row-major order. Frontier = last L sites (oldest = site above, newest = site to the left)."""
-    INF = 1e18
+    INF = 8191  # all tested total energies have magnitude below 128
     shape = (NS,) * L
-    dp = np.full(NS ** L, INF)
+    dp = np.full(NS ** L, INF, dtype=np.int16)
     cnt = np.zeros(NS ** L)
     dp[0] = 0.0
     cnt[0] = 1.0
@@ -57,18 +57,18 @@ def solve(L):
         for col in range(L):
             d3 = dp.reshape(NS, NS ** (L - 2), NS) if L >= 2 else None
             c3 = cnt.reshape(NS, NS ** (L - 2), NS)
-            new = np.full((NS ** (L - 2), NS, NS), INF)
+            new = np.full((NS ** (L - 2), NS, NS), INF, dtype=np.int16)
             newc = np.zeros((NS ** (L - 2), NS, NS))
             for s in range(NS):
-                cost = onsite[s] + (vert[:, s][:, None, None] if r > 0 else 0.0) + (horiz[:, s][None, None, :] if col > 0 else 0.0)
+                cost = onsite[s] + (vert[:, s][:, None, None] if r > 0 else 0) + (horiz[:, s][None, None, :] if col > 0 else 0)
                 tot = d3 + cost  # shape (above, mid, left)
                 m = tot.min(axis=0)
                 new[:, :, s] = m
-                newc[:, :, s] = np.where(np.isclose(tot, m[None]), c3, 0.0).sum(axis=0)
+                newc[:, :, s] = np.where((tot == m[None]), c3, 0.0).sum(axis=0)
             dp = new.reshape(-1)
             cnt = newc.reshape(-1)
     emin = dp.min()
-    nmin = cnt[np.isclose(dp, emin)].sum()
+    nmin = cnt[(dp == emin)].sum()
     # second-lowest energy among all configurations (minimum over frontier states of values above emin, and
     # multiplicity check): energies are integers, so it is enough that the minimiser is unique.
     return emin, nmin
@@ -117,6 +117,7 @@ if __name__ == '__main__':
         out.append(res)
         print(json.dumps(res), flush=True)
     ok = all(r['min_energy'] == r['predicted_min'] == r['energy_of_predicted_configuration'] and r['number_of_minimisers'] == 1 for r in out)
+    assert ok, "Finite check condition failed"
     print('unique minimiser at energy -3L, equal to the predicted tableau:', 'PASS' if ok else 'FAIL', flush=True)
     with open('check_classical_layer.json', 'w') as fh:
         json.dump(out, fh, indent=1)

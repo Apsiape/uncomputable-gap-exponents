@@ -2,66 +2,133 @@
   "status": "PASS",
   "single_threaded": true,
   "memory_limit_bytes": 1000000000,
+  "memory_method": "sampled process-tree RSS; not an OS historical peak",
   "checks": [
     {
       "script": "finite_size_runner.py",
       "status": "PASS",
-      "seconds": 172.773,
-      "peak_bytes": 986198016
+      "seconds": 78.794,
+      "sampled_peak_rss_bytes": 564301824
     },
     {
       "script": "check_wall_layer.py",
       "status": "PASS",
-      "seconds": 246.562,
-      "peak_bytes": 444170240
+      "seconds": 249.869,
+      "sampled_peak_rss_bytes": 444755968
     },
     {
       "script": "check_wall_layer_noO.py",
       "status": "PASS",
-      "seconds": 29.344,
-      "peak_bytes": 124194816
+      "seconds": 31.497,
+      "sampled_peak_rss_bytes": 124006400
     },
     {
       "script": "check_counter_perturbation.py",
       "status": "PASS",
-      "seconds": 8.343,
-      "peak_bytes": 210976768
+      "seconds": 8.213,
+      "sampled_peak_rss_bytes": 220495872
     },
     {
       "script": "check_film_counter.py",
       "status": "PASS",
-      "seconds": 1.961,
-      "peak_bytes": 60919808
+      "seconds": 1.933,
+      "sampled_peak_rss_bytes": 60743680
     },
     {
       "script": "check_film_classical_layer.py",
       "status": "PASS",
-      "seconds": 123.813,
-      "peak_bytes": 14581760
+      "seconds": 125.127,
+      "sampled_peak_rss_bytes": 14675968
     },
     {
       "script": "check_nested_limits.py",
       "status": "PASS",
-      "seconds": 1.735,
-      "peak_bytes": 43507712
+      "seconds": 1.717,
+      "sampled_peak_rss_bytes": 41373696
     },
     {
       "script": "check_critical_ruler.py",
       "status": "PASS",
-      "seconds": 16.758,
-      "peak_bytes": 113844224
+      "seconds": 16.394,
+      "sampled_peak_rss_bytes": 146329600
     },
     {
       "script": "check_bulk_broadcast.py",
       "status": "PASS",
-      "seconds": 16.723,
-      "peak_bytes": 20254720
+      "seconds": 16.789,
+      "sampled_peak_rss_bytes": 19353600
     },
     {
       "script": "check_bulk_independent.py",
       "status": "PASS",
-      "seconds": 1.733,
-      "peak_bytes": 19324928
+      "seconds": 1.719,
+      "sampled_peak_rss_bytes": 19906560
+    },
+    {
+      "script": "registers/check_registers.py",
+      "status": "PASS",
+      "seconds": 9.029,
+      "sampled_peak_rss_bytes": 18526208
+    },
+    {
+      "script": "registers/check_registers_independent.py",
+      "status": "PASS",
+      "seconds": 1.079,
+      "sampled_peak_rss_bytes": 17723392
+    },
+    {
+      "script": "states/check_states.py",
+      "status": "PASS",
+      "seconds": 6.015,
+      "sampled_peak_rss_bytes": 19324928
+    },
+    {
+      "script": "states/check_states_independent.py",
+      "status": "PASS",
+      "seconds": 8.37,
+      "sampled_peak_rss_bytes": 34603008
+    },
+    {
+      "script": "restricted/check_restricted.py",
+      "status": "PASS",
+      "seconds": 0.438,
+      "sampled_peak_rss_bytes": 17547264
+    },
+    {
+      "script": "ruler/check_ruler_stability.py",
+      "status": "PASS",
+      "seconds": 7.105,
+      "sampled_peak_rss_bytes": 15425536
+    },
+    {
+      "script": "restricted/check_restricted_independent.py",
+      "status": "PASS",
+      "seconds": 0.882,
+      "sampled_peak_rss_bytes": 20398080
+    },
+    {
+      "script": "inquiry/check_inquiry.py",
+      "status": "PASS",
+      "seconds": 0.663,
+      "sampled_peak_rss_bytes": 15110144
+    },
+    {
+      "script": "inquiry/check_inquiry_independent.py",
+      "status": "PASS",
+      "seconds": 0.226,
+      "sampled_peak_rss_bytes": 9728000
+    },
+    {
+      "script": "robust/check_robust_laws.py",
+      "status": "PASS",
+      "seconds": 0.876,
+      "sampled_peak_rss_bytes": 32739328
+    },
+    {
+      "script": "robust/check_robust_laws_independent.py",
+      "status": "PASS",
+      "seconds": 6.481,
+      "sampled_peak_rss_bytes": 42651648
     }
   ],
   "numerical_caveat": "Floating-point eigenvalues are consistency checks, not interval proofs."

@@ -1,0 +1,8 @@
+clone_identity: PASS
+toom_slab: PASS
+residual_preemption: PASS
+residual_directions: PASS
+branching_schedule: PASS
+scale_mesh: PASS
+blank_field: PASS
+ALL PASS; 6.876 seconds; peak traced allocations 35113 bytes

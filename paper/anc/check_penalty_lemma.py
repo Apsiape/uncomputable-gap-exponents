@@ -92,6 +92,7 @@ for family in ('path', 'cycle', 'tree', 'bounded', 'star'):
     worst[family] = dict(min_ratio=float(w[0]), at=w[1])
     print(family, json.dumps(worst[family]), flush=True)
 ok = all(v['min_ratio'] >= 1 - 1e-12 for v in worst.values())
+assert ok, "Finite check condition failed"
 print('the penalty localization lemma bound lambda0 >= 1/(8 D g^2) on all random instances:', 'PASS' if ok else 'FAIL', flush=True)
 with open('check_penalty_lemma.json', 'w') as f:
     json.dump(worst, f, indent=1)

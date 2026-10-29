@@ -183,7 +183,7 @@
    "lower": 0.00010850694444444444,
    "upper": 2.4674011002723395,
    "in_bracket": true,
-   "seconds": 0.18
+   "seconds": 0.16
   },
   {
    "radices": [
@@ -247,7 +247,7 @@
    "lower": 6.103515625e-05,
    "upper": 2.4674011002723395,
    "in_bracket": true,
-   "seconds": 0.14
+   "seconds": 0.15
   },
   {
    "radices": [
@@ -290,7 +290,7 @@
    "lower": 2.712673611111111e-05,
    "upper": 0.6168502750680849,
    "in_bracket": true,
-   "seconds": 0.08
+   "seconds": 0.09
   },
   {
    "radices": [
@@ -311,7 +311,7 @@
    "lower": 6.781684027777777e-06,
    "upper": 0.15421256876702122,
    "in_bracket": true,
-   "seconds": 0.09
+   "seconds": 0.1
   },
   {
    "radices": [

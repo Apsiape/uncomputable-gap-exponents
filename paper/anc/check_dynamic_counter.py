@@ -193,6 +193,7 @@ if __name__ == '__main__':
     ok = all(r['maxdeg_penalty_free'] <= 2 and r['maxdeg_one_head'] <= 2 and r['multi_head_all_penalized'] for r in out)
     ok = ok and all(abs(r['gap'] - r['pred_main_cycle_gap']) < 1e-9 or r['gap'] <= r['pred_main_cycle_gap'] + 1e-12 for r in out)
     ok = ok and all(r['gap'] >= r['rigorous_lower'] for r in out)
+    assert ok, "Finite check condition failed"
     print('one-head configs have degree<=2, multi-head configs all penalized, gap <= main-cycle gap, gap >= rigorous lower bound:', 'PASS' if ok else 'FAIL', flush=True)
     with open('check_dynamic_counter.json', 'w') as f:
         json.dump(out, f, indent=1)

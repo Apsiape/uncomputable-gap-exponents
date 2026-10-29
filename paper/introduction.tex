@@ -8,16 +8,15 @@ scaling becomes an exact spectral identity in a deliberately constructed
 model. The size of the local alphabet is fixed for each prescribed
 exponent and does not grow as $g$ approaches the transition.
 
-Critical gap exponents at this computable transition fill $\mathsf D_2$
-in the bulk on $\Z^2$ and $\mathsf D_3$ in the bulk on $\Z^3$,
-as well as at a surface-anchored film. The two-dimensional attainment
-has a computably tamed volume limit. In three dimensions an internally
-created frame supports an untamed classical computation; a final-time
-broadcast sends its settled word to quantum counters throughout the
-volume. The distinction is in how the finite counter labels are selected,
-not in whether the gap-carrying modes occupy the bulk. These are
-attainment statements in the gap convention below, not a dimension-only
-ceiling for every two-dimensional family.
+Critical gap exponents at this computable transition fill $\mathsf D_3$
+already in the bulk on $\Z^2$. Separate finite onsite registers let
+the ruler, framed computation and final-time broadcast share the same
+two spatial axes. The three-dimensional broadcast and surface-anchored
+film remain independent routes. A computably tamed planar ruler attains
+$\mathsf D_2$ and its ordered endpoint pairs; the untamed register
+construction attains the full two-limit ceiling. This is a distinction
+between selection mechanisms, not between bulk and boundary modes.
+No dimension-only bound follows from the number of logical registers.
 
 We use the gap above the \emph{entire} ground space, namely the difference
 between the two lowest distinct eigenvalues. A scalar finite matrix has
@@ -129,7 +128,53 @@ for every remaining finite parameter tuple, and only asserts a class
 when the relevant final endpoints are finite. Their surface selection remains distinct from the bulk broadcast
 of Theorem~\ref{thm:bulk-three}.
 
-The examples are finely tuned. For the earlier two-dimensional and
+\begin{theorem}[Planar register broadcast]\label{thm:register-headline}
+For every finite $\alpha\geq0$ in $\mathsf D_3$, a fixed
+translation-invariant nearest-neighbour rational affine family on
+$\Z^2$ has critical gap exponent $\alpha$ on square tori $L=n!$,
+with the volume limit taken first and the entire ground space removed.
+The limiting gap is zero for $g\leq0$, positive for $0<g<11/480$,
+and closes as $g\downarrow0$. Its energy density is zero on the left
+and $-g^2/(4r)+O(g^4)$ on the right, $r=1/16$.
+At fixed positive coupling, eventually at least $(L/p)^2$ independent
+reader excitations carry the gap, with local spectral weight per area
+at least $1/p^2$ and $p=2r/g+O(1)$. The inner gap is eventually
+exact, without a general computable settling bound. A selected
+infinite-volume phase has that gap above its full zero-energy subspace.
+Together with the two-limit ceiling, the existing finite nonnegative
+exponents in this convention are exactly $\mathsf D_3$ already in
+two dimensions.
+\end{theorem}
+Section~\ref{sec:registers} proves this theorem with explicit local
+domains, source predicates and full-sector comparisons. The theorem
+does not identify a locally nondegenerate or KMS-extremized gap,
+establish all-size convergence, or supply a unique ground state.
+Sections~\ref{sec:states} and \ref{sec:restricted} distinguish
+robust growing-readout information and state selection from intrinsic
+equilibrium exponents. Section~\ref{sec:inquiry} gives the fixed-target
+reach and hidden-scale obstructions.
+
+\begin{theorem}[Anchored robust scale laws]\label{thm:robust-headline}
+One fixed computable universal noisy rule on $\Z^3$, one open
+positive-rate kernel region, and fixed computable scale readouts
+realize exactly $\mathsf D_3\cap[0,1]$, separately as densities
+and counting exponents of eventual output sets. Each value is
+constant across the region for its chosen finite program.
+The construction has a computable bottom boundary, a distinguished
+program origin, infinite cloning in two directions, and prescribed
+time-then-window limits. Expectation and sample iterated limits agree
+almost surely. At computable kernels no effective inquiry converges
+with positive probability to a fixed such law outside $\mathsf D_2$;
+for external finite-cylinder inquiry the exceptional learnable kernels
+form a null, meager but dense subset of the region.
+\end{theorem}
+Section~\ref{subsec:robust-laws} proves the anchored range theorem,
+and Section~\ref{subsec:exceptional-kernels} proves the inquiry
+qualification. This robust counting law is distinct from an intrinsic
+equilibrium critical gap exponent. Removing the bottom boundary,
+program origin and infinite cloning is a separate open problem.
+
+The spectral ruler examples are finely tuned. For the earlier two-dimensional and
 wetting rulers, a specified arbitrarily small onsite perturbation
 changes the programmed gap exponent to zero
 (Section~\ref{sec:instability}). The ruler pitch has

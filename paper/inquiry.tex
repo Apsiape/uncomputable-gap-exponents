@@ -1,0 +1,169 @@
+\section{What an effective inquiry can learn}
+\label{sec:inquiry}
+An effective adaptive protocol has finitely encoded histories, a
+computable choice of its next finite experiment and rational output,
+and uniformly computable finite conditional outcome laws on valid
+positive-probability histories. Every successful stage finishes in
+finite time; no computable cost or convergence bound is assumed.
+Finite systems with algebraic Hamiltonians and measurements, and
+evolution for computable finite times, satisfy these hypotheses:
+matrix exponentiation is computable, although its entries need not
+remain algebraic. The controller may use independent fair coins.
+Noncomputable control parameters, oracle states and an infinite
+target-advice tape are outside this model. The conclusion is
+conditional on this effective experimental description.
+
+\begin{theorem}[Fixed-target randomized reach]\label{thm:reach}
+If such a protocol's rational outputs converge to a fixed real
+$\alpha$ with positive probability, then $\alpha\in\mathsf D_2$.
+Conversely every $\mathsf D_2$ real is the almost-sure limit of
+some such protocol. Consequently a fixed exponent outside
+$\mathsf D_2$ in Theorem~\ref{thm:register-headline} has zero
+convergence probability for every effective protocol in this class.
+\end{theorem}
+\begin{proof}
+Couple all outcomes to a single fair binary tape $X$. Recursively
+partition a unit interval into subintervals in the conditional
+probabilities prescribed after each history. Every finite-history
+endpoint is a computable real. Outside their countable null set,
+strict comparisons are decided after finitely many tape bits and
+probability approximations. Interval lengths reproduce all finite
+joint laws, including adaptive settings. Direct controller coins
+can be included as further steps. Thus outputs $q_k$ are partial
+$X$-computable functions defined at every successful stage outside
+that null set.
+
+On the measurable event $q_k\to\alpha$, the jump $X'$ computes a
+Cauchy name of $\alpha$ by deciding whether a proposed rational tail
+contains a deviation beyond a requested tolerance. Almost every
+tape is 2-random and satisfies $X'\leq_T X\oplus0'$.
+This generalized-lowness theorem is due to Sacks and Stillwell;
+see \cite[Corollary~3.12]{randomDegrees} and its attribution through
+Kautz's thesis. Intersecting with the success event preserves its
+positive measure. If $\alpha$ is irrational its rational lower cut
+is computable from its Cauchy name; if it is rational it is already
+computable.
+
+We use the following relativized cone argument. If a fixed set $A$
+is computable from $X\oplus Z$ on a positive-measure set of tapes,
+some fixed functional does so on a positive-measure subset. The
+Lebesgue density theorem supplies a finite cylinder on which this
+subset has relative measure greater than $1/2$. For each input,
+enumerate relative to $Z$ the halting cylinders yielding answer
+zero and those yielding answer one. Their measures are lower
+semicomputable and disjoint; only the correct answer reaches a
+certified measure greater than $1/2$ in the chosen cylinder. Waiting
+for it computes $A$ from $Z$. The cylinder and functional are finite
+nonuniform constants. This is the usual positive-measure cone
+mechanism; see also \cite{probabilisticChoice}. Apply it with
+$Z=0'$ and the cut of $\alpha$. Thus $\alpha\leq_T0'$.
+
+Conversely choose a computable rational approximation to a given
+$\mathsf D_2$ real. A protocol that prints it and ignores any dummy
+experiment succeeds on every run. Finally, a positive success
+probability for an exponent outside $\mathsf D_2$ would contradict
+the first conclusion.
+\end{proof}
+The deterministic converse is the classical limit-computability
+phenomenon of Gold and Putnam \cite{goldLimit,putnamTrial}.
+The randomized obstruction combines generalized lowness for almost
+every oracle with the relativized positive-measure cone theorem.
+Our use here is their fixed-target formulation for effective adaptive
+experiments and its application to the constructed gap exponents.
+This target-by-target existential statement is distinct from
+identification of an unknown system by one learner, as studied in
+formal learning theory \cite{kellyLearning}.
+
+The target is fixed independently of the outcome tape. A computable
+protocol can output successive binary prefixes of a random real,
+whose realized limit is almost surely outside $\mathsf D_2$; each
+fixed target then has probability zero. Likewise fixing an arbitrary
+noncomputable tape gives an oracle computation, not an ordinary
+deterministic algorithm. The converse above is existential and may
+ignore the data; it is not a common learner identifying unknown
+systems. Every nonnegative finite $\mathsf D_2$ target also has a
+planar material realization here, but no spectroscopy assumption is
+needed for that existential statement. Only the exponents
+\emph{outside} $\mathsf D_2$, not all of $\mathsf D_3$, have the
+stated zero-reach obstruction. Countably many effective protocols
+still give a null union of successes for any one such fixed target.
+
+\begin{theorem}[Hidden finite-size scale]\label{thm:hidden-scale}
+Suppose finite gaps $\Delta(L,g)$ are uniformly computable on
+permitted sizes and rational $0<g<g_0$. Suppose
+$D(g)=\lim_L\Delta(L,g)>0$ and the existing rational-coupling
+exponent $\alpha=\lim_{g\downarrow0}\log(1/D(g))/\log(1/g)$
+is finite. Assume permitted sizes have a computable cofinal
+rounding-up selector $s(n)\geq n$. Let $L_*(g)$ be the least
+permitted size such that every later permitted size satisfies
+\[
+ D(g)/2\leq\Delta(L,g)\leq2D(g).
+\]
+If $L_*(g)$ has a total computable eventual upper bound on rational
+couplings near zero, then $\alpha\in\mathsf D_2$.
+\end{theorem}
+\begin{proof}
+Hard-code rational $0<r<\min(g_0,1)$ inside the eventual domain
+and take $g_k=r2^{-k-1}$. Given a bound $B$, choose
+$L_k=s(\max(1,\lceil B(g_k)\rceil))$. The factor-two inequality
+gives normalized-logarithm error at most
+$\log2/\log(1/g_k)\to0$. Compute the finite normalized gap to
+rational error $2^{-k}$; promised positivity permits a terminating
+search for a positive lower enclosure before evaluating its logarithm.
+These computable rationals converge to $\alpha$, proving the claim.
+For factorial sides compute successive factorials until the requested
+threshold is reached. Locality is not used in this implication.
+\end{proof}
+For a beyond-$\mathsf D_2$ exponent the contrapositive is precise:
+for every total computable $B$ and rational $\eta>0$ there is a
+rational $0<g<\min(\eta,g_0)$ with $L_*(g)>B(g)$.
+More strongly, along any computable rational $g_k\to0$, every
+computable bound $b(k)$ has infinitely many violations; otherwise
+the same proof would compute a convergent rational approximation.
+This is absence of an eventual computable upper bound, not eventual
+domination at every coupling or an algorithm locating violations.
+The least relative-error tail threshold is also not automatically an
+optimal experimental size or a certified stopping rule.
+The construction's structural pitch is computable and proportional
+to $1/g$; that fact neither bounds the settling threshold nor
+identifies the pitch with a correlation length.
+
+\begin{corollary}[Incompatibility with a uniform single-length tail]
+\label{cor:uniform-scaling}
+The beyond-$\mathsf D_2$ realizations admit no factor-two
+thermodynamic tail bound valid at all permitted
+$L\geq Cg^{-N}$ for all small rational $g$, with finite constants
+$C,N$. The same holds with any computable raw threshold, including
+a fixed finite-parameter exponential threshold after enlarging its
+constants to rational or integer bounds.
+\end{corollary}
+\begin{proof}
+Round that raw threshold up by $s$. It is then a computable upper
+bound for the least \emph{permitted} $L_*$, contrary to
+Theorem~\ref{thm:hidden-scale}. For example a raw threshold 25
+rounds to factorial side 120, so the rounding must not be omitted.
+\end{proof}
+In particular consider the explicit ansatz
+\[
+ \Delta(L,g)=L^{-z}\Phi(L/\xi(g))(1+r(L,g)),\qquad
+ \frac{\Phi(x)}{\Phi_\infty x^z}\longrightarrow1,
+ \quad D(g)=\Phi_\infty\xi(g)^{-z}.
+\]
+To imply the excluded bound it needs uniform control of $r$ on
+$L/\xi(g)\geq X$ for all sufficiently small $g$. Choose both
+relative factors between $3/4$ and $5/4$ there. Their product is
+within $[1/2,2]$. If $\xi(g)\leq Ag^{-\nu}$ for finite constants,
+a larger integer power and rational coefficient give the required
+computable threshold; an exponential envelope works in the same way.
+A pointwise scaling ansatz without a uniform thermodynamic tail
+does not imply this statement. The finite-size scaling hypotheses of
+Fisher--Barber \cite{fisherBarber} are therefore not being disproved
+in their ordinary applications. The result excludes extending this
+specified uniform ansatz to these constructed gaps.
+
+Size-driven transitions \cite{sizeDriven} already exhibit enormous
+hidden scales in two-dimensional systems. Their constant-gap changes
+of ground-state character across a family differ from the relative
+gap-settling obstruction for one fixed family as coupling varies
+here. Neither finite checks of particular couplings nor that prior
+phenomenon replace the arithmetic proof of the present obstruction.

@@ -1,0 +1,447 @@
+\section{Restricted computability and an exact ruler criterion}
+\label{sec:restricted}
+The onsite instability in Section~\ref{sec:instability} concerns the
+particular programmed rulers, not every possible robust exponent.
+Several restricted positive results clarify what additional
+certificates would suffice. The response observable must be fixed
+before making any stability claim.
+
+For a concave ground-energy density $e$ at a transition $g_c$, put
+\[
+ s_{\rm RT}(t)=e(g_c)+e'_+(g_c)t-e(g_c+t),\qquad
+ \rho_{\rm RT}(t)=s'_{\rm RT}(t+),\quad t>0.
+\]
+After subtracting a vacuum bulk energy, another convention is
+$\rho_{\rm vac}(t)=-e'_+(g_c+t)$. They agree when $e'_+(g_c)=0$,
+but not at a jump: if $e(g_c+t)=-mt$, then
+$\rho_{\rm vac}=m$ has order zero while
+$s_{\rm RT}=\rho_{\rm RT}=0$ has no positive logarithmic order.
+Moving the critical point does not remove this distinction.
+For a convex thermal pressure use
+$\rho_{\rm RT}(t)=P'(g_c+t)-P'_+(g_c)$, so that the excess is
+relative to the right tangent. These are density and correlation
+claims when specified below, not substitutions for the spectral gap.
+
+\subsection{Classical chains and bounded thermal susceptibility}
+\begin{proposition}[Finite-range classical chains]\label{prop:chain-cycles}
+The zero-temperature energy density of a finite-alphabet
+translation-invariant classical chain with fixed finite range and
+affine coupling is the minimum of finitely many affine cycle means.
+Immediately to the right of every crossing its right-tangent
+deficit vanishes. Fixed-width classical strips have the same property.
+At finite temperature, bounded finite local energies give an
+analytic pressure at every finite coupling.
+\end{proposition}
+\begin{proof}
+For range $R$, form the de Bruijn graph of $V=q^R$ words. An edge
+appends one symbol and has its corresponding local energy. Removing
+loops from a finite walk leaves a simple path of at most $V-1$
+edges. If edge magnitudes are at most $W$ and $m$ is the least
+simple-cycle mean, a walk of $n$ edges has energy at least
+$nm-2W(V-1)$. Repetition of a minimizing cycle gives the reverse
+thermodynamic bound. There are finitely many simple cycles; affine
+local weights give affine means. A finite minimum is piecewise affine,
+which proves the tangent assertion. Blocking a fixed-width strip
+only changes the finite graph. At finite temperature the weighted
+de Bruijn matrix is primitive: some common power has every entry
+positive. Its Perron root is simple and positive, hence analytic
+locally in each finite coupling. Its logarithm gives the pressure.
+\end{proof}
+This familiar cycle mechanism does not exclude first-order crossings
+or every aperiodic minimizing configuration. The range-three chain
+paper of 1973 is by Bundaru, Angelescu and Nenciu \cite{isingChains};
+Morita's general finite-range ordering work is separate
+\cite{moritaChains}. The direct finite-graph proof supplies the
+arbitrary-range assertion here. Diverging strip width, hard infinite
+energies and zero-temperature transfer singularities are outside the
+finite-temperature assertion.
+
+\begin{proposition}[Explicit classical thermal curvature]
+\label{prop:thermal-curvature}
+Consider bounded finite-range classical interactions on $\Z^d$,
+alphabet size $q$, inverse temperature $\beta>0$, and field $-gN$
+with $N=\sum_xn(\sigma_x)$ for a nonconstant onsite charge $n$.
+On a compact field interval suppose one-site conditional energies
+have oscillation at most $B$, and two charge values differ by at
+least $\delta_n>0$. If supports have sup-norm diameter at most $R$,
+the pressure $P=\lim (\beta|\Lambda|)^{-1}\log Z_\Lambda$ is
+strongly convex with constant
+\begin{equation}\label{eq:thermal-curvature}
+ c_0=\beta(R+1)^{-d}q^{-2}e^{-2\beta B}\delta_n^2>0.
+\end{equation}
+If on a right interval it is twice differentiable and $P''\leq C$,
+then $c_0t\leq\rho_{\rm RT}(t)\leq Ct$ and its exponent is one.
+Without the upper bound, any existing finite positive-onset order
+lies in $[0,1]$.
+\end{proposition}
+\begin{proof}
+In an open box select one residue class modulo $R+1$. No interaction
+meets two selected sites. Given the complement, the selected spins
+are independent and every symbol has conditional probability at
+least $p_*=e^{-\beta B}/q$. The identity
+$\operatorname{Var}(n)=\frac12\sum_{a,b}p_ap_b(n_a-n_b)^2$
+gives conditional variance at least $p_*^2\delta_n^2$. Total
+variance therefore bounds $\operatorname{Var}(N)$ below by this
+number times the selected-site count. The finite pressure has
+$P_\Lambda''=\beta\operatorname{Var}(N)/|\Lambda|$.
+Subtract the corresponding quadratic and pass its convexity
+inequality to the thermodynamic limit. Selected density tends to
+$(R+1)^{-d}$, proving \eqref{eq:thermal-curvature} without
+interchanging second derivatives and limits.
+The two curvature bounds imply
+$c_0t\leq P'(g_c+t)-P'_+(g_c)\leq Ct$ by the mean value
+theorem and a right limit. Integration gives tangent excess between
+$c_0t^2/2$ and $Ct^2/2$. Dividing logarithms gives order one.
+With only the lower bound, division by $\log t<0$ gives order at
+most one. Right continuity of the bounded convex derivative gives
+$\rho_{\rm RT}(t)\to0$, so its finite order is nonnegative.
+\end{proof}
+
+Strong convexity and this conditional-variance/sparse-sublattice
+method are established by Dobrushin--Nakhapetian
+\cite{pressureConvexity}. Equation~\eqref{eq:thermal-curvature}
+is an explicit elementary finite-range specialization. If
+$0<c\leq c_0$ and $C_1\geq C$ are supplied effective bounds,
+\[
+ \left|\frac{\log\rho_{\rm RT}(t)}{\log t}-1\right|
+ \leq\frac{\max(|\log c|,|\log C_1|)}{|\log t|}
+\]
+is a computable dyadic modulus on a supplied right interval. It does
+not require evaluating an unknown critical point; evaluation in
+recentered coordinates would require a name for that point.
+A response $t^\alpha$, $0<\alpha<1$, shows why a divergent
+susceptibility can evade the exponent-one conclusion.
+
+A conditional upper-bound certificate consists of the identity
+$P''=\beta\sum_x\operatorname{Cov}(n_0,n_x)$ and the estimate
+$|\operatorname{Cov}(n_0,n_x)|\leq A e^{-m|x|_1}$ uniformly on
+the interval. Then
+\[
+ C=\beta A\left(\frac{1+e^{-m}}{1-e^{-m}}\right)^d.
+\]
+For a periodic pure phase average the response over a period cell,
+using the bound at every origin; mixing translated phases can add
+nondecaying covariances. Stable Peierls-phase mixing from contour
+theory \cite{contourTheory} requires its own finite-reference-phase
+and low-temperature hypotheses. It does not supply uniform
+differentiated critical-neighborhood constants for an arbitrary
+hierarchical ruler. The observable qualification also matters:
+$P(t)=\max(0,t+ct^2/2)$ has total-density jump one but
+right-tangent excess $ct$.
+
+\subsection{Algebraic transfer matrices and isolated effective fixed points}
+\begin{proposition}[A fixed-dimensional algebraic transfer class]
+\label{prop:algebraic-transfer}
+Suppose an exact injective matrix product state has fixed bond
+dimension, tensor entries with effective algebraic-function branch
+descriptions, and an algebraic critical coupling. If its simple
+positive leading transfer eigenvalue is $\lambda_0$, its normalized
+subleading radius satisfies $0<r(t)<1$, $r(t)\to1$, and the mode
+couples to the chosen finite observable, then
+$\xi(t)=-1/\log r(t)=t^{-\gamma+o(1)}$ for an effectively
+recoverable positive rational $\gamma$.
+\end{proposition}
+\begin{proof}
+Elimination makes all eigenvalue branches algebraic over the
+algebraic-number rational function field. Convergent Puiseux
+expansions and their effective equality tests
+\cite{effectivePuiseux} apply. Conjugation, modulus, division and
+finite maxima preserve algebraic branches. A nonzero branch
+difference has a fixed leading sign near zero, so the maximizing
+branch stabilizes. Thus $1-r(t)=ct^\gamma(1+o(1))$ with
+$c>0$ and positive rational $\gamma$, and the first nonzero term
+can be computed from the branch data. Finally $-\log r\sim1-r$.
+\end{proof}
+The overlap hypothesis prevents attributing a measured length to a
+dark transfer mode. For an explicit example take
+$A_0=I,A_1=tX,A_2=tY,A_3=tZ$ with Pauli matrices. The channel has
+eigenvalues $1+3t^2$ on $I$ and $1-t^2$ on each Pauli matrix, so
+$\xi\sim1/(4t^2)$. The physical observable
+$O=|0\rangle\langle1|+|1\rangle\langle0|$ has connected correlation
+\[
+ \langle O_0O_k\rangle_c=
+ \frac{4t^2}{(1+3t^2)^2}
+ \left(\frac{1-t^2}{1+3t^2}\right)^{k-1},\quad k\geq1.
+\]
+Indeed the inserted channel takes $I$ to $2tX$ and $X$ to $2tI$;
+the left fixed functional is $\operatorname{Tr}/2$.
+The tensors span $M_2$ for $t>0$. The two-site parent projection
+therefore gives a fixed-range parent with the injective uniqueness
+property of \cite[Section~4.1.2]{matrixProductStates}. Its entries
+are rational functions obtained by the finite Gram inverse. Since
+the projection is bounded, the singularity at zero is removable.
+This family has zero frustration-free energy throughout, not an
+energy singularity or an asserted affine spectral-gap law.
+Approximate MPS, growing bond dimension and unrestricted computable
+parameter dependence are outside the proposition.
+
+\begin{proposition}[An isolated RG certificate]\label{prop:rg-certificate}
+Let $R$ and $DR$ be computable near a specified rational compact
+finite-dimensional box $K$, and suppose $R(x)-x$ has exactly one
+zero $x_*$ in $K$. Then $x_*$ and $DR(x_*)$ are computable. A
+specified isolated real eigenvalue $\lambda>1$ and a physical
+identity $\nu=\log b/\log\lambda$, integer $b\geq2$, compute $\nu$.
+\end{proposition}
+\begin{proof}
+The norm $\|R(x)-x\|$ is computable. Refine rational boxes and
+discard a box only after certifying strict positivity throughout it.
+Never discard the zero. Outside any neighborhood of the unique zero,
+compactness gives a positive minimum, eventually certified by
+effective continuity. Dovetail subdivision until the unexcluded
+boxes have an enclosing box of the requested small diameter. This
+computes $x_*$, including a boundary zero, and then $DR(x_*)$.
+Equivalently apply \cite[Theorem~2.9]{invariantComputability}.
+Computable polynomial-root approximation gives the spectrum as a
+multiset, and the supplied isolator selects $\lambda$. Positivity
+of $\log\lambda$ permits the stated division.
+\end{proof}
+An ordinary $C^1$ promise does not supply an effective derivative.
+Neither stability alone nor an arbitrary finite RG truncation
+supplies this exact reduction, compact isolator or physical identity.
+Computable RG steps can have uncomputable flows
+\cite{renormalisation} without contradicting this isolated readout.
+
+\subsection{Why soft thermodynamic data do not suffice}
+\begin{proposition}[A volume-grid imitation]\label{prop:polyhedral-imitation}
+For each limit-computable $\zeta\in[1,2]$ there is a computable
+nondecreasing density $\rho$, zero on $(-\infty,0]$ and one on
+$[1,\infty)$, of logarithmic order $\zeta$ at zero. Put
+$s(u)=\int_0^u\rho(v)\,dv$ and
+$E(A,B;g)=-A s((g-B)/A)$, $A>0$.
+For $N=L^d$, uniformly computable rational polyhedral energies $E_L$
+with $N+1$ affine branches have volume-grid slopes and satisfy
+\[
+ E-A/N\leq E_L\leq E+(2A+|g-B|)/N.
+\]
+They are concave and positively homogeneous in $(A,B,g)$, and their
+limiting density order is the constant $\zeta$ on the open domain
+$A>0$, $B\in\mathbb R$.
+\end{proposition}
+\begin{proof}
+Take computable rationals $\zeta_j\to\zeta$ in $[1,2]$.
+At $t_n=2^{-n}$ prescribe
+$\rho(t_n)=2^{-Q_n}$, $Q_n=\sum_{j\leq n}\zeta_j$, with
+$Q_0=0$, and interpolate linearly. The ratios of successive values
+are in $[1/4,1/2]$, $\rho(t)\leq t$, and the interpolation has a
+known bounded Lipschitz constant. The tail integral below $2^{-n}$
+is at most $2^{-2n}/2$, so $s$ is computable without a modulus for
+$\zeta_j$. Ces\`aro convergence gives $Q_n/n\to\zeta$; bounded
+ratios extend the order from nodes to all $t$. Differentiation of
+the perspective gives the claimed density order at $g_c=B$.
+
+On $0\leq r\leq1$ let $c(r)=\max_{0\leq u\leq1}(ru-s(u))$.
+The compact computable optimization has a known Lipschitz bound,
+so $c$ is computable, $0\leq c\leq1$, and
+$|c(r)-c(r')|\leq|r-r'|$. Convex duality, or the tangent of slope
+$\rho(u)$ with the endpoint slopes on the linear extensions, gives
+$-s(u)=\min_{0\leq r\leq1}(c(r)-ur)$ for all real $u$.
+For $r_j=j/N$, approximate $c(r_j)$ within $1/(4N)$, round to the
+nearest $1/N$ grid and clamp to $[0,1]$, obtaining rational $a_j$
+with error at most $1/N$. Set
+\[
+ E_L=\min_{0\leq j\leq N}\{Aa_j+(B-g)j/N\}.
+\]
+Rounding lowers no branch by more than $A/N$. Moving a dual
+minimizer to the grid costs at most $(A+|g-B|)/N$, and rounding
+then costs at most another $A/N$. This proves both bounds.
+\end{proof}
+Thus computable finite energies, rational volume-grid slopes,
+concavity, homogeneity, a boundary-to-volume rate and constancy of
+an exponent on an open parameter domain do not force a computable
+exponent. The missing microscopic requirement is one common fixed
+finite local table whose configurations obey consistent restriction
+and gluing rules. The independently rounded branches do not supply
+that table. Thermal leading onsite responses with $\zeta>1$ would
+also contradict Proposition~\ref{prop:thermal-curvature}; adding an
+analytic response changes the leading observable.
+
+One simple sufficient transfer principle is still useful. If an
+exponent is constant on an open set and one member has a valid
+finite certificate for a computable value, equality transfers that
+value to every member. Uniform computation needs the certificate or
+an effective guaranteed search. Density of rational interaction
+tables does not give density of certified computable exponents.
+A more explicit certificate consists of positive computable $X(t)$,
+effective $c,C,t_0>0$ and $m(k)$ such that
+\[
+ ct^{\alpha+2^{-k}}\leq X(t)\leq Ct^{\alpha-2^{-k}}
+ \quad(0<t\leq\min(t_0,2^{-m(k)})).
+\]
+Then the normalized logarithm differs from $\alpha$ by at most
+$2^{-k}+\max(|\log c|,|\log C|)/|\log t|$. Choose a small dyadic
+$t$ effectively and evaluate its logarithm, finding a positive lower
+enclosure first. This computes $\alpha$. It assumes neither a
+computable derivative of every computable pressure nor that arbitrary
+continuous critical recentering is effective.
+
+\subsection{An exact calibrated ruler and its perturbations}
+\label{subsec:exact-ruler}
+Fix a finite-dimensional local-potential basis and subtract its
+vacuum bulk and linear wall contributions. Assume that the
+\emph{full} thermodynamic energy, for every perturbation in the
+neighborhood in question, is exactly
+\begin{equation}\label{eq:exact-ruler}
+ e_v(g)=\min\left(0,\inf_{p\in\mathcal P}
+ \left[-\frac gp+\frac{C(p)+v\cdot R(p)}{p^2}\right]\right).
+\end{equation}
+Here $C(p)>0$, $\log C(p)/\log p\to a\in(0,1)$,
+$\|R(p)\|_1=o(p)$, and the unbounded pitch set is logarithmically
+dense: the least available $p\geq x$ has $\log p/\log x\to1$.
+In a pattern-count interpretation the complete vector is
+$\alpha p^2+\beta p+R(p)$; its bulk term has been subtracted and
+the physical field is $g+v\cdot\beta$. Equation~\eqref{eq:exact-ruler}
+is an assumption about all competing configurations, not just clean
+cells. Establishing it for one finite local rule is a separate obligation.
+
+\begin{lemma}[Logarithmically dense ruler optimization]
+\label{lem:ruler-optimization}
+If $D(p)>0$ has logarithmic order $a<1$ on this pitch set, then
+\[
+ s(t)=\sup_p\{t/p-D(p)/p^2\}=t^{q+o(1)},\quad
+ q=1+\frac1{1-a},\qquad
+ s'(t+)=t^{1/(1-a)+o(1)}.
+\]
+\end{lemma}
+\begin{proof}
+For small $\delta>0$ and all sufficiently large $p$,
+$p^{a-\delta}\leq D(p)\leq p^{a+\delta}$. Each fixed finite pitch
+has negative profit for small $t$. Maximizing
+$t/p-p^{a-\delta-2}$ over all positive real $p$ bounds $s$ above
+by a constant times $t^{1+1/(1-a+\delta)}$.
+For a lower bound choose $x=(2/t)^{1/(1-a-\delta)}$ and the least
+available $p\geq x$. Then $D(p)/p\leq t/2$ and
+$\log p/\log x\to1$, so $s(t)\geq t/(2p)$ has order
+$1+1/(1-a-\delta)$. Squeeze logarithmic orders and let
+$\delta\downarrow0$. Convexity and $s(0)=0$ give
+$s(t)/t\leq s'(t+)\leq s(2t)/t$, proving the derivative order.
+The supremum is nonnegative because the branches tend to zero.
+\end{proof}
+
+\begin{theorem}[Residual-to-cost criterion]\label{thm:ruler-stability}
+Within \eqref{eq:exact-ruler}, a sufficiently small full ball of
+perturbations preserves the positive density-onset exponent
+$1/(1-a)$ at the actual calibrated transition if and only if
+\begin{equation}\label{eq:ruler-ratio}
+ \sup_{p\in\mathcal P}\frac{\|R(p)\|_1}{C(p)}<\infty.
+\end{equation}
+If the ratio is unbounded, every perturbation ball contains one
+fixed signed-coordinate perturbation giving a finite-pitch
+first-order onset. Its vacuum-relative order is zero and its
+right-tangent positive order is undefined.
+\end{theorem}
+\begin{proof}
+If the bound is $K$, choose $\|v\|_\infty<\eta$ with
+$\eta K<1/2$. Then $D_v=C+v\cdot R$ lies between $C/2$ and
+$3C/2$. It has order $a$, is positive and obeys $D_v/p\to0$.
+The vacuum wins for $g\leq0$, and every $g>0$ beats it at large
+enough pitch. Thus $g_c=0$, and
+Lemma~\ref{lem:ruler-optimization} gives the common exponent.
+The right derivative at zero is zero, so both response conventions
+agree. If $K=0$ the conclusion is immediate.
+
+If the ratio is unbounded, finite dimensionality supplies a fixed
+coordinate and sign $\sigma$ with $\sigma R_i/C$ unbounded above
+along a subsequence. Choose any sufficiently small fixed rational
+$\varepsilon>0$ and $v=-\varepsilon\sigma e_i$.
+Then $D_v$ is negative somewhere. The thresholds
+$h(p)=D_v(p)/p$ tend to zero, so their negative infimum $h_*$ is
+attained among finitely many pitches. Let $p_*$ be the smallest
+minimizer. For $g=h_*+t$ and $p\geq p_*$,
+\[
+ \frac{h(p)-h_*-t}{p}\geq-t/p\geq-t/p_*.
+\]
+For the finitely many $p<p_*$ the same comparison holds whenever
+$t\leq(h(p)-h_*)/(1-p/p_*)$. A positive common right interval
+therefore exists. Below $h_*$ the vacuum wins, while on that
+interval $e_v(h_*+t)=-t/p_*$. This is the actual shifted onset,
+with jump $1/p_*$. Subtracting its right tangent leaves zero.
+\end{proof}
+Pattern-discrepancy control relative to defect costs has an important
+antecedent in Mi\k{e}kisz's strict-boundary stability analysis
+\cite{stableQuasicrystals}. The recentered finite-pitch conclusion
+above additionally uses the exact envelope and its tail behavior.
+It is not a proof that a full robust lattice realization exists.
+
+An integer-consistent example makes the failure explicit. Let
+$p_n=n^4$, $C(p_n)=n$, and formal pattern counts
+\[
+ (n^8-n^2-n,n^2,n),\qquad R(p_n)=(-n^2-n,n^2,n),\quad n\geq2.
+\]
+They are nonnegative and sum to $p_n^2$, while
+$\|R\|_1/C=2n+2$. The unperturbed density order is $4/3$.
+Biasing the second pattern by $-\varepsilon$, with
+$\varepsilon=3/(2N)$ and integer $N\geq3$, gives
+$h(n)=n^{-3}-\varepsilon n^{-2}$ and the exact identity
+\[
+ h(n)-h(N)=\frac{(n-N)^2(n+2N)}{2N^3n^3}\geq0.
+\]
+Hence $g_c=-1/(2N^3)$, $p_*=N^4$ and the density jump is $N^{-4}$.
+The perturbation norm tends to zero as $N\to\infty$, but each fixed
+perturbation preempts the positive onset. These counts do not
+constitute a common finite local rule.
+
+\subsection{Static obstructions to shortcuts from noisy computation}
+The following exact checks separate the reliable trajectory theorem
+from an equilibrium energy estimate.
+First, on a trajectory cloned across a transverse $W\times W$
+torus, every full-symbol majority agrees with the base symbol.
+The stacked prediction is the base prediction, even for erroneous
+base histories. Therefore both update-error counts and any stipulated
+replicated additive marks are multiplied by exactly $W^2$, including
+differences between two histories. Transverse cloning alone does
+not improve their energy ratio.
+
+Second, start a majority history with an all-one plane. Change the
+entire next plane to zero and retain zero thereafter. This costs
+exactly $JW^2$ in update errors. A positive mark cost $r$ on ones
+charges the honest history $rW^2T$, so the competitor wins for
+$T>J/r$. There is no uniform estimate bounding all time-distributed
+marks by a constant times these faults. This organized deterministic
+plane error does not contradict stochastic low-noise reliability.
+
+Third, the blank/nonblank trajectory model of
+\cite[equation~(13), Sections~3.2 and~4]{thermalTrajectories} has,
+after a constant subtraction, update cost $JD$ with
+$J=\log(16(1-\varepsilon_0)/\varepsilon_0)>0$. It has an all-blank
+zero-error trajectory and fully nonblank zero-error trajectories
+from valid tilings. If $Q$ counts nonblank sites, adding blank and
+nonblank fields and subtracting the vacuum constant gives
+$H=JD+(\varepsilon-g)Q$. Since $D\geq0$ and
+$0\leq Q\leq|\Lambda|$, its energy density is bounded below by
+$\min(0,\varepsilon-g)$. The two zero-error endpoints attain the
+bound; restricting to open boxes costs only boundary terms. Thus
+\[
+ e(g)=\min(0,\varepsilon-g).
+\]
+This is a density jump of one, not the positive tangent onset sought
+above. At $g=0$, every translation-invariant ground-state measure
+has zero expected $JD+\varepsilon Q$ and hence is all blank.
+This measure assertion is not uniqueness of every configuration
+under finite modifications.
+
+Finally the desired arithmetic can be scheduled without thereby
+solving the static construction. For computable rationals $a_k\to
+a\in(0,1)$, set $s_0=0$,
+$d_k=[s_{k-1}<ka_k]$, $s_k=s_{k-1}+d_k$,
+$p_k=N^k$, $m_k=N^{s_k}$ for fixed $N\geq2$.
+For any eventual band $0<L<a_k<U<1$, induction gives
+$Lk-C\leq s_k\leq Uk+C$: a zero step certifies the lower bound,
+and a one step certifies the upper bound; the opposite bounds
+propagate. Hence $s_k/k\to a$ and $\log m_k/\log p_k\to a$.
+Choosing $N$ children or one child at stage $k$ gives this count.
+For a slow rational generator, simulate it for $k$ steps and retain
+the latest completed rational. Completed indices still tend to
+infinity and finite-string feedback comparisons have polynomial
+overhead in $k$. This supplies a counting schedule, not protected
+calibrated minimum costs, an interaction compiler or the full
+energy identity \eqref{eq:exact-ruler}.
+
+These results complement the explicit instability of the programmed
+rulers and the instability theorem of Castilla-Castellano--Lucia
+\cite{gapInstability}. Neither instability result proves a general
+equivalence between robustness and computability. The restricted
+certificates above identify sufficient mechanisms and the exact
+ruler theorem identifies its own necessary cost control; the general
+equilibrium question remains separate.
+
+\input{robustlaws}

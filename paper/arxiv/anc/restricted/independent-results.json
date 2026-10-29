@@ -1,0 +1,143 @@
+{
+  "open_path_bound": {
+    "status": "PASS",
+    "exact_open_path_bounds": 3000,
+    "scope": "25 ternary potentials, lengths 1..120; DP distinct from cycle enumeration"
+  },
+  "thermal_conditional_factorization": {
+    "status": "PASS",
+    "outside_contexts": 486,
+    "full_configurations": 39366,
+    "cases": [
+      {
+        "B": 3.88,
+        "curvature": 1.1460732027736362,
+        "finite_volume_bound": 0.0013609052711065271,
+        "minimum_conditional_probability": 0.15963641634623835,
+        "probability_lower_bound": 0.02204626038183709,
+        "max_factorization_error": 2.7755575615628914e-17
+      },
+      {
+        "B": 3.52,
+        "curvature": 1.2997172827960795,
+        "finite_volume_bound": 0.002252746455737845,
+        "minimum_conditional_probability": 0.1544135611643825,
+        "probability_lower_bound": 0.02836463124422137,
+        "max_factorization_error": 4.163336342344337e-17
+      }
+    ]
+  },
+  "jump_and_tangent": {
+    "status": "PASS",
+    "exact_identities": 15,
+    "finding": "BUILD jump exponent 0 is vacuum-relative; S17 right-tangent excess is identically zero"
+  },
+  "preemption_and_mesh": {
+    "status": "PASS",
+    "exact_preemption": [
+      {
+        "N": 3,
+        "epsilon": "1/2",
+        "gc": "-1/54",
+        "rho_jump": "1/81",
+        "tested_t": "1/108"
+      },
+      {
+        "N": 4,
+        "epsilon": "3/8",
+        "gc": "-1/128",
+        "rho_jump": "1/256",
+        "tested_t": "11/4725"
+      },
+      {
+        "N": 7,
+        "epsilon": "3/14",
+        "gc": "-1/686",
+        "rho_jump": "1/2401",
+        "tested_t": "7/47736"
+      },
+      {
+        "N": 13,
+        "epsilon": "3/26",
+        "gc": "-1/4394",
+        "rho_jump": "1/28561",
+        "tested_t": "247/27043200"
+      },
+      {
+        "N": 29,
+        "epsilon": "3/58",
+        "gc": "-1/48778",
+        "rho_jump": "1/707281",
+        "tested_t": "1247/4066608000"
+      }
+    ],
+    "tie_cases": 3,
+    "log_dense_mesh_samples": [
+      {
+        "k": 10,
+        "density_order_before": 2.420000000000008,
+        "density_order_after": 2.0000000000000067
+      },
+      {
+        "k": 30,
+        "density_order_before": 2.135555555555556,
+        "density_order_after": 2.0
+      },
+      {
+        "k": 100,
+        "density_order_before": 2.0402,
+        "density_order_after": 2.0
+      }
+    ]
+  },
+  "pauli_finite_ring": {
+    "status": "PASS",
+    "wavefunctions_enumerated": 2,
+    "amplitudes": 8192,
+    "correlations": [
+      {
+        "t": 0.25,
+        "separation": 1,
+        "correlation": 0.1425863575940217
+      },
+      {
+        "t": 0.25,
+        "separation": 2,
+        "correlation": 0.1316047195394071
+      },
+      {
+        "t": 0.25,
+        "separation": 3,
+        "correlation": 0.12801141661682947
+      },
+      {
+        "t": 0.5,
+        "separation": 1,
+        "correlation": 0.3313862278447211
+      },
+      {
+        "t": 0.5,
+        "separation": 2,
+        "correlation": 0.16262225040889217
+      },
+      {
+        "t": 0.5,
+        "separation": 3,
+        "correlation": 0.11776093995126673
+      }
+    ]
+  },
+  "polyhedral_dual": {
+    "status": "PASS",
+    "exact_parameter_cases": 72,
+    "profile": "rho(u)=u^2, Legendre dual certified by rational sqrt intervals"
+  },
+  "schedule_tracking": {
+    "status": "PASS",
+    "exact_tracking_steps": 45000,
+    "scope": "invariants tolerate target jumps; convergence itself proved analytically"
+  },
+  "peak_working_set_bytes": 20467712,
+  "seconds": 0.6746312999166548,
+  "script_sha256": "153487e8519c0c978f43ec21d5537f0f64b72a6b5a9bab1fd56aaaa8093f4170"
+}

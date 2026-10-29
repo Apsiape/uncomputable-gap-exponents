@@ -1,0 +1,28 @@
+{
+  "adaptive_coupling": {
+    "leaves": 256,
+    "exact_total_probability": "1",
+    "exact_interval_product_identities": true,
+    "midpoint_decodings": 256
+  },
+  "random_limit_quantifiers": {
+    "exact_tail_checks": 79,
+    "note": "Uniform random limit exists; fixed-target atoms vanish. No test of randomness degrees."
+  },
+  "hidden_scale_and_rounding": {
+    "logarithmic_squeeze_checks": 495,
+    "factorial_rounding_checks": 4999,
+    "threshold_25_rounds_to": 120
+  },
+  "ruler_ties": {
+    "exact_checks": 200,
+    "r": "1/16",
+    "note": "Checks geometric pitches, not the unknown gap-carrying choice."
+  },
+  "resources": {
+    "elapsed_seconds": 0.029724399908445776,
+    "peak_working_set_bytes": null,
+    "numerical_worker_threads": 1,
+    "memory_method": "Per-process peak unavailable; use the process-tree runner."
+  }
+}

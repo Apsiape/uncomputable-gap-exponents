@@ -1,0 +1,384 @@
+\section{Where uncomputable content can survive}
+\label{sec:states}
+The fragile ruler is not the only way a computable microscopic law
+can carry noncomputable asymptotic information. Two distinct homes
+are a noncomputable selection among several states, and a growing
+statistical readout whose expectation has a noneffective limit.
+This section makes that distinction precise. All alphabets, ranges,
+local tables, initial data, boundary rules and readouts called
+computable have uniform algorithms. Computability of a measure means
+uniform computability of its finite cylinder probabilities.
+We discuss finite-alphabet classical Gibbs measures and
+probabilistic cellular automata (PCA); no quantum Gibbs uniqueness
+theorem is implicit.
+
+\subsection{Effective state classes and local consensus}
+\begin{lemma}[Constant observables on an effective compact class]
+\label{lem:state-compact}
+Let $\mathcal M$ be the probability measures on a finite-alphabet
+configuration space $\Sigma^{\Z^d}$. A nonempty subset $S$ specified
+by uniformly computable continuous equalities is effectively closed
+in an effectively compact space. If a computable continuous local
+functional $L$ is constant on $S$, that common value is computable.
+In particular, a singleton $S$ is a computable measure.
+\end{lemma}
+\begin{proof}
+For increasing finite boxes $B_n$ use the metric
+$\sum_{n\geq0}2^{-n-1}\|\mu_{B_n}-\nu_{B_n}\|_{\rm TV}$.
+Given an accuracy, choose $N$ making the tail small. If $B_N$ has
+$M$ patterns, approximate its probability vector by a rational
+simplex mesh of denominator $D$ with $M/D$ below the remaining
+accuracy. Extend each finite pattern by a fixed exterior, and use
+finite mixtures of these extensions as a finite net. Consistency
+of marginals gives completeness and the same finite-box tests
+semidecide a finite open cover. Thus the space is effectively compact.
+The complement of a computable zero set is effectively open, as is
+the countable union for the specified equalities.
+
+For effectively open $V$, the inclusion $S\subset V$ is semidecidable:
+search for a finite subcover of $\mathcal M$ from $V$ and the
+enumerated complement of $S$. Dovetail rational intervals of width
+below the requested accuracy and test $S\subset\{L\in I\}$.
+If $L$ is constant, an interval containing its common value in its
+interior is eventually certified. For a singleton apply this to
+each cylinder probability, uniformly.
+\end{proof}
+
+This is the effective compactness mechanism behind isolated-zero
+results of Galatolo--Hoyrup--Rojas
+\cite[Theorem~2.9 and Corollary~3]{invariantComputability}.
+The simplex mesh must have denominator depending on the number of
+patterns; a fixed coarse denominator would not give the claimed net.
+
+\begin{theorem}[Unique states and consensus]\label{thm:unique-states}
+A computable finite-range PCA with a unique stationary probability
+measure has a computable stationary measure. A computable bounded
+finite-range classical interaction at computable finite temperature,
+with a unique full DLR Gibbs measure, has a computable Gibbs measure.
+More generally, any computable local expectation constant on a
+nonempty effective stationary or DLR class is computable. If all
+states unanimously place each specified computable local expectation
+strictly on the same side of a computable threshold, the resulting
+sequence of bits is computable.
+\end{theorem}
+\begin{proof}
+For a PCA with Markov operator $P$, stationarity is given by the
+countable cylinder equalities $\mu(f)=\mu(Pf)$. The finite-cone
+expression for $Pf$ is computable and continuous. A stationary
+measure exists by compactness of Ces\`aro averages; their stationarity
+residual is at most $2/T$ on a norm-one test.
+For Gibbs measures use all DLR identities
+$\mu(f)=\mu(\gamma_\Lambda f)$, including tests formed by products
+with exterior cylinders. Finite-range kernels are computable local
+functions: their finite Boltzmann sums have strictly positive
+partition functions. Compactness supplies Gibbs measures by taking
+finite-box limits. These identities characterize the full DLR class;
+one-site mean identities alone do not. Apply
+Lemma~\ref{lem:state-compact}. Additional effectively closed
+restrictions are allowed only when specified and nonemptiness is
+promised. For the threshold bits dovetail the two inclusion tests
+in the strict sublevel and superlevel sets. Compactness gives a
+positive gap for each test separately, without a uniform gap in the
+test index.
+\end{proof}
+
+The PCA uniqueness theorem is known: Marcovici--Sablik--Taati
+\cite[Proposition~2.2]{noisyErgodicity} proves precisely this result.
+The effective compactness and isolated-fixed-point methods of
+\cite{invariantComputability} give the general framework. The
+effective description of translation-invariant equilibrium-state
+sets is also developed by Gayral--Sablik--Taati \cite{effectiveStateSets}.
+Certified extremal local-expectation bounds of Fawzi--Fawzi--Scalet
+\cite{certifiedStates} give a broader antecedent for the consensus
+conclusion when the extrema coincide. The compact-cover argument
+here is a direct classical specialization. Uniqueness restricted to translation-invariant measures
+computes that restricted class; it must not be substituted for
+uniqueness among all Gibbs measures in the following boundary result.
+
+\begin{proposition}[What uniqueness makes effective]
+\label{prop:unique-moduli}
+Full Gibbs uniqueness gives a computable worst-boundary influence
+modulus for each local observable, and hence an effective spatial
+covariance bound for it. PCA uniqueness gives an effective uniform
+\emph{Ces\`aro} convergence modulus for each local observable.
+\end{proposition}
+\begin{proof}
+For a norm-one $f$ supported well inside $\Lambda_L$, compute the
+minimum $l_L$ and maximum $u_L$ of $\gamma_{\Lambda_L}f$ over its
+finite exterior collar. They enclose every infinite Gibbs expectation.
+These intervals are nested by conditioning in nested boxes. If their
+width failed to tend to zero, compact subsequential limits of
+extremizing finite-box measures would give two Gibbs states with
+different $f$ expectations. Search with rational enclosures until
+$u_L-l_L<\eta$. This terminates by uniqueness. For $h$ supported
+outside that box, conditioning on the exterior gives
+$|\operatorname{Cov}_\mu(f,h)|\leq(u_L-l_L)\|h\|_\infty$.
+
+For the PCA put $g_T(x)=T^{-1}\sum_{t<T}P^tf(x)$ and compute its
+finite-cone minimum and maximum. Their diameter tends to zero:
+otherwise subsequential limits of extremizing empirical measures
+are stationary and disagree on $f$. The unique stationary expectation
+lies in every such interval. Find $T$ with diameter below $\eta/2$.
+For any initial law split a length-$N$ average into $T$-blocks and a
+remainder. Every complete block differs from the common value by
+less than $\eta/2$, and the remainder costs at most $2T/N$ for
+signed norm-one $f$. Taking $N\geq4T/\eta$ gives the required
+uniform modulus for all subsequent averages.
+\end{proof}
+The conclusion for PCA does not assert ordinary unaveraged mixing.
+These algorithms can be extremely slow. An effective decay modulus
+for values will also not, by itself, compute a scaling exponent.
+
+\subsection{Noncomputable selection with computable finite preparations}
+\begin{proposition}[An Ising selector]\label{prop:state-selection}
+There is a computable sequence of randomized finite-volume boundary
+preparations for a computable low-temperature zero-field Ising
+interaction whose limiting Gibbs measure has a noncomputable local
+magnetization.
+\end{proposition}
+\begin{proof}
+Let $K$ be the halting set and put
+\[
+ r_s=\sum_{e\leq s}4^{-e-1}[e\text{ halts within }s\text{ steps}],
+ \qquad r=\sum_{e\in K}4^{-e-1}.
+\]
+The limit $r\in[0,1/3]$ is noncomputable: the tail after a digit
+is at most one third of that digit's weight, so a Cauchy name
+recovers the halting bits successively. Choose computable
+$\beta,J_x,J_y$ with
+$\sinh(2\beta J_x)\sinh(2\beta J_y)>1$.
+The plus and minus finite-box measures $\nu_L^\pm$ converge to
+Gibbs measures $\mu^\pm$. Ferromagnetic stochastic monotonicity
+gives the limits of increasing cylinder events, and finite
+inclusion-exclusion gives all cylinder limits. Their magnetizations
+are $\pm m$, where the Onsager--Yang formula is
+\[
+ m=\left[1-
+  \{\sinh(2\beta J_x)\sinh(2\beta J_y)\}^{-2}\right]^{1/8}>0.
+\]
+For the formula and its anisotropic form see
+\cite[equations~(2.1)--(2.2)]{baxterMagnetization} and
+\cite{yangMagnetization}. The positive number $m$ is computable.
+Choose plus boundary with the computable rational probability $r_L$
+and minus otherwise. The resulting finite preparation is computable
+and tends to $\mu_r=r\mu^++(1-r)\mu^-$, a DLR measure. Its local
+magnetization $(2r-1)m$ computes $r$, so is noncomputable.
+\end{proof}
+The randomization is an explicit part of each finite preparation.
+No deterministic computable infinite boundary, unique Gibbs state,
+or unique selection by the Hamiltonian is claimed. The same selector
+works throughout the zero-field anisotropic low-temperature family;
+this is not a full interaction ball allowing a longitudinal field.
+
+\subsection{Expectation limits and an independent-spin benchmark}
+\begin{proposition}[The expectation-limit ceiling]\label{prop:state-limits}
+If $\mu$ is computable and $O_s$ are uniformly computable finite
+cylinder observables, any existing finite limit $\lim_s\mu(O_s)$
+is in $\mathsf D_2$. A computable convergence modulus makes it
+computable. A unique-state product model already allows every
+limit-computable bit set as a deterministic almost-sure growing
+readout limit, when the program is in the decoder.
+\end{proposition}
+\begin{proof}
+Approximate $\mu(O_s)$ by rationals within $2^{-s}$. Their existing
+limit is computable in $0'$ by tail-Cauchy search, or computable
+without an oracle given a modulus. For the example take the
+radius-zero PCA that independently resets every spin to
+Bernoulli$(p)$, $0<p<1/2$ computable. After one step every input
+law becomes the same product law, so it is the unique stationary law.
+For $a(j,s)\to A(j)$ computable, take $2s+1$ distinct spins,
+form their majority, and XOR it with $a(j,s)$.
+The error probability is at most
+$\exp[-2(2s+1)(1/2-p)^2]$, a summable sequence. The first
+Borel--Cantelli lemma gives eventual agreement with the current
+guess for every fixed $j$, simultaneously for countably many $j$.
+Thus the readouts converge almost surely and in expectation to
+$A(j)$. The bias law itself contains no such logical computation;
+the decoder supplies it.
+\end{proof}
+
+The distinction between expectations and individual samples is
+necessary. Under the fair computable product law,
+$R_n(x)=\sum_{k=1}^n2^{-k}x_k$ has the deterministic uniform tail
+bound $|R-R_n|\leq2^{-n}$, yet its sampled limit is a uniform random
+real and hence noncomputable almost surely. Its expectation is
+$1/2$. This random sample value is not a deterministic
+noncomputable expectation. If bounded readouts converge almost
+surely to a fixed constant, dominated convergence does give the
+same expectation limit; an effective $L^1$ rate would compute it.
+
+\subsection{A fault-tolerant revising computation}
+\label{subsec:reliable-readout}
+The next construction puts the logical revisions in a fixed
+physical update rule. The reliability theorem is due to Toom and
+G\'acs--Reif \cite{toom,gacsReif}; we use its arbitrary-trajectory
+form as stated by Taati--Mi\k{e}kisz
+\cite[Theorem~3.1]{thermalTrajectories}. The growing-readout conclusion
+is an elementary corollary of that imported theorem.
+
+\begin{theorem}[Reliable growing readouts]\label{thm:reliable-readout}
+There is one fixed finite-alphabet three-dimensional stacked PCA
+rule such that, for every limit-computable set $A$, a computable
+cloned initialization and computable growing majority readouts
+$O_{j,s}$ satisfy
+\[
+ O_{j,s}\longrightarrow A(j)\quad\text{almost surely},\qquad
+ \mu(O_{j,s})\longrightarrow A(j)
+\]
+below a noise threshold. The limits persist on a relatively open
+region of positive fixed-neighborhood product-update kernels.
+At every computable parameter point the causal history law $\mu$
+is computable. A restricted constant-normalizer thermal family gives
+the same conclusion for a four-dimensional half-space DLR history
+with a fixed computable bottom row.
+\end{theorem}
+\begin{proof}
+Fix a universal one-dimensional CA simulating an ordinary finite
+program for $a(j,s)\to A(j)$. Its finite initial input is computable.
+Stage completion times $T_s$ and register locations $i_{j,s}$ are
+computable by finite simulation until the completion marker; every
+stage terminates. The same rule handles every program.
+An original radius-$r$ rule can be made one-sided: compose with a
+shift by $r$, then group $2r$ sites into a symbol. The blocked rule
+uses only its own block and the next block. At time $T$ the original
+register at $i$ is recovered at drifting coordinate $i-rT$ before
+blocking. All coordinates remain computable.
+
+Clone this one-dimensional initial tape along two redundant axes.
+At each step take the full-symbol north-east-center majority in
+each redundant plane (with a fixed choice for three distinct
+symbols), then apply the one-dimensional rule. This is the stacking
+rule of \cite[Section~3.1]{thermalTrajectories}. For any
+$\delta<1/2$, its reliability theorem provides $\varepsilon_0>0$
+such that joint-fault bounds $\varepsilon_0^{|F|}$ imply full-symbol
+error probability at most $\delta$ at every site and time, relative
+to the arbitrary noiseless trajectory. Thus revisions, rather than
+only monotone outputs, are covered by the import.
+
+For product local updates, use fresh independent coins at every
+site and time. Let $R$ bound the redundant-coordinate speed. At
+time $T_s$ read $m_s=2s+1$ copies of the register, separated by
+$2RT_s+1$ along one redundant axis. Their finite backward cones
+have disjoint update variables. Deterministic initial values do not
+create a stochastic dependence. A projected bit error entails a
+full-symbol error, so these independent indicators have means at
+most $\delta$. Their majority obeys
+\begin{equation}\label{eq:reliable-tail}
+ \Pr\{O_{j,s}\ne a(j,s)\}
+ \leq e^{-2m_s(1/2-\delta)^2}.
+\end{equation}
+For example the exponential-moment bound for centered Bernoulli
+variables is $\mathbb E e^{\lambda(Y-\mathbb EY)}\leq
+e^{\lambda^2/8}$; multiply over copies and optimize $\lambda$.
+This proves \eqref{eq:reliable-tail} without identical distributions.
+Summability and Borel--Cantelli give almost-sure eventual agreement
+with each current logical guess. Countable intersection covers every
+$j$. Expectation error is at most the probability in
+\eqref{eq:reliable-tail} plus $|a(j,s)-A(j)|$.
+Likewise $Q_s=\sum_{j\leq s}4^{-j-1}O_{j,s}$ converges almost
+surely and in expectation to $\sum_{j\in A}4^{-j-1}$, by truncating
+a fixed prefix and bounding the geometric tail.
+
+A finite spacetime cylinder has a finite ancestor graph down to the
+computable initial row. Summing products of computable kernel entries
+over this graph computes its probability. Thus the whole causal law
+is computable. Positivity and
+$K(G(r)\mid r)>1-\varepsilon_0$ are finitely many strict conditions,
+giving the claimed open kernel region. Conditioning first on the
+past of the latest fault layer and iterating backwards bounds each
+finite fault event by $\varepsilon_0^{|F|}$, even for probabilities
+depending on predecessor patterns.
+
+For the thermal version assign unit energy to a wrong update.
+With $q$ symbols the kernel is
+\[
+ K_\beta(a\mid r)=
+ \frac{e^{-\beta[a\ne G(r)]}}{1+(q-1)e^{-\beta}},\qquad
+ p_\beta=\frac{(q-1)e^{-\beta}}{1+(q-1)e^{-\beta}}.
+\]
+For $p_\beta<\varepsilon_0$ the same readout works.
+On a finite ancestor-closed directed graph the path probability is
+the product of its update factors. To condition a finite resampling
+region $\Lambda$, exhaust the half-space by such graphs containing
+$\Lambda$ and all its immediate children. In conditional probability
+ratios, precisely the factors whose support meets $\Lambda$ remain,
+including factors centered at future children outside $\Lambda$.
+The expression stabilizes once these children are present.
+Martingale convergence proves the conditional identity for the full
+exterior. Since the normalizer is independent of predecessors, this
+is exactly the DLR kernel of the unit-fault interaction. This proof
+uses the fixed bottom row and asserts no DLR uniqueness or stationarity.
+
+More generally, fix for each predecessor pattern a permutation
+$\pi_r$ with $\pi_r(0)=G(r)$, and give $\pi_r(k)$ the common
+energy $J_k$, $J_0=0$, $J_k>0$ for $k>0$. The row normalizer
+$Z=\sum_ke^{-\beta J_k}$ is still constant. The strict condition
+$\sum_{k>0}e^{-\beta J_k}/Z<\varepsilon_0$ gives an open region
+in this temperature/energy family. At computable points all laws
+above are computable. A general energy perturbation has
+predecessor-dependent normalizers, which cannot be discarded in DLR
+conditioning, so arbitrary Gibbs perturbations are outside the claim.
+\end{proof}
+
+The probability-one event may depend on the kernel. Computable laws
+are claimed at computable parameter points, whereas reliability is
+a pointwise statement throughout the region. The effective physical
+error bound controls agreement with the current guess, not the last
+logical revision. The construction is a thermal history with growing
+readouts; it supplies neither a noncomputable local number in a unique
+equilibrium phase nor an intrinsic equilibrium critical exponent.
+
+The history/Gibbs correspondence itself has the prior formulations of
+Domany--Kinzel and Goldstein--Kuik--Lebowitz--Maes
+\cite{domanyKinzel,pcaEquilibrium}, and the temperature-matched
+trajectory construction in \cite{thermalTrajectories}. The direct
+fixed-bottom conditional proof specifies the half-space used here.
+
+\subsection{Scaling envelopes and the precise two-homes conclusion}
+\begin{proposition}[Decay versus logarithmic scaling]\label{prop:scaling-envelope}
+Effective decay of numerical correlation data does not compute its
+logarithmic order. If positive computable data eventually satisfy
+$c r^{-\alpha}\leq C(r)\leq C_0r^{-\alpha}$ for fixed
+$0<c\leq C_0<\infty$, the exponent $\alpha$ is computable
+pointwise. Uniform computation requires the envelope witnesses.
+\end{proposition}
+\begin{proof}
+For computable rationals $\alpha_n\to\alpha\in[1,2]$, the data
+$C(2^n)=2^{-n\alpha_n}\leq2^{-n}$ have an effective value-decay
+bound but logarithmic order $\alpha$, possibly noncomputable.
+No positive-definiteness or physical correlation realization is
+asserted for this numerical example. Conversely the envelope gives
+\[
+ \alpha-\frac{\log_2C_0}{n}
+ \leq-\frac{\log_2C(2^n)}n
+ \leq\alpha-\frac{\log_2c}{n}.
+\]
+Hard-code an integer above the logarithmic constants and an eventual
+cutoff, choose $n$ effectively large, and evaluate the positive
+sample's logarithm. Fixed finite logarithmic powers add only an
+effective $O(\log n/n)$ error. Uniform extraction without witnesses
+fails: let $C_e(2^n)=2^{-n}$ until machine $e$ halts by time $n$,
+and $2^{-2n}$ thereafter. Every sequence is eventually a pure power,
+but a uniform exponent algorithm would decide halting.
+\end{proof}
+
+Here is the precise exclusion underlying the two homes. Let $S$ be
+one of the nonempty effective stationary or DLR classes above,
+possibly with explicitly supplied effectively closed restrictions,
+and let $\mu\in S$. If a computable local observable has a
+noncomputable expectation in $\mu$, its expectation is not constant
+on $S$, by Lemma~\ref{lem:state-compact}. If instead $\mu$ is
+computable, existing expectation limits of uniformly computable
+growing cylinder observables have the ceiling and modulus condition
+of Proposition~\ref{prop:state-limits}. This is a statement about
+specified state classes and statistical expectations, not an
+exhaustive classification of arbitrary sample-dependent observables.
+State selection and fault-tolerant revision therefore coexist with
+the local uniqueness obstruction.
+Uniform strict contraction of a PCA instead supplies geometric
+coupling decay; bounded finite-range one-dimensional finite-temperature
+Gibbs chains have a uniform finite-block Doeblin contraction. In
+these restricted neighborhoods the ordinary spatial correlation
+length cannot diverge at an interior parameter point. Neither
+argument decides the corresponding higher-dimensional equilibrium
+exponent question.

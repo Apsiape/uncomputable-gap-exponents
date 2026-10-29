@@ -341,8 +341,8 @@
     "reason": "different number of V columns in a common row"
   },
   "resources": {
-    "elapsed_seconds": 16.46818050008733,
-    "peak_working_set_bytes": 20594688,
+    "elapsed_seconds": 16.60448350000661,
+    "peak_working_set_bytes": 19877888,
     "stdlib_only": true,
     "processes": 1,
     "threads_requested": 1

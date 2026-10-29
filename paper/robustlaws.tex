@@ -1,0 +1,495 @@
+\subsection{Anchored robust density and counting laws}
+\label{subsec:robust-laws}
+The reliable computation of Section~\ref{subsec:reliable-readout}
+also supports a fixed scale readout with an exact arithmetic range.
+The anchors are essential: a computable bottom configuration, a
+distinguished program origin, infinite cloning in two directions,
+and a prescribed time-then-window limit. This is a theorem about
+anchored causal histories, not an intrinsic equilibrium gap exponent.
+
+Fix a finite alphabet $\Sigma$, a finite neighborhood and a
+positive product-update kernel $K$. Its simplex has one probability
+vector for each predecessor pattern. A law is robust on a nonempty
+relatively open set $U$ when, for each fixed initial configuration
+under consideration, it exists and is constant as $K$ varies in $U$.
+Different programs may have different robust laws. At computable
+kernel entries and a computable initial configuration, every finite
+spacetime cylinder probability is computable by its finite ancestor
+graph. All supports, site maps and cylinder functions below are
+uniformly computable from their integer indices: one algorithm returns
+each finite support and computes its cylinder function to any requested
+rational accuracy. This includes the canonical geometry and projection,
+which are fixed independently of the program and kernel. A fixed but
+noncomputable choice of sites would instead supply extra advice.
+
+At even $t\geq2$ choose the odd, computable schedule
+\[
+ m_t=2\lceil\log_2t\rceil^2+1.
+\]
+The ceiling here is computed by integer bit length. This rounded
+logarithmic-square schedule has the same summability and
+growth-versus-mixing properties used below.
+For a fixed bit projection $b$ and computable site map $z(n,t)$,
+let $O(n,t)$ be the majority of $b(X_t)$ at
+$z(n,t)+\ell(2t+1)e_1$, $0\leq\ell<m_t$.
+The redundant-coordinate speed of the stack is at most one, so these
+endpoints have disjoint depth-$t$ noise cones. Put
+\begin{align}
+ \rho_N(t)&=N^{-1}\sum_{n<N}O(n,t),&
+ c_N(t)&=\sum_{n<N}O(n,t),\notag\\
+ \Phi_{\rm dens}&=\lim_{N\to\infty}\lim_{t\to\infty}
+                 \mathbb E\rho_N(t),&
+ \Phi_{\rm exp}&=\lim_{N\to\infty}
+  \frac{\log(1+\lim_{t\to\infty}\mathbb E c_N(t))}{\log N}.
+ \label{eq:robust-observables}
+\end{align}
+Use $N\geq2$ in the exponent, and restrict to existing indicated
+limits. In particular $1+$count, rather than the count itself, is
+strictly positive. The sample analogues use the same prescribed
+order. They are not assertions that one trajectory executes the
+outer limit in time. A depth-$d$ readout means $d$ specified nested
+existing limits of expectations of uniformly computable finite
+cylinder functions, with any stated computable continuous operations.
+This broad decoder class can itself carry a target program: a constant
+cylinder function $N^{-1}\sum_{n<N}a(n,t)$ can ignore the world and
+have any $\mathsf D_3$ density as its two-limit value when the decoder
+varies with the target. The result below instead fixes one counting
+readout before choosing the finite program in the dynamics. It does
+not classify every computable decoder by a memory mechanism.
+
+\begin{proposition}[Robust depth ceiling]\label{prop:robust-depth}
+At computable data and kernel, a depth-$d$ value is in
+$\mathsf D_{d+1}$. If it is robust on a nonempty open kernel set,
+the same absolute ceiling holds throughout that set, including its
+noncomputable kernels.
+\end{proposition}
+\begin{proof}
+Replace each finite expectation by rational approximations with
+effective vanishing errors. One existing limit is computable in
+$0'$ by Cauchy-tail search; iterate relative to successive jumps.
+For \eqref{eq:robust-observables}, the nonnegative inner count has
+a $0'$-name, which computes the logarithm of one plus it. A further
+existing limit gives $0''$. Every nonempty relatively open region
+of the finite positive-rate simplex contains a computable kernel.
+A robust value equals its value there; this is witness transfer,
+without a uniform algorithm locating a witness in an arbitrary open
+set presentation.
+\end{proof}
+
+\begin{theorem}[Anchored robust third level]\label{thm:robust-third}
+One fixed computable universal three-dimensional stacked rule $G$,
+one nonempty open positive-rate kernel region $U$, and one fixed
+computable projection and site map in \eqref{eq:robust-observables}
+have the following property. Starting from the computable bottom
+configuration obtained by infinitely cloning a finite program at
+a distinguished origin, the ranges over programs of the existing
+density laws and of the existing counting-exponent laws are each
+exactly $\mathsf D_3\cap[0,1]$, for every $K\in U$.
+Each law is independent of $K$, and its expectation and sample
+iterated limits agree almost surely. All these limits retain the
+prescribed time-then-window order and the stated anchors.
+\end{theorem}
+\begin{proof}
+Fix a universal ordinary interpreter with a product tape alphabet:
+a protected output-bit track, scratch tracks and head/state fields.
+Every ordinary instruction copies the output track. Only a designated
+write instruction changes a selected output bit, including when a
+head passes through its cell. Initialize all output bits to zero,
+the finite program and head near the origin, and other scratch
+cells blank. A fixed radius-$r$ local CA simulation preserves this
+track invariant. At stage $s$ the interpreter computes a total
+binary approximation $a(0,s),\ldots,a(s,s)$ and writes register $n$
+at original coordinate $-2r(n+1)$. If $a(n,s)\to A(n)$, infinitely
+many completed stages visit $n$ and all sufficiently late writes
+repeat $A(n)$. Between writes the output stays fixed. Thus its
+logical bit $L_n(t)$ stabilizes, without an effective settling bound.
+
+For shift $(Sx)_i=x_{i+1}$, set $H=S^rF$ and group $2r$ cells.
+Then $H^t(x)_i=F^t(x)_{i+rt}$ and the blocked neighborhood is
+$\{0,1\}$. At even times the register is at blocked coordinate
+$-(n+1)-t/2$, internal offset zero. Hence
+\[
+ z(n,t)=(0,0,-(n+1)-t/2)
+\]
+and one fixed bit projection work for every program. Stack this
+blocked rule using full-symbol north-east-center majority. The
+Toom/G\'acs--Reif reliability theorem, in the arbitrary-trajectory
+form \cite[Theorem~3.1]{thermalTrajectories}, gives a positive
+rational $\varepsilon_0$ for site error target $1/4$. Define
+\[
+ U=\{K: K(a\mid r)>0\text{ for all }a,r,\quad
+              K(G(r)\mid r)>1-\varepsilon_0\text{ for all }r\}.
+\]
+The rule, region and readout are fixed before choosing the program.
+Product updates give the required finite joint-fault bounds by
+conditioning backwards over time layers. The cloned bottom is
+computable, even though its redundancy is infinite.
+
+The $m_t$ endpoint symbols use disjoint independent noise variables.
+A bit error requires a symbol error, of probability at most $1/4$.
+Hoeffding therefore gives
+\begin{equation}\label{eq:robust-amplification}
+ \Pr\{O(n,t)\ne L_n(t)\}\leq e^{-m_t/8}=:e_t,
+ \qquad |\mathbb E O(n,t)-L_n(t)|\leq e_t.
+\end{equation}
+The bound is summable over even $t$, since $m_t$ grows as
+$(\log t)^2$. Borel--Cantelli gives eventual equality to the current
+logical bit for each fixed $n$. A countable intersection covers all
+registers. Hence the inner limits of every fixed window, both in
+expectation and almost surely, are exactly its count in $A$.
+The probability-one event can depend on $K$.
+
+For any $\beta\in\mathsf D_3\cap[0,1]$, take uniformly
+$0'$-computable rationals $u_s\to\beta$ in $[0,1]$. With
+$N_0=1$, $A(0)=0$, $N_{s+1}=(s+2)N_s$, put the mechanical bits
+$A(N_s+j)=\lfloor(j+1)u_s\rfloor-\lfloor ju_s\rfloor$ on the
+successive blocks. If $d_s=|A\cap[0,N_s)|/N_s$, then for
+$N=N_s+j$,
+\begin{equation}\label{eq:robust-all-prefix}
+ \left|\frac{|A\cap[0,N)|}{N}-\beta\right|
+ \leq\frac{N_s}{N}|d_s-\beta|
+      +\frac jN|u_s-\beta|+\frac1N.
+\end{equation}
+At the next endpoint the first weight is $1/(s+2)$, so endpoint
+errors tend to zero. Equation~\eqref{eq:robust-all-prefix} then
+proves convergence at every intermediate prefix, including
+$\beta=0,1$. The set is $0'$-computable. The ordinary limit lemma
+supplies the total computable approximation executed by the interpreter.
+This density correspondence is classical
+\cite{density,ershovDensity}; it is not a new density theorem.
+
+For the counting exponent $\gamma\in\mathsf D_3\cap[0,1]$ use
+$0'$-computable rational $u_k\to\gamma$ and
+\[
+ A=\bigcup_{k\geq1}[2^k,2^k+M_k),\qquad
+ M_k=\lfloor2^{ku_k}\rfloor.
+\]
+For $u_k=a/b$, $M_k$ is the largest integer $m$ with
+$m^b\leq2^{ka}$, computed by exact integer comparison. Thus a
+floor at integer equality does not require a new real-equality
+oracle. If $2^K\leq N<2^{K+1}$, the full preceding block gives
+lower bound $M_{K-1}$ and the sum through block $K$ gives an upper
+bound. Eventual $|u_k-\gamma|<\eta$ yields
+\[
+ (K-1)(\gamma-\eta)-O(1)
+ \leq\log_2(1+|A\cap[0,N)|)
+ \leq K(\gamma+\eta)+O(\log K)+O(1),
+\]
+with zero as the lower bound if $\gamma<\eta$. Divide by
+$\log_2N\in[K,K+1)$ and let $\eta\downarrow0$. This includes
+both endpoints. Compile this set's approximation in the same way.
+Conversely, suppose all inner prefix expectation limits exist at any
+$K\in U$, including a noncomputable kernel. The amplification error
+in~\eqref{eq:robust-amplification} tends to zero, so each deterministic
+integer prefix count $\sum_{n<N}L_n(t)$ converges along the sampled
+even times and is eventually constant. Differences of consecutive
+prefix counts make the corresponding logical output bits eventually
+constant along those times. If the exponent starts at $N=2$, choose
+the first two bits to have that prefix's eventual count; this finite
+choice changes neither asymptotic statistic. The resulting set is
+limit-computable, independently of $K$. Every stipulated fixed-window
+expectation and sample limit is its count, uniformly throughout $U$.
+Its existing density or counting order is in
+$\mathsf D_3$ by the same relativized limit argument. Thus necessity
+does not assume robustness for an arbitrary program at a noncomputable
+kernel. Proposition~\ref{prop:robust-depth} supplies the corresponding
+ceiling at a computable witness.
+\end{proof}
+The programs realizing a prescribed density and a prescribed
+counting exponent may differ. A positive-density set has counting
+exponent one; the theorem does not assert arbitrary independent
+pairs for one program. The fixed-rule synthesis uses the prior
+reliable-computation technology \cite{toom,gacsReif,thermalTrajectories}
+and the asymptotic-density literature \cite{density,ershovDensity}.
+At fixed finite time, only finitely many logical output registers can
+have been reached from the program. The remaining far-blank region
+has one common noisy-majority expectation $q_t(K)\leq e_t$, rather
+than an exactly zero physical value. Thus
+$\lim_t\lim_N\mathbb E\rho_N(t)=0$, whereas the prescribed
+opposite order is $\beta$. For $\beta\ne0$ the two orders differ.
+
+\subsection{Prescribed higher depths and restricted memory mechanisms}
+\begin{corollary}[Anchored higher-depth readouts]\label{cor:robust-depth}
+For each fixed $d\geq2$, the same protected interpreter, kernel
+region and anchored initialization realize exactly
+$\mathsf D_{d+1}\cap[0,1]$ by a fixed depth-$d$ readout with
+$d-2$ tuple-index limits outside time and window. A separate fixed
+one-limit weighted readout realizes $\mathsf D_2\cap[0,1]$.
+The computable bottom boundary, distinguished program origin,
+infinite cloning and prescribed outer limits are retained.
+\end{corollary}
+\begin{proof}
+Iterated relative limit approximation expresses a target as
+$d-2$ existing limits of uniformly $0''$-computable real names
+$c(k_1,\ldots,k_{d-2})\in[0,1]$. The conversions must use names,
+not uniformly decidable strict rational cuts. Explicitly, for
+$0''$-computable rational approximants $q(k,j)$ with error $2^{-j}$,
+the relative limit lemma gives $0'$-computable guesses
+$q_s(k,j)$ eventually equal to each rational code. At stage $s$
+choose the largest $m\leq s$ for which the first $m$ closed rational
+error intervals meet $[0,1]$, and output a rational in that intersection;
+use a default if necessary. Each fixed finite prefix is eventually
+correct, so $m\to\infty$ and the outputs converge to $c(k)$.
+This avoids an unjustified diagonal approximation to the jump.
+Apply the mechanical blocks uniformly in the tuple, then the
+uniform ordinary limit lemma to obtain $a(k,n,s)$. Fix a computable
+encoding of tuples into register indices and service the first $s$
+encoded registers at stage $s$. Every register is visited infinitely
+often. The prescribed outer limits now give the target. Conversely,
+at any kernel where the stipulated limits exist, the consecutive-prefix
+argument above applies uniformly to every tuple. It gives a
+limit-computable logical table whose inner values agree throughout
+$U$; the depth ceiling then gives necessity. The readout is fixed separately for
+each $d$; changing depth changes the definition, not the physical rule.
+For $d=1$, use $\sum_{n<t}2^{-n-1}O(n,t)$. A $0'$-computable
+binary expansion of a target has a computable stabilizing bit
+approximation. At dyadic targets choose a fixed computable expansion;
+for target one use the all-ones fractional expansion.
+Finite-prefix stabilization and the geometric tail
+give expectation and almost-sure convergence. This is a one-limit
+readout, not the two-limit density renamed.
+\end{proof}
+
+Three restricted comparisons are useful, without being exhaustive.
+For a kernel with Dobrushin coefficient $\kappa=\sum_vc_v<1$,
+sitewise coupling gives marginal distance at most $\kappa^t$ from
+its unique stationary law. Let its projected bit marginal be $\pi$.
+Disjoint-cone endpoint samples from deterministic data remain
+independent. If $\pi\ne1/2$, an eventual fixed bias and majority
+amplification give expectation limit zero or one. If $\pi=1/2$,
+couple the $m_t$ bits to independent fair bits to obtain error at
+most $m_t\kappa^t\to0$. The density expectation law is therefore
+in $\{0,1/2,1\}$ and its counting exponent in $\{0,1\}$.
+At a fixed kernel the initial-data image is a singleton; the three
+possibilities are across kernels. No almost-sure convergence of a
+Boolean readout to $1/2$ is asserted. For a general mixing error
+$\delta_t$, the stronger condition $m_t\delta_t\to0$ suffices;
+the sharper condition $\sqrt{m_t}\delta_t\to0$ also follows from
+binomial comparison. Arbitrarily growing majorities need not forget.
+
+For static Toom memory, use the stationary site map
+$z_{\rm id}(n,t)=(0,0,-(n+1))$ for an unshifted binary identity
+rule, with the same transverse copy spacing. Alternatively shift and
+block both the identity dynamics and the readout together. Using
+the moving universal-computation site map with an unshifted identity
+would sample different tape bits. With the matching coordinates,
+every computable tape is recovered with error $e_t$, so its existing
+density lies in $\mathsf D_2$; computable mechanical tapes attain
+every such value. In the same universal rule as
+Theorem~\ref{thm:robust-third}, programs with a computable logical
+settling bound $S(n)$ likewise give exactly $\mathsf D_2$ densities:
+$A(n)=L_n(S(n))$ is computable, and write-once total programs realize
+all computable tapes. Here $S(n)$ is a bound in physical CA time;
+a bound given in interpreter stages is converted by deterministic
+simulation until the corresponding commits finish. Choose computable
+even $T(N)$ beyond the first
+$N$ settling bounds with $Ne_{T(N)}\leq2^{-N}$. The observed mean
+then converges to its density almost surely by a union bound and
+Borel--Cantelli. This is a data-reading realization, with the anchors
+and growing support retained.
+
+At a computable kernel and computable data, a supplied computable
+inner modulus $S(n,j)$ makes
+the inner expectations uniformly computable; one remaining existing
+limit is in $\mathsf D_2$. Such effectiveness is pointwise unless
+uniform modulus data are supplied. A name of a computable kernel
+does not uniformly decide whether $\pi=1/2$. These are sufficient
+mechanisms, not an exhaustive classification or a necessary condition
+for a particular law to be computable. For example, put halting-set
+guesses only at register indices $2^j$, all other bits zero. The
+eventual set has density zero but no computable uniform settling
+bound. Robust equality transfers the ceiling from a computable kernel
+to the whole region. The Ces\`aro and full-Gibbs-boundary moduli of
+Proposition~\ref{prop:unique-moduli} give additional restricted
+effective-inner-limit mechanisms.
+For equilibrium responses, Section~\ref{sec:ceilings} computes pressure
+and first derivatives at computable points of promised differentiability.
+With a computable critical point and tangent, a strictly positive
+computable tangent deficit has an existing logarithmic order in
+$\mathsf D_2$. A positive response $f(t)=t^{a+o(1)}$, $a>-1$,
+has integral of order $a+1$: bound it by $t^{a\pm\eta}$ and
+integrate, taking $\eta<a+1$. This transfers that conditional
+deficit-order ceiling to the corresponding response order. The
+critical data and positivity are substantive hypotheses. The known
+unique-measure mechanism is credited in Theorem~\ref{thm:unique-states}.
+
+\subsection{Rates and robust hidden settling scales}
+\begin{proposition}[Rates with computable reference scales]
+\label{prop:robust-rates}
+Let uniformly computable $q_s\to r$. If $r$ is noncomputable, every
+positive computable $h(s)\to0$ is exceeded by $|q_s-r|$ infinitely
+often. Against a positive computable reference $h_0(s)\to0$, any
+existing finite exponent $\lim_s\log|q_s-r|/\log h_0(s)$ is zero.
+If $r$ is computable and the errors are eventually nonzero, that
+existing finite exponent is in $\mathsf D_2$.
+\end{proposition}
+\begin{proof}
+An eventual error bound $h(s)$, with a finite cutoff hard-coded,
+would compute $r$ by searching for sufficiently small $h(s)$ and
+approximating $q_s$. A positive rate exponent would supply such
+a bound $h_0(s)^a$ for a positive rational $a$. Since the error
+tends to zero, the defined quotient is eventually nonnegative.
+For computable $r$, positive errors and their logarithms are
+computable on the promised domain, so the exponent is an existing
+limit of computable values. Zeros need a separate convention and
+are not passed silently through a real logarithm.
+\end{proof}
+
+Fix a program in Theorem~\ref{thm:robust-third} with a density or
+counting exponent $\beta\notin\mathsf D_2$. Let $\tau(N)$ be the
+least time after which its first $N$ logical bits never change.
+This deterministic quantity is identical for every $K\in U$.
+For every total computable $B$, infinitely many $N$ have
+$\tau(N)>B(N)$: an eventual bound, with the finite cutoff hard-coded,
+would compute every final bit and make the existing law
+$\mathsf D_2$. Consequently the usual power, exponential and
+fixed-height iterated-exponential growth comparisons have no finite
+upper exponent; an extended value $+\infty$ is not excluded.
+
+After $t\geq\tau(N)$, expectation error of the count is at most
+$Ne_t$, and the probability of any erroneous bit in the window is
+at most $Ne_t$. A sufficient accuracy time is the maximum of
+$\tau(N)$ and a computable amplification margin. This is not an
+equality of settling times or a deterministic last-fault bound.
+At each $K\in U$, even a physical guarantee of window-density error
+below $1/(4N)$ for every $t\geq B(N)$ cannot have a computable
+eventual upper bound. Otherwise choose computable even $t\geq B(N)$
+with $e_t<1/(4N)$. The current logical prefix density is within
+$1/(2N)$ of the final one. Both lie on the $1/N$ grid, so their
+counts are equal. This computes all final prefix counts and hence
+the noncomputable set.
+
+At \emph{computable} $K$, any computable even diagonal $\sigma(N)$
+gives computable finite expectations. An existing diagonal limit
+is $\mathsf D_2$, hence cannot be $\beta$. The corresponding sample
+diagonal, using rational approximations for the logarithmic statistic
+when necessary, is an effective inquiry; Theorem~\ref{thm:reach}
+makes its fixed-target convergence probability zero. The physical
+law itself is still the specified iterated limit.
+
+For the density there is also a pointwise statement at every $K\in U$
+along any computable unbounded diagonal. First suppose
+$\sigma(N)\to\infty$ and set
+$x_N=N^{-1}\sum_{n<N}L_n(\sigma(N))$, a computable rational sequence.
+The expectation differs from $x_N$ by at most $e_{\sigma(N)}\to0$,
+so it cannot converge to $\beta\notin\mathsf D_2$. For samples,
+the expected fraction of incorrect registers is at most
+$e_{\sigma(N)}$; Markov's inequality gives
+$\Pr\{|\rho_N(\sigma(N))-x_N|>a\}\leq e_{\sigma(N)}/a$.
+Some deterministic subsequence stays more than $2a$ from $\beta$,
+since $x_N$ cannot converge to it. On a sample-convergence event
+the displayed deviations exceed $a$ eventually on that subsequence,
+an event of probability zero by the bound. A computable unbounded
+$\sigma$ has a computably chosen subsequence tending to infinity,
+so the same exclusion applies. Bounded-time paths retain the
+computable-kernel qualification. An additive density error does not
+control logarithms of sparse counts, so the counting-exponent
+diagonal statement also retains that qualification.
+In the constant-normalizer thermal family of Section~\ref{sec:states},
+the same statement is a four-dimensional causal half-space DLR
+construction with computable fixed bottom boundary; time is height.
+It does not imply unique equilibrium or arbitrary-interaction stability.
+
+\subsection{Null and meager, but dense, exceptional kernels}
+\label{subsec:exceptional-kernels}
+Here an inquiry is an external computable controller allowed to
+inspect successively larger finite spacetime cylinders of the
+anchored history, including time-one observations. This access model
+is essential for the density conclusion below. It does not assert an
+autonomous noisy computer that internally acquires raw-fault data.
+
+\begin{theorem}[Kernel information and fixed-target inquiry]
+\label{thm:exceptional-kernels}
+Fix an anchored program and a law
+$\beta\in\mathsf D_3\setminus\mathsf D_2$ in
+Theorem~\ref{thm:robust-third}. At every computable $K\in U$, no
+computable inquiry in this model converges to $\beta$ with positive
+probability. More generally, every fixed target reached with positive
+probability at $K$ is computable in the kernel oracle's jump $K'$.
+The kernels in $U$ permitting inquiry to $\beta$ form a null, meager
+but dense subset, in intrinsic simplex measure and topology.
+\end{theorem}
+\begin{proof}
+Finite cylinder laws are computable relative to a name of $K$.
+Relativize the proof of Theorem~\ref{thm:reach}: on success a target
+name is computable in $(X\oplus K)'$. For almost every tape $X$,
+relative generalized lowness bounds this by $X\oplus K'$.
+The relativized positive-measure cone argument then places the
+fixed target below $K'$. This proves the computable-kernel conclusion.
+
+For measure and category, use $q-1$ free probabilities per row;
+the last entry is recovered by subtraction. Cover the positive
+simplex by rational boxes in these intrinsic coordinates. Rescaling
+each box to a cube and interleaving binary digits preserves degrees
+off the null, meager dyadic hyperplanes. For almost every code $Y$,
+$Y'\equiv_TY\oplus0'$. A positive-measure set on which
+$\beta\leq_TK'$ would thus give a positive-measure cone relative
+to $0'$, contradicting $\beta\not\leq_T0'$.
+
+For category, 1-generic codes are comeager and also satisfy
+$Y'\equiv_TY\oplus0'$. Indeed a generic oracle either meets a
+c.e. set of finite halting witnesses or has a prefix with no
+extension in it; $Y\oplus0'$ can find which alternative applies.
+If a fixed functional computes a non-$Z$-computable set from
+$Y\oplus Z$ on a nonmeager Borel set, its success set is comeager
+in some cylinder after restriction. Search relative to $Z$ for any
+finite extension on which it halts on the requested input. Such an
+extension exists, and its open cylinder meets the comeager success
+set, so every found answer is correct. This would compute the set
+from $Z$. Countably many functionals give the category cone theorem.
+Use $Z=0'$ and a cut/name of $\beta$. Thus learnable kernels lie
+in a null and meager set, using free coordinates rather than a
+fictitious fair-random join of constrained row entries.
+
+For density, in any open patch choose one blank-row probability $p$
+in a rational interval $(u,v)$ whose closure stays inside the patch.
+Choose rational $u<u_0<v_0<v$ and set
+\[
+ p=u_0+(v_0-u_0)\sum_{j\geq0}2\,\chi_{0'}(j)4^{-j-1}.
+\]
+The separated base-four digits give $0'\leq_Tp$. In particular $p$
+is noncomputable, hence irrational and non-dyadic. Compensate in a
+second entry in the same row; the patch's positive margins allow
+this arbitrarily small change. Other free coordinates can be rational.
+The sampled entry itself therefore satisfies
+$\beta\leq_T0''\leq_Tp'$. At time one, fresh known blank predecessor
+neighborhoods away from the finite program give independent samples
+of that output, with probability $p$. Let $f_n$ be the frequency
+and choose the rational radius $r_n=1/\lceil n^{1/3}\rceil$,
+computed by integer comparisons. Hoeffding makes failure of
+$[f_n-r_n,f_n+r_n]$ to contain $p$ summable. Eventually these
+intervals contain $p$, shrink to it and determine shared binary
+prefixes of unbounded length, since $p$ is irrational.
+Choose a total $p$-computable rational sequence
+$\Theta^p(m)\to\beta$ by the relative limit lemma. Only $p$ is
+the oracle: a prefix estimated from one entry is not a name of the
+whole kernel. At stage $n$
+simulate the first $n$ computations for $n$ steps using the current
+finite prefix as a partial oracle, and output the largest completed
+index not querying beyond it, or a default. Eventually the prefixes
+are correct, and each fixed computation eventually fits and finishes;
+the selected indices tend to infinity. Thus this external finite-stage
+inquiry converges to $\beta$ almost surely. Every open patch contains
+such a kernel.
+\end{proof}
+The reach set is targetwise existential. This does not prove that
+one common learner identifies every unknown law, or that every
+$K'$-computable target can be read from every kernel without an
+access theorem. Robustness of the law is pointwise on $U$;
+unlearnability is not, because the exceptional kernels are dense.
+
+\subsection{A restricted statement about active records}
+Strict positive rates give a minimum transition probability
+$\varepsilon_{\min}>0$. For any fixed finite set $V$ in a current
+layer, every pattern on it has conditional probability at least
+$\varepsilon_{\min}^{|V|}$ given the past. Conditional
+Borel--Cantelli implies every such pattern recurs infinitely often.
+Thus a fixed nonconstant function of that fixed window cannot
+converge almost surely. The function and its finite support are fixed,
+and it is observed at every integer time. This does not imply that
+every convergent numerical estimator has growing support: the one-site
+function $X_t(0)/(t+1)$ for a binary spin converges to zero despite
+being nonconstant at each time. Constants, expectations and repeated
+access to a fixed past record also give no such conclusion. The
+separated majorities above have growing support by their definition;
+that property is asserted for those readouts only.

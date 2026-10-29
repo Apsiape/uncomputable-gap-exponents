@@ -1,0 +1,297 @@
+{"monte_carlo_case": {"t": 2, "p": 0.03, "desired_full_symbol": 4, "true_cone_noisy_vertices": 7, "certified_finite_horizon_delta": 0.19201715521887, "observed_full_symbol_error": 0.03350490196078432, "observed_bit_error": 0.017205882352941175, "readouts": [{"m": 1, "errors": 221, "trials": 12000, "observed_rate": 0.018416666666666668, "certified_binomial_upper": 0.19201715521887, "claimed_exponential_upper": 0.8272015798451596}, {"m": 3, "errors": 13, "trials": 12000, "observed_rate": 0.0010833333333333333, "certified_binomial_upper": 0.09645219289606684, "claimed_exponential_upper": 0.5660229827279822}, {"m": 5, "errors": 1, "trials": 12000, "observed_rate": 8.333333333333333e-05, "certified_binomial_upper": 0.05197246531457294, "claimed_exponential_upper": 0.38730827501109544}, {"m": 9, "errors": 0, "trials": 12000, "observed_rate": 0.0, "certified_binomial_upper": 0.0164786556487581, "claimed_exponential_upper": 0.18134358486132202}, {"m": 17, "errors": 0, "trials": 12000, "observed_rate": 0.0, "certified_binomial_upper": 0.0019158213315658608, "claimed_exponential_upper": 0.03975511721884187}]}}
+{"monte_carlo_case": {"t": 3, "p": 0.01, "desired_full_symbol": 7, "true_cone_noisy_vertices": 25, "certified_finite_horizon_delta": 0.22217864060085324, "observed_full_symbol_error": 0.010431372549019607, "observed_bit_error": 0.005470588235294118, "readouts": [{"m": 1, "errors": 57, "trials": 12000, "observed_rate": 0.00475, "certified_binomial_upper": 0.22217864060085324, "claimed_exponential_upper": 0.8569553899468942}, {"m": 3, "errors": 1, "trials": 12000, "observed_rate": 8.333333333333333e-05, "certified_binomial_upper": 0.1261550817586905, "claimed_exponential_upper": 0.6293245066896669}, {"m": 5, "errors": 0, "trials": 12000, "observed_rate": 0.0, "certified_binomial_upper": 0.07637206360276569, "claimed_exponential_upper": 0.4621586366878863}, {"m": 9, "errors": 0, "trials": 12000, "observed_rate": 0.0, "certified_binomial_upper": 0.030348786654866646, "claimed_exponential_upper": 0.24924355219755603}, {"m": 17, "errors": 0, "trials": 12000, "observed_rate": 0.0, "certified_binomial_upper": 0.00548568285902207, "claimed_exponential_upper": 0.07249192786558652}]}}
+{"monte_carlo_case": {"t": 4, "p": 0.003, "desired_full_symbol": 9, "true_cone_noisy_vertices": 65, "certified_finite_horizon_delta": 0.17740646818827213, "observed_full_symbol_error": 0.0029901960784313726, "observed_bit_error": 0.0014705882352941176, "readouts": [{"m": 1, "errors": 15, "trials": 12000, "observed_rate": 0.00125, "certified_binomial_upper": 0.17740646818827213, "claimed_exponential_upper": 0.8120988794329067}, {"m": 3, "errors": 0, "trials": 12000, "observed_rate": 0.0, "certified_binomial_upper": 0.08325211781977242, "claimed_exponential_upper": 0.5355829385005165}, {"m": 5, "errors": 0, "trials": 12000, "observed_rate": 0.0, "certified_binomial_upper": 0.042031320659673035, "claimed_exponential_upper": 0.3532194062540222}, {"m": 9, "errors": 0, "trials": 12000, "observed_rate": 0.0, "certified_binomial_upper": 0.011737967612829012, "claimed_exponential_upper": 0.1536314753217827}, {"m": 17, "errors": 0, "trials": 12000, "observed_rate": 0.0, "certified_binomial_upper": 0.0010636738459035265, "claimed_exponential_upper": 0.029063739413148038}]}}
+{"monte_carlo_case": {"t": 8, "p": 0.0001, "desired_full_symbol": 16, "true_cone_noisy_vertices": 750, "certified_finite_horizon_delta": 0.07225999293495006, "observed_full_symbol_error": 7.843137254901961e-05, "observed_bit_error": 3.9215686274509805e-05, "readouts": [{"m": 1, "errors": 0, "trials": 12000, "observed_rate": 0.0, "certified_binomial_upper": 0.07225999293495006, "claimed_exponential_upper": 0.6935561840556169}, {"m": 3, "errors": 0, "trials": 12000, "observed_rate": 0.0, "certified_binomial_upper": 0.014909907679866344, "claimed_exponential_upper": 0.3336145208009513}, {"m": 5, "errors": 0, "trials": 12000, "observed_rate": 0.0, "certified_binomial_upper": 0.003375918956202792, "claimed_exponential_upper": 0.16047531699367443}, {"m": 9, "errors": 0, "trials": 12000, "observed_rate": 0.0, "certified_binomial_upper": 0.00019376675964035, "claimed_exponential_upper": 0.0371308452815341}, {"m": 17, "errors": 0, "trials": 12000, "observed_rate": 0.0, "certified_binomial_upper": 7.635531652385203e-07, "claimed_exponential_upper": 0.001987870201458206}]}}
+{
+  "blocking": {
+    "coordinate_time_checks": 1152,
+    "radii": [
+      1,
+      2,
+      3
+    ],
+    "times": 8
+  },
+  "majority_symbols": {
+    "triples_with_targets": 81
+  },
+  "dlr": {
+    "histories": 512,
+    "conditional_exterior_classes": 128,
+    "dlr_conditional_max_error": 1.1102230246251565e-16,
+    "error_when_future_child_factors_omitted": 0.7098052153024244,
+    "factorization_max_error": 6.938893903907228e-18,
+    "partition_error": 0.0
+  },
+  "normalizer": {
+    "nonconstant_row_normalizer_joint_discrepancy": 0.012429310087873402
+  },
+  "random_limit": {
+    "expectation_limit": 0.5,
+    "sample_limit_distribution": "uniform[0,1]",
+    "rows": [
+      {
+        "n": 1,
+        "expectation": 0.25,
+        "uniform_sample_tail_upper": 0.5
+      },
+      {
+        "n": 4,
+        "expectation": 0.46875,
+        "uniform_sample_tail_upper": 0.0625
+      },
+      {
+        "n": 8,
+        "expectation": 0.498046875,
+        "uniform_sample_tail_upper": 0.00390625
+      },
+      {
+        "n": 16,
+        "expectation": 0.49999237060546875,
+        "uniform_sample_tail_upper": 1.52587890625e-05
+      }
+    ]
+  },
+  "monte_carlo": {
+    "alphabet_size": 26,
+    "rule": "Toom NEC then revision_step(left,right)",
+    "noise": "independent uniform choice among 25 wrong symbols",
+    "initial_row": "constant phase=0,bit=0, cloned in a,b",
+    "certified_cases": [
+      {
+        "t": 2,
+        "p": 0.03,
+        "desired_full_symbol": 4,
+        "true_cone_noisy_vertices": 7,
+        "certified_finite_horizon_delta": 0.19201715521887,
+        "observed_full_symbol_error": 0.03350490196078432,
+        "observed_bit_error": 0.017205882352941175,
+        "readouts": [
+          {
+            "m": 1,
+            "errors": 221,
+            "trials": 12000,
+            "observed_rate": 0.018416666666666668,
+            "certified_binomial_upper": 0.19201715521887,
+            "claimed_exponential_upper": 0.8272015798451596
+          },
+          {
+            "m": 3,
+            "errors": 13,
+            "trials": 12000,
+            "observed_rate": 0.0010833333333333333,
+            "certified_binomial_upper": 0.09645219289606684,
+            "claimed_exponential_upper": 0.5660229827279822
+          },
+          {
+            "m": 5,
+            "errors": 1,
+            "trials": 12000,
+            "observed_rate": 8.333333333333333e-05,
+            "certified_binomial_upper": 0.05197246531457294,
+            "claimed_exponential_upper": 0.38730827501109544
+          },
+          {
+            "m": 9,
+            "errors": 0,
+            "trials": 12000,
+            "observed_rate": 0.0,
+            "certified_binomial_upper": 0.0164786556487581,
+            "claimed_exponential_upper": 0.18134358486132202
+          },
+          {
+            "m": 17,
+            "errors": 0,
+            "trials": 12000,
+            "observed_rate": 0.0,
+            "certified_binomial_upper": 0.0019158213315658608,
+            "claimed_exponential_upper": 0.03975511721884187
+          }
+        ]
+      },
+      {
+        "t": 3,
+        "p": 0.01,
+        "desired_full_symbol": 7,
+        "true_cone_noisy_vertices": 25,
+        "certified_finite_horizon_delta": 0.22217864060085324,
+        "observed_full_symbol_error": 0.010431372549019607,
+        "observed_bit_error": 0.005470588235294118,
+        "readouts": [
+          {
+            "m": 1,
+            "errors": 57,
+            "trials": 12000,
+            "observed_rate": 0.00475,
+            "certified_binomial_upper": 0.22217864060085324,
+            "claimed_exponential_upper": 0.8569553899468942
+          },
+          {
+            "m": 3,
+            "errors": 1,
+            "trials": 12000,
+            "observed_rate": 8.333333333333333e-05,
+            "certified_binomial_upper": 0.1261550817586905,
+            "claimed_exponential_upper": 0.6293245066896669
+          },
+          {
+            "m": 5,
+            "errors": 0,
+            "trials": 12000,
+            "observed_rate": 0.0,
+            "certified_binomial_upper": 0.07637206360276569,
+            "claimed_exponential_upper": 0.4621586366878863
+          },
+          {
+            "m": 9,
+            "errors": 0,
+            "trials": 12000,
+            "observed_rate": 0.0,
+            "certified_binomial_upper": 0.030348786654866646,
+            "claimed_exponential_upper": 0.24924355219755603
+          },
+          {
+            "m": 17,
+            "errors": 0,
+            "trials": 12000,
+            "observed_rate": 0.0,
+            "certified_binomial_upper": 0.00548568285902207,
+            "claimed_exponential_upper": 0.07249192786558652
+          }
+        ]
+      },
+      {
+        "t": 4,
+        "p": 0.003,
+        "desired_full_symbol": 9,
+        "true_cone_noisy_vertices": 65,
+        "certified_finite_horizon_delta": 0.17740646818827213,
+        "observed_full_symbol_error": 0.0029901960784313726,
+        "observed_bit_error": 0.0014705882352941176,
+        "readouts": [
+          {
+            "m": 1,
+            "errors": 15,
+            "trials": 12000,
+            "observed_rate": 0.00125,
+            "certified_binomial_upper": 0.17740646818827213,
+            "claimed_exponential_upper": 0.8120988794329067
+          },
+          {
+            "m": 3,
+            "errors": 0,
+            "trials": 12000,
+            "observed_rate": 0.0,
+            "certified_binomial_upper": 0.08325211781977242,
+            "claimed_exponential_upper": 0.5355829385005165
+          },
+          {
+            "m": 5,
+            "errors": 0,
+            "trials": 12000,
+            "observed_rate": 0.0,
+            "certified_binomial_upper": 0.042031320659673035,
+            "claimed_exponential_upper": 0.3532194062540222
+          },
+          {
+            "m": 9,
+            "errors": 0,
+            "trials": 12000,
+            "observed_rate": 0.0,
+            "certified_binomial_upper": 0.011737967612829012,
+            "claimed_exponential_upper": 0.1536314753217827
+          },
+          {
+            "m": 17,
+            "errors": 0,
+            "trials": 12000,
+            "observed_rate": 0.0,
+            "certified_binomial_upper": 0.0010636738459035265,
+            "claimed_exponential_upper": 0.029063739413148038
+          }
+        ]
+      },
+      {
+        "t": 8,
+        "p": 0.0001,
+        "desired_full_symbol": 16,
+        "true_cone_noisy_vertices": 750,
+        "certified_finite_horizon_delta": 0.07225999293495006,
+        "observed_full_symbol_error": 7.843137254901961e-05,
+        "observed_bit_error": 3.9215686274509805e-05,
+        "readouts": [
+          {
+            "m": 1,
+            "errors": 0,
+            "trials": 12000,
+            "observed_rate": 0.0,
+            "certified_binomial_upper": 0.07225999293495006,
+            "claimed_exponential_upper": 0.6935561840556169
+          },
+          {
+            "m": 3,
+            "errors": 0,
+            "trials": 12000,
+            "observed_rate": 0.0,
+            "certified_binomial_upper": 0.014909907679866344,
+            "claimed_exponential_upper": 0.3336145208009513
+          },
+          {
+            "m": 5,
+            "errors": 0,
+            "trials": 12000,
+            "observed_rate": 0.0,
+            "certified_binomial_upper": 0.003375918956202792,
+            "claimed_exponential_upper": 0.16047531699367443
+          },
+          {
+            "m": 9,
+            "errors": 0,
+            "trials": 12000,
+            "observed_rate": 0.0,
+            "certified_binomial_upper": 0.00019376675964035,
+            "claimed_exponential_upper": 0.0371308452815341
+          },
+          {
+            "m": 17,
+            "errors": 0,
+            "trials": 12000,
+            "observed_rate": 0.0,
+            "certified_binomial_upper": 7.635531652385203e-07,
+            "claimed_exponential_upper": 0.001987870201458206
+          }
+        ]
+      }
+    ],
+    "revision_snapshots_p_003": [
+      {
+        "t": 3,
+        "target_bit": 1,
+        "full_symbol_error": 0.036833333333333336,
+        "bit_error": 0.0205
+      },
+      {
+        "t": 7,
+        "target_bit": 0,
+        "full_symbol_error": 0.03283333333333333,
+        "bit_error": 0.017166666666666667
+      },
+      {
+        "t": 11,
+        "target_bit": 1,
+        "full_symbol_error": 0.035333333333333335,
+        "bit_error": 0.02
+      },
+      {
+        "t": 12,
+        "target_bit": 1,
+        "full_symbol_error": 0.034166666666666665,
+        "bit_error": 0.015
+      }
+    ]
+  },
+  "seconds": 7.918291200068779,
+  "peak_working_set_bytes": 34725888,
+  "numpy_version": "2.4.3",
+  "source_sha256": "9a9c03eddb7e75ad01d3d78f924789785ad89addef979b93d4337c0c832623d3"
+}

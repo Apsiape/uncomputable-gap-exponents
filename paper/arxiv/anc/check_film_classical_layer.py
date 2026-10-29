@@ -1,6 +1,6 @@
-"""Checks for the classical layer of the film Hamiltonian (Theorem F).
+"""Checks for the classical layer of the film Hamiltonian (Theorem 12.1).
 
-(1) Flag lemma in 3D (Lemma CL3): for each of the six flag types separately (the flag energy is a sum of six
+(1) Flag lemma in 3D (Section 12.1): for each of the six flag types separately (the flag energy is a sum of six
     independent parts), exhaustive minimisation over all 2^|box| assignments on small 3D boxes: the minimum is
     -(face area), attained only by the exact face.
 (2) Thickness counter + output transport in one (x,z) plane, exact flags: count ALL solutions of the local rules by a
@@ -102,6 +102,7 @@ if __name__ == '__main__':
         ok = all(v['ok'] for v in r.values())
         allok &= ok
         out['flags'][str(box)] = r
+        assert ok, "Finite check condition failed"
         print('flags', box, 'ok' if ok else 'FAIL', {k: (v['min'], v['area']) for k, v in r.items()}, flush=True)
     rnd = random.Random(7)
     jobs = [(L, M, 100 * M + L) for M in range(1, 6) for L in (3, 4)] + [(L, M, None) for M in range(1, 10) for L in (4, 5)]
@@ -112,6 +113,7 @@ if __name__ == '__main__':
             allok &= info['ok']
             out['planes'].append(info)
             print('plane', info, flush=True)
+    assert allok, "Finite check condition failed"
     print('ALL PASS' if allok else 'SOME FAIL', flush=True)
     out['all_pass'] = allok
     with open(sys.argv[1] if len(sys.argv) > 1 else 'check_film_classical_layer.json', 'w') as fh:

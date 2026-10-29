@@ -22,7 +22,7 @@
    1
   ],
   "bitlength_L_minus_1": 2,
-  "seconds": 1.4
+  "seconds": 0.4
  },
  {
   "L": 4,
@@ -35,6 +35,6 @@
    1
   ],
   "bitlength_L_minus_1": 2,
-  "seconds": 150.4
+  "seconds": 56.6
  }
 ]

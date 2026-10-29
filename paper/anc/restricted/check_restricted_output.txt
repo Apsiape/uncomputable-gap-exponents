@@ -1,0 +1,77 @@
+{
+  "python": "3.13.12",
+  "random_seed": 1729,
+  "cycle_means": {
+    "torus_minima_checked_exactly": 324,
+    "status": "PASS"
+  },
+  "polyhedral_grid": {
+    "rational_parameter_cases": 105,
+    "max_error_divided_by_proved_bound": 0.4117647058823529,
+    "status": "PASS"
+  },
+  "thermal_variance": {
+    "cases": [
+      {
+        "L": 9,
+        "pressure_curvature": 0.1653507827622569,
+        "conditional_variance_lower_bound": 0.00020029239710452082
+      },
+      {
+        "L": 12,
+        "pressure_curvature": 0.08889768916549723,
+        "conditional_variance_lower_bound": 0.00046752852217236165
+      },
+      {
+        "L": 12,
+        "pressure_curvature": 0.3007621945057141,
+        "conditional_variance_lower_bound": 0.0006613698248123429
+      }
+    ],
+    "status": "PASS"
+  },
+  "transfer_gap": {
+    "cases": [
+      {
+        "exact_exponent": 1,
+        "finite_scale_log_ratios": [
+          0.8742932551522404,
+          0.9374986241212979,
+          0.9687499999895031
+        ]
+      },
+      {
+        "exact_exponent": 2,
+        "finite_scale_log_ratios": [
+          1.8749972482425958,
+          1.9374999999790061,
+          1.96875
+        ]
+      },
+      {
+        "exact_exponent": 3,
+        "finite_scale_log_ratios": [
+          2.874999989251084,
+          2.9374999999999996,
+          2.9687500000000004
+        ]
+      }
+    ],
+    "status": "PASS"
+  },
+  "pauli_mps": {
+    "independent_channel_eigenvector_checks": 12,
+    "exact_exponent": 2,
+    "finite_scale_log_ratios": [
+      1.750002751645438,
+      1.8750000000209939,
+      1.9375000000000002
+    ],
+    "status": "PASS"
+  },
+  "dyadic_dual": {
+    "exact_nonstationary_dual_cases": 144,
+    "status": "PASS"
+  },
+  "peak_working_set_bytes": 17711104
+}

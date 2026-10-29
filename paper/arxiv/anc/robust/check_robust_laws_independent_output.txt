@@ -1,0 +1,24 @@
+All-prefix mechanical density bound: PASS
+Exact rational-power block lengths and interior exponents: PASS
+One-sided blocking, even-time fixed projection, negative positions: PASS
+Protected output track under workspace/head operations: PASS
+Fast-majority counterexample: canonical growth condition is necessary
+MC p=0.02 T= 1 symbol_err=0.02002 bit_err=0.01090 majority_errors={3: 1}
+MC p=0.02 T= 2 symbol_err=0.02157 bit_err=0.01164 majority_errors={3: 0}
+MC p=0.02 T= 4 symbol_err=0.02113 bit_err=0.01120 majority_errors={3: 0, 7: 0, 9: 0}
+MC p=0.02 T= 6 symbol_err=0.02129 bit_err=0.01082 majority_errors={3: 4, 7: 0, 19: 0}
+MC p=0.02 T= 8 symbol_err=0.02053 bit_err=0.01051 majority_errors={3: 2, 7: 0, 19: 0}
+MC p=0.02 T=12 symbol_err=0.02075 bit_err=0.01076 majority_errors={3: 0, 7: 0, 33: 0}
+MC p=0.06 T= 1 symbol_err=0.05933 bit_err=0.03215 majority_errors={3: 8}
+MC p=0.06 T= 2 symbol_err=0.06657 bit_err=0.03524 majority_errors={3: 13}
+MC p=0.06 T= 4 symbol_err=0.07067 bit_err=0.03602 majority_errors={3: 14, 7: 0, 9: 0}
+MC p=0.06 T= 6 symbol_err=0.06993 bit_err=0.03579 majority_errors={3: 13, 7: 1, 19: 0}
+MC p=0.06 T= 8 symbol_err=0.07081 bit_err=0.03654 majority_errors={3: 12, 7: 0, 19: 0}
+MC p=0.06 T=12 symbol_err=0.07078 bit_err=0.03630 majority_errors={3: 17, 7: 1, 33: 0}
+MC p=0.12 T= 1 symbol_err=0.12484 bit_err=0.06274 majority_errors={3: 48}
+MC p=0.12 T= 2 symbol_err=0.14600 bit_err=0.07609 majority_errors={3: 63}
+MC p=0.12 T= 4 symbol_err=0.16357 bit_err=0.08360 majority_errors={3: 94, 7: 6, 9: 0}
+MC p=0.12 T= 6 symbol_err=0.17861 bit_err=0.09248 majority_errors={3: 93, 7: 8, 19: 0}
+MC p=0.12 T= 8 symbol_err=0.18484 bit_err=0.09560 majority_errors={3: 113, 7: 8, 19: 0}
+MC p=0.12 T=12 symbol_err=0.18922 bit_err=0.09939 majority_errors={3: 94, 7: 8, 33: 0}
+PASS | runtime 6.053 s | peak working set 45457408 bytes

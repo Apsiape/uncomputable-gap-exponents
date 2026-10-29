@@ -31,7 +31,7 @@
 (4, 4, 4, 4)   eps=0.0   k= 8 gap=8.538e-05 cycle=8.538e-05 instability_bound=0.00e+00 pure=True pass=True (1s)
 (4, 4, 4, 4)   eps=0.01  k= 8 gap=5.399e-03 cycle=8.538e-05 instability_bound=6.25e-05 pure=True pass=True (3s)
 (4, 4, 4, 4)   eps=0.1   k= 8 gap=3.596e-02 cycle=8.538e-05 instability_bound=6.25e-04 pure=True pass=True (5s)
-(4, 1, 4, 2)   eps=0.0   k= 5 gap=3.947e-03 cycle=3.947e-03 instability_bound=0.00e+00 pure=True pass=True (6s)
+(4, 1, 4, 2)   eps=0.0   k= 5 gap=3.947e-03 cycle=3.947e-03 instability_bound=0.00e+00 pure=True pass=True (5s)
 (4, 1, 4, 2)   eps=0.01  k= 5 gap=9.309e-03 cycle=3.947e-03 instability_bound=6.25e-05 pure=True pass=True (6s)
 (4, 1, 4, 2)   eps=0.1   k= 5 gap=6.449e-02 cycle=3.947e-03 instability_bound=6.25e-04 pure=True pass=True (7s)
 PASS

@@ -1,4 +1,4 @@
-"""Variant of check_wall_layer.py for the vacuum-free alphabet {W, V, A, S, D} actually used in Theorem 1.
+"""Variant of check_wall_layer.py for the vacuum-free alphabet {W, V, A, S, D} actually used in Section 2.
 Exhaustive floating-point min-plus transfer matrices on 3 x L and L x 3 tori (L = 2..12) and 4 x L, L x 4 tori (L = 2..6):
 (i) violation weight 6r: minimum >= L1 L2 f*; (ii) weight 1 (the true model): reports min - VFmin;
 (iii) weight 100: violation-free minimum equals the analytic prediction (all-A/all-D energy 0, or stripe stackings)."""
@@ -51,6 +51,7 @@ def main():
     print("true-model minima below the violation-free minimum (incommensurate tori):", len(below), flush=True)
     for x in below[:8]:
         print("  ", {k: (round(v, 5) if isinstance(v, float) else v) for k, v in x.items()}, flush=True)
+    assert ok, "Finite check condition failed"
     print("PASS" if ok else "FAIL", flush=True)
     json.dump(dict(r=r, records=recs, passed=ok), open('check_wall_layer_noO.json', 'w'), indent=1)
 
