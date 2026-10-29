@@ -1,0 +1,90 @@
+\section{Fine tuning and an explicit instability}\label{sec:instability}
+A small perturbation being larger than a closing gap does not by
+itself prove instability. Here a concrete perturbation has a
+quantitative lower bound in every sector. For each active site's
+legal digits $\{0,\ldots,r_j-1\}$ let $P_j$ be the complete-graph
+Laplacian, acting as the identity on its side/head symbol. Put
+\[
+ V_\epsilon=\epsilon\sum_jP_j,\qquad 0<\epsilon\leq1,
+\]
+and let it vanish off the region. Conditioning on the local classical
+radix label makes this one fixed translation-invariant onsite term.
+Its per-site norm is at most $\epsilon2^\beta$, so its norm can be
+made smaller than any prescribed positive tolerance.
+
+\begin{theorem}[Onsite perturbation destroys the programmed exponent]
+\label{thm:instability}
+For the two-dimensional bulk ruler and the wetting ruler, this perturbation preserves the
+classical selection and the ground energy. In the positive-coupling
+phase its thermodynamic gap satisfies, for constants independent of
+the selected segment length $\ell$,
+\begin{equation}\label{eq:instability}
+ \min\left(c_{\rm cl},2\epsilon,
+       \frac{2\epsilon\,2^{-\beta}}{5\ell^2}\right)
+ \leq\Delta'_\infty(g)\leq\frac{2\pi^2}{\ell^2}.
+\end{equation}
+Here $c_{\rm cl}$ is the positive classical-sector separation in
+the relevant thermodynamic construction. Hence the perturbed gap
+still closes, but its coupling exponent is zero.
+\end{theorem}
+\begin{proof}
+The perturbation is positive and annihilates zero-head states with
+uniform legal-digit superpositions. Thus every classical block
+still has a zero-energy dynamic state, and its classical offset
+is unchanged. Legal digits and legal one-head side strings form an
+invariant subspace under every counter transition and the new digit
+edges. Its complement is entirely penalized and lies at least one
+up; exterior errors and multiple heads also cost at least one.
+
+Free zero-head sectors are products of complete graphs, with gap
+at least $2\epsilon$ whenever they have a positive eigenvalue.
+On the free one-head space, the digit flips connect all legal
+digit vectors within each of the $2\ell$ head classes. Write the
+counter Laplacian as $L_c$, digit Laplacian as $L_d$, and let $Q$
+project to functions constant on each class's digit vectors.
+Then $L_d\geq2$ on $Q^\perp$. The compressed quadratic form
+$QL_cQ$ contains the cycle
+\[
+ \INC_0,\ldots,\INC_{\ell-1},
+ \RET_{\ell-1},\ldots,\RET_0,\INC_0
+\]
+with every edge weight at least $2^{-\beta}$. Carry and return
+conditions hold on a fraction $1/r_j$ of digit vectors; wrap and
+restart close the two ends. Consequently its gap is at least
+$\gamma=4\,2^{-\beta}/\ell^2$. Extra increment edges are nonnegative.
+This also proves that the enlarged free one-head graph is connected.
+
+For a normalized vector orthogonal to constants write
+$\psi=\psi_0+\psi_1$, with $\psi_0=Q\psi$, and let
+$x=\|\psi_0\|,y=\|\psi_1\|$. The counter's weighted degree is at
+most two, so $\|L_c\|\leq4$. The triangle inequality for
+$L_c^{1/2}$ gives
+\[
+ \langle\psi,(L_c+\epsilon L_d)\psi\rangle
+ \geq\max\{2\epsilon y^2,(\sqrt\gamma x-2y)_+^2\}.
+\]
+If $y\leq\sqrt\gamma x/4$, the second term is at least
+$\gamma/8$. Otherwise $y^2\geq\gamma/20$, and the first is
+at least $\epsilon\gamma/10$. This proves the one-head lower
+bound $2\epsilon2^{-\beta}/(5\ell^2)$. Combining the other
+sectors and the classical separation gives the left side of
+\eqref{eq:instability}.
+
+For the upper bound take the head-only function
+$\cos(\pi(i+1/2)/\ell)$, equal on both rails and constant in
+digits. It is orthogonal to constants, digit flips have zero
+energy, and the rung edges have zero energy. The remaining path
+Rayleigh quotient is at most $2\pi^2/\ell^2$.
+Finally $\ell=\Theta(\log(1/g))$ for either ruler. The normalized
+logarithm of both bounds tends to zero. Ties do not alter this
+estimate when the relevant thermodynamic gap is defined.
+\end{proof}
+
+This is an existence theorem for destabilizing perturbations, not a
+claim that every perturbation changes the exponent. A proposed
+symmetry-protected persistence of the wall geometry under diagonal
+wall perturbations requires a new charging estimate at run ends.
+It remains a sketch and is not used in any theorem. Making the
+corner cost size-dependent to program a structural exponent also
+requires a new minimizer and defect analysis; it is not an
+established realization of an uncomputable $\nu$.

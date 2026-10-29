@@ -95,7 +95,7 @@
   "penalty_free_configs": 208,
   "largest_component": 60,
   "log2_inv_gap": 6.5121074628993325,
-  "seconds": 0.1
+  "seconds": 0.09
  },
  {
   "radices": [
@@ -122,7 +122,7 @@
   "penalty_free_configs": 512,
   "largest_component": 124,
   "log2_inv_gap": 8.60570904926421,
-  "seconds": 0.78
+  "seconds": 0.67
  },
  {
   "radices": [
@@ -173,7 +173,7 @@
   "penalty_free_configs": 52,
   "largest_component": 32,
   "log2_inv_gap": 3.8751775172664744,
-  "seconds": 0.16
+  "seconds": 0.13
  },
  {
   "radices": [
@@ -246,7 +246,7 @@
   "penalty_free_configs": 80,
   "largest_component": 48,
   "log2_inv_gap": 4.104911716451128,
-  "seconds": 0.14
+  "seconds": 0.12
  },
  {
   "radices": [
@@ -271,7 +271,7 @@
   "penalty_free_configs": 640,
   "largest_component": 168,
   "log2_inv_gap": 9.481810753130373,
-  "seconds": 0.11
+  "seconds": 0.09
  },
  {
   "radices": [
@@ -299,6 +299,6 @@
   "penalty_free_configs": 1216,
   "largest_component": 252,
   "log2_inv_gap": 10.651642328243948,
-  "seconds": 20.66
+  "seconds": 15.96
  }
 ]

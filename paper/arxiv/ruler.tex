@@ -1,0 +1,126 @@
+\section{The coupling as an energetic ruler}\label{sec:ruler}
+The ruler is classical. Its five symbols are $W,V,A,S,D$: a horizontal
+wall, a vertical divider, a site above the signal, the signal, and a
+site below it. Allowed horizontal pairs, in left-to-right order, are
+\[
+ WW,\ AA,\ SA,\ DS,\ DD,\ AV,\ SV,\ VS,\ VD.
+\]
+Allowed vertical pairs, in top-to-bottom order, are
+\[
+ WS,\ WA,\ WV,\ SW,\ DW,\ VW,\ AA,\ AS,\ SD,\ DD,\ VV.
+\]
+Every other pair costs one. Each $W$ site receives energy $-g$;
+each vertical $VW$ bond costs $r=1/16$. These are fixed rational
+onsite and nearest-neighbour terms, affine in $g$.
+
+\begin{lemma}[Forced cell geometry]\label{lem:forcing}
+On a torus, every violation-free configuration is either all $A$, all
+$D$, or a stack of stripes separated by $W$ rows. A stripe of height
+$h\geq1$ consists of repeated columns
+\[
+ V,\ S_0,\ldots,S_{h-1},\qquad S_o=A^o S D^{h-1-o}.
+\]
+Its cells have pitch $p=h+1$, interior $h\times h$, and $p$ divides
+the horizontal circumference.
+\end{lemma}
+\begin{proof}
+The only horizontal pair containing $W$ is $WW$, so a wall occupies an
+entire row. Vertical $WW$ is forbidden. Between walls a column
+containing $V$ is all $V$. Any other column is $A^*SD^*$, $A^*$ or
+$D^*$ by the vertical rules; the boundary rules forbid the last two.
+If the signal in one column is at offset $o<h-1$, the pairs $SA$
+and $DS$ force the next signal to offset $o+1$. At $o=h-1$ the next
+column must be $V$: otherwise its last entry would be $A$ above $W$.
+After $V$, the next signal has offset zero. This gives the cycle.
+With no $W$, a cyclic vertical column is all $A$, all $D$ or all $V$.
+The horizontal rules admit no cyclic mixture of these column types;
+only the two uniform vacua remain.
+\end{proof}
+
+A perfect pitch-$p$ configuration has energy per site
+\begin{equation}\label{eq:ruler-energy}
+ f_g(p)=-\frac gp+\frac r{p^2},\qquad
+ g_p=\frac{r(2p+1)}{p(p+1)},\qquad
+ f_g(p)-f_g(p+1)=\frac{g_p-g}{p(p+1)}.
+\end{equation}
+Only $p\geq2$ is geometrically needed. For sufficiently small $g>0$
+the unique minimizer is $p_*(g)=p$ on $(g_p,g_{p-1})$; at $g_p$ both
+$p,p+1$ minimize. Completing the square in $1/p$ gives
+\begin{equation}\label{eq:ruler-asymptotic}
+ p_*(g)=\frac{2r}{g}+O(1),\qquad
+ \min_p f_g(p)=-\frac{g^2}{4r}+O(g^4).
+\end{equation}
+The following estimate controls arbitrary defects, not only the perfect
+patterns used in this minimization.
+
+\begin{lemma}[Charging estimate]\label{lem:charging}
+Put $f_* =\min(0,\min_{p\geq1} f_g(p))$. On an $L_1\times L_2$
+torus let $V(\sigma)$ count violated pairs. For every column containing
+$W$, let $s$ range over segments from one $W$ to the next, of pitch
+$p_s$. Then
+\begin{equation}\label{eq:charging}
+ E(\sigma)-L_1L_2f_*
+ \geq\sum_s p_s(f_g(p_s)-f_*)+(1-6r)V(\sigma).
+\end{equation}
+In particular a configuration with a violated pair lies at least $5/8$
+above $L_1L_2f_*$.
+\end{lemma}
+\begin{proof}
+A column with no $W$ has no negative bonus and contributes at least
+$L_2f_*$. For the other columns assign each $W$ to the segment it starts.
+If $v_s$ is the indicator that the segment ends in a $VW$ bond, its
+energy contribution is $-g+rv_s$. The identity
+\[
+ -g-pf_*=p(f_g(p)-f_*)-r/p
+\]
+leaves the additional nonnegative residual $-A_0f_*$, where $A_0$
+is the area of the $W$-free columns, and reduces the assertion to
+$\sum_s(v_s-1/p_s)\geq-6V(\sigma)$.
+Declare a segment vertically bad if its closed row range contains a
+forbidden vertical bond. Group the remaining segments into maximal
+horizontal runs having the same top and bottom wall rows and no
+violation on the intervening horizontal bonds. Lemma~\ref{lem:forcing}
+forces the column cycle inside a run. A run of $m$ columns and pitch
+$p$ contains at least $\lfloor m/p\rfloor$ divider columns; its deficit
+is greater than $-1$. A run closing around the torus has zero deficit.
+Charge only the right end of each nonclosing run. A missing matching
+wall segment produces a forbidden $W$--non-$W$ horizontal pair.
+A matching but vertically bad segment supplies a forbidden vertical
+bond; otherwise the failed join supplies a forbidden horizontal bond.
+A violated pair belongs to the closed vertical ranges of at most three
+segments on that side, and so pays for at most three such run ends.
+A segment excluded from every good run contains a violated vertical
+pair; its individual deficit is at least $-1$. Each such violation is
+in at most three closed segment ranges. Charging both types uses at
+most six units of deficit per violation. Substitution proves
+\eqref{eq:charging}.
+\end{proof}
+
+\begin{corollary}[Selection and separation]\label{cor:selection}
+For $g\leq0$ the vacua have energy zero and every other wall
+configuration has energy at least $r$. For small positive nontie $g$,
+on a square torus divisible by $p_*(g)$ the minimizers are exactly the
+perfect pitch-$p_*$ cell lattices. Every other configuration lies at
+least $\min(5/8,L\delta(g))$ above, where
+\[
+ \delta(g)=\min_{p\ne p_*}p(f_g(p)-f_*)>0.
+\]
+At ties allow both minimizing pitches and omit both from this minimum.
+\end{corollary}
+\begin{proof}
+For $g\leq0$ a clean nonvacuum stack has energy
+$L_1\sum_i(-g+r/p_i)\geq r$, since $p_i\leq L_1$.
+Defective configurations obey Lemma~\ref{lem:charging}. For $g>0$,
+clean stripes of a wrong pitch contribute $Lp(f_g(p)-f_*)$; all
+other configurations have a violated pair. The minimum defining
+$\delta$ is effective and positive because its terms tend to infinity
+with $p$. The same argument excludes all pitches except the two
+minimizers at a tie. Uniform vacua have the positive excess
+$-L^2f_*$ and are also above the stated bound for sufficiently large $L$.
+\end{proof}
+
+The threshold for the last statement can be computed at rational
+$g>0$: compare the rational energies, find the finite minimizing
+pitches and a positive separation, then take $L=n!$ large enough that
+these pitches divide $L$ and $L\delta\geq5/8$ (and the vacuum excess
+also exceeds $5/8$). No assertion is made for incommensurate tori.

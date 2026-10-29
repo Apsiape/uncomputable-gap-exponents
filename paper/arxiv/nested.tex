@@ -1,0 +1,117 @@
+\section{Dependent nested limits at every finite level}\label{sec:nested}
+For $k\geq1$ define
+\begin{equation}\label{eq:nested-definition}
+ Q(M)=\lim_{L_1}\cdots\lim_{L_{k-1}}
+       \Delta(M,L_1,\ldots,L_{k-1}),\qquad
+ z_M=\frac{\log(1/Q(M))}{\log M}.
+\end{equation}
+The rightmost limit is taken first. Require every intermediate limit to
+exist at each fixed tuple of remaining parameters. Require the final
+$Q(M)$ to be finite and positive for every sufficiently large $M$;
+earlier intermediate limits need not be positive because their
+logarithms are not taken.
+
+\begin{theorem}[Nested-box classification]\label{thm:nested}
+For algebraic finite-range interactions, finite lower, upper and
+existing exponents in \eqref{eq:nested-definition} have ceilings
+$\mathsf S_{k+1},\mathsf P_{k+1},\mathsf D_{k+1}$ respectively.
+Every ordered nonnegative finite pair in those endpoint classes is
+realized by fixed integer onsite and nearest-neighbour interactions
+in dimension $k+1$. The local dimension and the finite program may
+depend on the pair and on $k$.
+\end{theorem}
+\begin{proof}[Necessity]
+The finite spectra have uniform computable names. Applying the
+$\mathsf D_m$ limit rule inductively gives a uniform
+$0^{(k-1)}$-Cauchy name for $Q(M)$. Positivity permits the logarithm
+in the same oracle. The final lower, upper or existing limit has the
+asserted ceiling by Proposition~\ref{prop:calculus}.
+\end{proof}
+
+Here is a finite local-rule specification completing realization for
+every fixed $k\geq3$. The cases $k=1,2$ are the fast finite-size
+engine and Theorem~\ref{thm:film} respectively. Let $A$ be computable
+in $0^{(k-1)}$. By the iterated limit lemma there is a total
+computable binary function
+\[
+ A(j)=\lim_{s_1}\cdots\lim_{s_{k-1}}
+ R(j,s_1,\ldots,s_{k-1}),
+\]
+with every intermediate bit limit existing. Set $R=1$ at $j=0,1,2$.
+Use coordinates
+\[
+ (x,y,w_1,\ldots,w_{k-2},z),\qquad
+ \text{side lengths }(L_{k-1},L_{k-1},L_1,\ldots,L_{k-2},M).
+\]
+The following fields
+and predicates are finite for fixed $k$.
+
+\begin{enumerate}
+\item Give every axis two exact face flags, with the flag identity
+of \eqref{eq:film-flags} in dimension $k+1$. For each
+$a\in\{w_1,\ldots,w_{k-2},z\}$ introduce its own $(b_a,c_a,f_a)$
+counter on every $(x,a)$ slice. Initialize $b_a=f_a=0$ at $a=0$,
+set $c_a=1$ at $x=0$, and use the same carry and vertical recursion.
+No copying along the other axes is needed: each slice is uniquely
+determined from its own boundary initialization.
+\item The only computation plane is the conjunction
+$P=Z_0\bigwedge_i W_i^1$. On $P$ use the deterministic machine
+compiler of Section~\ref{sec:classical}; off $P$ fix every tape,
+head, output and arrival field to a unique dummy. Machine bonds
+require $P$ at both endpoints and the two missing-neighbour arrival
+conditions are imposed.
+\item On $P$, expose the read-only pair of bits
+$(b_{w_i},b_{w_i}\mathbin{\mathrm{OR}}f_{w_i})$ for each $i$.
+At the far face the second track marks exactly the prefix of length
+$\bitlength(L_i-1)$. Scanning to its first zero gives a delimiter,
+and the first track then specifies $L_i-1$ in least-significant-first
+binary order. Zero has its delimiter at the first cell. Merely
+supplying an undelimited infinite string of zero-padded bits would
+not let a finite-time machine recognize the input's end.
+\item After parsing the inputs, the ordinary machine computes
+$R(j,L_1-1,\ldots,L_{k-2}-1,s)$ for $j=0,\ldots,s$ at stage $s$
+and writes the answers on its persistent output track. Every finite
+computation finishes. A small box not exposing a delimiter still
+has a unique finite computation prefix; completed output is only
+asserted for sufficiently large innermost squares.
+\item On $P_w=\bigwedge_iW_i^1$ transport the output from $Z_0$
+along $z$, and fix the transport field to zero off $P_w$. The only
+quantum segment is
+$P_wY_1Z_1(b_z\mathbin{\mathrm{OR}}f_z)$. Its radix uses the
+transported output; every other quantum site is frozen. Use the
+same region guards, endpoint tests, penalties and weighted
+transitions as the film. For eventual boxes the segment has an
+$x$ neighbour outside the region, so wrap is still two-site.
+\end{enumerate}
+
+All tests are onsite or on an oriented nearest-neighbour bond.
+Flags, independent counters, machine and transport are determined
+in that order, which proves uniqueness of the correct classical
+configuration. Any other classical block costs at least one;
+its dynamic part is nonnegative. Thus the sector proof is unchanged
+in higher dimension.
+
+Fix $M$ and every outer size. For the finitely many read positions
+$j<\ell(M)$, the innermost bit limit exists, and each bit is eventually
+constant. The entire radix vector is therefore eventually constant
+in $L_{k-1}$. Its gap is less than one once the first three bits are
+read, and the innermost gap limit is precisely that full counter gap.
+Let the next size grow and repeat: each next intermediate bit limit
+again stabilizes a finite vector. Induction in the declared order gives
+\[
+ Q(M)=\Delta^+(K[2^{\beta A(j)}:j<\ell(M)]).
+\]
+This uses eventual constancy of finite discrete vectors, not continuity
+of an eigenvalue through degeneracy or a uniform settling modulus.
+The counter bracket gives
+$z_M=2\beta\rho_{\ell(M)}(A)+o(1)$. Choose the target density pair
+with Lemma~\ref{lem:relative-density} and an integer
+$\beta\geq\max(1,b/2)$. This completes realization and the proof of
+Theorem~\ref{thm:nested} at the finite-alphabet compiler level.
+
+The dimension $k+1$ is a sufficient construction dimension. Minimality
+is not proved. Nor does the theorem supply one local dimension for
+all levels or all prescribed targets. A nondecreasing unbounded
+sampling function that attains all sufficiently large integers
+through unit steps preserves these density endpoints; arbitrary sparse
+sampling need not do so.

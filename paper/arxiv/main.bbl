@@ -1,5 +1,17 @@
 \begin{thebibliography}{10}
 
+\bibitem{bak}
+Per Bak.
+\newblock Commensurate phases, incommensurate phases and the devil's staircase.
+\newblock {\em Reports on Progress in Physics}, 45(6):587--629, 1982.
+\newblock \url{https://doi.org/10.1088/0034-4885/45/6/001}.
+
+\bibitem{bootstrapUniversality}
+Paul Balister, B{\'e}la Bollob{\'a}s, Robert Morris, and Paul Smith.
+\newblock Universality for monotone cellular automata, 2022.
+\newblock Version 3, introduction and footnote 4.
+  \url{https://arxiv.org/abs/2203.13806v3}.
+
 \bibitem{sizeDriven}
 Johannes Bausch, Toby~S. Cubitt, Angelo Lucia, David P{\'e}rez-Garc{\'i}a, and
   Michael~M. Wolf.
@@ -13,6 +25,12 @@ Johannes Bausch, Toby~S. Cubitt, and James~D. Watson.
 \newblock Uncomputability of phase diagrams.
 \newblock {\em Nature Communications}, 12:452, 2021.
 \newblock \url{https://doi.org/10.1038/s41467-020-20504-6}.
+
+\bibitem{gapInstability}
+Laura Castilla-Castellano and Angelo Lucia.
+\newblock Instability of the undecidable behavior of the spectral gap in {1D},
+  2026.
+\newblock \url{https://arxiv.org/abs/2607.08686}.
 
 \bibitem{spectralShort}
 Toby~S. Cubitt, David P{\'e}rez-Garc{\'i}a, and Michael~M. Wolf.
@@ -36,10 +54,29 @@ Rodney~G. Downey, Carl~G. {Jockusch, Jr.}, and Paul~E. Schupp.
 \newblock Asymptotic density and computably enumerable sets, 2013.
 \newblock \url{https://arxiv.org/abs/1307.0040}.
 
+\bibitem{fisherBarber}
+Michael~E. Fisher and Michael~N. Barber.
+\newblock Scaling theory for finite-size effects in the critical region.
+\newblock {\em Physical Review Letters}, 28:1516--1519, 1972.
+\newblock \url{https://doi.org/10.1103/PhysRevLett.28.1516}.
+
+\bibitem{fisherSelke}
+Michael~E. Fisher and Walter Selke.
+\newblock Infinitely many commensurate phases in a simple {Ising} model.
+\newblock {\em Physical Review Letters}, 44:1502--1505, 1980.
+\newblock \url{https://doi.org/10.1103/PhysRevLett.44.1502}.
+
 \bibitem{gossetMozgunov}
 David Gosset and Evgeny Mozgunov.
 \newblock Local gap threshold for frustration-free spin systems, 2016.
 \newblock \url{https://doi.org/10.1063/1.4962337}.
+
+\bibitem{kato}
+Tosio Kato.
+\newblock {\em Perturbation Theory for Linear Operators}.
+\newblock Springer, 1995.
+\newblock Reprint of the second edition.
+  \url{https://doi.org/10.1007/978-3-642-66282-9}.
 
 \bibitem{lemmMozgunov}
 Marius Lemm and Evgeny Mozgunov.
@@ -53,16 +90,46 @@ Rintaro Masaoka, Tomohiro Soejima, and Haruki Watanabe.
 \newblock {\em Physical Review X}, 15:041050, 2025.
 \newblock \url{https://doi.org/10.1103/d4c4-5p2r}.
 
+\bibitem{meyerovitchGrowth}
+Tom Meyerovitch.
+\newblock Growth-type invariants for {$\mathbb{Z}^d$} subshifts of finite type
+  and arithmetical classes of real numbers.
+\newblock {\em Inventiones Mathematicae}, 184:567--589, 2011.
+\newblock \url{https://doi.org/10.1007/s00222-010-0296-1}.
+
+\bibitem{liebRobinson}
+Bruno Nachtergaele and Robert Sims.
+\newblock {Lieb--Robinson} bounds and the exponential clustering theorem.
+\newblock {\em Communications in Mathematical Physics}, 265:119--130, 2006.
+\newblock \url{https://doi.org/10.1007/s00220-006-1556-1}.
+
 \bibitem{chaitinTransition}
 James Purcell, Zhi Li, and Toby Cubitt.
 \newblock Chaitin phase transition, 2024.
 \newblock \url{https://arxiv.org/abs/2410.02600}.
+
+\bibitem{algorithmicTransition}
+Christof Schmidhuber.
+\newblock {Chaitin}'s {Omega} and an algorithmic phase transition, 2021.
+\newblock Version 3. \url{https://arxiv.org/abs/1909.09231v3}.
+
+\bibitem{criticalBoundary}
+James~D. Watson and Johannes Bausch.
+\newblock The complexity of approximating critical points of quantum phase
+  transitions, 2021.
+\newblock \url{https://arxiv.org/abs/2105.13350}.
 
 \bibitem{energyDensity}
 James~D. Watson and Toby~S. Cubitt.
 \newblock Computational complexity of the ground state energy density problem,
   2021.
 \newblock \url{https://arxiv.org/abs/2107.05060}.
+
+\bibitem{renormalisation}
+James~D. Watson, Emilio Onorati, and Toby~S. Cubitt.
+\newblock Uncomputably complex renormalisation group flows.
+\newblock {\em Nature Communications}, 13:7618, 2022.
+\newblock \url{https://doi.org/10.1038/s41467-022-35179-4}.
 
 \bibitem{bulkGap}
 Xiangling Xu, Matthias Sch{\"o}tz, Jie Wang, Victor Magron, Igor Klep, Omar

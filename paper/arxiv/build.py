@@ -15,8 +15,8 @@ out=Path(args.output_dir).resolve()
 if out==source:
     raise ValueError('Choose a separate build directory')
 out.mkdir(parents=True,exist_ok=True)
-for name in ('main.tex','references.bib'):
-    shutil.copyfile(source/name,out/name)
+for path in sorted(source.glob('*.tex')) + [source/'references.bib']:
+    shutil.copyfile(path,out/path.name)
 commands=[['pdflatex','-interaction=nonstopmode',
            '-halt-on-error','-file-line-error','main.tex'],
           ['bibtex','main']]

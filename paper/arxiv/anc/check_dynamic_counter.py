@@ -9,11 +9,11 @@ operators conditioned on the classical labels (projectors), as in the theorem.  
 
 Local terms:
   penalties (diagonal, weight 1):
-    P0  1-site: digit d >= r_j
-    P1  2-site: (none-right, none-left)        [a right-side cell followed by a left-side cell]
-    P2  2-site: (head, none-left)               [cells right of the head must be right-side]
-    P3  2-site: (none-right, head)              [cells left of the head must be left-side]
-    P4  2-site: (head, head)
+    penalty_0  1-site: digit d >= r_j
+    penalty_1  2-site: (none-right, none-left)        [a right-side cell followed by a left-side cell]
+    penalty_2  2-site: (head, none-left)               [cells right of the head must be right-side]
+    penalty_3  2-site: (none-right, head)              [cells left of the head must be left-side]
+    penalty_4  2-site: (head, head)
   transitions (each an edge Laplacian |x><x|+|y><y|-|x><y|-|y><x| on the local pattern):
     T1  1-site:  (d, INC) -> (d+1, RET)                       if d+1 < r_j
     T2  2-site:  (r_j - 1, INC),(e, none-right) -> (0, none-left),(e, INC)   (cell j not last)
@@ -21,12 +21,11 @@ Local terms:
     T4  2-site:  (0, none-left),(e, RET) -> (0, RET),(e, none-right)
     T5  1-site:  (d, RET) -> (d, INC)                         if cell j is first
 
-The script builds the full sparse Hamiltonian on the product space by Kronecker embedding of the local operators,
-then: (i) checks that every configuration has at most 2 transition neighbours (components are paths or cycles);
-(ii) computes, per connected component, the exact spectrum; (iii) reports the spectral gap Delta (smallest positive
-eigenvalue; the ground energy is 0), the length N of the main counter cycle, the prediction 2-2cos(2 pi/N), and the
-rigorous lower bound min(1/(8 D gc^2), 1/gc^2), D = max degree, gc = largest cluster of penalty-free configurations
-(the penalty localization lemma).  Penalized configurations (several heads) can have degree > 2; the lemma covers them.  Run: python -u check_dynamic_counter.py
+The script builds the finite product-space Hamiltonian, checks that one-head configurations have weighted
+transition degree at most two, verifies that every multi-head configuration is penalized, and numerically
+diagonalizes its connected blocks in double precision. It reports consistency checks for the rigorous bracket
+and the main-orbit upper witness; these eigenvalues are not exact or interval-certified spectra.
+Run: python -u check_dynamic_counter.py
 """
 import itertools, json, math, sys, time
 import numpy as np
@@ -78,8 +77,8 @@ def build(radices, RMAX):
     H = sp.csr_matrix((dim, dim))
     # penalties
     for j, r in enumerate(radices):
-        P0 = sp.diags([1.0 if s[0] >= r else 0.0 for s in S])
-        H = H + embed1(P0, j)
+        penalty_0 = sp.diags([1.0 if s[0] >= r else 0.0 for s in S])
+        H = H + embed1(penalty_0, j)
     pen2 = np.zeros(q * q)
     for a, x in enumerate(S):
         for b, y in enumerate(S):
@@ -88,9 +87,9 @@ def build(radices, RMAX):
             bad = (hx == NR and hy == NL) or (headx and hy == NL) or (hx == NR and heady) or (headx and heady)
             if bad:
                 pen2[a * q + b] = 1.0
-    P2 = sp.diags(pen2)
+    penalty_2 = sp.diags(pen2)
     for j in range(l - 1):
-        H = H + embed2(P2, j)
+        H = H + embed2(penalty_2, j)
     # transitions
     for j, r in enumerate(radices):
         first, last = (j == 0), (j == l - 1)

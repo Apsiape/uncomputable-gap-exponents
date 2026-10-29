@@ -1,0 +1,1846 @@
+{
+  "broadcast_linear_algebra": {
+    "translated_geometries": 90,
+    "all_prefix_fillings": 864,
+    "wrong_repeated_bit_contradictions": 2880,
+    "noncommensurate_tests": 4,
+    "y_copy": "eliminated exactly before GF(2) calculation"
+  },
+  "ruler_defects": {
+    "configurations": 13824,
+    "all_one_and_two_site_changes_at_pitch_6": 10224,
+    "larger_random_defects": 3600,
+    "arithmetic": "exact fractions"
+  },
+  "full_counter_sector_audit": {
+    "radix_vectors": 44,
+    "full_product_vertices": 103728,
+    "max_full_dimension": 4096,
+    "invariance_and_head_sector_checks": true,
+    "records": [
+      {
+        "D": 2,
+        "radices": [
+          1
+        ],
+        "free_gap": 4.0,
+        "components": [
+          [
+            "cycle",
+            2
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2
+        ],
+        "free_gap": 2.0000000000000004,
+        "components": [
+          [
+            "cycle",
+            4
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          1,
+          1
+        ],
+        "free_gap": 2.0000000000000004,
+        "components": [
+          [
+            "cycle",
+            4
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          1,
+          2
+        ],
+        "free_gap": 0.585786437626905,
+        "components": [
+          [
+            "cycle",
+            8
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2,
+          1
+        ],
+        "free_gap": 0.9999999999999998,
+        "components": [
+          [
+            "cycle",
+            6
+          ],
+          [
+            "path",
+            2
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2,
+          2
+        ],
+        "free_gap": 0.26794919243112264,
+        "components": [
+          [
+            "cycle",
+            12
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          1,
+          1,
+          1
+        ],
+        "free_gap": 0.9999999999999998,
+        "components": [
+          [
+            "cycle",
+            6
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          1,
+          1,
+          2
+        ],
+        "free_gap": 0.26794919243112264,
+        "components": [
+          [
+            "cycle",
+            12
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          1,
+          2,
+          1
+        ],
+        "free_gap": 0.3819660112501051,
+        "components": [
+          [
+            "cycle",
+            10
+          ],
+          [
+            "path",
+            2
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          1,
+          2,
+          2
+        ],
+        "free_gap": 0.09788696740969285,
+        "components": [
+          [
+            "cycle",
+            20
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2,
+          1,
+          1
+        ],
+        "free_gap": 0.585786437626905,
+        "components": [
+          [
+            "cycle",
+            8
+          ],
+          [
+            "path",
+            4
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2,
+          1,
+          2
+        ],
+        "free_gap": 0.15224093497742647,
+        "components": [
+          [
+            "cycle",
+            16
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2,
+          2,
+          1
+        ],
+        "free_gap": 0.19806226419516174,
+        "components": [
+          [
+            "cycle",
+            14
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            4
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2,
+          2,
+          2
+        ],
+        "free_gap": 0.05014417563635278,
+        "components": [
+          [
+            "cycle",
+            28
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "free_gap": 0.585786437626905,
+        "components": [
+          [
+            "cycle",
+            8
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "free_gap": 0.15224093497742647,
+        "components": [
+          [
+            "cycle",
+            16
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "free_gap": 0.19806226419516174,
+        "components": [
+          [
+            "cycle",
+            14
+          ],
+          [
+            "path",
+            2
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "free_gap": 0.05014417563635278,
+        "components": [
+          [
+            "cycle",
+            28
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "free_gap": 0.26794919243112264,
+        "components": [
+          [
+            "cycle",
+            12
+          ],
+          [
+            "path",
+            4
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "free_gap": 0.0681483474218634,
+        "components": [
+          [
+            "cycle",
+            24
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "free_gap": 0.08101405277100522,
+        "components": [
+          [
+            "cycle",
+            22
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            4
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          1,
+          2,
+          2,
+          2
+        ],
+        "free_gap": 0.020357116238134534,
+        "components": [
+          [
+            "cycle",
+            44
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "free_gap": 0.26794919243112264,
+        "components": [
+          [
+            "cycle",
+            10
+          ],
+          [
+            "path",
+            6
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2,
+          1,
+          1,
+          2
+        ],
+        "free_gap": 0.09788696740969285,
+        "components": [
+          [
+            "cycle",
+            20
+          ],
+          [
+            "path",
+            6
+          ],
+          [
+            "path",
+            6
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "free_gap": 0.12061475842818321,
+        "components": [
+          [
+            "cycle",
+            18
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            6
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2,
+          1,
+          2,
+          2
+        ],
+        "free_gap": 0.030384493975583876,
+        "components": [
+          [
+            "cycle",
+            36
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            6
+          ],
+          [
+            "path",
+            6
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "free_gap": 0.15224093497742647,
+        "components": [
+          [
+            "cycle",
+            16
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            6
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2,
+          2,
+          1,
+          2
+        ],
+        "free_gap": 0.038429439193539104,
+        "components": [
+          [
+            "cycle",
+            32
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            6
+          ],
+          [
+            "path",
+            6
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2,
+          2,
+          2,
+          1
+        ],
+        "free_gap": 0.04370479853238871,
+        "components": [
+          [
+            "cycle",
+            30
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            6
+          ]
+        ]
+      },
+      {
+        "D": 2,
+        "radices": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "free_gap": 0.010956209263453325,
+        "components": [
+          [
+            "cycle",
+            60
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            6
+          ],
+          [
+            "path",
+            6
+          ]
+        ]
+      },
+      {
+        "D": 4,
+        "radices": [
+          1
+        ],
+        "free_gap": 4.0,
+        "components": [
+          [
+            "cycle",
+            2
+          ]
+        ]
+      },
+      {
+        "D": 4,
+        "radices": [
+          4
+        ],
+        "free_gap": 0.585786437626905,
+        "components": [
+          [
+            "cycle",
+            8
+          ]
+        ]
+      },
+      {
+        "D": 4,
+        "radices": [
+          1,
+          1
+        ],
+        "free_gap": 2.0000000000000004,
+        "components": [
+          [
+            "cycle",
+            4
+          ]
+        ]
+      },
+      {
+        "D": 4,
+        "radices": [
+          1,
+          4
+        ],
+        "free_gap": 0.15224093497742647,
+        "components": [
+          [
+            "cycle",
+            16
+          ]
+        ]
+      },
+      {
+        "D": 4,
+        "radices": [
+          4,
+          1
+        ],
+        "free_gap": 0.3819660112501051,
+        "components": [
+          [
+            "cycle",
+            10
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ]
+        ]
+      },
+      {
+        "D": 4,
+        "radices": [
+          4,
+          4
+        ],
+        "free_gap": 0.024623318809724546,
+        "components": [
+          [
+            "cycle",
+            40
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ]
+        ]
+      },
+      {
+        "D": 4,
+        "radices": [
+          1,
+          1,
+          1
+        ],
+        "free_gap": 0.9999999999999998,
+        "components": [
+          [
+            "cycle",
+            6
+          ]
+        ]
+      },
+      {
+        "D": 4,
+        "radices": [
+          1,
+          1,
+          4
+        ],
+        "free_gap": 0.0681483474218634,
+        "components": [
+          [
+            "cycle",
+            24
+          ]
+        ]
+      },
+      {
+        "D": 4,
+        "radices": [
+          1,
+          4,
+          1
+        ],
+        "free_gap": 0.12061475842818321,
+        "components": [
+          [
+            "cycle",
+            18
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ]
+        ]
+      },
+      {
+        "D": 4,
+        "radices": [
+          1,
+          4,
+          4
+        ],
+        "free_gap": 0.007610603816508936,
+        "components": [
+          [
+            "cycle",
+            72
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ]
+        ]
+      },
+      {
+        "D": 4,
+        "radices": [
+          4,
+          1,
+          1
+        ],
+        "free_gap": 0.26794919243112264,
+        "components": [
+          [
+            "cycle",
+            12
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ]
+        ]
+      },
+      {
+        "D": 4,
+        "radices": [
+          4,
+          1,
+          4
+        ],
+        "free_gap": 0.017110277252379177,
+        "components": [
+          [
+            "cycle",
+            48
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ]
+        ]
+      },
+      {
+        "D": 4,
+        "radices": [
+          4,
+          4,
+          1
+        ],
+        "free_gap": 0.02233834754974291,
+        "components": [
+          [
+            "cycle",
+            42
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ]
+        ]
+      },
+      {
+        "D": 4,
+        "radices": [
+          4,
+          4,
+          4
+        ],
+        "free_gap": 0.0013985904232028947,
+        "components": [
+          [
+            "cycle",
+            168
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            2
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ],
+          [
+            "path",
+            4
+          ]
+        ]
+      }
+    ],
+    "long_example": {
+      "radices": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "components": [
+        [
+          "cycle",
+          58
+        ],
+        [
+          "path",
+          2
+        ],
+        [
+          "path",
+          2
+        ],
+        [
+          "path",
+          2
+        ],
+        [
+          "path",
+          2
+        ],
+        [
+          "path",
+          4
+        ],
+        [
+          "path",
+          30
+        ],
+        [
+          "path",
+          30
+        ],
+        [
+          "path",
+          30
+        ],
+        [
+          "path",
+          30
+        ],
+        [
+          "path",
+          32
+        ],
+        [
+          "path",
+          32
+        ],
+        [
+          "path",
+          34
+        ]
+      ],
+      "full_gap": 0.008531647409930955,
+      "main_cycle_gap": 0.011724085691280783
+    }
+  },
+  "degenerate_tensor_sum": {
+    "cases": 8,
+    "smallest_positive": "1/97",
+    "multiplicity": "N*2**(N-1)"
+  },
+  "ties_and_bulk_count": {
+    "pitches": 2043,
+    "exact": true
+  },
+  "resources": {
+    "elapsed_seconds": 1.372707900009118,
+    "peak_working_set_bytes": 19922944,
+    "standard_library_only": true,
+    "processes": 1,
+    "numerical_threads_requested": 1
+  },
+  "status": "PASS"
+}

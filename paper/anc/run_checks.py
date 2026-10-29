@@ -1,51 +1,43 @@
-"""Run the finite checks sequentially with one numerical-library thread."""
+"""Run every finite check sequentially with one numerical-library thread."""
 import os
-for key in ('OPENBLAS_NUM_THREADS', 'OMP_NUM_THREADS', 'MKL_NUM_THREADS', 'NUMEXPR_NUM_THREADS'):
-    os.environ[key] = '1'
-os.environ['PYTHONDONTWRITEBYTECODE'] = '1'
-import json
-import math
+for key in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS','NUMEXPR_NUM_THREADS','VECLIB_MAXIMUM_THREADS'):
+    os.environ[key]='1'
+os.environ['PYTHONDONTWRITEBYTECODE']='1'
+import hashlib,json,subprocess,sys,time
 from pathlib import Path
-import platform
-import subprocess
-import sys
-
-HERE = Path(__file__).resolve().parent
-scripts = ['check_penalty_lemma.py', 'check_dynamic_counter.py',
-           'check_classical_layer.py', 'independent_checks.py']
+import psutil
+HERE=Path(__file__).resolve().parent
+scripts=sys.argv[1:] or ['finite_size_runner.py','check_wall_layer.py','check_wall_layer_noO.py',
+         'check_counter_perturbation.py','check_film_counter.py',
+         'check_film_classical_layer.py','check_nested_limits.py','check_critical_ruler.py','check_bulk_broadcast.py','check_bulk_independent.py']
+previous=HERE/'all_checks_summary.json'
+records=json.loads(previous.read_text())['checks'] if sys.argv[1:] and previous.exists() else []
 for name in scripts:
-    print('Running ' + name, flush=True)
-    completed = subprocess.run([sys.executable, '-u', name], cwd=HERE,
-                               capture_output=True, text=True, timeout=1200)
-    (HERE / (Path(name).stem + '_output.txt')).write_text(
-        completed.stdout + completed.stderr, encoding='utf-8')
-    if completed.returncode or 'FAIL' in completed.stdout or completed.stderr:
-        raise RuntimeError(name + ' failed; inspect its recorded output')
-    print(completed.stdout.splitlines()[-1], flush=True)
-
-penalty = json.loads((HERE / 'check_penalty_lemma.json').read_text())
-assert all(v['min_ratio'] >= 1 - 1e-10 for v in penalty.values())
-counter = json.loads((HERE / 'check_dynamic_counter.json').read_text())
-for item in counter:
-    bound = 4.0 ** (-item['k_bits']) / (64 * len(item['radices']) ** 2)
-    assert item['gap'] >= bound - 1e-10
-    assert item['gap'] <= item['pred_main_cycle_gap'] + 1e-10
-    assert item['maxdeg_one_head'] <= 2 and item['multi_head_all_penalized']
-classical = json.loads((HERE / 'check_classical_layer.json').read_text())
-assert all(v['min_energy'] == -3*v['L'] and v['number_of_minimisers'] == 1
-           for v in classical)
-independent = json.loads((HERE / 'independent_checks.json').read_text())
-summary = dict(
-    python=platform.python_version(),
-    status='PASS',
-    counter_cases=len(counter),
-    largest_counter_dimension=max(v['dim'] for v in counter),
-    classical_sizes=[v['L'] for v in classical],
-    random_penalty_instances=2000,
-    exhaustive_penalty_instances=independent['penalty']['checked'],
-    independent_counter_cases=len(independent['counter']),
-    four_flag_assignments=independent['classical']['low_energy_enumerated'],
-    numerical_caveat='Floating-point diagonalization is evidence, not an interval proof.'
-)
-(HERE / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n', encoding='utf-8')
-print('ALL FINITE CHECKS PASS', flush=True)
+    print('Running '+name,flush=True)
+    start=time.monotonic(); peak=0
+    output=HERE/(Path(name).stem+'_output.txt')
+    with output.open('w',encoding='utf-8') as out:
+        proc=subprocess.Popen([sys.executable,'-u',name],cwd=HERE,stdout=out,stderr=subprocess.STDOUT)
+        monitor=psutil.Process(proc.pid)
+        while proc.poll() is None:
+            try:
+                processes=[monitor]+monitor.children(recursive=True)
+                memory=sum(p.memory_info().rss for p in processes if p.is_running())
+                peak=max(peak,memory)
+                if memory>=1000000000:
+                    for p in reversed(processes): p.kill()
+                    raise RuntimeError('Memory bound exceeded by '+name)
+            except psutil.NoSuchProcess:
+                pass
+            if time.monotonic()-start>2400:
+                proc.kill(); raise RuntimeError('Time bound exceeded by '+name)
+            time.sleep(.2)
+    text=output.read_text(encoding='utf-8')
+    if proc.returncode or 'FAIL' in text or 'Traceback' in text:
+        raise RuntimeError(name+' failed; inspect recorded output')
+    records.append(dict(script=name,status='PASS',seconds=round(time.monotonic()-start,3),peak_bytes=peak))
+    print(name+' PASS',flush=True)
+summary=dict(status='PASS',single_threaded=True,memory_limit_bytes=1000000000,checks=records,
+             numerical_caveat='Floating-point eigenvalues are consistency checks, not interval proofs.')
+(HERE/'all_checks_summary.json').write_text(json.dumps(summary,indent=2)+'\n',encoding='utf-8')
+print('ALL FINITE CHECKS PASS',flush=True)

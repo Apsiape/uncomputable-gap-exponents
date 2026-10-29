@@ -1,0 +1,8 @@
+COUNTERS 72 PASS; cycle-equality counterexamples 6
+PREFIX COUNTEREXAMPLE 0.011724085691280783 0.008531647409930955
+FLAGS {"flag_assignments": 26508, "all_pass": true}
+THICKNESS {"counter_boxes": 414, "checked_cells": 177318, "delimited_inputs": 257, "all_pass": true}
+DENSITY {"exact_fraction_prefix_checks": 1325, "all_pass": true}
+STABILIZATION {"cases": [{"M": 5, "ell": 3, "L0": 19, "tested_later_events": 3316}, {"M": 6, "ell": 3, "L0": 19, "tested_later_events": 3316}, {"M": 8, "ell": 3, "L0": 19, "tested_later_events": 3316}, {"M": 9, "ell": 4, "L0": 431, "tested_later_events": 3213}, {"M": 16, "ell": 4, "L0": 431, "tested_later_events": 3213}, {"M": 17, "ell": 5, "L0": 564, "tested_later_events": 3181}, {"M": 32, "ell": 5, "L0": 564, "tested_later_events": 3181}, {"M": 33, "ell": 6, "L0": 863, "tested_later_events": 3106}, {"M": 64, "ell": 6, "L0": 863, "tested_later_events": 3106}, {"M": 65, "ell": 7, "L0": 1038, "tested_later_events": 3062}], "all_pass": true}
+CALCULUS {"computable_name_error_checks": 961, "second_response_counterexample": true, "all_pass": true}
+ALL PASS 1.3806123733520508

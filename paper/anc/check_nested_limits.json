@@ -1,0 +1,1480 @@
+{
+  "counters": [
+    {
+      "radices": [
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 8,
+      "gap": 1,
+      "cycle_length": 2,
+      "cycle_gap": 4.0,
+      "equals_cycle": false,
+      "lower": 0.015625,
+      "upper": 39.47841760435743,
+      "components": 6,
+      "max_diagonalized_block": 2,
+      "double_edge": true
+    },
+    {
+      "radices": [
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 8,
+      "gap": 2.0,
+      "cycle_length": 4,
+      "cycle_gap": 2.0000000000000004,
+      "equals_cycle": true,
+      "lower": 0.00390625,
+      "upper": 9.869604401089358,
+      "components": 5,
+      "max_diagonalized_block": 4,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 64,
+      "gap": 1,
+      "cycle_length": 4,
+      "cycle_gap": 2.0000000000000004,
+      "equals_cycle": false,
+      "lower": 0.00390625,
+      "upper": 39.47841760435743,
+      "components": 39,
+      "max_diagonalized_block": 4,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 64,
+      "gap": 0.5857864376269046,
+      "cycle_length": 8,
+      "cycle_gap": 0.585786437626905,
+      "equals_cycle": true,
+      "lower": 0.0009765625,
+      "upper": 9.869604401089358,
+      "components": 33,
+      "max_diagonalized_block": 8,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 64,
+      "gap": 0.9999999999999991,
+      "cycle_length": 6,
+      "cycle_gap": 0.9999999999999998,
+      "equals_cycle": true,
+      "lower": 0.0009765625,
+      "upper": 9.869604401089358,
+      "components": 32,
+      "max_diagonalized_block": 6,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 64,
+      "gap": 0.2679491924311224,
+      "cycle_length": 12,
+      "cycle_gap": 0.26794919243112264,
+      "equals_cycle": true,
+      "lower": 0.000244140625,
+      "upper": 2.4674011002723395,
+      "components": 27,
+      "max_diagonalized_block": 12,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        1,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 512,
+      "gap": 0.9999999999999991,
+      "cycle_length": 6,
+      "cycle_gap": 0.9999999999999998,
+      "equals_cycle": true,
+      "lower": 0.001736111111111111,
+      "upper": 39.47841760435743,
+      "components": 285,
+      "max_diagonalized_block": 6,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        1,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 512,
+      "gap": 0.2679491924311224,
+      "cycle_length": 12,
+      "cycle_gap": 0.26794919243112264,
+      "equals_cycle": true,
+      "lower": 0.00043402777777777775,
+      "upper": 9.869604401089358,
+      "components": 241,
+      "max_diagonalized_block": 12,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        2,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 512,
+      "gap": 0.3819660112501043,
+      "cycle_length": 10,
+      "cycle_gap": 0.3819660112501051,
+      "equals_cycle": true,
+      "lower": 0.00043402777777777775,
+      "upper": 9.869604401089358,
+      "components": 243,
+      "max_diagonalized_block": 10,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        2,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 512,
+      "gap": 0.0978869674096924,
+      "cycle_length": 20,
+      "cycle_gap": 0.09788696740969285,
+      "equals_cycle": true,
+      "lower": 0.00010850694444444444,
+      "upper": 2.4674011002723395,
+      "components": 205,
+      "max_diagonalized_block": 20,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        1,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 512,
+      "gap": 0.5857864376269046,
+      "cycle_length": 8,
+      "cycle_gap": 0.585786437626905,
+      "equals_cycle": true,
+      "lower": 0.00043402777777777775,
+      "upper": 9.869604401089358,
+      "components": 233,
+      "max_diagonalized_block": 8,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        1,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 512,
+      "gap": 0.152240934977425,
+      "cycle_length": 16,
+      "cycle_gap": 0.15224093497742647,
+      "equals_cycle": true,
+      "lower": 0.00010850694444444444,
+      "upper": 2.4674011002723395,
+      "components": 197,
+      "max_diagonalized_block": 16,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        2,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 512,
+      "gap": 0.19806226419516204,
+      "cycle_length": 14,
+      "cycle_gap": 0.19806226419516174,
+      "equals_cycle": true,
+      "lower": 0.00010850694444444444,
+      "upper": 2.4674011002723395,
+      "components": 198,
+      "max_diagonalized_block": 14,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        2,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 512,
+      "gap": 0.05014417563635207,
+      "cycle_length": 28,
+      "cycle_gap": 0.05014417563635278,
+      "equals_cycle": true,
+      "lower": 2.712673611111111e-05,
+      "upper": 0.6168502750680849,
+      "components": 167,
+      "max_diagonalized_block": 28,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.5857864376269046,
+      "cycle_length": 8,
+      "cycle_gap": 0.585786437626905,
+      "equals_cycle": true,
+      "lower": 0.0009765625,
+      "upper": 39.47841760435743,
+      "components": 2121,
+      "max_diagonalized_block": 8,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.152240934977425,
+      "cycle_length": 16,
+      "cycle_gap": 0.15224093497742647,
+      "equals_cycle": true,
+      "lower": 0.000244140625,
+      "upper": 9.869604401089358,
+      "components": 1793,
+      "max_diagonalized_block": 16,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.19806226419516204,
+      "cycle_length": 14,
+      "cycle_gap": 0.19806226419516174,
+      "equals_cycle": true,
+      "lower": 0.000244140625,
+      "upper": 9.869604401089358,
+      "components": 1813,
+      "max_diagonalized_block": 14,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.05014417563635207,
+      "cycle_length": 28,
+      "cycle_gap": 0.05014417563635278,
+      "equals_cycle": true,
+      "lower": 6.103515625e-05,
+      "upper": 2.4674011002723395,
+      "components": 1529,
+      "max_diagonalized_block": 28,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        2,
+        1,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.2679491924311224,
+      "cycle_length": 12,
+      "cycle_gap": 0.26794919243112264,
+      "equals_cycle": true,
+      "lower": 0.000244140625,
+      "upper": 9.869604401089358,
+      "components": 1809,
+      "max_diagonalized_block": 12,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.06814834742186218,
+      "cycle_length": 24,
+      "cycle_gap": 0.0681483474218634,
+      "equals_cycle": true,
+      "lower": 6.103515625e-05,
+      "upper": 2.4674011002723395,
+      "components": 1529,
+      "max_diagonalized_block": 24,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        2,
+        2,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.08101405277100514,
+      "cycle_length": 22,
+      "cycle_gap": 0.08101405277100522,
+      "equals_cycle": true,
+      "lower": 6.103515625e-05,
+      "upper": 2.4674011002723395,
+      "components": 1543,
+      "max_diagonalized_block": 22,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        2,
+        2,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.020357116238134073,
+      "cycle_length": 44,
+      "cycle_gap": 0.020357116238134534,
+      "equals_cycle": true,
+      "lower": 1.52587890625e-05,
+      "upper": 0.6168502750680849,
+      "components": 1301,
+      "max_diagonalized_block": 44,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.26794919243112236,
+      "cycle_length": 10,
+      "cycle_gap": 0.3819660112501051,
+      "equals_cycle": false,
+      "lower": 0.000244140625,
+      "upper": 9.869604401089358,
+      "components": 1733,
+      "max_diagonalized_block": 10,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        1,
+        1,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.0978869674096924,
+      "cycle_length": 20,
+      "cycle_gap": 0.09788696740969285,
+      "equals_cycle": true,
+      "lower": 6.103515625e-05,
+      "upper": 2.4674011002723395,
+      "components": 1465,
+      "max_diagonalized_block": 20,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.12061475842818284,
+      "cycle_length": 18,
+      "cycle_gap": 0.12061475842818321,
+      "equals_cycle": true,
+      "lower": 6.103515625e-05,
+      "upper": 2.4674011002723395,
+      "components": 1481,
+      "max_diagonalized_block": 18,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        1,
+        2,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.03038449397558445,
+      "cycle_length": 36,
+      "cycle_gap": 0.030384493975583876,
+      "equals_cycle": true,
+      "lower": 1.52587890625e-05,
+      "upper": 0.6168502750680849,
+      "components": 1249,
+      "max_diagonalized_block": 36,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        2,
+        1,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.152240934977425,
+      "cycle_length": 16,
+      "cycle_gap": 0.15224093497742647,
+      "equals_cycle": true,
+      "lower": 6.103515625e-05,
+      "upper": 2.4674011002723395,
+      "components": 1473,
+      "max_diagonalized_block": 16,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        2,
+        1,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.038429439193538265,
+      "cycle_length": 32,
+      "cycle_gap": 0.038429439193539104,
+      "equals_cycle": true,
+      "lower": 1.52587890625e-05,
+      "upper": 0.6168502750680849,
+      "components": 1245,
+      "max_diagonalized_block": 32,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.04370479853238861,
+      "cycle_length": 30,
+      "cycle_gap": 0.04370479853238871,
+      "equals_cycle": true,
+      "lower": 1.52587890625e-05,
+      "upper": 0.6168502750680849,
+      "components": 1256,
+      "max_diagonalized_block": 30,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 4096,
+      "gap": 0.010956209263454565,
+      "cycle_length": 60,
+      "cycle_gap": 0.010956209263453325,
+      "equals_cycle": true,
+      "lower": 3.814697265625e-06,
+      "upper": 0.15421256876702122,
+      "components": 1059,
+      "max_diagonalized_block": 60,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1
+      ],
+      "alphabet": 4,
+      "dimension": 16,
+      "gap": 1,
+      "cycle_length": 2,
+      "cycle_gap": 4.0,
+      "equals_cycle": false,
+      "lower": 0.015625,
+      "upper": 39.47841760435743,
+      "components": 12,
+      "max_diagonalized_block": 2,
+      "double_edge": true
+    },
+    {
+      "radices": [
+        2
+      ],
+      "alphabet": 4,
+      "dimension": 16,
+      "gap": 1,
+      "cycle_length": 4,
+      "cycle_gap": 2.0000000000000004,
+      "equals_cycle": false,
+      "lower": 0.00390625,
+      "upper": 9.869604401089358,
+      "components": 11,
+      "max_diagonalized_block": 4,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        4
+      ],
+      "alphabet": 4,
+      "dimension": 16,
+      "gap": 0.5857864376269046,
+      "cycle_length": 8,
+      "cycle_gap": 0.585786437626905,
+      "equals_cycle": true,
+      "lower": 0.0009765625,
+      "upper": 2.4674011002723395,
+      "components": 9,
+      "max_diagonalized_block": 8,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        1
+      ],
+      "alphabet": 4,
+      "dimension": 256,
+      "gap": 1,
+      "cycle_length": 4,
+      "cycle_gap": 2.0000000000000004,
+      "equals_cycle": false,
+      "lower": 0.00390625,
+      "upper": 39.47841760435743,
+      "components": 173,
+      "max_diagonalized_block": 4,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        2
+      ],
+      "alphabet": 4,
+      "dimension": 256,
+      "gap": 0.5857864376269046,
+      "cycle_length": 8,
+      "cycle_gap": 0.585786437626905,
+      "equals_cycle": true,
+      "lower": 0.0009765625,
+      "upper": 9.869604401089358,
+      "components": 161,
+      "max_diagonalized_block": 8,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        4
+      ],
+      "alphabet": 4,
+      "dimension": 256,
+      "gap": 0.152240934977425,
+      "cycle_length": 16,
+      "cycle_gap": 0.15224093497742647,
+      "equals_cycle": true,
+      "lower": 0.000244140625,
+      "upper": 2.4674011002723395,
+      "components": 137,
+      "max_diagonalized_block": 16,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        1
+      ],
+      "alphabet": 4,
+      "dimension": 256,
+      "gap": 0.9999999999999991,
+      "cycle_length": 6,
+      "cycle_gap": 0.9999999999999998,
+      "equals_cycle": true,
+      "lower": 0.0009765625,
+      "upper": 9.869604401089358,
+      "components": 158,
+      "max_diagonalized_block": 6,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        2
+      ],
+      "alphabet": 4,
+      "dimension": 256,
+      "gap": 0.2679491924311224,
+      "cycle_length": 12,
+      "cycle_gap": 0.26794919243112264,
+      "equals_cycle": true,
+      "lower": 0.000244140625,
+      "upper": 2.4674011002723395,
+      "components": 147,
+      "max_diagonalized_block": 12,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        4
+      ],
+      "alphabet": 4,
+      "dimension": 256,
+      "gap": 0.06814834742186218,
+      "cycle_length": 24,
+      "cycle_gap": 0.0681483474218634,
+      "equals_cycle": true,
+      "lower": 6.103515625e-05,
+      "upper": 0.6168502750680849,
+      "components": 125,
+      "max_diagonalized_block": 24,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        4,
+        1
+      ],
+      "alphabet": 4,
+      "dimension": 256,
+      "gap": 0.3819660112501043,
+      "cycle_length": 10,
+      "cycle_gap": 0.3819660112501051,
+      "equals_cycle": true,
+      "lower": 0.000244140625,
+      "upper": 2.4674011002723395,
+      "components": 128,
+      "max_diagonalized_block": 10,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        4,
+        2
+      ],
+      "alphabet": 4,
+      "dimension": 256,
+      "gap": 0.0978869674096924,
+      "cycle_length": 20,
+      "cycle_gap": 0.09788696740969285,
+      "equals_cycle": true,
+      "lower": 6.103515625e-05,
+      "upper": 0.6168502750680849,
+      "components": 119,
+      "max_diagonalized_block": 20,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        4,
+        4
+      ],
+      "alphabet": 4,
+      "dimension": 256,
+      "gap": 0.024623318809723314,
+      "cycle_length": 40,
+      "cycle_gap": 0.024623318809724546,
+      "equals_cycle": true,
+      "lower": 1.52587890625e-05,
+      "upper": 0.15421256876702122,
+      "components": 101,
+      "max_diagonalized_block": 40,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        1,
+        1
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.9999999999999991,
+      "cycle_length": 6,
+      "cycle_gap": 0.9999999999999998,
+      "equals_cycle": true,
+      "lower": 0.001736111111111111,
+      "upper": 39.47841760435743,
+      "components": 2665,
+      "max_diagonalized_block": 6,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        1,
+        2
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.2679491924311224,
+      "cycle_length": 12,
+      "cycle_gap": 0.26794919243112264,
+      "equals_cycle": true,
+      "lower": 0.00043402777777777775,
+      "upper": 9.869604401089358,
+      "components": 2481,
+      "max_diagonalized_block": 12,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        1,
+        4
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.06814834742186218,
+      "cycle_length": 24,
+      "cycle_gap": 0.0681483474218634,
+      "equals_cycle": true,
+      "lower": 0.00010850694444444444,
+      "upper": 2.4674011002723395,
+      "components": 2113,
+      "max_diagonalized_block": 24,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        2,
+        1
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.3819660112501043,
+      "cycle_length": 10,
+      "cycle_gap": 0.3819660112501051,
+      "equals_cycle": true,
+      "lower": 0.00043402777777777775,
+      "upper": 9.869604401089358,
+      "components": 2485,
+      "max_diagonalized_block": 10,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        2,
+        2
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.0978869674096924,
+      "cycle_length": 20,
+      "cycle_gap": 0.09788696740969285,
+      "equals_cycle": true,
+      "lower": 0.00010850694444444444,
+      "upper": 2.4674011002723395,
+      "components": 2313,
+      "max_diagonalized_block": 20,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        2,
+        4
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.024623318809723314,
+      "cycle_length": 40,
+      "cycle_gap": 0.024623318809724546,
+      "equals_cycle": true,
+      "lower": 2.712673611111111e-05,
+      "upper": 0.6168502750680849,
+      "components": 1969,
+      "max_diagonalized_block": 40,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        4,
+        1
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.12061475842818284,
+      "cycle_length": 18,
+      "cycle_gap": 0.12061475842818321,
+      "equals_cycle": true,
+      "lower": 0.00010850694444444444,
+      "upper": 2.4674011002723395,
+      "components": 2125,
+      "max_diagonalized_block": 18,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        4,
+        2
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.03038449397558445,
+      "cycle_length": 36,
+      "cycle_gap": 0.030384493975583876,
+      "equals_cycle": true,
+      "lower": 2.712673611111111e-05,
+      "upper": 0.6168502750680849,
+      "components": 1977,
+      "max_diagonalized_block": 36,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        4,
+        4
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.007610603816509426,
+      "cycle_length": 72,
+      "cycle_gap": 0.007610603816508936,
+      "equals_cycle": true,
+      "lower": 6.781684027777777e-06,
+      "upper": 0.15421256876702122,
+      "components": 1681,
+      "max_diagonalized_block": 72,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        1,
+        1
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.5857864376269046,
+      "cycle_length": 8,
+      "cycle_gap": 0.585786437626905,
+      "equals_cycle": true,
+      "lower": 0.00043402777777777775,
+      "upper": 9.869604401089358,
+      "components": 2433,
+      "max_diagonalized_block": 8,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        1,
+        2
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.152240934977425,
+      "cycle_length": 16,
+      "cycle_gap": 0.15224093497742647,
+      "equals_cycle": true,
+      "lower": 0.00010850694444444444,
+      "upper": 2.4674011002723395,
+      "components": 2265,
+      "max_diagonalized_block": 16,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        1,
+        4
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.038429439193538265,
+      "cycle_length": 32,
+      "cycle_gap": 0.038429439193539104,
+      "equals_cycle": true,
+      "lower": 2.712673611111111e-05,
+      "upper": 0.6168502750680849,
+      "components": 1929,
+      "max_diagonalized_block": 32,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        2,
+        1
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.19806226419516204,
+      "cycle_length": 14,
+      "cycle_gap": 0.19806226419516174,
+      "equals_cycle": true,
+      "lower": 0.00010850694444444444,
+      "upper": 2.4674011002723395,
+      "components": 2268,
+      "max_diagonalized_block": 14,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        2,
+        2
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.05014417563635207,
+      "cycle_length": 28,
+      "cycle_gap": 0.05014417563635278,
+      "equals_cycle": true,
+      "lower": 2.712673611111111e-05,
+      "upper": 0.6168502750680849,
+      "components": 2111,
+      "max_diagonalized_block": 28,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        2,
+        4
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.01257558021351399,
+      "cycle_length": 56,
+      "cycle_gap": 0.012575580213514834,
+      "equals_cycle": true,
+      "lower": 6.781684027777777e-06,
+      "upper": 0.15421256876702122,
+      "components": 1797,
+      "max_diagonalized_block": 56,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        4,
+        1
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.0581163651478956,
+      "cycle_length": 26,
+      "cycle_gap": 0.05811636514789594,
+      "equals_cycle": true,
+      "lower": 2.712673611111111e-05,
+      "upper": 0.6168502750680849,
+      "components": 1938,
+      "max_diagonalized_block": 26,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        4,
+        2
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.014582251803892122,
+      "cycle_length": 52,
+      "cycle_gap": 0.014582251803892013,
+      "equals_cycle": true,
+      "lower": 6.781684027777777e-06,
+      "upper": 0.15421256876702122,
+      "components": 1803,
+      "max_diagonalized_block": 52,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        4,
+        4
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.003648891553364932,
+      "cycle_length": 104,
+      "cycle_gap": 0.003648891553365058,
+      "equals_cycle": true,
+      "lower": 1.6954210069444444e-06,
+      "upper": 0.038553142191755305,
+      "components": 1533,
+      "max_diagonalized_block": 104,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        4,
+        1,
+        1
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.2679491924311224,
+      "cycle_length": 12,
+      "cycle_gap": 0.26794919243112264,
+      "equals_cycle": true,
+      "lower": 0.00010850694444444444,
+      "upper": 2.4674011002723395,
+      "components": 1969,
+      "max_diagonalized_block": 12,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        4,
+        1,
+        2
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.06814834742186218,
+      "cycle_length": 24,
+      "cycle_gap": 0.0681483474218634,
+      "equals_cycle": true,
+      "lower": 2.712673611111111e-05,
+      "upper": 0.6168502750680849,
+      "components": 1833,
+      "max_diagonalized_block": 24,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        4,
+        1,
+        4
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.01711027725237784,
+      "cycle_length": 48,
+      "cycle_gap": 0.017110277252379177,
+      "equals_cycle": true,
+      "lower": 6.781684027777777e-06,
+      "upper": 0.15421256876702122,
+      "components": 1561,
+      "max_diagonalized_block": 48,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        4,
+        2,
+        1
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.08101405277100514,
+      "cycle_length": 22,
+      "cycle_gap": 0.08101405277100522,
+      "equals_cycle": true,
+      "lower": 2.712673611111111e-05,
+      "upper": 0.6168502750680849,
+      "components": 1834,
+      "max_diagonalized_block": 22,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        4,
+        2,
+        2
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.020357116238134073,
+      "cycle_length": 44,
+      "cycle_gap": 0.020357116238134534,
+      "equals_cycle": true,
+      "lower": 6.781684027777777e-06,
+      "upper": 0.15421256876702122,
+      "components": 1707,
+      "max_diagonalized_block": 44,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        4,
+        2,
+        4
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.005095770779493561,
+      "cycle_length": 88,
+      "cycle_gap": 0.005095770779492917,
+      "equals_cycle": true,
+      "lower": 1.6954210069444444e-06,
+      "upper": 0.038553142191755305,
+      "components": 1453,
+      "max_diagonalized_block": 88,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        4,
+        4,
+        1
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.0223383475497417,
+      "cycle_length": 42,
+      "cycle_gap": 0.02233834754974291,
+      "equals_cycle": true,
+      "lower": 6.781684027777777e-06,
+      "upper": 0.15421256876702122,
+      "components": 1564,
+      "max_diagonalized_block": 42,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        4,
+        4,
+        2
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.005592405637639445,
+      "cycle_length": 84,
+      "cycle_gap": 0.005592405637639705,
+      "equals_cycle": true,
+      "lower": 1.6954210069444444e-06,
+      "upper": 0.038553142191755305,
+      "components": 1455,
+      "max_diagonalized_block": 84,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        4,
+        4,
+        4
+      ],
+      "alphabet": 4,
+      "dimension": 4096,
+      "gap": 0.0013985904232023559,
+      "cycle_length": 168,
+      "cycle_gap": 0.0013985904232028947,
+      "equals_cycle": true,
+      "lower": 4.238552517361111e-07,
+      "upper": 0.009638285547938826,
+      "components": 1237,
+      "max_diagonalized_block": 168,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 32768,
+      "gap": 0.002566985657894409,
+      "cycle_length": 124,
+      "cycle_gap": 0.0025669856578943856,
+      "equals_cycle": true,
+      "lower": 6.103515625e-07,
+      "upper": 0.038553142191755305,
+      "components": 6743,
+      "max_diagonalized_block": 124,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "alphabet": 2,
+      "dimension": 32768,
+      "gap": 0.024623318809723314,
+      "cycle_length": 40,
+      "cycle_gap": 0.024623318809724546,
+      "equals_cycle": true,
+      "lower": 9.765625e-06,
+      "upper": 0.6168502750680849,
+      "components": 9345,
+      "max_diagonalized_block": 40,
+      "double_edge": false
+    },
+    {
+      "radices": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "alphabet": 2,
+      "dimension": 32768,
+      "gap": 0.3819660112501043,
+      "cycle_length": 10,
+      "cycle_gap": 0.3819660112501051,
+      "equals_cycle": true,
+      "lower": 0.000625,
+      "upper": 39.47841760435743,
+      "components": 15825,
+      "max_diagonalized_block": 10,
+      "double_edge": false
+    }
+  ],
+  "allowed_prefix_cycle_counterexample": {
+    "radices": [
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "cycle_length": 58,
+    "cycle_gap": 0.011724085691280783,
+    "actual_gap": 0.008531647409930955,
+    "components": [
+      {
+        "size": 58,
+        "cycle": true,
+        "gap": 0.011724085691280783
+      },
+      {
+        "size": 30,
+        "cycle": false,
+        "gap": 0.010956209263453325
+      },
+      {
+        "size": 2,
+        "cycle": false,
+        "gap": 2.0000000000000004
+      },
+      {
+        "size": 32,
+        "cycle": false,
+        "gap": 0.009630546655606228
+      },
+      {
+        "size": 30,
+        "cycle": false,
+        "gap": 0.010956209263453325
+      },
+      {
+        "size": 2,
+        "cycle": false,
+        "gap": 2.0000000000000004
+      },
+      {
+        "size": 34,
+        "cycle": false,
+        "gap": 0.008531647409930955
+      },
+      {
+        "size": 4,
+        "cycle": false,
+        "gap": 0.585786437626905
+      },
+      {
+        "size": 2,
+        "cycle": false,
+        "gap": 2.0000000000000004
+      },
+      {
+        "size": 30,
+        "cycle": false,
+        "gap": 0.010956209263453325
+      },
+      {
+        "size": 2,
+        "cycle": false,
+        "gap": 2.0000000000000004
+      },
+      {
+        "size": 32,
+        "cycle": false,
+        "gap": 0.009630546655606228
+      },
+      {
+        "size": 30,
+        "cycle": false,
+        "gap": 0.010956209263453325
+      }
+    ],
+    "M": 131074,
+    "explanation": "A={0,1,2}, beta=1, ell(M)=18; a closed 30-vertex legal path undercuts the main 58-cycle."
+  },
+  "flags": {
+    "flag_assignments": 26508,
+    "all_pass": true
+  },
+  "thickness": {
+    "counter_boxes": 414,
+    "checked_cells": 177318,
+    "delimited_inputs": 257,
+    "all_pass": true
+  },
+  "density": {
+    "exact_fraction_prefix_checks": 1325,
+    "all_pass": true
+  },
+  "stabilization": {
+    "cases": [
+      {
+        "M": 5,
+        "ell": 3,
+        "L0": 19,
+        "tested_later_events": 3316
+      },
+      {
+        "M": 6,
+        "ell": 3,
+        "L0": 19,
+        "tested_later_events": 3316
+      },
+      {
+        "M": 8,
+        "ell": 3,
+        "L0": 19,
+        "tested_later_events": 3316
+      },
+      {
+        "M": 9,
+        "ell": 4,
+        "L0": 431,
+        "tested_later_events": 3213
+      },
+      {
+        "M": 16,
+        "ell": 4,
+        "L0": 431,
+        "tested_later_events": 3213
+      },
+      {
+        "M": 17,
+        "ell": 5,
+        "L0": 564,
+        "tested_later_events": 3181
+      },
+      {
+        "M": 32,
+        "ell": 5,
+        "L0": 564,
+        "tested_later_events": 3181
+      },
+      {
+        "M": 33,
+        "ell": 6,
+        "L0": 863,
+        "tested_later_events": 3106
+      },
+      {
+        "M": 64,
+        "ell": 6,
+        "L0": 863,
+        "tested_later_events": 3106
+      },
+      {
+        "M": 65,
+        "ell": 7,
+        "L0": 1038,
+        "tested_later_events": 3062
+      }
+    ],
+    "all_pass": true
+  },
+  "calculus": {
+    "computable_name_error_checks": 961,
+    "second_response_counterexample": true,
+    "all_pass": true
+  },
+  "seconds": 1.3806123733520508,
+  "peak_working_set_bytes": 52350976,
+  "all_pass": true
+}

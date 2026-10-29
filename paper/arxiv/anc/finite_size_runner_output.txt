@@ -1,0 +1,9 @@
+Running check_penalty_lemma.py
+the penalty localization lemma bound lambda0 >= 1/(8 D g^2) on all random instances: PASS
+Running check_dynamic_counter.py
+one-head configs have degree<=2, multi-head configs all penalized, gap <= main-cycle gap, gap >= rigorous lower bound: PASS
+Running check_classical_layer.py
+unique minimiser at energy -3L, equal to the predicted tableau: PASS
+Running independent_checks.py
+ALL INDEPENDENT CHECKS PASS
+ALL FINITE CHECKS PASS

@@ -1,0 +1,189 @@
+\section{A surface-anchored wetting ruler}\label{sec:wetting}
+The film engine can also read a coupling-selected thickness. Here the
+volume convention requires particular care at height ties. We use
+open cubes with $L=n!$ for the exact all-coupling statement. Away
+from height ties the same inner gap identity holds along all
+sufficiently large open cubes. The anchors and closing modes are
+on faces and an edge; this is not an intrinsic bulk-gap realization.
+
+\subsection{Local geometry and energy}
+Use the six face flags of Section~\ref{sec:film} and a wetting track
+with symbols $F,A,S,D,V,W,O$, denoting floor, signal surroundings,
+signal, divider, ceiling and vacuum. Require $F$ exactly at $Z_0$.
+Allowed $x$ pairs are
+\[
+ FF,\ WW,\ OO,\ AA,\ SA,\ DS,\ DD,\ AV,\ SV,\ VS,\ VD.
+\]
+Allowed $z$ pairs, written in order of decreasing $z$, are
+\[
+ WS,\ WA,\ WV,\ SF,\ DF,\ VF,\ AA,\ AS,\ SD,\ DD,\ VV,\ OW,\ OO.
+\]
+Allowed $y$ pairs are $FF,WW,OO$ and every pair within
+$\{A,S,D,V\}$. Require the far $Z_1$ face to carry $O$ or $W$.
+Every other pair or onsite pattern costs one. The coupling contributes
+$g$ per interior symbol $A,S,D,V$, and a $VF$ bond costs $r=1/16$.
+All interactions are rational and affine in $g$.
+
+In a clean configuration the floor is $z=0$, a flat ceiling is at
+$z=h+1$, $1\leq h\leq L-2$, and vacuum fills the space above it.
+The signal cycle cuts each $(x,z)$ interior slice into periods
+$h+1$, with a free horizontal phase in each $y$ plane. The
+floor itself is not cut. The energy of one such plane, after
+subtracting the flag energy, is
+\begin{equation}\label{eq:wetting-row}
+ E_L(h)=Lgh+r\left\lfloor\frac{L}{h+1}\right\rfloor
+\end{equation}
+for an optimal phase; an extra divider costs another $r$.
+The limiting plane energy per width is
+\begin{equation}\label{eq:wetting-phi}
+ \phi_g(h)=gh+\frac{r}{h+1},\qquad
+ t_h=\frac{r}{(h+1)(h+2)},\qquad
+ \phi_g(h)-\phi_g(h+1)=t_h-g.
+\end{equation}
+Thus off ties $h_*(g)=h$ on $(t_h,t_{h-1})$ and
+$h_*(g)=(r/g)^{1/2}+O(1)$.
+
+\begin{lemma}[Wetting selection with commensurate open cubes]
+\label{lem:wetting-selection}
+Fix sufficiently small positive rational $g$. Along sufficiently
+large $L=n!$, the classical minimizing heights are exactly the
+minimizers of $\phi_g$. There is one such height off ties, and
+two adjacent heights at a tie. All other classical configurations
+have a positive separation independent of $L$. The same assertion
+off ties holds along all sufficiently large $L$, with a possibly
+smaller positive separation than $1/2$.
+\end{lemma}
+\begin{proof}
+The flag identity puts every wrong flag at unit cost. Decompose a
+fixed $y$ plane into maximal clean runs of columns with equal floor
+and ceiling heights and no violated intervening $x$ bond. A run of
+$m$ columns has interior cost $mgh$ and at least
+$\lfloor m/(h+1)\rfloor$ divider corners. Its energy is therefore
+at least $m\phi_g(h)-r$. A bad column or broken horizontal bond
+terminates a run. For $0<g\leq1/8$, a bad column has unit error
+cost and nonnegative interior and corner energies, whereas the
+minimum plane energy per width is at most $\phi_g(1)\leq1/4$.
+Charging each extra run to its terminating error gives
+\[
+ E(R_y)\geq L\phi_*-r+
+             (3/4-r)(\#\text{bad columns}+\#\text{broken }x\text{ bonds}).
+\]
+Additional $y$ violations only raise the energy. Correct flags and
+clean rules are attainable at an optimal height and phase, with
+energy at most $L\phi_*$ per plane. A defective plane consequently
+costs at least $5/8$ relative to that comparison. Flag errors outside
+the plane decomposition are also nonnegative and charged once.
+
+At fixed nontie $g$, put
+$\delta(g)=\min_{h\ne h_*}(\phi_g(h)-\phi_*)>0$. The minimum
+is effective because $\phi_g(h)\to\infty$. A clean wrong-height
+plane lies at least $L\delta(g)-r$ above an optimal one, so it is
+excluded for large $L$. A nonoptimal phase at the selected height
+may cost only $r$ and must not be assigned a universal $1/2$
+separation. Changing ceiling heights between $y$ planes creates
+violated $y$ bonds; the same positive comparison excludes that case.
+
+Along factorial sizes all minimizing periods $h+1$ divide $L$.
+Their clean row energies are exactly $L\phi_*$, also at ties.
+For any other fixed height, the same $L\delta-r$ estimate applies;
+the finitely many low candidate heights can be included in the
+factorial divisibility threshold. Heights beyond them have an
+increasing positive bulk excess. This proves a positive uniform
+separation from the set of minimizing clean configurations.
+\end{proof}
+
+For the quantum readout introduce an additional classical bit $C$.
+Set $C=0$ at $Z_1$ and at every noninterior symbol. On a $z$ bond
+whose lower endpoint is interior, require its $C$ to equal the
+indicator that the upper endpoint is $W$. This is a two-site
+diagonal test and uniquely determines $C$ everywhere in a clean
+configuration.
+
+The machine runs on the uncut floor with tape $x$ and time $y$.
+Use the limit program for a $\Delta^0_2$ set $A$. The thickness
+counter starts at the floor, the output is transported through the
+film, and the quantum segment is selected onsite by
+$Y_1C(b\mathbin{\mathrm{OR}}f)$. Its length is
+$\ell(h)=\bitlength(h)$ and its radices, after settling, are
+$2^{\beta A(j)}$. Freeze all unused machine, transport and dynamic
+fields, with blank output interpreted as zero. This is exactly the
+functional film compiler with its far thickness face replaced by
+the selected ceiling; it does not truncate the floor computation.
+
+\begin{theorem}[Wetting transfer]\label{thm:wetting}
+For any $\Delta^0_2$ set $A$ containing $0,1,2$ and integer
+$\beta\geq1$, this rational
+affine family has, for every sufficiently small fixed $g>0$,
+\begin{equation}\label{eq:wetting-exact}
+ \Delta_\infty(g)=
+ \min_{h\in\operatorname*{argmin}\phi_g}
+ \Delta^+(K[2^{\beta A(j)}:j<\bitlength(h)]),
+\end{equation}
+along factorial open cubes. The lower and upper gap exponents
+are $\beta$ times the lower and upper densities of $A$.
+Every nonnegative finite $\mathsf D_3$ value and ordered
+$\mathsf S_3\times\mathsf P_3$ pair occurs. For $g\leq0$ close
+to zero the gap tends to zero. The bulk energy density is $g$
+for $g<0$ and zero for $g>0$, with a kink at zero.
+\end{theorem}
+\begin{proof}
+Initialize the first three output cells permanently to one before
+running the approximation program, as in Section~\ref{sec:film}.
+For every read length $\ell\geq3$ the first three radices are then
+at least two. The free orbit has $N\geq2(8+4+2)=28$, so its gap,
+and hence the full counter gap, is at most
+$4\pi^2/N^2\leq\pi^2/196<r$. This is below the conservative
+classical separation $r$ of Lemma~\ref{lem:wetting-selection}.
+Equality with the orbit gap is not required.
+At each fixed selected height only finitely many output bits are
+read. They settle as $L\to\infty$, so the full-counter identity
+and the all-sector proof of Theorem~\ref{thm:film} give
+\eqref{eq:wetting-exact}. The settling time is not generally
+computable from $g$; it is not the computable classical selection
+threshold.
+
+Since $\log(1/g)=2\log h+\log(1/r)+o(1)$ and
+$\log_2(1/D(h))=2\beta\ell(h)\rho_{\ell(h)}(A)+O(\log\ell(h))$,
+the normalized gap logarithm is
+$\beta\rho_{\ell(h_*(g))}(A)+o(1)$. Every sufficiently large
+integer height occurs. Adjacent heights at a tie have either the
+same read length or lengths differing by one, which gives the
+same endpoint limits. Apply Lemma~\ref{lem:relative-density}
+with densities $a/\beta,b/\beta$ and
+$\beta\geq\max(1,b)$. Proposition~\ref{prop:critical-ceiling}
+gives the matching ceiling.
+
+For $g=0$, the lowest clean corner count is one and minimizing
+heights satisfy $h+1>L/2$, equivalently $h\geq\lfloor L/2\rfloor$.
+For fixed negative $g$ sufficiently
+close to zero, the maximal height $L-2$ minimizes once
+$L|g|>r$. The same run charging uses
+$1+gL-\phi_g(L-2)\geq3/4$ for sufficiently small $|g|$ to
+exclude defective competitors. In either case the minimizing
+quantum segments have diverging bitlength, and their main-orbit
+upper bound is $\pi^2/\ell^2\to0$, independent of the guessed
+bits. Filling the cube at negative $g$ gives energy density $g$;
+a bounded-thickness film at fixed positive $g$ has only surface
+energy and density zero. The nonnegative dynamic terms have
+kernels, so they do not change these densities.
+\end{proof}
+
+The volume convention is substantive. At the tie $t_7=1/1152$,
+formula~\eqref{eq:wetting-row} selects height $8$ at
+$L=72n+8$ and height $7$ at $L=72n+9$. Their read lengths differ,
+and a legal word can give different full counter gaps. Thus the
+all-size open-cube gap limit need not exist at a tie. Neither an
+all-size identity there nor a universal classical separation of
+$1/2$ is used. The factorial convention removes this residue
+obstruction without changing rational coefficients or the
+coupling exponent.
+
+At a single fixed coupling the eventual counter is one finite
+algebraic matrix and its gap is individually computable. The
+failure is uniform in the coupling. To prove that no general
+computable scalar-gap settling modulus exists, choose a realized
+exponent outside $\mathsf D_2$. A uniform computable inner-gap
+modulus would make the scalar gaps uniformly computable and
+Proposition~\ref{prop:critical-ceiling} would put this exponent
+in $\mathsf D_2$, a contradiction. No injectivity of the map
+from radix vectors to their scalar gaps is assumed.

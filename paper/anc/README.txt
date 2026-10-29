@@ -1,45 +1,65 @@
-FINITE CHECKS
+Finite consistency checks
+Version 2.0.0, October 2026. A preprint; it has not been peer reviewed.
 
-Run from any directory with Python 3, NumPy and SciPy installed:
-  python -u run_checks.py
-The runner resolves its own directory, runs scripts sequentially, sets numerical
-library thread counts to one, checks the JSON results and records console output.
-The supplied outputs were produced with Python 3.13.12, NumPy 2.4.3 and SciPy
-1.17.1. Other versions may change last digits and elapsed times.
+Run from this directory with Python, NumPy, SciPy and psutil installed:
+    python -u run_checks.py
+    python verify_hashes.py
+The runner invokes programs sequentially, fixes numerical-library threads to
+one, disables bytecode writes and monitors the process tree below 1 GB.
+All scripts write only their local recorded output and JSON result files.
 
 Coverage:
-  check_dynamic_counter.py constructs full register product spaces for twelve
-  small radix patterns, up to dimension 262144, and diagonalizes each transition
-  component. It includes all head counts and illegal digits. Its last-cell
-  operation is the register restriction of the guarded bond term in the paper;
-  it is not a separate full two-dimensional simulation.
+check_penalty_lemma.py: random bounded graph penalty estimates.
+check_dynamic_counter.py: complete finite register product spaces, including
+illegal digits, head sectors, repeated edges and the main-orbit upper witness.
+check_classical_layer.py: exhaustive small classical profile minimization.
+independent_checks.py: separate finite-size engine, four flags, frozen sites,
+parallel edges, carry recursion and exact rational word interpolation.
+check_wall_layer.py: exhaustive floating-point min-plus transfers for a
+six-symbol enlarged wall alphabet. Both state-space search and weights are
+recorded; the arithmetic is double precision, not exact rational arithmetic.
+check_wall_layer_noO.py: the actual five-symbol wall alphabet.
+check_counter_perturbation.py: full finite product spaces with digit mixing;
+36 samples include the unperturbed case and two positive strengths.
+check_film_counter.py: a second product-space counter implementation. Its
+main-cycle equality test holds on its samples, not for every radix vector.
+check_film_classical_layer.py: six face preferences and unique carry/output
+transport solutions in randomized and reversed assignment orders. No arbitrary
+program's machine tableau is simulated by this finite constraint search.
+check_nested_limits.py: independent counter components, the seeded legal-path
+counterexample, flag identity, thickness counting, binary delimiters, uniform
+name obstruction, rational words and finite persistent-write schedules.
+check_critical_ruler.py: exact enumeration of wall configurations and charging
+deficits, exact wetting-track minima, height-tie residues, phase excitations,
+legal counter components and rational pitch selection.
 
-  check_classical_layer.py minimizes over every configuration of the binary
-  counter and three boundary flags on boxes of side 2, 3 and 4 by a transfer
-  profile dynamic program. It does not encode the arbitrary machine tableau.
-  Energies and the minimizing multiplicity are checked against the forced
-  tableau. The analytic four-flag identity controls all box sizes.
+check_bulk_broadcast.py: literal three-field copying graphs including deliberately
+noncommensurate cases, local/global prefix masks, exact ruler minimization and
+charging on small tori, tie alignment, inert-ring upper witnesses, tensor sums,
+retained-stage obstruction and rational Lipschitz interpolation.
+check_bulk_independent.py: separate GF(2) elimination for translated broadcast
+graphs and all finite source fillings, forced contradictions from wrong bits,
+defective rulers, full native counter products, the long legal-path example,
+degenerate-kernel tensor sums, pitch ties, guard positions and reader counts.
+These two programs use only the Python standard library; they import none of
+the other checks. They do not enumerate a general machine's full alphabet or
+the complete three-dimensional Hamiltonian, prove a convergence modulus, or
+check every possible ground-state phase. Noncommensurate collapse and the
+failure of universal main-cycle equality are expected, reproduced outcomes.
 
-  check_penalty_lemma.py tests 2000 seeded path, cycle, tree, bounded-graph and
-  star instances, with 3 through 89 vertices, against the penalty inequality.
+The independent component checks explicitly exhibit legal paths whose
+positive gap is smaller than the main cycle's. PASS certifies only the actual
+bracket, local tests and finite predictions, including these counterexamples.
+The wetting tie examples explain why the manuscript uses factorial open cubes.
+summary.json records the finite-size suite; all_checks_summary.json records
+all groups and monitored peak working sets. Outputs ending in _output.txt and
+their JSON companions are retained. SHA256SUMS covers every ancillary file
+except the manifest itself. A rerun changes timing fields; regenerate the
+manifest only when intentionally accepting new recorded outputs.
 
-  independent_checks.py uses a direct state-graph implementation. It checks all
-  radix words of length at most three over {1,2,4}, a four-cell binary example,
-  and six frozen-exterior examples. It retains parallel edge weights. It also
-  enumerates connected simple graphs through five vertices and all nonempty
-  proper penalty sets; enumerates the complete potentially minimizing sector
-  of a four-flag 2 by 2 counter layer (all omitted flags already cost at least
-  two); checks carry/region identities; and verifies exact rational prefix
-  identities for mechanical words. These checks have no imports from the other
-  three scripts.
-
-The JSON and _output.txt files record results. summary.json collects coverage.
-The linear algebra is floating point, not interval-certified. Numerical
-diagonalization does not replace the proofs, verify a noncomputable limit,
-or certify arbitrary full two-dimensional machine tableaux. The algorithms
-operate sequentially; the largest classical profile uses less than 1.5 GB.
-
-SHA256SUMS covers every other file in this directory. To verify it:
-  python verify_hashes.py
-The runner can overwrite records with fresh timings; after rerunning it, the
-original checksum file is expected to differ until intentionally regenerated.
+Limitations:
+Floating-point eigenvalues are finite consistency checks, not interval proofs.
+No full two- or three-dimensional many-body matrix is diagonalized, no general
+target program or uncomputable limiting real is numerically certified, and no
+arbitrary-level Hamiltonian is formally verified. The manuscript's analytic
+proofs control those statements. Thermal ceilings are not attainment results.

@@ -1,0 +1,3 @@
+PASS: broadcast, source-prefix alignment, ruler selection, charging, modulus, and tensor checks
+{"elapsed_seconds": 16.46818050008733, "peak_working_set_bytes": 20594688, "stdlib_only": true, "processes": 1, "threads_requested": 1}
+Finite checks do not verify arbitrary Turing computations or a full many-body matrix.

@@ -1,0 +1,655 @@
+{
+ "flags": {
+  "(2, 2, 2)": {
+   "X0": {
+    "min": -4,
+    "unique": true,
+    "is_face": true,
+    "area": 4,
+    "ok": true
+   },
+   "X1": {
+    "min": -4,
+    "unique": true,
+    "is_face": true,
+    "area": 4,
+    "ok": true
+   },
+   "Y0": {
+    "min": -4,
+    "unique": true,
+    "is_face": true,
+    "area": 4,
+    "ok": true
+   },
+   "Y1": {
+    "min": -4,
+    "unique": true,
+    "is_face": true,
+    "area": 4,
+    "ok": true
+   },
+   "Z0": {
+    "min": -4,
+    "unique": true,
+    "is_face": true,
+    "area": 4,
+    "ok": true
+   },
+   "Z1": {
+    "min": -4,
+    "unique": true,
+    "is_face": true,
+    "area": 4,
+    "ok": true
+   }
+  },
+  "(3, 2, 2)": {
+   "X0": {
+    "min": -4,
+    "unique": true,
+    "is_face": true,
+    "area": 4,
+    "ok": true
+   },
+   "X1": {
+    "min": -4,
+    "unique": true,
+    "is_face": true,
+    "area": 4,
+    "ok": true
+   },
+   "Y0": {
+    "min": -6,
+    "unique": true,
+    "is_face": true,
+    "area": 6,
+    "ok": true
+   },
+   "Y1": {
+    "min": -6,
+    "unique": true,
+    "is_face": true,
+    "area": 6,
+    "ok": true
+   },
+   "Z0": {
+    "min": -6,
+    "unique": true,
+    "is_face": true,
+    "area": 6,
+    "ok": true
+   },
+   "Z1": {
+    "min": -6,
+    "unique": true,
+    "is_face": true,
+    "area": 6,
+    "ok": true
+   }
+  },
+  "(3, 3, 2)": {
+   "X0": {
+    "min": -6,
+    "unique": true,
+    "is_face": true,
+    "area": 6,
+    "ok": true
+   },
+   "X1": {
+    "min": -6,
+    "unique": true,
+    "is_face": true,
+    "area": 6,
+    "ok": true
+   },
+   "Y0": {
+    "min": -6,
+    "unique": true,
+    "is_face": true,
+    "area": 6,
+    "ok": true
+   },
+   "Y1": {
+    "min": -6,
+    "unique": true,
+    "is_face": true,
+    "area": 6,
+    "ok": true
+   },
+   "Z0": {
+    "min": -9,
+    "unique": true,
+    "is_face": true,
+    "area": 9,
+    "ok": true
+   },
+   "Z1": {
+    "min": -9,
+    "unique": true,
+    "is_face": true,
+    "area": 9,
+    "ok": true
+   }
+  },
+  "(2, 2, 4)": {
+   "X0": {
+    "min": -8,
+    "unique": true,
+    "is_face": true,
+    "area": 8,
+    "ok": true
+   },
+   "X1": {
+    "min": -8,
+    "unique": true,
+    "is_face": true,
+    "area": 8,
+    "ok": true
+   },
+   "Y0": {
+    "min": -8,
+    "unique": true,
+    "is_face": true,
+    "area": 8,
+    "ok": true
+   },
+   "Y1": {
+    "min": -8,
+    "unique": true,
+    "is_face": true,
+    "area": 8,
+    "ok": true
+   },
+   "Z0": {
+    "min": -4,
+    "unique": true,
+    "is_face": true,
+    "area": 4,
+    "ok": true
+   },
+   "Z1": {
+    "min": -4,
+    "unique": true,
+    "is_face": true,
+    "area": 4,
+    "ok": true
+   }
+  }
+ },
+ "planes": [
+  {
+   "L": 3,
+   "M": 1,
+   "solutions": 1,
+   "region": [],
+   "expected": [],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "random"
+  },
+  {
+   "L": 4,
+   "M": 1,
+   "solutions": 1,
+   "region": [],
+   "expected": [],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "random"
+  },
+  {
+   "L": 3,
+   "M": 2,
+   "solutions": 1,
+   "region": [
+    0
+   ],
+   "expected": [
+    0
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "random"
+  },
+  {
+   "L": 4,
+   "M": 2,
+   "solutions": 1,
+   "region": [
+    0
+   ],
+   "expected": [
+    0
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "random"
+  },
+  {
+   "L": 3,
+   "M": 3,
+   "solutions": 1,
+   "region": [
+    0,
+    1
+   ],
+   "expected": [
+    0,
+    1
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "random"
+  },
+  {
+   "L": 4,
+   "M": 3,
+   "solutions": 1,
+   "region": [
+    0,
+    1
+   ],
+   "expected": [
+    0,
+    1
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "random"
+  },
+  {
+   "L": 3,
+   "M": 4,
+   "solutions": 1,
+   "region": [
+    0,
+    1
+   ],
+   "expected": [
+    0,
+    1
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "random"
+  },
+  {
+   "L": 4,
+   "M": 4,
+   "solutions": 1,
+   "region": [
+    0,
+    1
+   ],
+   "expected": [
+    0,
+    1
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "random"
+  },
+  {
+   "L": 3,
+   "M": 5,
+   "solutions": 1,
+   "region": [
+    0,
+    1,
+    2
+   ],
+   "expected": [
+    0,
+    1,
+    2
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "random"
+  },
+  {
+   "L": 4,
+   "M": 5,
+   "solutions": 1,
+   "region": [
+    0,
+    1,
+    2
+   ],
+   "expected": [
+    0,
+    1,
+    2
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "random"
+  },
+  {
+   "L": 4,
+   "M": 1,
+   "solutions": 1,
+   "region": [],
+   "expected": [],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 5,
+   "M": 1,
+   "solutions": 1,
+   "region": [],
+   "expected": [],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 4,
+   "M": 2,
+   "solutions": 1,
+   "region": [
+    0
+   ],
+   "expected": [
+    0
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 5,
+   "M": 2,
+   "solutions": 1,
+   "region": [
+    0
+   ],
+   "expected": [
+    0
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 4,
+   "M": 3,
+   "solutions": 1,
+   "region": [
+    0,
+    1
+   ],
+   "expected": [
+    0,
+    1
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 5,
+   "M": 3,
+   "solutions": 1,
+   "region": [
+    0,
+    1
+   ],
+   "expected": [
+    0,
+    1
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 4,
+   "M": 4,
+   "solutions": 1,
+   "region": [
+    0,
+    1
+   ],
+   "expected": [
+    0,
+    1
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 5,
+   "M": 4,
+   "solutions": 1,
+   "region": [
+    0,
+    1
+   ],
+   "expected": [
+    0,
+    1
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 4,
+   "M": 5,
+   "solutions": 1,
+   "region": [
+    0,
+    1,
+    2
+   ],
+   "expected": [
+    0,
+    1,
+    2
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 5,
+   "M": 5,
+   "solutions": 1,
+   "region": [
+    0,
+    1,
+    2
+   ],
+   "expected": [
+    0,
+    1,
+    2
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 4,
+   "M": 6,
+   "solutions": 1,
+   "region": [
+    0,
+    1,
+    2
+   ],
+   "expected": [
+    0,
+    1,
+    2
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 5,
+   "M": 6,
+   "solutions": 1,
+   "region": [
+    0,
+    1,
+    2
+   ],
+   "expected": [
+    0,
+    1,
+    2
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 4,
+   "M": 7,
+   "solutions": 1,
+   "region": [
+    0,
+    1,
+    2
+   ],
+   "expected": [
+    0,
+    1,
+    2
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 5,
+   "M": 7,
+   "solutions": 1,
+   "region": [
+    0,
+    1,
+    2
+   ],
+   "expected": [
+    0,
+    1,
+    2
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 4,
+   "M": 8,
+   "solutions": 1,
+   "region": [
+    0,
+    1,
+    2
+   ],
+   "expected": [
+    0,
+    1,
+    2
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 5,
+   "M": 8,
+   "solutions": 1,
+   "region": [
+    0,
+    1,
+    2
+   ],
+   "expected": [
+    0,
+    1,
+    2
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 4,
+   "M": 9,
+   "solutions": 1,
+   "region": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "expected": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  },
+  {
+   "L": 5,
+   "M": 9,
+   "solutions": 1,
+   "region": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "expected": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "region_ok": true,
+   "transport_ok": true,
+   "ok": true,
+   "order": "reversed"
+  }
+ ],
+ "all_pass": true
+}

@@ -1,0 +1,33 @@
+flags (2, 2, 2) ok {'X0': (-4, 4), 'X1': (-4, 4), 'Y0': (-4, 4), 'Y1': (-4, 4), 'Z0': (-4, 4), 'Z1': (-4, 4)}
+flags (3, 2, 2) ok {'X0': (-4, 4), 'X1': (-4, 4), 'Y0': (-6, 6), 'Y1': (-6, 6), 'Z0': (-6, 6), 'Z1': (-6, 6)}
+flags (3, 3, 2) ok {'X0': (-6, 6), 'X1': (-6, 6), 'Y0': (-6, 6), 'Y1': (-6, 6), 'Z0': (-9, 9), 'Z1': (-9, 9)}
+flags (2, 2, 4) ok {'X0': (-8, 8), 'X1': (-8, 8), 'Y0': (-8, 8), 'Y1': (-8, 8), 'Z0': (-4, 4), 'Z1': (-4, 4)}
+plane {'L': 3, 'M': 1, 'solutions': 1, 'region': [], 'expected': [], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'random'}
+plane {'L': 4, 'M': 1, 'solutions': 1, 'region': [], 'expected': [], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'random'}
+plane {'L': 3, 'M': 2, 'solutions': 1, 'region': [0], 'expected': [0], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'random'}
+plane {'L': 4, 'M': 2, 'solutions': 1, 'region': [0], 'expected': [0], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'random'}
+plane {'L': 3, 'M': 3, 'solutions': 1, 'region': [0, 1], 'expected': [0, 1], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'random'}
+plane {'L': 4, 'M': 3, 'solutions': 1, 'region': [0, 1], 'expected': [0, 1], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'random'}
+plane {'L': 3, 'M': 4, 'solutions': 1, 'region': [0, 1], 'expected': [0, 1], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'random'}
+plane {'L': 4, 'M': 4, 'solutions': 1, 'region': [0, 1], 'expected': [0, 1], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'random'}
+plane {'L': 3, 'M': 5, 'solutions': 1, 'region': [0, 1, 2], 'expected': [0, 1, 2], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'random'}
+plane {'L': 4, 'M': 5, 'solutions': 1, 'region': [0, 1, 2], 'expected': [0, 1, 2], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'random'}
+plane {'L': 4, 'M': 1, 'solutions': 1, 'region': [], 'expected': [], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 5, 'M': 1, 'solutions': 1, 'region': [], 'expected': [], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 4, 'M': 2, 'solutions': 1, 'region': [0], 'expected': [0], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 5, 'M': 2, 'solutions': 1, 'region': [0], 'expected': [0], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 4, 'M': 3, 'solutions': 1, 'region': [0, 1], 'expected': [0, 1], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 5, 'M': 3, 'solutions': 1, 'region': [0, 1], 'expected': [0, 1], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 4, 'M': 4, 'solutions': 1, 'region': [0, 1], 'expected': [0, 1], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 5, 'M': 4, 'solutions': 1, 'region': [0, 1], 'expected': [0, 1], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 4, 'M': 5, 'solutions': 1, 'region': [0, 1, 2], 'expected': [0, 1, 2], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 5, 'M': 5, 'solutions': 1, 'region': [0, 1, 2], 'expected': [0, 1, 2], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 4, 'M': 6, 'solutions': 1, 'region': [0, 1, 2], 'expected': [0, 1, 2], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 5, 'M': 6, 'solutions': 1, 'region': [0, 1, 2], 'expected': [0, 1, 2], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 4, 'M': 7, 'solutions': 1, 'region': [0, 1, 2], 'expected': [0, 1, 2], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 5, 'M': 7, 'solutions': 1, 'region': [0, 1, 2], 'expected': [0, 1, 2], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 4, 'M': 8, 'solutions': 1, 'region': [0, 1, 2], 'expected': [0, 1, 2], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 5, 'M': 8, 'solutions': 1, 'region': [0, 1, 2], 'expected': [0, 1, 2], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 4, 'M': 9, 'solutions': 1, 'region': [0, 1, 2, 3], 'expected': [0, 1, 2, 3], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+plane {'L': 5, 'M': 9, 'solutions': 1, 'region': [0, 1, 2, 3], 'expected': [0, 1, 2, 3], 'region_ok': True, 'transport_ok': True, 'ok': True, 'order': 'reversed'}
+ALL PASS

@@ -1,0 +1,160 @@
+\section{A film whose inner gap limit becomes exact}\label{sec:film}
+The finite-size engine writes a fast \emph{computable} word because its
+available time and read length grow together. A film separates them.
+Use boxes $[0,L)^2\times[0,M)$ with coordinates $(x,y,z)$, take
+$L\to\infty$ first, and only then scale $M$. The film gap and its
+normalized exponent sequence are
+\begin{equation}\label{eq:film-definition}
+ Q(M)=\lim_{L\to\infty}\Delta(L,M)>0,\qquad
+ z_M=\frac{\log(1/Q(M))}{\log M}.
+\end{equation}
+All intermediate gaps and limits used in a necessity assertion must be
+defined. The construction below makes the inner limit eventually exact.
+
+\subsection{The local fields and their determination}
+Put two flag bits on each coordinate axis, indicating its near and far
+faces. For each flag use onsite energy $-1$ when set and a bond
+contribution $+2$ at the endpoint that is not on the designated face.
+The six independent copies of Lemma~\ref{lem:boundary} give
+\begin{equation}\label{eq:film-flags}
+ E_{\rm cl}(\sigma)=E_*+\#\{\text{flag errors}\}
+                          +\#\{\text{rule violations}\},\qquad
+ E_*=-2(L^2+2LM).
+\end{equation}
+This is an exact identity, including coincident opposite faces when a
+side has length one. Every additional forbidden onsite or bond pattern
+has unit nonnegative cost.
+
+Let $A$ be a $\Delta^0_2$ set, with a total computable approximation
+$a(j,s)\to A(j)$. Modify the first three bits to be one at every stage.
+On $z=0$, a fixed ordinary machine uses $y$ as time and $x$ as tape.
+It first initializes output cells $0,1,2$ permanently to one in a
+known finite time. It then computes $a(j,s)$ for $j=0,\ldots,s$ at stage $s$ and writes each
+answer to its own cell on a persistent output track. Work and output
+are separate tracks. Each stage finishes. For each fixed $j$ there is
+therefore a physical time $t_j$ after which every subsequent output at
+cell $j$ equals $A(j)$. Blank output is read as zero.
+
+The two-site arrival compiler of Section~\ref{sec:classical} specifies
+this tableau. Initialize at $y=0$ with the head at $x=0$; fix both
+missing-neighbour arrival fields at $x=0,L-1$. Freeze \emph{every}
+machine field to one dummy value off $z=0$, and guard both endpoints
+of machine bond rules by $z=0$. The head cannot travel farther than
+elapsed time, so all included rows coincide with the infinite
+one-sided computation. This proves existence and uniqueness without
+a bound on the runtime of a stage.
+
+In every $(x,z)$ slice put a separate binary thickness counter
+$(b,c,f)$. At $z=0$ set $b=f=0$; at $x=0$ set $c=1$. Across an
+$x$ bond set $c_{x+1}=b_xc_x$, and across a $z$ bond set
+\[
+ b'=b\mathbin{\mathrm{XOR}}c,\qquad
+ f'=f\mathbin{\mathrm{OR}}b.
+\]
+Functional induction shows that row $z$ encodes $z$ in binary, and at
+$z=M-1$ the bit $b_j\mathbin{\mathrm{OR}}f_j$ equals
+$\ind_{\{2^j\leq M-1\}}$. Copy the machine's output bit along $z$
+on another field, initialized at $z=0$. These recurrences determine
+all counter and transport fields, including those not read by the
+quantum layer.
+
+The quantum region is
+\[
+ \reg=Y_1Z_1(b\mathbin{\mathrm{OR}}f),\qquad
+ \ell(M)=\bitlength(M-1).
+\]
+For $L>\ell(M)$ it is one segment at $(y,z)=(L-1,M-1)$.
+Its radices are $2^{\beta o'_j}$, where $o'$ is the transported bit.
+All other quantum fields are frozen. Use exactly the guarded rules
+\eqref{eq:increment}--\eqref{eq:restart}. In particular wrap tests an
+$x$ bond with region on the left and nonregion on the right; it changes
+only the left dynamic field. There is a physical such neighbour in
+every asymptotic box. No three-site interaction or absent-neighbour
+oracle is introduced. All coefficients are integers.
+
+\begin{theorem}[Exact fixed-thickness gap]\label{thm:film}
+For every $\Delta^0_2$ set $A$ containing $0,1,2$ and integer
+$\beta\geq1$, the construction has, for all sufficiently large fixed
+$M$ and all $L\geq L_0(M)$,
+\begin{equation}\label{eq:film-exact}
+ \Delta(L,M)=Q(M)
+ =\Delta^+\bigl(K[2^{\beta A(j)}:j<\ell(M)]\bigr).
+\end{equation}
+Here $K$ is the full counter operator, not only its main orbit.
+The threshold need not have a computable bound. Its exponent sequence
+satisfies
+\begin{equation}\label{eq:film-density}
+ z_M=2\beta\rho_{\ell(M)}(A)
+           +O\!\left(\frac{\log\log M}{\log M}\right).
+\end{equation}
+\end{theorem}
+\begin{proof}
+Flags, counters, the machine and transport are uniquely determined in
+that order. Equation~\eqref{eq:film-flags} puts all other classical
+blocks at least one above this block. Their quantum operators are
+nonnegative. Incorrect exterior quantum fields also cost at least one
+and cannot move. The counter analysis in Lemma~\ref{lem:counter} covers
+zero heads, multiple heads, penalized components, and all free paths
+and cycles, retaining parallel-edge multiplicities.
+
+At fixed $M$, choose
+$L_0(M)>\max(\ell(M)+1,\max_{j<\ell(M)}t_j)$. This is finite because
+only finitely many output cells are read. Above it the radix vector
+is exactly the same for every $L$. For large $M$ its first three
+radices are $2^\beta$, so its gap is at most $4\pi^2/64<1$.
+It is therefore the gap of the entire box. Taking logarithms of
+Lemma~\ref{lem:counter}, with
+$k=\beta|A\cap[0,\ell(M))|$, proves \eqref{eq:film-density}.
+Since $\ell(M)$ takes every large integer through unit steps, the two
+endpoints are exactly $2\beta$ times the density endpoints of $A$.
+\end{proof}
+
+\begin{corollary}[Film classification]\label{cor:film-classification}
+For translation-invariant integer nearest-neighbour interactions on
+$\Z^3$, existing nonnegative finite film exponents are exactly
+$\mathsf D_3\cap[0,\infty)$. Ordered finite nonnegative pairs are
+exactly $\mathsf S_3\times\mathsf P_3$. Some fixed model has an
+existing exponent in neither $\mathsf S_2$ nor $\mathsf P_2$.
+Necessity holds for algebraic interactions in any fixed dimension,
+under the stated existence and positivity promises.
+\end{corollary}
+\begin{proof}
+For necessity, isolate the distinct finite algebraic eigenvalues, as
+in Proposition~\ref{prop:necessity}. A fixed-thickness inner limit has
+a uniform $0'$-Cauchy name. Its promised positivity permits computation
+of its logarithm in that oracle. Proposition~\ref{prop:calculus}
+then gives the three outer ceilings. For attainment choose
+$\beta\geq\max(1,b/2)$ and apply Lemma~\ref{lem:relative-density} at
+level $k=2$ to $a/(2\beta),b/(2\beta)$. Theorem~\ref{thm:film} applies.
+For an existing value outside both preceding sides, use the diagonal
+real of Lemma~\ref{lem:diagonal} and a positive rational scaling.
+\end{proof}
+
+No uniform gap equality with the main counter cycle is asserted.
+For example the legal radix vector $(2,2,2,1^{15})$ has a main cycle
+of length $58$, but also a closed free path of length $30$ with gap
+$2-2\cos(\pi/30)<2-2\cos(2\pi/58)$. Fix digits
+$d_0=d_1=0,d_2=1$ and all later digits zero. An incrementing head
+travels from position $3$ to $17$, wraps, and returns to $3$; it can
+neither enter nor leave through digit $d_2=1$. Its forced side symbols
+are legal throughout. The independent component check also finds a
+longer free path. The full-counter bracket, exact formula
+\eqref{eq:film-exact}, and density exponent do not require identifying
+the minimizing component.
+
+\subsection{A classical moving-corner observable}
+The same arithmetic level occurs without a quantum layer. In a square
+tableau use the limit machine above, and index a site by $(j,i)$ back
+from the \emph{far-time} corner. Its physical time is $L-1-i$.
+At fixed $(j,i)$ the output tends to $A(j)$ as $L\to\infty$.
+The $J\times J$ average of that limiting configuration is
+\[
+ J^{-2}\sum_{i,j<J}A(j)=J^{-1}\sum_{j<J}A(j).
+\]
+Thus its existing density and ordered endpoints fill the same level-three
+classes on the allowed interval. Necessity is one pointwise limit of
+computable finite tableaux followed by the window-size limit. A fixed
+site measured from the initialized corner would instead remain at
+fixed computation time. This is a moving-corner boundary-selected
+observable, not a claim about a canonical translation-invariant bulk
+state density.

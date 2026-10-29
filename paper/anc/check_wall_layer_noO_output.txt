@@ -1,0 +1,23 @@
+rows width=3 g=-0.050 (0s)
+rows width=3 g=+0.000 (0s)
+rows width=3 g=+0.010 (0s)
+rows width=3 g=+0.030 (1s)
+rows width=3 g=+0.040 (1s)
+rows width=3 g=+0.045 (1s)
+rows width=3 g=+0.060 (1s)
+rows width=3 g=+0.080 (1s)
+cols width=3 g=-0.050 (1s)
+cols width=3 g=+0.000 (1s)
+cols width=3 g=+0.010 (1s)
+cols width=3 g=+0.030 (2s)
+cols width=3 g=+0.040 (2s)
+cols width=3 g=+0.045 (2s)
+cols width=3 g=+0.060 (2s)
+cols width=3 g=+0.080 (2s)
+rows width=4 g=+0.030 (9s)
+rows width=4 g=+0.045 (16s)
+cols width=4 g=+0.030 (22s)
+cols width=4 g=+0.045 (29s)
+records 196 failures 0
+true-model minima below the violation-free minimum (incommensurate tori): 0
+PASS

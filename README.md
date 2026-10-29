@@ -1,19 +1,13 @@
-# Uncomputable finite-size gap exponents
+# Uncomputable critical exponents
 
-Seth Douglas and Nidhal Mghirbi. Version 1.0.0, October 2026. DOI: [10.5281/zenodo.23753840](https://doi.org/10.5281/zenodo.23753840). Concept DOI (all versions): [10.5281/zenodo.23753839](https://doi.org/10.5281/zenodo.23753839). A preprint; it has not been peer reviewed.
+Seth Douglas and Nidhal Mghirbi.
 
-We classify the nonnegative finite-size spectral-gap exponents of translation-invariant nearest-neighbour Hamiltonians on the square lattice, with finite local dimension, integer interaction matrices and open boundaries. The gap is measured above the entire ground space on an $L\times L$ box. The existing exponents in $\Delta(L)=L^{-z+o(1)}$ are exactly the nonnegative limit-computable ($\Delta^0_2$) reals. The finite nonnegative lower/upper exponent pairs are exactly the ordered pairs consisting of a left-$\Sigma^0_2$ real and a left-$\Pi^0_2$ real. In particular, one fixed integer-valued model has exponent equal to the halting probability of any chosen prefix-universal machine. A classical boundary preference fixes a size counter and a computation tableau; a reversible mixed-radix counter supplies the small gap. We bound every sector of the full Hilbert space. The closing modes live on a boundary segment of length $O(\log L)$, and the local dimension may depend on the prescribed pair. These are finite-box exponents, with no assertion about bulk dispersion or stability of thermodynamic critical exponents.
+Version 2.0.0, October 2026. A preprint; it has not been peer reviewed.
 
-## Contents
-- `paper/main.pdf` (11 pages), with its LaTeX source (`paper/main.tex`, `paper/references.bib`, `paper/main.bbl`) and a builder
-  (`paper/build.py`).
-- `paper/arxiv/`: a standalone source folder with the same source and checks.
-- `paper/anc/`: the finite checks (exact diagonalization of the counter Hamiltonian, exhaustive minimization of the classical layer, the
-  penalty-localization lemma, independent checks), with a runner, recorded outputs and SHA-256 hashes. See `paper/anc/README.txt` for
-  their coverage and limitations. The theorems rest on the written proofs; the computations support them and do not replace them.
+This is version 2.0.0 of "Uncomputable finite-size gap exponents" (version 1.0.0: [10.5281/zenodo.23753840](https://doi.org/10.5281/zenodo.23753840)). It keeps the finite-size classification and adds the critical exponents, the bulk third-level theorem and the hierarchy.
 
-Related: "The uncomputable price of precision" (Seth Douglas and Nidhal Mghirbi,
-[10.5281/zenodo.23753741](https://doi.org/10.5281/zenodo.23753741)).
+We construct translation-invariant nearest-neighbour quantum Hamiltonian families with rational coefficient matrices whose critical gap exponents at the computable transition coupling zero fill Delta-2 in the bulk on Z^2 and Delta-3 in the bulk on Z^3. Volume limits use cubic tori of side L=n! and precede the coupling limit; gaps are above the entire ground space. A classical energetic ruler selects pitch proportional to inverse coupling. In three dimensions a self-created frame supports an unbounded computation, whose final-time output is broadcast by nearest-neighbour classical constraints to positive-density bulk counters. Their full gaps give an extensive flat band and nonzero local spectral weight per volume at each fixed positive coupling. The inner limit is eventually exact, with no general computable settling bound. The two-dimensional ruler also realizes ordered left-Sigma-2 and left-Pi-2 endpoint pairs, including a halting probability. Surface-anchored wetting films independently attain Delta-3; fixed-thickness films and dependent nested box limits yield the stated arithmetic hierarchy. We give full-sector counter bounds, conditional ceilings for effectively controlled limits, and an explicit onsite instability of the earlier rulers. Finite analytic systems have integer exponents. No all-integer-size limit, robustness, unique-ground-state realization, correlation-length classification, or identification with locally nondegenerate or KMS-extremized gaps is established.
 
-## License
-The paper and documentation are licensed CC BY 4.0, and the scripts MIT or Apache 2.0, at your option. See RIGHTS.md.
+The manuscript and source are in paper/. The self-contained source package is paper/arxiv/. The sequential finite checks, recorded outputs and checksums are in paper/anc/. Build outside this tree with python paper/build.py --output-dir BUILD_DIRECTORY.
+
+The manuscript and documentation are licensed CC BY 4.0. Scripts are MIT or Apache 2.0 at your option; see RIGHTS.md.

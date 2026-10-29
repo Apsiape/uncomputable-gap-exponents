@@ -1,0 +1,1334 @@
+{
+  "wall": [
+    {
+      "width": 2,
+      "height": 2,
+      "configurations": 625,
+      "violation_free": 6,
+      "largest_corner_deficit_per_violation": "1",
+      "witness": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "width": 2,
+      "height": 3,
+      "configurations": 15625,
+      "violation_free": 2,
+      "largest_corner_deficit_per_violation": "1",
+      "witness": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "width": 3,
+      "height": 2,
+      "configurations": 15625,
+      "violation_free": 2,
+      "largest_corner_deficit_per_violation": "1",
+      "witness": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "width": 2,
+      "height": 4,
+      "configurations": 390625,
+      "violation_free": 10,
+      "largest_corner_deficit_per_violation": "1",
+      "witness": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "width": 4,
+      "height": 2,
+      "configurations": 390625,
+      "violation_free": 6,
+      "largest_corner_deficit_per_violation": "1",
+      "witness": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "width": 3,
+      "height": 3,
+      "configurations": 1953125,
+      "violation_free": 11,
+      "largest_corner_deficit_per_violation": "1",
+      "witness": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "width": 2,
+      "height": 5,
+      "configurations": 9765625,
+      "violation_free": 2,
+      "largest_corner_deficit_per_violation": "1",
+      "witness": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "width": 5,
+      "height": 2,
+      "configurations": 9765625,
+      "violation_free": 2,
+      "largest_corner_deficit_per_violation": "1",
+      "witness": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "film": {
+    "tie_g": "1/1152",
+    "tie_residue_tests": [
+      {
+        "L": 728,
+        "g": "1/1152",
+        "optimal_heights": [
+          8
+        ],
+        "row_energy_h7": "91/9",
+        "row_energy_h8": "181/18"
+      },
+      {
+        "L": 729,
+        "g": "1/1152",
+        "optimal_heights": [
+          7
+        ],
+        "row_energy_h7": "1295/128",
+        "row_energy_h8": "81/8"
+      },
+      {
+        "L": 1448,
+        "g": "1/1152",
+        "optimal_heights": [
+          8
+        ],
+        "row_energy_h7": "181/9",
+        "row_energy_h8": "361/18"
+      },
+      {
+        "L": 1449,
+        "g": "1/1152",
+        "optimal_heights": [
+          7
+        ],
+        "row_energy_h7": "2575/128",
+        "row_energy_h8": "161/8"
+      }
+    ],
+    "phase_defect": {
+      "L": 721,
+      "height": 7,
+      "corner_counts": [
+        91,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        90
+      ],
+      "energy_difference": "1/16"
+    },
+    "counter_h7": {
+      "radices": [
+        2,
+        2,
+        2
+      ],
+      "gap": 0.05014417563635276,
+      "components": [
+        {
+          "vertices": 28,
+          "cycle": true,
+          "gap": 0.05014417563635276
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 4,
+          "cycle": false,
+          "gap": 0.5857864376269049
+        },
+        {
+          "vertices": 4,
+          "cycle": false,
+          "gap": 0.5857864376269049
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        }
+      ]
+    },
+    "counter_h8": {
+      "radices": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "gap": 0.04370479853238862,
+      "components": [
+        {
+          "vertices": 30,
+          "cycle": true,
+          "gap": 0.04370479853238862
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 4,
+          "cycle": false,
+          "gap": 0.5857864376269049
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 6,
+          "cycle": false,
+          "gap": 0.2679491924311226
+        },
+        {
+          "vertices": 4,
+          "cycle": false,
+          "gap": 0.5857864376269049
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 4,
+          "cycle": false,
+          "gap": 0.5857864376269049
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        }
+      ]
+    },
+    "long_counter_17": {
+      "radices": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "gap": 0.009630546655606143,
+      "components": [
+        {
+          "vertices": 56,
+          "cycle": true,
+          "gap": 0.012575580213514792
+        },
+        {
+          "vertices": 28,
+          "cycle": false,
+          "gap": 0.012575580213514792
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 30,
+          "cycle": false,
+          "gap": 0.01095620926345342
+        },
+        {
+          "vertices": 28,
+          "cycle": false,
+          "gap": 0.012575580213514792
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 32,
+          "cycle": false,
+          "gap": 0.009630546655606143
+        },
+        {
+          "vertices": 4,
+          "cycle": false,
+          "gap": 0.5857864376269049
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 28,
+          "cycle": false,
+          "gap": 0.012575580213514792
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 30,
+          "cycle": false,
+          "gap": 0.01095620926345342
+        },
+        {
+          "vertices": 28,
+          "cycle": false,
+          "gap": 0.012575580213514792
+        }
+      ]
+    },
+    "long_counter_18": {
+      "radices": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "gap": 0.008531647409931065,
+      "components": [
+        {
+          "vertices": 58,
+          "cycle": true,
+          "gap": 0.011724085691280806
+        },
+        {
+          "vertices": 30,
+          "cycle": false,
+          "gap": 0.01095620926345342
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 32,
+          "cycle": false,
+          "gap": 0.009630546655606143
+        },
+        {
+          "vertices": 30,
+          "cycle": false,
+          "gap": 0.01095620926345342
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 34,
+          "cycle": false,
+          "gap": 0.008531647409931065
+        },
+        {
+          "vertices": 4,
+          "cycle": false,
+          "gap": 0.5857864376269049
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 30,
+          "cycle": false,
+          "gap": 0.01095620926345342
+        },
+        {
+          "vertices": 2,
+          "cycle": false,
+          "gap": 2
+        },
+        {
+          "vertices": 32,
+          "cycle": false,
+          "gap": 0.009630546655606143
+        },
+        {
+          "vertices": 30,
+          "cycle": false,
+          "gap": 0.01095620926345342
+        }
+      ]
+    },
+    "DC2_counterexample": {
+      "radices": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "gap": 0.2679491924311226,
+      "components": [
+        {
+          "vertices": 10,
+          "cycle": true,
+          "gap": 0.3819660112501051
+        },
+        {
+          "vertices": 6,
+          "cycle": false,
+          "gap": 0.2679491924311226
+        }
+      ]
+    }
+  },
+  "scalar": {
+    "wall_pitches_checked": 98,
+    "all_passed": true
+  },
+  "wetting_transfer": [
+    {
+      "X": 1,
+      "Z": 3,
+      "g": "-1/32",
+      "minimum": "-1/32",
+      "pass_": true
+    },
+    {
+      "X": 2,
+      "Z": 3,
+      "g": "-1/32",
+      "minimum": "0",
+      "pass_": true
+    },
+    {
+      "X": 3,
+      "Z": 3,
+      "g": "-1/32",
+      "minimum": "-1/32",
+      "pass_": true
+    },
+    {
+      "X": 4,
+      "Z": 3,
+      "g": "-1/32",
+      "minimum": "0",
+      "pass_": true
+    },
+    {
+      "X": 5,
+      "Z": 3,
+      "g": "-1/32",
+      "minimum": "-1/32",
+      "pass_": true
+    },
+    {
+      "X": 6,
+      "Z": 3,
+      "g": "-1/32",
+      "minimum": "0",
+      "pass_": true
+    },
+    {
+      "X": 7,
+      "Z": 3,
+      "g": "-1/32",
+      "minimum": "-1/32",
+      "pass_": true
+    },
+    {
+      "X": 8,
+      "Z": 3,
+      "g": "-1/32",
+      "minimum": "0",
+      "pass_": true
+    },
+    {
+      "X": 9,
+      "Z": 3,
+      "g": "-1/32",
+      "minimum": "-1/32",
+      "pass_": true
+    },
+    {
+      "X": 10,
+      "Z": 3,
+      "g": "-1/32",
+      "minimum": "0",
+      "pass_": true
+    },
+    {
+      "X": 11,
+      "Z": 3,
+      "g": "-1/32",
+      "minimum": "-1/32",
+      "pass_": true
+    },
+    {
+      "X": 12,
+      "Z": 3,
+      "g": "-1/32",
+      "minimum": "0",
+      "pass_": true
+    },
+    {
+      "X": 1,
+      "Z": 3,
+      "g": "0",
+      "minimum": "0",
+      "pass_": true
+    },
+    {
+      "X": 2,
+      "Z": 3,
+      "g": "0",
+      "minimum": "1/16",
+      "pass_": true
+    },
+    {
+      "X": 3,
+      "Z": 3,
+      "g": "0",
+      "minimum": "1/16",
+      "pass_": true
+    },
+    {
+      "X": 4,
+      "Z": 3,
+      "g": "0",
+      "minimum": "1/8",
+      "pass_": true
+    },
+    {
+      "X": 5,
+      "Z": 3,
+      "g": "0",
+      "minimum": "1/8",
+      "pass_": true
+    },
+    {
+      "X": 6,
+      "Z": 3,
+      "g": "0",
+      "minimum": "3/16",
+      "pass_": true
+    },
+    {
+      "X": 7,
+      "Z": 3,
+      "g": "0",
+      "minimum": "3/16",
+      "pass_": true
+    },
+    {
+      "X": 8,
+      "Z": 3,
+      "g": "0",
+      "minimum": "1/4",
+      "pass_": true
+    },
+    {
+      "X": 9,
+      "Z": 3,
+      "g": "0",
+      "minimum": "1/4",
+      "pass_": true
+    },
+    {
+      "X": 10,
+      "Z": 3,
+      "g": "0",
+      "minimum": "5/16",
+      "pass_": true
+    },
+    {
+      "X": 11,
+      "Z": 3,
+      "g": "0",
+      "minimum": "5/16",
+      "pass_": true
+    },
+    {
+      "X": 12,
+      "Z": 3,
+      "g": "0",
+      "minimum": "3/8",
+      "pass_": true
+    },
+    {
+      "X": 1,
+      "Z": 3,
+      "g": "1/1008",
+      "minimum": "1/1008",
+      "pass_": true
+    },
+    {
+      "X": 2,
+      "Z": 3,
+      "g": "1/1008",
+      "minimum": "65/1008",
+      "pass_": true
+    },
+    {
+      "X": 3,
+      "Z": 3,
+      "g": "1/1008",
+      "minimum": "11/168",
+      "pass_": true
+    },
+    {
+      "X": 4,
+      "Z": 3,
+      "g": "1/1008",
+      "minimum": "65/504",
+      "pass_": true
+    },
+    {
+      "X": 5,
+      "Z": 3,
+      "g": "1/1008",
+      "minimum": "131/1008",
+      "pass_": true
+    },
+    {
+      "X": 6,
+      "Z": 3,
+      "g": "1/1008",
+      "minimum": "65/336",
+      "pass_": true
+    },
+    {
+      "X": 7,
+      "Z": 3,
+      "g": "1/1008",
+      "minimum": "7/36",
+      "pass_": true
+    },
+    {
+      "X": 8,
+      "Z": 3,
+      "g": "1/1008",
+      "minimum": "65/252",
+      "pass_": true
+    },
+    {
+      "X": 9,
+      "Z": 3,
+      "g": "1/1008",
+      "minimum": "29/112",
+      "pass_": true
+    },
+    {
+      "X": 10,
+      "Z": 3,
+      "g": "1/1008",
+      "minimum": "325/1008",
+      "pass_": true
+    },
+    {
+      "X": 11,
+      "Z": 3,
+      "g": "1/1008",
+      "minimum": "163/504",
+      "pass_": true
+    },
+    {
+      "X": 12,
+      "Z": 3,
+      "g": "1/1008",
+      "minimum": "65/168",
+      "pass_": true
+    },
+    {
+      "X": 1,
+      "Z": 3,
+      "g": "1/128",
+      "minimum": "1/128",
+      "pass_": true
+    },
+    {
+      "X": 2,
+      "Z": 3,
+      "g": "1/128",
+      "minimum": "5/64",
+      "pass_": true
+    },
+    {
+      "X": 3,
+      "Z": 3,
+      "g": "1/128",
+      "minimum": "11/128",
+      "pass_": true
+    },
+    {
+      "X": 4,
+      "Z": 3,
+      "g": "1/128",
+      "minimum": "5/32",
+      "pass_": true
+    },
+    {
+      "X": 5,
+      "Z": 3,
+      "g": "1/128",
+      "minimum": "21/128",
+      "pass_": true
+    },
+    {
+      "X": 6,
+      "Z": 3,
+      "g": "1/128",
+      "minimum": "15/64",
+      "pass_": true
+    },
+    {
+      "X": 7,
+      "Z": 3,
+      "g": "1/128",
+      "minimum": "31/128",
+      "pass_": true
+    },
+    {
+      "X": 8,
+      "Z": 3,
+      "g": "1/128",
+      "minimum": "5/16",
+      "pass_": true
+    },
+    {
+      "X": 9,
+      "Z": 3,
+      "g": "1/128",
+      "minimum": "41/128",
+      "pass_": true
+    },
+    {
+      "X": 10,
+      "Z": 3,
+      "g": "1/128",
+      "minimum": "25/64",
+      "pass_": true
+    },
+    {
+      "X": 11,
+      "Z": 3,
+      "g": "1/128",
+      "minimum": "51/128",
+      "pass_": true
+    },
+    {
+      "X": 12,
+      "Z": 3,
+      "g": "1/128",
+      "minimum": "15/32",
+      "pass_": true
+    },
+    {
+      "X": 1,
+      "Z": 3,
+      "g": "1/16",
+      "minimum": "1/16",
+      "pass_": true
+    },
+    {
+      "X": 2,
+      "Z": 3,
+      "g": "1/16",
+      "minimum": "3/16",
+      "pass_": true
+    },
+    {
+      "X": 3,
+      "Z": 3,
+      "g": "1/16",
+      "minimum": "1/4",
+      "pass_": true
+    },
+    {
+      "X": 4,
+      "Z": 3,
+      "g": "1/16",
+      "minimum": "3/8",
+      "pass_": true
+    },
+    {
+      "X": 5,
+      "Z": 3,
+      "g": "1/16",
+      "minimum": "7/16",
+      "pass_": true
+    },
+    {
+      "X": 6,
+      "Z": 3,
+      "g": "1/16",
+      "minimum": "9/16",
+      "pass_": true
+    },
+    {
+      "X": 7,
+      "Z": 3,
+      "g": "1/16",
+      "minimum": "5/8",
+      "pass_": true
+    },
+    {
+      "X": 8,
+      "Z": 3,
+      "g": "1/16",
+      "minimum": "3/4",
+      "pass_": true
+    },
+    {
+      "X": 9,
+      "Z": 3,
+      "g": "1/16",
+      "minimum": "13/16",
+      "pass_": true
+    },
+    {
+      "X": 10,
+      "Z": 3,
+      "g": "1/16",
+      "minimum": "15/16",
+      "pass_": true
+    },
+    {
+      "X": 11,
+      "Z": 3,
+      "g": "1/16",
+      "minimum": "1",
+      "pass_": true
+    },
+    {
+      "X": 12,
+      "Z": 3,
+      "g": "1/16",
+      "minimum": "9/8",
+      "pass_": true
+    },
+    {
+      "X": 1,
+      "Z": 3,
+      "g": "1/8",
+      "minimum": "1/8",
+      "pass_": true
+    },
+    {
+      "X": 2,
+      "Z": 3,
+      "g": "1/8",
+      "minimum": "5/16",
+      "pass_": true
+    },
+    {
+      "X": 3,
+      "Z": 3,
+      "g": "1/8",
+      "minimum": "7/16",
+      "pass_": true
+    },
+    {
+      "X": 4,
+      "Z": 3,
+      "g": "1/8",
+      "minimum": "5/8",
+      "pass_": true
+    },
+    {
+      "X": 5,
+      "Z": 3,
+      "g": "1/8",
+      "minimum": "3/4",
+      "pass_": true
+    },
+    {
+      "X": 6,
+      "Z": 3,
+      "g": "1/8",
+      "minimum": "15/16",
+      "pass_": true
+    },
+    {
+      "X": 7,
+      "Z": 3,
+      "g": "1/8",
+      "minimum": "17/16",
+      "pass_": true
+    },
+    {
+      "X": 8,
+      "Z": 3,
+      "g": "1/8",
+      "minimum": "5/4",
+      "pass_": true
+    },
+    {
+      "X": 9,
+      "Z": 3,
+      "g": "1/8",
+      "minimum": "11/8",
+      "pass_": true
+    },
+    {
+      "X": 10,
+      "Z": 3,
+      "g": "1/8",
+      "minimum": "25/16",
+      "pass_": true
+    },
+    {
+      "X": 11,
+      "Z": 3,
+      "g": "1/8",
+      "minimum": "27/16",
+      "pass_": true
+    },
+    {
+      "X": 12,
+      "Z": 3,
+      "g": "1/8",
+      "minimum": "15/8",
+      "pass_": true
+    },
+    {
+      "X": 1,
+      "Z": 4,
+      "g": "-1/32",
+      "minimum": "-1/16",
+      "pass_": true
+    },
+    {
+      "X": 2,
+      "Z": 4,
+      "g": "-1/32",
+      "minimum": "-1/8",
+      "pass_": true
+    },
+    {
+      "X": 3,
+      "Z": 4,
+      "g": "-1/32",
+      "minimum": "-1/8",
+      "pass_": true
+    },
+    {
+      "X": 4,
+      "Z": 4,
+      "g": "-1/32",
+      "minimum": "-3/16",
+      "pass_": true
+    },
+    {
+      "X": 5,
+      "Z": 4,
+      "g": "-1/32",
+      "minimum": "-1/4",
+      "pass_": true
+    },
+    {
+      "X": 6,
+      "Z": 4,
+      "g": "-1/32",
+      "minimum": "-1/4",
+      "pass_": true
+    },
+    {
+      "X": 1,
+      "Z": 4,
+      "g": "0",
+      "minimum": "0",
+      "pass_": true
+    },
+    {
+      "X": 2,
+      "Z": 4,
+      "g": "0",
+      "minimum": "0",
+      "pass_": true
+    },
+    {
+      "X": 3,
+      "Z": 4,
+      "g": "0",
+      "minimum": "1/16",
+      "pass_": true
+    },
+    {
+      "X": 4,
+      "Z": 4,
+      "g": "0",
+      "minimum": "1/16",
+      "pass_": true
+    },
+    {
+      "X": 5,
+      "Z": 4,
+      "g": "0",
+      "minimum": "1/16",
+      "pass_": true
+    },
+    {
+      "X": 6,
+      "Z": 4,
+      "g": "0",
+      "minimum": "1/8",
+      "pass_": true
+    },
+    {
+      "X": 1,
+      "Z": 4,
+      "g": "1/1008",
+      "minimum": "1/1008",
+      "pass_": true
+    },
+    {
+      "X": 2,
+      "Z": 4,
+      "g": "1/1008",
+      "minimum": "1/252",
+      "pass_": true
+    },
+    {
+      "X": 3,
+      "Z": 4,
+      "g": "1/1008",
+      "minimum": "11/168",
+      "pass_": true
+    },
+    {
+      "X": 4,
+      "Z": 4,
+      "g": "1/1008",
+      "minimum": "71/1008",
+      "pass_": true
+    },
+    {
+      "X": 5,
+      "Z": 4,
+      "g": "1/1008",
+      "minimum": "73/1008",
+      "pass_": true
+    },
+    {
+      "X": 6,
+      "Z": 4,
+      "g": "1/1008",
+      "minimum": "23/168",
+      "pass_": true
+    },
+    {
+      "X": 1,
+      "Z": 4,
+      "g": "1/128",
+      "minimum": "1/128",
+      "pass_": true
+    },
+    {
+      "X": 2,
+      "Z": 4,
+      "g": "1/128",
+      "minimum": "1/32",
+      "pass_": true
+    },
+    {
+      "X": 3,
+      "Z": 4,
+      "g": "1/128",
+      "minimum": "11/128",
+      "pass_": true
+    },
+    {
+      "X": 4,
+      "Z": 4,
+      "g": "1/128",
+      "minimum": "1/8",
+      "pass_": true
+    },
+    {
+      "X": 5,
+      "Z": 4,
+      "g": "1/128",
+      "minimum": "9/64",
+      "pass_": true
+    },
+    {
+      "X": 6,
+      "Z": 4,
+      "g": "1/128",
+      "minimum": "7/32",
+      "pass_": true
+    },
+    {
+      "X": 1,
+      "Z": 4,
+      "g": "1/16",
+      "minimum": "1/16",
+      "pass_": true
+    },
+    {
+      "X": 2,
+      "Z": 4,
+      "g": "1/16",
+      "minimum": "3/16",
+      "pass_": true
+    },
+    {
+      "X": 3,
+      "Z": 4,
+      "g": "1/16",
+      "minimum": "1/4",
+      "pass_": true
+    },
+    {
+      "X": 4,
+      "Z": 4,
+      "g": "1/16",
+      "minimum": "3/8",
+      "pass_": true
+    },
+    {
+      "X": 5,
+      "Z": 4,
+      "g": "1/16",
+      "minimum": "7/16",
+      "pass_": true
+    },
+    {
+      "X": 6,
+      "Z": 4,
+      "g": "1/16",
+      "minimum": "9/16",
+      "pass_": true
+    },
+    {
+      "X": 1,
+      "Z": 4,
+      "g": "1/8",
+      "minimum": "1/8",
+      "pass_": true
+    },
+    {
+      "X": 2,
+      "Z": 4,
+      "g": "1/8",
+      "minimum": "5/16",
+      "pass_": true
+    },
+    {
+      "X": 3,
+      "Z": 4,
+      "g": "1/8",
+      "minimum": "7/16",
+      "pass_": true
+    },
+    {
+      "X": 4,
+      "Z": 4,
+      "g": "1/8",
+      "minimum": "5/8",
+      "pass_": true
+    },
+    {
+      "X": 5,
+      "Z": 4,
+      "g": "1/8",
+      "minimum": "3/4",
+      "pass_": true
+    },
+    {
+      "X": 6,
+      "Z": 4,
+      "g": "1/8",
+      "minimum": "15/16",
+      "pass_": true
+    }
+  ],
+  "passed": true,
+  "seconds": 16.317232608795166
+}

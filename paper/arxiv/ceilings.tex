@@ -1,0 +1,194 @@
+\section{Ceilings, analytic obstructions and effective collapse}\label{sec:ceilings}
+\begin{proposition}[Coupling-exponent ceilings]\label{prop:critical-ceiling}
+Suppose finite-volume gaps at rational $g$ are uniformly computable,
+defined eventually in volume, and their inner limits exist and are
+positive at every sufficiently small positive rational $g$. For finite
+endpoints in \eqref{eq:critical-definition}, the lower, upper and
+existing ceilings are $\mathsf S_3,\mathsf P_3,\mathsf D_3$.
+If the inner limit has a computable error modulus, or a computable
+eventual-exactness threshold, these reduce respectively to
+$\mathsf S_2,\mathsf P_2,\mathsf D_2$.
+If instead the positive inner gap is uniformly right-c.e., the
+ceilings are $\mathsf S_3,\mathsf P_2,\mathsf P_2$.
+\end{proposition}
+\begin{proof}
+An existing inner limit has a uniform $0'$-Cauchy name. Promised
+positivity lets that oracle find a rational interval bounded away
+from zero and compute its logarithm. The normalization is then
+uniformly $\mathsf D_2$. Tail infima and suprema over rational
+couplings give the same relativized lower/upper cut arguments as
+Proposition~\ref{prop:calculus}: use a rational buffer and quantify
+over all rational $g$ in a sufficiently small punctured neighbourhood.
+An existing outer limit is computable in the next jump by a
+tail-Cauchy search. This proves the first ceilings. Effective inner
+convergence computes the gap without the first jump, proving the
+second. A positive right-c.e. gap has a \emph{left}-c.e. inverse
+logarithm, so the $\mathsf S_1$ row proves the third.
+\end{proof}
+
+An infimum over an effectively enumerated adequate family of
+computable excitation tests is right-c.e. This observation applies
+only after the variational representation is established for the
+particular gap definition. The certified upper approximations of
+Xu et al. \cite{bulkGap} concern their operator-algebraic bulk gap;
+they do not identify it with an open-box, film or commensurate-torus
+limit. The one-sided ceilings above are bounds, without an attainment
+claim for intrinsic bulk dispersion.
+
+\begin{proposition}[Finite analytic obstruction]\label{prop:rellich}
+If a finite-dimensional Hermitian matrix depends real-analytically
+on $g$ near $g_c$, and its gap above the entire ground space is
+defined to the right, that gap has a nonnegative integer exponent.
+\end{proposition}
+\begin{proof}
+Rellich's theorem gives analytic eigenvalue branches
+\cite[Chapter~II, Section~6]{kato}. Two branches either agree
+identically or have isolated intersections. Finitely many branches
+therefore have a fixed ordering of distinct values on some
+$(g_c,g_c+\epsilon)$. The gap there is the difference of two analytic
+branches, nonzero on that interval. Its Taylor series starts with
+$c(g-g_c)^m$, $c>0$ and integer $m\geq0$. Hence its logarithmic
+exponent is $m$.
+\end{proof}
+
+A noninteger envelope cannot equal the gap of one fixed finite
+analytic system throughout a right neighbourhood. In the ruler it
+is the increasing cell size that evades this obstruction. This
+argument forces infinitely many effective finite pieces in that
+representation; it does not force first-order steps in every
+possible infinite-volume construction.
+
+\subsection{Locality and first thermodynamic derivatives}
+Cutting a large box into side-$L$ boxes removes interactions of norm
+at most a computable constant times the number of cut bonds. The
+ground-energy variational inequality yields
+\begin{equation}\label{eq:density-modulus}
+ |e-e_L|\leq C/L.
+\end{equation}
+The same argument gives a pressure modulus. For Hermitian $A,B$,
+Weyl's eigenvalue bounds imply
+\[
+ |\log\operatorname{Tr}e^{A+B}-\log\operatorname{Tr}e^A|
+ \leq\|B\|.
+\]
+The partition function factors across a cut tensor product.
+Tiling and passing to the limit thus give $|p-p_L|\leq C(\beta,h)/L$
+uniformly on bounded computable parameter sets. These are two-sided
+brackets; an unshifted finite-box value need not itself be a lower
+bound. The modulus describes a box side required for accuracy,
+not the algorithm's running time.
+
+For a computable convex pressure as a function of an appropriate
+linear field variable, at a computable interior point $u$,
+\[
+ p'_+(u)=\inf_{t\in\Q_{>0}}\frac{p(u+t)-p(u)}t,\qquad
+ p'_-(u)=\sup_{t\in\Q_{>0}}\frac{p(u)-p(u-t)}t,
+\]
+with $t$ restricted to the domain. The right derivative is
+right-c.e. and the left derivative left-c.e. At a promised
+differentiability point they agree; search for upper and lower chord
+bounds within the requested accuracy. This computes the derivative,
+uniformly over computable sequences of promised differentiability
+points, without a given modulus of differentiability.
+
+\begin{corollary}[Restricted positive-temperature ceiling]
+One further normalized limit formed from pressure values or
+differentiable first thermodynamic densities, at computable
+sampling and reference data, has lower/upper/existing ceilings
+$\mathsf S_2,\mathsf P_2,\mathsf D_2$. A positive right derivative
+at a cusp, with inverse-log normalization, instead has ceilings
+$\mathsf S_3,\mathsf P_2,\mathsf P_2$.
+\end{corollary}
+\begin{proof}
+The locality and convexity arguments compute the first type of
+finite-scale data. The second type is right-c.e.; its inverse
+logarithm reverses the side. Apply Proposition~\ref{prop:calculus}.
+All logarithms and denominators must be defined with the advertised
+positivity, and subtracted reference data must have the stated
+computability.
+\end{proof}
+
+These are ceilings, not thermal attainment theorems. They do not
+cover every correlation, higher response or selected Gibbs-state
+observable. A noncomputable critical point is additional input and
+is not included in a theorem for computable reference data.
+
+\begin{proposition}[Zero-temperature tangent-deficit exponent]
+For an affine finite-range family let $g_c$ be computable and put
+\[
+ s(g)=e'_+(g_c)(g-g_c)-(e(g)-e(g_c)).
+\]
+Assume $s(g)>0$ at the computable sampling points tending down to
+$g_c$ and that
+$2-\alpha=\lim_{g\downarrow g_c}\log s(g)/\log(g-g_c)$ exists
+and is finite in the stated rational-coupling sense. Then
+$2-\alpha\in\mathsf S_2$ and $\alpha\in\mathsf P_2$.
+\end{proposition}
+\begin{proof}
+Equation~\eqref{eq:density-modulus} computes $e$, and the interaction
+norm gives a volume-uniform Lipschitz bound in $g$, including $e(g_c)$.
+Ground energy is an infimum of affine functions and is concave.
+Its right derivative is the supremum of forward chord slopes, so
+it is left-c.e. Concavity gives $s\geq0$, and $s$ is uniformly
+left-c.e. Under promised strict positivity, $\log s$ is left-c.e.
+Division by the negative computable $\log(g-g_c)$ reverses the
+side, giving right-c.e. normalized data. Their existing limit is
+in $\mathsf S_2$; subtracting from two gives $\mathsf P_2$.
+\end{proof}
+
+This defines a particular singular-energy exponent. It matches the
+usual $e_{\rm sing}\sim|g-g_c|^{2-\alpha}$ interpretation where that
+singular term dominates the analytic remainder, for example
+$1<2-\alpha<2$. It is not an unrestricted theorem about every
+definition of a specific-heat exponent. Weyl's gap continuity bound
+has a volume factor $O(L^d)$ and supplies no analogous uniform
+modulus for the gap. A volume-uniform modulus of dependence on $g$
+alone, without an effective approximation mechanism in volume,
+must not be substituted for an effective inner-limit modulus.
+For example computable rational approximants $a_L\to\Omega_U$
+give $F_L(g)=a_L$ with common Lipschitz constant zero, yet their
+inner limit is an uncomputable constant. This is a data-level
+counterexample; the energy-density argument has the additional
+effective size bound \eqref{eq:density-modulus}.
+
+\subsection{Other effective mechanisms and their limits}
+Finite-range Lieb--Robinson estimates, with a computable initial
+state and effective constants, give a computable infinite-volume
+local expectation at every finite computable time \cite{liebRobinson}.
+A late-time exponent against a computable reference has the
+one-limit ceiling. If the reference is itself an untamed limiting
+value and is used inside the outer normalization, a further
+dependent limit can restore the next ceiling.
+
+For a nonempty effectively closed subset $K$ of an effectively
+compact space and computable continuous $f$, $\min_K f$ is left-c.e.:
+certify that $K\subset\{f>q\}$ using effective compactness.
+Effective overtness also semidecides $K\cap\{f<q\}\ne\varnothing$,
+giving the other side and computability. Ordinary compactness alone
+does not suffice. These and locality, convexity and variational
+extrema are useful sufficient mechanisms, not an exhaustive list
+of all ways physical definitions can simplify.
+
+Higher derivatives require separate control. The convex functions
+\[
+ p_n(u)=u^2+\frac{1-\cos(nu)}{n^2}
+\]
+converge effectively and uniformly to $u^2$, but $p_n''(0)=3$
+whereas the limit has second derivative two. Thus effective pressure
+convergence alone does not justify interchanging second derivatives.
+Under the ordinary hypotheses giving a second-order expansion, an
+existing second derivative of a computable function is itself a
+limit of computable central differences and has a $\mathsf D_2$
+ceiling. An additional response exponent can then have a
+$\mathsf D_3$ ceiling; no higher level follows merely by writing
+the derivative as a difference of one-sided values.
+
+If a film uses $\liminf_L$ instead of an existing inner limit,
+the inner gap is $\mathsf S_2$; its inverse-log normalization is
+$\mathsf P_2$. The lower/upper/existing ceilings are then
+$\mathsf S_3,\mathsf P_4,\mathsf S_3$. No physical sharpness for
+this alternative convention follows from Theorem~\ref{thm:film}.
+Range bounds likewise restrict an interval without proving either
+class preservation or attainment.
+
+\input{frustration}

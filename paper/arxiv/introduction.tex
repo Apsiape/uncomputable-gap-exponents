@@ -1,0 +1,201 @@
+\section{Critical exponents at a computable transition}\label{sec:intro}
+Local interactions with rational coefficients can have an uncomputable
+asymptotic exponent at a rational critical coupling. The organizing idea
+is to make the coupling an energetic ruler. A classical layer selects
+cells of pitch $p_*(g)=2r/g+O(1)$; a quantum counter inside each cell
+then makes the thermodynamic gap equal to a finite box's gap. Finite-size
+scaling becomes an exact spectral identity in a deliberately constructed
+model. The size of the local alphabet is fixed for each prescribed
+exponent and does not grow as $g$ approaches the transition.
+
+Critical gap exponents at this computable transition fill $\mathsf D_2$
+in the bulk on $\Z^2$ and $\mathsf D_3$ in the bulk on $\Z^3$,
+as well as at a surface-anchored film. The two-dimensional attainment
+has a computably tamed volume limit. In three dimensions an internally
+created frame supports an untamed classical computation; a final-time
+broadcast sends its settled word to quantum counters throughout the
+volume. The distinction is in how the finite counter labels are selected,
+not in whether the gap-carrying modes occupy the bulk. These are
+attainment statements in the gap convention below, not a dimension-only
+ceiling for every two-dimensional family.
+
+We use the gap above the \emph{entire} ground space, namely the difference
+between the two lowest distinct eigenvalues. A scalar finite matrix has
+no such gap and is excluded whenever a gap is required. A family has
+translation-invariant onsite and oriented nearest-neighbour terms
+$h_a(g)=h_a^0+g h_a^1$, with rational Hermitian matrices. Only the onsite
+term needs to depend on $g$ in our constructions. At rational $g$ every
+finite-volume matrix is algebraic. On tori, take the commensurate sizes
+$L=n!$; on the wetting open cubes we also take $L=n!$; the fixed-thickness film uses all $L\in\N$. Define, in this order,
+\begin{equation}\label{eq:critical-definition}
+ \begin{gathered}
+ \Delta_\infty(g)=\lim_{L\to\infty}\Delta(L,g),\qquad
+ x(g)=\frac{\log(1/\Delta_\infty(g))}{\log(1/g)},\\
+ (z\nu)^-=\liminf_{g\downarrow0}x(g),\qquad
+ (z\nu)^+=\limsup_{g\downarrow0}x(g).
+ \end{gathered}
+\end{equation}
+The first limit must exist and be positive at each sufficiently small
+positive coupling. An existing finite exponent is $z\nu=(z\nu)^-=(z\nu)^+$.
+General arithmetic ceilings concern rational couplings. In the explicit
+rulers the gap is constant between rational transition points, so real
+and rational approaches have the same endpoints. The notation $z\nu$
+denotes this gap exponent; it does not assert a dispersion relation or
+identify a ground-state correlation length.
+
+For an individual real, write $\mathsf S_m$ and $\mathsf P_m$ for the
+left-$\Sigma^0_m$ and left-$\Pi^0_m$ classes of its strict lower rational
+cut. Write $\mathsf D_m=\Delta^0_m$ for reals computable in
+$0^{(m-1)}$. Rational endpoints are treated separately when passing
+between strict upper and lower cuts. Uniform families throughout the
+paper are specified by oracle Cauchy names or one-sided approximation
+names, as explained in Section~\ref{sec:arithmetic}; uniform decidability
+of exact comparison with a rational is not assumed.
+
+\begin{theorem}[Bulk ruler]\label{thm:bulk-headline}
+For every $0\leq a\leq b<\infty$ with $a\in\mathsf S_2$ and
+$b\in\mathsf P_2$, a fixed rational nearest-neighbour affine family on
+$\Z^2$ has $((z\nu)^-,(z\nu)^+)=(a,b)$ along commensurate tori.
+The transition coupling is $g_c=0$. The gap is at least $1/16$ for
+$g\leq0$, and tends to zero from the right. For small positive $g$,
+the ground configurations fill the plane with cells and
+\[
+ \Delta_\infty(g)=D(p_*(g)-1),\qquad p_*(g)=\frac{2r}{g}+O(1),
+ \qquad r=\frac1{16},
+\]
+off the explicitly specified tie points. Here $D(h)$ is the full quantum
+counter gap selected by an $h\times h$ box. At ties the gap is the
+minimum of the two neighbouring values. The ground energy density is
+$0$ for $g\leq0$ and $-g^2/(4r)+O(g^4)$ for $g>0$.
+The inner gap limit is computably tamed. Consequently its finite
+nonnegative existing exponents are exactly $\mathsf D_2$.
+\end{theorem}
+
+The proof is in Sections~\ref{sec:ruler} and \ref{sec:transfer}, using
+the finite-size construction in Sections~\ref{sec:statement}--\ref{sec:necessity}.
+In particular $z\nu$ can be the halting probability $\Omega_U$ of any
+chosen prefix-universal machine. No uncomputable number is an interaction
+coefficient. There is one counter in every cell, with a positive density
+of possible excitation locations at fixed $g$. These gap-closing modes
+are not supported on the boundary of a finite box. We make no
+identification with a boundary-independent operator-algebraic gap.
+
+
+\begin{theorem}[Three-dimensional bulk broadcast]\label{thm:bulk-three}
+For every finite $\alpha\geq0$ in $\mathsf D_3$, a fixed
+translation-invariant nearest-neighbour rational affine family on $\Z^3$
+has critical gap exponent $\alpha$ on cubic tori $L=n!$, with the volume
+limit taken first and the entire ground space removed. The limiting gap
+is zero for $g\leq0$, positive for $0<g<11/480$, and closes as
+$g\downarrow0$. The ground energy density is zero for $g\leq0$ and
+$-g^2/(4r)+O(g^4)$ from the right, with $r=1/16$.
+At each fixed positive coupling in that interval, the gap is carried by
+at least $L^3/p^2$ independent bulk reader excitations for all sufficiently
+large factorial $L$, where $p=2r/g+O(1)$ is a gap-attaining pitch.
+The corresponding local spectral weight per volume is at least $1/p^2$.
+The finite-volume gap is eventually exact at fixed $g$, without a
+general computable settling bound. Together with the general two-limit
+ceiling, the existing finite nonnegative exponents in this convention
+fill exactly $\mathsf D_3$. A selected infinite-volume phase has the
+same gap above its full zero-energy subspace.
+\end{theorem}
+
+Section~\ref{sec:bulk-three} gives the complete construction and proof,
+including the minimum-of-two-gaps rule at pitch ties. The internally
+anchored computation does not confine the soft quantum modes to a seam:
+their possible locations have positive density at fixed $g$. No unique
+ground state, all-integer-size limit or equality with a locally
+nondegenerate or KMS-extremized gap is asserted.
+
+\begin{theorem}[Wetting ruler and film hierarchy]\label{thm:film-headline}
+A surface-anchored rational affine family along factorial open cubes in $\Z^3$
+selects a wetting-film height $h_*(g)=(r/g)^{1/2}+O(1)$.
+Its finite nonnegative existing gap exponents fill $\mathsf D_3$, and
+its ordered endpoint pairs fill $\mathsf S_3\times\mathsf P_3$.
+The gapless side includes $g=0$. At fixed $g>0$ the finite-box gap is
+eventually exactly constant, without a general computable settling bound.
+Independently, for integer interactions the fixed-thickness film
+exponents, with the in-plane limit taken first, fill exactly the same
+classes. More generally $k$ dependent nested box limits, including the
+outer scaling limit, fill $\mathsf D_{k+1}$ and its ordered
+$\mathsf S_{k+1}\times\mathsf P_{k+1}$ pairs in dimension $k+1$.
+\end{theorem}
+
+The wetting statement and its precise selection rules are in
+Section~\ref{sec:wetting}; the separate fixed-thickness theorem and the
+completed finite local-rule schema are in Sections~\ref{sec:film} and
+\ref{sec:nested}. Necessity requires every intermediate limit to exist
+for every remaining finite parameter tuple, and only asserts a class
+when the relevant final endpoints are finite. Their surface selection remains distinct from the bulk broadcast
+of Theorem~\ref{thm:bulk-three}.
+
+The examples are finely tuned. For the earlier two-dimensional and
+wetting rulers, a specified arbitrarily small onsite perturbation
+changes the programmed gap exponent to zero
+(Section~\ref{sec:instability}). The ruler pitch has
+structural exponent one; a theorem making a conventional correlation
+length exponent $\nu$ uncomputable is not claimed. Finite analytic
+systems have integer gap exponents. This forces the effective finite
+system to change infinitely often when its envelope has a noninteger
+exponent, but does not prove that all noninteger critical exponents in
+physics require a staircase.
+
+\subsection{Relation to earlier work}
+Spectral-gap undecidability for translation-invariant lattices was
+established by Cubitt, P\'erez-Garc\'ia and Wolf
+\cite{spectralShort,spectralFull}. Bausch, Cubitt and Watson constructed
+uncomputable phase diagrams \cite{phaseDiagrams}. Purcell, Li and Cubitt
+placed a transition at an uncomputable coupling \cite{chaitinTransition}.
+Here the coupling is rational and an asymptotic gap exponent contains
+the uncomputable number. Watson, Onorati and Cubitt proved that a
+computable renormalisation map can have uncomputably complex flows
+\cite{renormalisation}. None of these statements identifies stability
+with an effective convergence modulus.
+
+Fisher and Barber developed finite-size scaling for critical phenomena
+\cite{fisherBarber}. Our cell decomposition supplies a particular exact
+transfer, rather than a theorem about the usual scaling ansatz in all
+models. The commensurate steps belong to the established staircase
+tradition of Fisher and Selke and of Bak \cite{fisherSelke,bak}; the
+arithmetic programming of their gap envelope is the additional feature.
+Rellich's analytic perturbation theory, as presented by Kato
+\cite{kato}, supplies the finite-system obstruction.
+
+The open-edge preference is a form of the boundary-bonus mechanism of
+Bausch, Cubitt, Lucia, P\'erez-Garc\'ia and Wolf \cite{sizeDriven}; the
+exact flag identities and all-sector bounds used here are proved below.
+Watson and Cubitt study complexity of ground energy density
+\cite{energyDensity}. Xu et al. distinguish intrinsic bulk excitations
+from boundary-dependent gaps \cite{bulkGap}. Our bulk broadcast
+has positive-density local excitations, but its gap removes all
+zero-energy states. Section~\ref{subsec:bulk-conventions} separates
+this convention from their locally nondegenerate, KMS-extremized gap. The real hierarchy and density
+classifications are prior mathematical results of Zheng and Weihrauch
+and of Downey, Jockusch and Schupp \cite{zhengWeihrauch,density}.
+Meyerovitch classified entropy-dimension values of multidimensional
+shifts of finite type using arithmetical classes of reals
+\cite{meyerovitchGrowth}. This is a prior classification of local-rule
+growth exponents; the observable and realization here concern spectral
+gaps and their coupling-selected finite-cell envelopes.
+The companion precision problem \cite{pricePrecision} is independent
+of the present proof.
+
+There are closer precedents than undecidable transition locations.
+Schmidhuber's algorithmic ensemble has the computable critical
+inverse temperature $\log2$ and partition value $\Omega_U$ there
+\cite{algorithmicTransition}; it is not a local quantum-lattice
+gap-exponent classification. Balister, Bollob\'as, Morris and Smith
+explicitly announce uncomputability of bootstrap critical-probability
+exponents through a halting reduction \cite{bootstrapUniversality}.
+That announcement, referring to work in preparation, concerns failure
+of a uniform exponent algorithm across update families; it does not
+by itself exhibit one fixed noncomputable real quantum gap exponent.
+Watson and Bausch study the complexity of approximating critical
+boundaries under a finite-size consistency promise
+\cite{criticalBoundary}, a distinct input-size complexity question.
+Castilla-Castellano and Lucia show that arbitrarily small onsite
+perturbations remove undecidable behavior from a particular
+one-dimensional gap family \cite{gapInstability}. Our explicit
+perturbation proves the quantitative change of a programmed exponent
+to zero; neither result proves computability of every stable exponent.
+No exhaustive priority claim is made.

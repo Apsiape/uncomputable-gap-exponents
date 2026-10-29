@@ -1,0 +1,81 @@
+\section{Exact transfer to a bulk critical exponent}\label{sec:transfer}
+Superimpose the finite-size engine on the ruler. Interior sites carry
+the four tableau flags $T,F,B,R$, tied by two-site unit penalties to the
+conditions that their upper, left, lower and right neighbours are the
+corresponding $W,V,W,V$ walls. Wall sites carry one dummy tableau label.
+Tableau rules act only between interior sites of one cell. Every
+quantum site outside the cell's marked bottom-row segment is frozen.
+The classical wall bonus replaces the physical-box flag reward inside
+the cell; all additional tableau tests are nonnegative. In a perfect
+lattice each cell consequently has the unique tableau of its
+$h\times h$ box, where $h=p-1$.
+
+Let $A$ be a fast density word from Lemma~\ref{lem:word}, modified so
+$0,1,2\in A$. Let $D(h)$ denote the \emph{full} counter gap selected by
+that tableau. With $\ell(h)=\bitlength(h-1)$ and
+$k(h)=\beta|A\cap[0,\ell(h))|$, Lemma~\ref{lem:counter} gives
+\begin{equation}\label{eq:cell-bracket}
+ \frac{4^{-k(h)}}{64\ell(h)^2}\leq D(h)
+ \leq4\pi^2 4^{-k(h)},\qquad
+ D(h)\leq\frac{\pi^2}{\ell(h)^2}.
+\end{equation}
+The last inequality follows from the free orbit of length at least
+$2\ell$: each summand in \eqref{eq:orbit} is at least one. It guarantees
+gap closure even when the density, and hence the exponent, is zero.
+
+\begin{proof}[Proof of Theorem~\ref{thm:bulk-headline}]
+All classical labels are conserved and each dynamic block is
+nonnegative. For $g\leq0$ the vacua have no quantum region; their
+dynamic Hamiltonian is a sum of frozen-site penalties with positive
+eigenvalues at least one. Every other wall block has offset at least
+$r$, and a wrong tableau adds a unit penalty. Thus the gap is at least
+$r$ on every torus.
+
+Fix sufficiently small positive rational $g$, first off ties. Choose
+$L=n!$ large enough for Corollary~\ref{cor:selection}. All nonminimizing
+classical blocks then lie at least $5/8$ above the minimum. The finitely
+specified word machine has written the required prefix in every cell
+once $h$ exceeds its fixed timing cutoff. Each minimizing block has a
+tensor sum of identical disjoint cell counters and frozen exterior
+sites. Its first positive excitation is exactly $D(h)$. Since
+$k(h)\geq3$, $D(h)\leq4\pi^2/64<5/8$, so no other classical sector
+undercuts it. At a tie, minimizing stripe stacks use the two pitches;
+the least positive dynamic excitation over all minimizing blocks is
+$\min(D(p-1),D(p))$. Pure stacks show that both candidate values occur.
+Rational wall energies and the finite timing cutoff give a computable
+factorial index beyond which this identity holds, also at rational ties.
+
+Every classical block has a zero-energy dynamic state, so the density
+is the wall minimum. Equations~\eqref{eq:ruler-energy} and
+\eqref{eq:ruler-asymptotic} prove its asserted expansion and
+nonanalyticity at zero. The positive side has commensurate first-order
+kinks accumulating at zero; the gap at zero itself remains positive.
+
+For $g\in(g_p,g_{p-1})$,
+$\log(1/g)=\log p-\log(2r)+o(1)$ and
+$\ell(p-1)=\log_2p+O(1)$. Taking logarithms in
+\eqref{eq:cell-bracket} gives
+\[
+ x(g)=2\beta\rho_{\ell(p_*(g)-1)}(A)
+       +O\!\left(\frac{\log\log(1/g)}{\log(1/g)}\right).
+\]
+The pitch takes every sufficiently large integer. Its sampled bitlength
+is nondecreasing, unbounded and advances by unit steps. Ties use the
+minimum of two gaps; the two neighbouring normalized logarithms differ
+by $o(1)$, so ties do not alter either endpoint. The endpoints are
+therefore $2\beta$ times the two densities. Choose
+$\beta\geq\max(1,b/2)$ and use Lemma~\ref{lem:word} with densities
+$a/(2\beta),b/(2\beta)$. This proves attainment. The computably tamed
+inner limit and Proposition~\ref{prop:critical-ceiling} give necessity.
+\end{proof}
+
+The canonical \emph{structural} length of this construction is its pitch:
+$\xi(g)=p_*(g)=g^{-1+o(1)}$. If one defines a structural $\nu$ from this
+length, it equals one, leaving the uncomputability in $z\nu$. Ground
+space degeneracy means that correlation lengths of chosen ground states
+need not equal this pitch. An equality with a GNS gap, or an assertion
+about all torus sizes, requires a separate argument and is not used.
+Different stripes may choose independent horizontal phases, so not
+every minimizing configuration has one common vertical period.
+The structural length denotes the cell pitch, or the period of
+a chosen periodic representative.

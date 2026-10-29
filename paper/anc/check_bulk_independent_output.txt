@@ -1,0 +1,35 @@
+PASS independent GF(2) broadcast and translated source
+PASS independent ruler defects
+PASS independent full counter sectors; main-cycle equality refuted again
+{
+  "broadcast_linear_algebra": {
+    "translated_geometries": 90,
+    "all_prefix_fillings": 864,
+    "wrong_repeated_bit_contradictions": 2880,
+    "noncommensurate_tests": 4,
+    "y_copy": "eliminated exactly before GF(2) calculation"
+  },
+  "ruler_defects": {
+    "configurations": 13824,
+    "all_one_and_two_site_changes_at_pitch_6": 10224,
+    "larger_random_defects": 3600,
+    "arithmetic": "exact fractions"
+  },
+  "degenerate_tensor_sum": {
+    "cases": 8,
+    "smallest_positive": "1/97",
+    "multiplicity": "N*2**(N-1)"
+  },
+  "ties_and_bulk_count": {
+    "pitches": 2043,
+    "exact": true
+  },
+  "resources": {
+    "elapsed_seconds": 1.372707900009118,
+    "peak_working_set_bytes": 19922944,
+    "standard_library_only": true,
+    "processes": 1,
+    "numerical_threads_requested": 1
+  },
+  "status": "PASS"
+}

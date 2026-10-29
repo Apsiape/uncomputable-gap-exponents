@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "single_threaded": true,
+  "memory_limit_bytes": 1000000000,
+  "checks": [
+    {
+      "script": "finite_size_runner.py",
+      "status": "PASS",
+      "seconds": 172.773,
+      "peak_bytes": 986198016
+    },
+    {
+      "script": "check_wall_layer.py",
+      "status": "PASS",
+      "seconds": 246.562,
+      "peak_bytes": 444170240
+    },
+    {
+      "script": "check_wall_layer_noO.py",
+      "status": "PASS",
+      "seconds": 29.344,
+      "peak_bytes": 124194816
+    },
+    {
+      "script": "check_counter_perturbation.py",
+      "status": "PASS",
+      "seconds": 8.343,
+      "peak_bytes": 210976768
+    },
+    {
+      "script": "check_film_counter.py",
+      "status": "PASS",
+      "seconds": 1.961,
+      "peak_bytes": 60919808
+    },
+    {
+      "script": "check_film_classical_layer.py",
+      "status": "PASS",
+      "seconds": 123.813,
+      "peak_bytes": 14581760
+    },
+    {
+      "script": "check_nested_limits.py",
+      "status": "PASS",
+      "seconds": 1.735,
+      "peak_bytes": 43507712
+    },
+    {
+      "script": "check_critical_ruler.py",
+      "status": "PASS",
+      "seconds": 16.758,
+      "peak_bytes": 113844224
+    },
+    {
+      "script": "check_bulk_broadcast.py",
+      "status": "PASS",
+      "seconds": 16.723,
+      "peak_bytes": 20254720
+    },
+    {
+      "script": "check_bulk_independent.py",
+      "status": "PASS",
+      "seconds": 1.733,
+      "peak_bytes": 19324928
+    }
+  ],
+  "numerical_caveat": "Floating-point eigenvalues are consistency checks, not interval proofs."
+}

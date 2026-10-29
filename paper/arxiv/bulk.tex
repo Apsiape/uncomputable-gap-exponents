@@ -1,0 +1,587 @@
+\section{A final-time broadcast to three-dimensional bulk counters}
+\label{sec:bulk-three}
+The film separates the read length from the available computation time,
+but its readers lie on an edge. We now retain the unbounded classical
+computation and distribute its final word to an extensive set of finite
+quantum readers. All coordinates below are periodic, with
+$T_L=(\Z/L\Z)^3$ and $L=n!$. There is no external boundary term,
+designated site or size-dependent interaction. The positive-coupling
+statements in this section concern only
+\[
+ 0<g<\bar g=g_5=\frac{11}{480}.
+\]
+Thus all selected ruler pitches satisfy $p\geq6$. The Hamiltonian
+itself is defined for every real $g$.
+
+Fix a set $A\leq_T0'$ containing $0,1,2$, an integer $\beta\geq1$,
+and a total computable approximation $a(j,s)\to A(j)$.
+Use an ordinary one-sided-tape machine with separate work and persistent
+output tracks. At stage $s$ it computes and writes $a(j,s)$ for all
+$j\leq s$. Every stage finishes. For each fixed $j$, its physical output
+$o_t(j)$ is consequently constant and equal to $A(j)$ after some finite
+time $t_j$. Blank output means zero. A later write to an already settled
+cell has the same value. This does not require any bound on $t_j$.
+
+\subsection{An internally created frame and a protected ruler}
+We use one precise classical tiling import. The periodic-to-open
+construction of Cubitt, P\'erez-Garc\'ia and Wolf
+\cite[Section~6.3, equation~(133), Lemma~55]{spectralFull}, in the
+\href{https://arxiv.org/abs/1502.04573v5}{version~5 full text}, is an
+integer-weight nearest-neighbour layer on a square torus with minimum
+energy four. Every minimizer has a single frame row and frame column,
+whose complement is a valid modified Robinson tiling of an open
+$(L-1)\times(L-1)$ square. Every other configuration costs at least
+five. We import this finite tile set and lemma, not a new assertion
+about all periodic tilings.
+
+Put this layer in each $xy$ plane and copy its entire tile label on
+every $z$ bond. If $F_z$ is the frame energy in a plane, then
+\[
+ E_{\rm frame}=\sum_z F_z+\#\{\text{failed tile copies}\}\geq4L.
+\]
+Equality forces common frame seams at all heights; failure of equality
+costs at least one. Translation of the frame remains free. Its row and
+column types define four adjacent-interior flags $X_0,X_1,Y_0,Y_1$.
+For example, on an $x$ bond require
+\[
+ X_0(\text{right})=
+ \ind_{\{\text{left in frame column, right outside frame column}\}}.
+\]
+The opposite-side test defines $X_1$, and $y$ bonds define $Y_0,Y_1$.
+Each false flag has a unit diagonal penalty. These are tests on actual
+torus bonds. The frame sites are tensor factors of the physical system,
+not deleted sites; only the computation rules are disabled across the
+marked internal edges.
+
+In every $xz$ plane put the five-symbol ruler of
+Section~\ref{sec:ruler}, with its displayed horizontal pairs along $x$
+and vertical pairs along increasing $z$. Add unit $y$-bond penalties
+for unequal ruler symbols. Its perfect pitch-$p$ density is
+$f_g(p)=-g/p+r/p^2$, $r=1/16$. Write
+\[
+ f_* =\min(0,\min_{q\geq1}f_g(q)),\qquad
+ \mathcal P(g)=\{q\geq2:f_g(q)=f_*\}.
+\]
+In the stated interval $\mathcal P(g)$ is either $\{p\}$ or, at
+$g=g_p$, $\{p,p+1\}$, with $g_p$ as in
+\eqref{eq:ruler-energy}. The auxiliary $q=1$ term is useful for
+defective segments and never minimizes here.
+
+For completeness, the exact charging identity on one square layer is
+\begin{equation}\label{eq:bulk-defect-identity}
+ E-L^2f_*=
+ \sum_s p_s(f_g(p_s)-f_*)
+ +r\sum_s(v_s-1/p_s)+V_{\rm err}-A_0f_*.
+\end{equation}
+Here segments start at a $W$, $v_s$ indicates an ending $VW$ bond,
+$V_{\rm err}$ counts forbidden pairs, and $A_0$ is the area of
+$W$-free columns. In particular $-A_0f_*$ is retained in the equality.
+It is nonnegative and may then be dropped for a lower bound.
+The segment/run proof of Lemma~\ref{lem:charging} applies literally:
+a vertically bad segment has deficit at least $-1$, a good open run
+has deficit greater than $-1$, and a closing run has zero deficit.
+A vertical violation receives at most three bad-segment and three
+run-end charges, while a horizontal violation receives at most three
+run-end charges. Therefore
+\begin{equation}\label{eq:bulk-defect-bound}
+ E-L^2f_*\geq
+ \sum_s p_s(f_g(p_s)-f_*)+\frac58 V_{\rm err}.
+\end{equation}
+This controls a putative extensive gain from defects, without a
+small-perturbation estimate in the volume.
+
+Define the nonoptimal stripe separation by excluding \emph{every}
+minimizing pitch:
+\[
+ \delta(g)=\min_{q\geq2,\ q\notin\mathcal P(g)}
+             q(f_g(q)-f_*)>0.
+\]
+Indeed $q(f_g(q)-f_*)=q|f_*|-g+r/q\to\infty$.
+At rational $g$, a tested value $M$ excludes all $q$ with
+$q|f_*|-g>M$, so the search is finite and effective. A sufficient
+fixed-$g$ size cutoff includes
+\begin{equation}\label{eq:bulk-classical-cutoff}
+ L\delta(g)\geq5/8,\qquad L^2|f_*|\geq5/8,
+ \qquad q\mid L\quad(q\in\mathcal P(g)).
+\end{equation}
+The second condition excludes the uniform $W$-free vacua. Summing the
+layer estimates over $y$, then adding copy penalties, leaves every
+nonminimal three-dimensional ruler at least $5/8$ above its minimum.
+The cutoff depends on $g$ and is not asserted uniform near zero.
+
+Add a Boolean marker $v$ constant on $z$ and $y$ bonds, equal to the
+indicator of ruler symbol $V$ on non-$W$ sites. On a $W$ site in the
+frame column require $v=1$. In a clean stripe of pitch $q$ there are
+$L/q$ marked columns. Constancy of $v$ makes these columns common to
+all stripes and all $y$ planes, so different pitches cannot coexist
+in a zero-penalty configuration. Conversely, any uniform pitch
+dividing $L$ can be translated so that one of its $V$ columns is the
+frame column. At a tie both uniform pitches remain attainable; their
+mixtures incur at least one auxiliary penalty. The frame-column
+condition is gated by $W$ and imposes no divider in a $W$-free vacuum.
+
+\subsection{Three binary fields broadcast a periodic word}
+\begin{lemma}[Nearest-neighbour broadcast]\label{lem:bulk-broadcast}
+Suppose the ruler walls are $z=z_0$ modulo $p$, with $p\mid L$.
+Introduce bits $B,C,D$ on every site, including frame and wall sites,
+and impose
+\begin{align*}
+ B(x,y+1,z)&=B(x,y,z),& B(x,y,z+1)&=B(x,y,z),\\
+ D(x,y,z)&=C(x-1,y,z),& C(x,y,z+1)&=D(x,y,z),\\
+ C(x,y,z)&=B(x,y,z)&&\text{on a }W\text{ plane}.
+\end{align*}
+The solutions are in bijection with arbitrary $p$-periodic words
+$b(x)$, with $B(x,y,z)=b(x)$. Each word has a unique $C,D$ filling.
+\end{lemma}
+\begin{proof}
+The first two equalities make $B$ independent of $y,z$. Starting at a
+wall, the next two give
+\[
+ C(x,y,z_0+t)=b(x-t),\qquad D(x,y,z_0+t)=b(x-t-1).
+\]
+At the next wall $C=B$ says exactly $b(x-p)=b(x)$. Conversely these
+formulas fill each stripe consistently and close around the torus
+because $p\mid L$. There is one free bit for each of the $p$ residues.
+\end{proof}
+
+Every equality is onsite or on one ordinary oriented bond. The apparent
+diagonal shift is split into an $x$ bond and a $z$ bond by $D$.
+There is no entire word stored onsite. On noncommensurate periodic
+test graphs the free dimension can instead be $\gcd(L,p)$, identifying
+different source residues. Thus this lemma is not an all-size copying
+assertion. Factorial tori eventually accommodate both pitches at
+each fixed tie.
+
+\subsection{Two prefix masks and the final-time source}
+Introduce an inert/active bit $I$, with unit equality penalties along
+all three axes. Inert sites allow only ruler symbols $A,D$ and fix
+all computation, mask and broadcast fields to prescribed dummy values.
+The frame and its geometric flags remain. Active sites enable the
+following predicates. Mixed phase bits are ordinary classical
+configurations with positive penalties, not excluded sectors.
+
+Let $F_z$ flag the non-$W$ row immediately after a $W$ row, and $T_z$
+the non-$W$ row immediately before the next $W$. Let $F_x$ flag the
+non-$V$ site immediately after a $V$ column. Each flag has a defining
+two-site truth table. At pitch $p$, each stripe has height $h=p-1$.
+Two copies of the Boolean thickness counter from
+Section~\ref{sec:film} will mark
+\[
+ \ell(p)=\bitlength(p-2).
+\]
+Within its own horizontal interval initialize $b_j=f_j=0$ on $F_z$
+and carry $c_0=1$ at the first site. The rules are
+\begin{equation}\label{eq:bulk-thickness}
+ c_{j+1}=b_jc_j,\qquad
+ b'_j=b_j\mathbin{\mathrm{XOR}}c_j,\qquad
+ f'_j=f_j\mathbin{\mathrm{OR}}b_j.
+\end{equation}
+The first is an $x$-bond predicate; the latter two are $z$-bond
+predicates. At stripe row $t$ the bits encode $t$ in binary and $f_j$
+records whether bit $j$ was previously one. At $T_z$, $t=p-2$, so
+\begin{equation}\label{eq:bulk-prefix}
+ b_j\mathbin{\mathrm{OR}}f_j
+       =\ind_{\{2^j\leq p-2\}}=\ind_{\{j<\ell(p)\}}.
+\end{equation}
+
+The \emph{local} copy restarts after each $V$ column, has width
+$h$, and has dummy $b,c,f$ fields on $V$ and $W$. Carry is enforced
+only inside that interval; increment is enforced only between
+non-$W$ rows. Copy the top indicator into $P_{\rm cell}$ along
+\emph{all} $z$ bonds, including through $W$, and set it to zero in
+$V$ columns. Do not make $P_{\rm cell}$ dummy on $W$: its vertical
+copy is needed there. Alignment makes the repeated top indicators
+agree, so it selects the first $\ell(p)$ sites of every local cell.
+
+The \emph{global} copy restarts only at $X_0$ and spans the entire
+frame interior of width $L-1$, without restarting at $V$. Initialize
+it on each $F_z$; impose its carry only inside the frame interior
+and its increment only inside the stripe. Copy its top indicator in
+$P_{\rm global}$ within that non-$W$ stripe only, using dummy zero
+on $W$ and the frame column. All other unused counting fields are
+dummy. The resulting floor mask selects precisely the first
+$\ell(p)$ tape indices after the frame column. Since that column
+is a $V$ column, these are also local indices $j=0,\ldots,\ell(p)-1$
+in the first cell. The identity holds after every translation and
+coordinate wraparound. Moreover $\ell(p)<p-1$ for $p\geq6$,
+leaving an actual nonreader neighbour after the last reader site.
+
+At every stripe floor $F_z$ run the fixed machine in the internally
+open $xy$ square, using $x$ as tape and $y$ as time. Its rows are
+$0,\ldots,L-2$ and its width is $L-1$. The two-site arrival compiler
+of Section~\ref{sec:classical} applies: horizontal predicates fix
+the incoming head signals from neighbours, and vertical predicates
+fix the next tape, head and persistent output from that finite onsite
+tuple. Both missing-edge arrival fields are blank, including fields
+in the final row; all inactive machine fields are dummy. Work and
+output tracks are distinct. Initialize the head at $X_0,Y_0$.
+At physical time $t$ its position is at most $t$, so an included
+transition cannot require tape beyond the right edge. Functional
+induction gives the ordinary infinite-tape computation on all
+included rows. The divider columns do not cut this giant tableau.
+
+Impose the onsite source equality only at
+$F_z\wedge Y_1\wedge P_{\rm global}$:
+\begin{equation}\label{eq:bulk-final-source}
+ B=o_{L-2}(j),\qquad 0\leq j<\ell(p).
+\end{equation}
+Also impose $B=0$ wherever $P_{\rm cell}=0$. There is no equality
+between $B$ and the machine output at earlier time rows. Computations
+on different stripe floors have the same initialization and final
+time, so their demands agree. Lemma~\ref{lem:bulk-broadcast} now
+forces this final prefix, repeated in every cell throughout the
+volume, with zeros on the other residues.
+
+\begin{lemma}[Simultaneous completion]\label{lem:bulk-completion}
+For each minimum frame and each aligned uniform minimum pitch dividing
+$L$, the active auxiliary fields have a zero-penalty filling. Every
+such filling has the same repeated radix word
+$[2^{\beta o_{L-2}(j)}:j<\ell(p)]$.
+\end{lemma}
+\begin{proof}
+Fill the two thickness counters functionally, copy their top masks
+with their respective boundary conventions, and fill each identical
+machine tableau. Set the $p$-periodic word to the final prefix and
+zeros elsewhere. Its $C,D$ extension exists by the broadcast lemma.
+All source, mask and alignment predicates are satisfied. Conversely,
+functional counters and tableaux fix both masks and the source
+prefix, and the zero mask fixes every remaining residue. The
+broadcast lemma fixes $C,D$. The Robinson interior need not be
+unique; it does not enter the radix predicates.
+\end{proof}
+
+All added constraints have unit nonnegative weight. Any Boolean fact
+derived from a neighbour is stored onsite and checked on its defining
+bond. Later predicates use only that stored fact and other onsite
+fields. Hence the compiler uses a fixed finite alphabet and only
+onsite or nearest-neighbour rational projectors. Neither an oracle
+nor a volume-dependent register enters an interaction coefficient.
+
+\subsection{The full Hamiltonian and its protected positive gap}
+Activate the guarded counter of Section~\ref{sec:counter} on every
+$x$ segment with $I=1$, $T_z=1$ and $P_{\rm cell}=1$, for every
+$y$, including the internal frame row. Its first-site rule uses
+$F_x$ and its radix is $2^{\beta B}$. Wrap uses the actual bond from
+the final reader site to its nonreader neighbour. Freeze every
+exterior dynamic field to $(0,\NL)$ with a unit penalty. Retain all
+parallel local edges. On inconsistent classical labels, each
+controlled transition is still a nonnegative edge Laplacian times
+a classical projector. Thus every quantum block remains nonnegative.
+
+Put a qubit at each site as well. When $I=1$, penalize its state
+$|1\rangle$ by one. On a $y$ bond with both endpoints inert put
+\[
+ (|01\rangle-|10\rangle)(\langle01|-\langle10|),
+\]
+and otherwise no qubit bond term. Inert counter fields are frozen.
+This completes a fixed nearest-neighbour family with rational
+coefficient matrices, affine in $g$ only through the ruler bonus.
+
+\begin{lemma}[Eventual distinct-level identity]\label{lem:bulk-gap}
+For each fixed $0<g<\bar g$, for all sufficiently large $L=n!$,
+\begin{equation}\label{eq:bulk-gap-identity}
+ \Delta(L,g)=\min_{q\in\mathcal P(g)}d_q,\qquad
+ d_q=\Delta^+\bigl(K[2^{\beta A(j)}:j<\ell(q)]\bigr).
+\end{equation}
+The threshold is finite but has no general computable bound.
+For $g\leq0$, $\lim_n\Delta(n!,g)=0$.
+\end{lemma}
+\begin{proof}
+All classical fields are diagonal and unchanged by quantum moves, so
+\begin{equation}\label{eq:bulk-blocks}
+ H_L(g)=\bigoplus_\sigma
+       \bigl(E_{\rm cl}(\sigma;g)\ind+K_\sigma\bigr),
+ \qquad K_\sigma\geq0.
+\end{equation}
+The frame and ruler lower bounds, together with zero auxiliary
+penalties, are simultaneously attained by
+Lemma~\ref{lem:bulk-completion}. Quantum kernels are nonempty.
+Consequently the ground energy is exactly
+\[
+ E_*(L,g)=4L+L^3f_*.
+\]
+After \eqref{eq:bulk-classical-cutoff}, any nonminimum frame costs
+at least one and any nonminimum ruler costs at least $5/8$.
+A failed flag, tableau, copy, alignment or phase equality costs an
+integer at least one. The bare ruler never lies below its own
+minimum, so a changed phase cannot cancel such a penalty. An all-inert
+configuration cannot attain $f_*<0$. Every nonminimizing classical
+block therefore starts at least $5/8$ above $E_*$. Nonnegativity of
+$K_\sigma$ excludes even an arbitrarily long fake reader in those
+blocks; superposition across diagonal blocks cannot lower an offset.
+
+In a minimum block of uniform pitch $q$, the number of independent
+identical readers is
+\begin{equation}\label{eq:bulk-reader-count}
+ N_L=(L/q)(L/q)L=L^3/q^2.
+\end{equation}
+The factors count stripes in $z$, intervals in $x$, and all $y$ rows.
+Other quantum factors have unit gaps. The first positive eigenvalue
+of a tensor sum with nonempty factor kernels is the least positive
+factor gap, even when the kernels are degenerate.
+
+Set $T(q)=\max_{j<\ell(q)}t_j$. For $L-2\geq T(q)$ the finite
+radix word is exactly the one defining $d_q$. There are only one or
+two pitches to settle. With
+$k_q=\beta|A\cap[0,\ell(q))|$, Lemma~\ref{lem:counter} gives
+\begin{equation}\label{eq:bulk-counter-bracket}
+ \frac{4^{-k_q}}{64\ell(q)^2}\leq d_q
+ \leq 4\pi^2\,4^{-k_q}\leq\frac{\pi^2}{16}<\frac58.
+\end{equation}
+The last step uses $q\geq6$, $\beta\geq1$ and $0,1,2\in A$.
+Thus the full ground-space gap is supplied by a reader. At a tie
+alignment retains the two uniform classical minima and removes their
+mixtures. Taking the least positive energy over both ground blocks
+gives $\min(d_p,d_{p+1})$, as claimed. No equality between $d_q$ and
+the main counter cycle is used: closed free paths, zero-head states,
+penalized components and multiple-head sectors are all covered by
+Lemma~\ref{lem:counter}. The legal path counterexample in
+Section~\ref{sec:film} still applies.
+
+For $g\leq0$ the bare ruler minimum is zero, attained by a uniform
+$A$ or $D$ vacuum. With $I=0$ and dummy auxiliaries the frame minimum
+$4L$ is attained, and all quantum terms are nonnegative. The inert
+qubit layer has the all-zero ground vector. On one of its $y$ rings
+the single-excitation Fourier vector has positive eigenvalue
+\[
+ \epsilon_L=2-2\cos(2\pi/L)\quad(L\geq3).
+\]
+Therefore $0\leq\Delta(L,g)\leq\epsilon_L\to0$. Only this positive
+upper witness is needed, without an assertion about the ring's full
+gap or a unique ground vector.
+\end{proof}
+
+The machine settling time in this proof need not be computably bounded
+as $q$ varies. The geometric cutoff is effective at rational $g$;
+the further settling cutoff is not. The volume limit is taken at
+fixed $g$ before the pitch grows. In particular it is not an infimum
+over the machine's intermediate guesses.
+
+\subsection{The critical law and every prescribed third-level value}
+The logarithm of \eqref{eq:bulk-counter-bracket} yields
+\[
+ 2k_p-\log_2(4\pi^2)\leq\log_2(1/d_p)
+            \leq2k_p+6+2\log_2\ell(p).
+\]
+Since $\ell(p)=\log_2p+O(1)$ and $p=2r/g+O(1)$, off ties,
+\begin{equation}\label{eq:bulk-density-exponent}
+ \frac{\log(1/\Delta_\infty(g))}{\log(1/g)}
+ =2\beta\rho_{\ell(p)}(A)
+      +O\!\left(\frac{\log\ell(p)}{\ell(p)}\right).
+\end{equation}
+Every sufficiently large pitch, and every sufficiently large
+bitlength, is visited. At a tie the inverse logarithm is the larger
+of the neighbouring values. Both have the same density limit and
+vanishing error, including when the bitlength increases. Thus if
+$A$ has density $\rho$, the exponent is $2\beta\rho$.
+
+Here is the needed density realization explicitly. For a finite
+$\alpha\geq0$ computable in $0''$, choose a fixed integer
+$\beta\geq\max(1,\alpha/2)$ and put $\rho=\alpha/(2\beta)$.
+The relativized limit lemma supplies a $0'$-computable rational
+sequence $u_s\in[0,1]$ tending to $\rho$. Starting with $N_0=1$,
+put $N_{s+1}=(s+2)N_s$ and on $[N_s,N_{s+1})$ use the mechanical
+word of slope $u_s$: its first $t$ bits have sum $\lfloor tu_s\rfloor$.
+For an intermediate prefix the density differs by at most
+$1/(N_s+t)$ from
+\[
+ \frac{N_s\rho_{N_s}(A)+tu_s}{N_s+t}.
+\]
+At the endpoint its difference from $u_s$ is at most
+$1/(s+2)+1/N_{s+1}$. Endpoints converge to $\rho$, and the displayed
+convex combination then proves convergence of all intermediate
+densities. The resulting set is computable in $0'$; changing its
+first three bits to one preserves the density. The ordinary limit
+lemma gives the total computable approximation used by the machine.
+The ordinary algorithm for that approximation, rather than an oracle,
+is encoded in the finite local alphabet. Equation~\eqref{eq:bulk-density-exponent}
+proves the required exponent $\alpha$.
+
+The gap closes even for $\alpha=0$. The orbit in
+\eqref{eq:orbit} has length at least $2\ell$, so its upper witness
+gives $d_p\leq\pi^2/\ell(p)^2\to0$. The ground energy per volume is
+zero on $g\leq0$, and for small $g>0$ it is $f_*$. Indeed the
+frame contribution is $4/L^2\to0$, and completing the square gives
+\[
+ -\frac gp+\frac r{p^2}
+ =-\frac{g^2}{4r}+r\left(\frac1p-\frac g{2r}\right)^2.
+\]
+Rounding $p$ near $2r/g$ makes the last term $O(g^4)$.
+The two different one-sided quadratic behaviors preclude real
+analyticity at the computable point zero. Together with the gapless
+inert side and the positive gaps closing from the right, this proves
+the critical-point assertion.
+
+For necessity, at rational $g$ a finite torus matrix is rational.
+Multiplicity-aware algebraic root isolation computes its two lowest
+distinct eigenvalues whenever defined. Replace their gap by rational
+approximants with effective errors tending to zero. For an existing
+inner limit a halting oracle finds tail-Cauchy indices, giving a
+uniform $0'$-Cauchy name. Promised positivity allows a search for a
+certified interval bounded away from zero in that same oracle, and
+then computation of the logarithm. One further existing coupling
+limit is computable in $0''$, as in
+Proposition~\ref{prop:critical-ceiling}. A computable critical point
+can be approached by certified rational points on its required side
+without adding an oracle. No decidability of strict rational cuts of
+arbitrary computable real arrays is assumed.
+
+\begin{corollary}\label{cor:bulk-beyond-sides}
+Some fixed three-dimensional family in Theorem~\ref{thm:bulk-three}
+has an existing positive gap exponent outside
+$\mathsf S_2\cup\mathsf P_2$.
+\end{corollary}
+\begin{proof}
+Enumerate all $\Sigma^0_2$ and $\Pi^0_2$ subsets of $\Q$, including
+noncuts. Oracle $0''$ decides membership of a chosen midpoint in
+each candidate. Starting inside $[1/4,3/4]$, choose the left third
+of the current interval when its midpoint belongs to the candidate,
+and the right third otherwise. If the candidate is a strict lower
+cut, its real lies above the midpoint in the first case and at or
+below it in the second, so the chosen third excludes that real.
+The nested intervals have a unique $0''$-computable point, different
+from every listed cut-real. Apply the attainment just proved.
+\end{proof}
+
+\subsection{Extensive local excitations and a selected infinite-volume phase}
+Fix $g\in(0,\bar g)$ and a pitch $p$ attaining
+\eqref{eq:bulk-gap-identity}; at a tie choose a gap-attaining one.
+In its minimum classical block choose normalized counter vectors
+$\phi\in\ker K$ and $K\psi=d_p\psi$. Use $\phi$ on every reader
+and the prescribed states on all exterior factors, giving a product
+ground vector $\Omega_L$. Replacing $\phi$ by $\psi$ at any of the
+$N_L=L^3/p^2$ reader locations gives mutually orthogonal eigenvectors
+at $E_*+d_p$, since $\langle\phi,\psi\rangle=0$. Their support
+length $\ell(p)$ is independent of $L$ at fixed $g$. They occupy
+every $y$ row and a periodic array in $xz$, including locations
+arbitrarily far from the frame seams. Linear combinations give
+extended modes in the same extensive flat band.
+
+More quantitatively, let $a=|\psi\rangle\langle\phi|$ on one
+reader's dynamic factors and identity on other factors. It has
+norm one and finite support. If $P_d$ projects onto the first
+positive energy in this classical block and $\tau_u$ denotes
+spatial translation, then
+\begin{equation}\label{eq:bulk-local-weight}
+ \frac1{L^3}\sum_{u\in T_L}
+       \|P_d\tau_u(a)\Omega_L\|^2\geq\frac1{p^2}.
+\end{equation}
+Every aligned reader translate contributes one. The bound persists
+as volume tends to infinity at fixed $g$; neither its value nor the
+support size is asserted uniform as $g\downarrow0$.
+
+To obtain an infinite-volume phase, translate the common frame so
+its two seams recede from every fixed window, retain a fixed ruler
+phase and the settled word, and pass to a locally convergent
+subsequence of the remaining finite-alphabet patterns. Choose the
+same reader product vectors. Finite-range dynamics converge on
+local observables uniformly on compact time intervals, by the
+standard Lieb--Robinson thermodynamic-limit construction
+\cite{liebRobinson}. Every finite-volume ground-state excitation
+spectral measure is supported in $\{0\}\cup[d_p,\infty)$. Its
+weak limit excludes $(0,d_p)$. Local vectors are dense in the
+ground-state GNS representation, so its Hamiltonian has no spectrum
+there. A fixed aligned reader operator retains unit spectral weight
+at $d_p$ (its time correlation is the corresponding exponential).
+Thus the gap in this selected representation is exactly $d_p$
+above the \emph{entire} zero-energy subspace. At a tie the same
+argument uses the selected gap-attaining pitch. This completes the
+proof of Theorem~\ref{thm:bulk-three}.
+
+\subsection{Gap conventions and effective selection}
+\label{subsec:bulk-conventions}
+The positive-density statement is not an identification with every
+operator-algebraic gap definition. The locally nondegenerate criterion
+of Xu et al.\ \cite[equation~(4), Definition~1.11]{bulkGap} requires
+\[
+ \omega(a^*[H,a])\geq
+ \gamma\bigl(\omega(a^*a)-|\omega(a)|^2\bigr)
+\]
+and their bulk gap takes a supremum over KMS ground states satisfying
+that criterion. Our readers have local zero-energy degeneracy.
+Choose orthogonal $\phi_0,\phi_1\in\ker K$ and the local map
+$|\phi_1\rangle\langle\phi_0|$ in the product state using $\phi_0$.
+Its energy is zero and its variance one, excluding every positive
+$\gamma$ in this state. Already $\operatorname{diag}(0,0,1)$ has
+distinct-level gap one but zero locally nondegenerate threshold.
+Neither a unique zero-energy vector nor the KMS-state supremum is
+computed here. The certification theorem for that other convention
+therefore supplies no contradictory ceiling for the present result.
+
+There is also a useful sufficient effective-collapse condition.
+If, at every rational $g$, a computable procedure supplies the
+complete finite list of limiting reader operators with their correct
+radix labels, and a competing-sector threshold above their gaps,
+then it computes the limiting gap. Its existing exponent is
+$\mathsf D_2$. An effective volume settling bound suffices, but is
+not necessary if these operators are already known. Here the pitch
+is computable; its settled word $A\upharpoonright\ell(p)$ is not
+uniformly computable in general. The finite periodic quantum readers
+do not provide an effective list of their limiting classical labels.
+
+Two obstructions explain the construction choices. Retaining
+independent readers for every previous computation stage would give
+$\min_{s\leq s(L)}d_s$, tending to $\inf_s d_s$, a right-c.e.
+quantity for computable stage gaps. The history
+$1/8,1/2,1/2,\ldots$ would retain $1/8$, not the final value $1/2$.
+The final-time source withdraws old guesses instead. If the union
+$\mathcal A_L$ of all available reader supports were confined to
+one seam, a norm-bounded local operator of radius $R$ would have
+spectral weight into that factorized band at most
+$\|a\|^2|\mathcal A_L^{(+R)}|/L^3$, tending to zero. The relevant
+union is over spatially different reader locations, not the
+degeneracy of a single reader. Equation~\eqref{eq:bulk-local-weight}
+establishes the extensive union here.
+
+Finally, coupling equicontinuity alone does not compute a volume
+limit even when it is pointwise eventually exact. For the same
+computable approximation let
+\[
+ k_{n,s}=\sum_{j<n}a(j,s),\qquad
+ q_n=2^{-n},\qquad y_{n,s}=2^{-n-k_{n,s}}.
+\]
+On $[0,1]$, let $F_s(0)=0$, interpolate the knots
+$(q_n,y_{n,s})$ for $0\leq n\leq s$, and join the last knot to
+zero linearly. A knot-interval slope is
+\[
+ 2^{-k_{n,s}}\bigl(2-2^{-a(n,s)}\bigr)\leq3/2;
+\]
+the terminal slope is at most one. These uniformly computable
+piecewise-linear functions have a common Lipschitz constant.
+At each fixed $g>0$ their values eventually settle. But the limiting
+value at $q_n$ identifies $k_n$ among the finitely many separated
+powers of two, and successive $k_n$ recover $A$. A computable limit
+would therefore compute $A$. At the knots its normalized inverse
+logarithm is $1+\rho_n(A)$. Neighbouring knot ratios lie between
+two and four, so interpolation changes this by $O(1/n)$. When
+the density exists the exponent is $1+\rho(A)$, potentially outside
+both one-sided level-two classes. This is a scalar-data example,
+not another Hamiltonian realization. Effective boundary-to-volume
+brackets for energy density remain an additional argument.
+
+\subsection{Finite checks and the exact scope of the theorem}
+The ancillary programs \texttt{check\_bulk\_broadcast.py} and
+\texttt{check\_bulk\_independent.py} implement separate finite checks.
+The first checks literal copying components, both prefix counters,
+exact ruler minimization and small-torus charging, tie alignment,
+the inert-ring witness, tensor gaps and the scalar modulus example.
+The second uses independent binary row elimination on translated
+geometries and all tested source fillings, forces contradictions
+from changed source bits, checks defective rulers and complete
+native counter products, and reproduces the long legal free paths
+and degenerate-kernel tensor sums. It also checks tie arithmetic,
+physical endpoint guards and the reader count. The expected
+noncommensurate collapse and failure of universal main-cycle
+equality are included as counterexamples to those stronger assertions.
+
+These programs do not generate the full onsite matrix for an
+arbitrary target machine, diagonalize a three-dimensional many-body
+Hamiltonian, reprove the imported frame lemma, or numerically certify
+a noncomputable limit. Floating-point trigonometric checks are
+corroboration, not interval-certified proofs. The finite-rule
+compiler and block argument supply the general statements.
+There is no conclusion here about all integer sizes, robustness,
+unique ground states, a separate correlation length, minimum spatial
+dimension, or an extremum over all infinite-volume phases. The
+classical computation still uses an internal anchor. Positive-coupling
+inner limits outside $(0,\bar g)$ are not claimed.

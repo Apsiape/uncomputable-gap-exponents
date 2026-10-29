@@ -1,0 +1,125 @@
+\section{Arithmetic of limits and density readers}\label{sec:arithmetic}
+The arithmetic claims depend on the representation of a \emph{uniform}
+family. For $X=0^{(m-1)}$, uniformly $\mathsf D_m$ data mean that an
+$X$-oracle algorithm approximates $x_n$ within $2^{-p}$ uniformly in
+$(n,p)$. Uniform $\mathsf S_m$ data have increasing rational
+$X$-computable names, and uniform $\mathsf P_m$ data have decreasing
+ones. For an individual real these agree with the one-sided cut classes,
+with a separate rational-endpoint case. They do not imply that exact
+strict lower cuts are uniformly decidable at the same level.
+
+For example let $x_e=2^{-t}$ if machine $e$ first halts at step $t\geq1$,
+and let $x_e=0$ otherwise. Running for $s$ steps and returning the value
+found, or zero, gives error at most $2^{-s}$. This is a uniformly
+computable family, but $\{e:x_e>0\}$ is the halting set. A theorem about
+names cannot silently be replaced by a uniform exact-comparison theorem.
+
+\begin{proposition}[Limit calculus]\label{prop:calculus}
+For uniform names, finite outputs, and the stated existing limits, the
+following are arithmetic ceilings. Every entry is sharp for abstract
+data; physical attainment is asserted separately.
+\begin{center}\small
+\begin{tabular}{c|ccc}
+Input & limit & lower limit & upper limit\\\hline
+$\mathsf D_m$ & $\mathsf D_{m+1}$ & $\mathsf S_{m+1}$ & $\mathsf P_{m+1}$\\
+$\mathsf S_m$ & $\mathsf P_{m+1}$ & $\mathsf S_{m+2}$ & $\mathsf P_{m+1}$\\
+$\mathsf P_m$ & $\mathsf S_{m+1}$ & $\mathsf S_{m+1}$ & $\mathsf P_{m+2}$
+\end{tabular}
+\end{center}
+Infimum and supremum send $\mathsf D_m$ data respectively to
+$\mathsf P_m,\mathsf S_m$. For $\mathsf S_m$ data they give
+$\mathsf P_{m+1},\mathsf S_m$; for $\mathsf P_m$ data they give
+$\mathsf P_m,\mathsf S_{m+1}$. A limit with an effective error bound
+preserves the input class. Computable continuous increasing maps
+preserve the side; decreasing maps exchange it, on their domains.
+\end{proposition}
+\begin{proof}
+Work relative to $X$. For a convergent computable rational sequence an
+$X'$ search finds arbitrarily accurate tail-Cauchy intervals. Oracle
+Cauchy names reduce asymptotic limits to rational sequences by errors
+$2^{-n}$. Moreover
+\[
+ q<\liminf_n a_n\ \Longleftrightarrow\
+ \exists r>q\ \exists N\ \forall n\geq N:\ a_n\geq r.
+\]
+This is a $\Sigma^X_2$ lower cut; the upper endpoint is dual. The
+rational-endpoint distinction avoids incorrectly complementing strict
+cuts at equality. For increasing names $a_{n,s}$, the analogous lower
+cut of the liminf has an additional existential approximation witness
+after the universal $n$ quantifier, hence $\Sigma^X_3$. The strict upper
+cut of their limsup is $\Sigma^X_2$, giving a $\mathsf P_{m+1}$ real.
+An existing limit is its own limsup. Negation proves the other row.
+
+Dovetailing preserves suprema of left-c.e. and infima of right-c.e.
+names. An infimum of left-c.e. values has a $\Sigma^X_2$ upper cut:
+there is an index and a rational buffer below the tested threshold
+bounding every increasing approximant. The dual gives the supremum
+rule. If $|x_i-x|\leq2^{-i}$, use
+$x=\sup_i(x_i-2^{-i})=\inf_i(x_i+2^{-i})$ to preserve one-sided names.
+Computably continuous monotone maps preserve or reverse these names on
+their domains. For a positive two-sided name, search for an interval
+bounded away from zero; for a positive increasing name, search for a
+positive approximant. For a decreasing name $q_s$ converging to a positive
+value, each $q_s$ is positive, so apply logarithms or reciprocals directly
+to these upper approximants and take monotone rational roundings. This
+requires no computable positive lower bound on the limit.
+
+Sharpness of the two-sided row is the relativized real hierarchy
+\cite{zhengWeihrauch,density}. For the left-c.e. limit and limsup entries,
+write a right-c.e.-in-$X'$ value as the limsup of an $X$-computable
+sequence, and take its tail suprema, which are left-c.e. in $X$.
+Sharpness of the left-c.e. liminf entry follows from the characterization
+of lower densities of c.e. sets \cite[Theorem~5.7]{density}, relativized
+to $X$; their finite prefix densities have increasing $X$-names.
+Negation handles the dual entries. For an infimum target with
+$\Sigma^X_2$ upper cut, write its membership as
+$\exists a\forall b\,R(q,a,b)$. An increasing name starts at $q$ and
+jumps to a common upper bound on the first failed witness. The infimum
+over $(q,a)$ is the target. Supremum is dual. Bounded targets can be
+handled in one fixed compact rational interval.
+\end{proof}
+
+\begin{lemma}[Relative density realization]\label{lem:relative-density}
+For $X=0^{(k-1)}$ and $0\leq a\leq b\leq1$ in
+$\mathsf S_{k+1}\times\mathsf P_{k+1}$, an $X$-computable set $A$
+has lower density $a$ and upper density $b$. When $a=b$, its density
+is that $\mathsf D_{k+1}$ real. A finite prescribed prefix can be added.
+\end{lemma}
+\begin{proof}
+The relativized sequence characterizations
+\cite[Theorem~5.1 and Corollaries~5.4--5.5]{density} provide a rational
+$X$-computable sequence with those endpoints: for unequal endpoints,
+interleave lower and upper sequences clipped on opposite sides of a
+fixed rational separator. For equal endpoints use a convergent sequence.
+Clip all values to $[0,1]$. On $[N_s,N_{s+1})$, where $N_0=1$ and
+$N_{s+1}=(s+2)N_s$, write the mechanical word of slope $b_s$.
+Its first $t$ letters contain $\lfloor t b_s\rfloor$ ones. At a block
+endpoint its density differs from $b_s$ by at most
+$1/(s+2)+1/N_{s+1}$. Between endpoints it differs by at most $1/J$
+from a convex combination of the preceding density and $b_s$.
+Thus no new extreme limit values are introduced, and both endpoints
+are attained. Each bit is $X$-computable. Finite changes preserve density.
+There is no claim of uniformly choosing a separator from arbitrary
+endpoint descriptions.
+\end{proof}
+
+\begin{lemma}[A value beyond either preceding side]\label{lem:diagonal}
+For every $k\geq1$ some $x\in\mathsf D_{k+1}\cap(0,1)$ lies in
+neither $\mathsf S_k$ nor $\mathsf P_k$.
+\end{lemma}
+\begin{proof}
+Enumerate all $\Sigma^0_k$ and $\Pi^0_k$ subsets of $\Q$, including
+those that are not cuts. Starting with $[1/4,3/4]$, test its midpoint
+against the next set with $0^{(k)}$. If it belongs, keep the left third;
+otherwise keep the right third. If the tested set is the strict lower
+cut of a value $v$, that third excludes $v$. The nested intervals have
+length $3^{-n}/2$ and $0^{(k)}$-computable endpoints. Their intersection
+is therefore in $\mathsf D_{k+1}$ and avoids every listed cut.
+\end{proof}
+
+Two qualifications will recur. Independent limits do not add their oracle
+levels: $0'$ computes both limits of two computable sequences and their
+defined computable combination. Additional levels arise from dependent
+limits with the required uniform names. Also, a syntactic ceiling
+does not prove a value has exactly that least level or that a physical
+model attains it.

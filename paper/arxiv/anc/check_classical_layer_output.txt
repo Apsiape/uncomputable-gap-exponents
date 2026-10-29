@@ -1,4 +1,4 @@
 {"L": 2, "min_energy": -6.0, "predicted_min": -6, "energy_of_predicted_configuration": -6.0, "number_of_minimisers": 1.0, "predicted_region": [0], "bitlength_L_minus_1": 1, "seconds": 0.0}
-{"L": 3, "min_energy": -9.0, "predicted_min": -9, "energy_of_predicted_configuration": -9.0, "number_of_minimisers": 1.0, "predicted_region": [0, 1], "bitlength_L_minus_1": 2, "seconds": 1.5}
-{"L": 4, "min_energy": -12.0, "predicted_min": -12, "energy_of_predicted_configuration": -12.0, "number_of_minimisers": 1.0, "predicted_region": [0, 1], "bitlength_L_minus_1": 2, "seconds": 167.2}
+{"L": 3, "min_energy": -9.0, "predicted_min": -9, "energy_of_predicted_configuration": -9.0, "number_of_minimisers": 1.0, "predicted_region": [0, 1], "bitlength_L_minus_1": 2, "seconds": 1.4}
+{"L": 4, "min_energy": -12.0, "predicted_min": -12, "energy_of_predicted_configuration": -12.0, "number_of_minimisers": 1.0, "predicted_region": [0, 1], "bitlength_L_minus_1": 2, "seconds": 150.4}
 unique minimiser at energy -3L, equal to the predicted tableau: PASS
